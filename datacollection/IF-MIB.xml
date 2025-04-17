@@ -1,0 +1,92 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="IF-MIB">
+   <resourceType name="ifEntry" label="ifEntry" resourceLabel="${ifType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ifXEntry" label="ifXEntry" resourceLabel="${ifLinkUpDownTrapEnable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ifStackEntry" label="ifStackEntry" resourceLabel="${ifStackStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ifRcvAddressEntry" label="ifRcvAddressEntry" resourceLabel="${ifRcvAddressStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ifTestEntry" label="ifTestEntry" resourceLabel="${ifTestStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="interfaces" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.2.1" instance="0" alias="ifNumber" type="integer32"/>
+   </group>
+   <group name="ifMIBObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.31.1.5" instance="0" alias="ifTableLastChange" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.6" instance="0" alias="ifStackLastChange" type="timeticks"/>
+   </group>
+   <group name="ifTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.1" instance="ifEntry" alias="ifIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.2" instance="ifEntry" alias="ifDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.3" instance="ifEntry" alias="ifType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.4" instance="ifEntry" alias="ifMtu" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.5" instance="ifEntry" alias="ifSpeed" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.6" instance="ifEntry" alias="ifPhysAddress" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.7" instance="ifEntry" alias="ifAdminStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.8" instance="ifEntry" alias="ifOperStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.9" instance="ifEntry" alias="ifLastChange" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.10" instance="ifEntry" alias="ifInOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.11" instance="ifEntry" alias="ifInUcastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.12" instance="ifEntry" alias="ifInNUcastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.13" instance="ifEntry" alias="ifInDiscards" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.14" instance="ifEntry" alias="ifInErrors" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.15" instance="ifEntry" alias="ifInUnknownProtos" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.16" instance="ifEntry" alias="ifOutOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.17" instance="ifEntry" alias="ifOutUcastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.18" instance="ifEntry" alias="ifOutNUcastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.19" instance="ifEntry" alias="ifOutDiscards" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.20" instance="ifEntry" alias="ifOutErrors" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.21" instance="ifEntry" alias="ifOutQLen" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.2.1.2.2.1.22" instance="ifEntry" alias="ifSpecific" type="string"/>
+   </group>
+   <group name="ifXTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.1" instance="ifXEntry" alias="ifName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.2" instance="ifXEntry" alias="ifInMulticastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.3" instance="ifXEntry" alias="ifInBroadcastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.4" instance="ifXEntry" alias="ifOutMulticastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.5" instance="ifXEntry" alias="ifOutBroadcastPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.6" instance="ifXEntry" alias="ifHCInOctets" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.7" instance="ifXEntry" alias="ifHCInUcastPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.8" instance="ifXEntry" alias="ifHCInMulticastPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.9" instance="ifXEntry" alias="ifHCInBroadcastPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.10" instance="ifXEntry" alias="ifHCOutOctets" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.11" instance="ifXEntry" alias="ifHCOutUcastPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.12" instance="ifXEntry" alias="ifHCOutMulticasPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.13" instance="ifXEntry" alias="ifHCOutBroadcasPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.14" instance="ifXEntry" alias="ifLinUpDownTrapEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.15" instance="ifXEntry" alias="ifHighSpeed" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.16" instance="ifXEntry" alias="ifPromiscuousMode" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.17" instance="ifXEntry" alias="ifConnectorPresent" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.18" instance="ifXEntry" alias="ifAlias" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.1.1.19" instance="ifXEntry" alias="ifCounteDiscontTime" type="timeticks"/>
+   </group>
+   <group name="ifStackTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.31.1.2.1.1" instance="ifStackEntry" alias="ifStackHigherLayer" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.2.1.2" instance="ifStackEntry" alias="ifStackLowerLayer" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.2.1.3" instance="ifStackEntry" alias="ifStackStatus" type="string"/>
+   </group>
+   <group name="ifRcvAddressTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.31.1.4.1.1" instance="ifRcvAddressEntry" alias="ifRcvAddressAddress" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.4.1.2" instance="ifRcvAddressEntry" alias="ifRcvAddressStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.4.1.3" instance="ifRcvAddressEntry" alias="ifRcvAddressType" type="string"/>
+   </group>
+   <group name="ifTestTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.31.1.3.1.1" instance="ifTestEntry" alias="ifTestId" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.3.1.2" instance="ifTestEntry" alias="ifTestStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.3.1.3" instance="ifTestEntry" alias="ifTestType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.3.1.4" instance="ifTestEntry" alias="ifTestResult" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.3.1.5" instance="ifTestEntry" alias="ifTestCode" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.31.1.3.1.6" instance="ifTestEntry" alias="ifTestOwner" type="octetstring"/>
+   </group>
+</datacollection-group>

@@ -1,0 +1,103 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="UPS-MIB">
+   <resourceType name="upsInputEntry" label="upsInputEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="upsOutputEntry" label="upsOutputEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="upsBypassEntry" label="upsBypassEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="upsAlarmEntry" label="upsAlarmEntry" resourceLabel="${upsAlarmDescr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="upsIdent" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.1.1" instance="0" alias="upsIdentManufacture" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.1.2" instance="0" alias="upsIdentModel" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.1.3" instance="0" alias="upsIdenUPSSoftVersi" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.1.4" instance="0" alias="upsIdenAgenSoftVers" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.1.5" instance="0" alias="upsIdentName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.1.6" instance="0" alias="upsIdentAttacDevice" type="octetstring"/>
+   </group>
+   <group name="upsBattery" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.2.1" instance="0" alias="upsBatteryStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.2.2" instance="0" alias="upsSecondsOnBattery" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.2.3" instance="0" alias="upsEstimMinutRemain" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.2.4" instance="0" alias="upsEstimChargRemain" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.2.5" instance="0" alias="upsBatteryVoltage" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.2.6" instance="0" alias="upsBatteryCurrent" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.2.7" instance="0" alias="upsBatteryTemperatu" type="integer32"/>
+   </group>
+   <group name="upsInput" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.3.1" instance="0" alias="upsInputLineBads" type="counter32"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.3.2" instance="0" alias="upsInputNumLines" type="integer"/>
+   </group>
+   <group name="upsInputTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.33.1.3.3.1.1" instance="upsInputEntry" alias="upsInputLineIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.3.3.1.2" instance="upsInputEntry" alias="upsInputFrequency" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.3.3.1.3" instance="upsInputEntry" alias="upsInputVoltage" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.3.3.1.4" instance="upsInputEntry" alias="upsInputCurrent" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.3.3.1.5" instance="upsInputEntry" alias="upsInputTruePower" type="integer"/>
+   </group>
+   <group name="upsOutput" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.1" instance="0" alias="upsOutputSource" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.2" instance="0" alias="upsOutputFrequency" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.3" instance="0" alias="upsOutputNumLines" type="integer"/>
+   </group>
+   <group name="upsOutputTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.4.1.1" instance="upsOutputEntry" alias="upsOutputLineIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.4.1.2" instance="upsOutputEntry" alias="upsOutputVoltage" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.4.1.3" instance="upsOutputEntry" alias="upsOutputCurrent" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.4.1.4" instance="upsOutputEntry" alias="upsOutputPower" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.4.4.1.5" instance="upsOutputEntry" alias="upsOutputPercenLoad" type="integer"/>
+   </group>
+   <group name="upsBypass" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.5.1" instance="0" alias="upsBypassFrequency" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.5.2" instance="0" alias="upsBypassNumLines" type="integer"/>
+   </group>
+   <group name="upsBypassTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.33.1.5.3.1.1" instance="upsBypassEntry" alias="upsBypassLineIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.5.3.1.2" instance="upsBypassEntry" alias="upsBypassVoltage" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.5.3.1.3" instance="upsBypassEntry" alias="upsBypassCurrent" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.5.3.1.4" instance="upsBypassEntry" alias="upsBypassPower" type="integer"/>
+   </group>
+   <group name="upsAlarm" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.6.1" instance="0" alias="upsAlarmsPresent" type="gauge32"/>
+   </group>
+   <group name="upsAlarmTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.33.1.6.2.1.1" instance="upsAlarmEntry" alias="upsAlarmId" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.6.2.1.2" instance="upsAlarmEntry" alias="upsAlarmDescr" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.6.2.1.3" instance="upsAlarmEntry" alias="upsAlarmTime" type="timeticks"/>
+   </group>
+   <group name="upsTest" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.7.1" instance="0" alias="upsTestId" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.7.2" instance="0" alias="upsTestSpinLock" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.7.3" instance="0" alias="upsTestResultSummar" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.7.4" instance="0" alias="upsTestResultDetail" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.7.5" instance="0" alias="upsTestStartTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.7.6" instance="0" alias="upsTestElapsedTime" type="integer"/>
+   </group>
+   <group name="upsControl" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.8.1" instance="0" alias="upsShutdownType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.8.2" instance="0" alias="upsShutdoAfterDelay" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.8.3" instance="0" alias="upsStartuAfterDelay" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.8.4" instance="0" alias="upsRebootWithDurati" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.8.5" instance="0" alias="upsAutoRestart" type="string"/>
+   </group>
+   <group name="upsConfig" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.1" instance="0" alias="upsConfiInputVoltag" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.2" instance="0" alias="upsConfigInputFreq" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.3" instance="0" alias="upsConfiOutpuVoltag" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.4" instance="0" alias="upsConfigOutputFreq" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.5" instance="0" alias="upsConfigOutputVA" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.6" instance="0" alias="upsConfiOutputPower" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.7" instance="0" alias="upsConfiLowBattTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.8" instance="0" alias="upsConfiAudibStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.9" instance="0" alias="upsConLowVolTraPoin" type="integer"/>
+      <mibObj oid=".1.3.6.1.2.1.33.1.9.10" instance="0" alias="upsConHigVolTraPoin" type="integer"/>
+   </group>
+</datacollection-group>
