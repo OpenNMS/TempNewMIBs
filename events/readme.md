@@ -1,1 +1,1 @@
-This folder is for event mibs
+This folder is for events
