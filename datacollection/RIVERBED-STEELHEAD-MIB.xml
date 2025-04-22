@@ -1,0 +1,233 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="STEELHEAD-MIB">
+   <resourceType name="procEntry" label="procEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="peerEntry" label="peerEntry" resourceLabel="${peerAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="neighborEntry" label="neighborEntry" resourceLabel="${neighborAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="crlEntry" label="crlEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpuIndivUtilEntry" label="cpuIndivUtilEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="bwPortEntry" label="bwPortEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ttTalkersEntry" label="ttTalkersEntry" resourceLabel="${ttTalkerIp1} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ttSrcHostEntry" label="ttSrcHostEntry" resourceLabel="${ttSrcHostIp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ttDestHostEntry" label="ttDestHostEntry" resourceLabel="${ttDestHostIp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ttAppPortEntry" label="ttAppPortEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="bwHCPortEntry" label="bwHCPortEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="system" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.1.1" instance="0" alias="model" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.1.2" instance="0" alias="serialNumber" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.1.3" instance="0" alias="systemVersion" type="octetstring"/>
+   </group>
+   <group name="status" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.1" instance="0" alias="systemClock" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.2" instance="0" alias="health" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.3" instance="0" alias="serviceStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.4" instance="0" alias="serviceUptime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.7" instance="0" alias="systemHealth" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.8" instance="0" alias="optServiceStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.9" instance="0" alias="systemTemperature" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.10" instance="0" alias="healthNotes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.14" instance="0" alias="asymRouteCount" type="integer"/>
+   </group>
+   <group name="procTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.5.1.1" instance="procEntry" alias="procIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.5.1.2" instance="procEntry" alias="procName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.5.1.3" instance="procEntry" alias="procStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.5.1.4" instance="procEntry" alias="procNumFailures" type="integer"/>
+   </group>
+   <group name="peerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.6.1.1.1" instance="peerEntry" alias="peerIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.6.1.1.2" instance="peerEntry" alias="peerHostname" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.6.1.1.3" instance="peerEntry" alias="peerVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.6.1.1.4" instance="peerEntry" alias="peerAddress" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.6.1.1.5" instance="peerEntry" alias="peerModel" type="octetstring"/>
+   </group>
+   <group name="neighborTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.1" instance="neighborEntry" alias="neighborIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.2" instance="neighborEntry" alias="neighborAddress" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.3" instance="neighborEntry" alias="neighborState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.4" instance="neighborEntry" alias="neighborNatReqSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.5" instance="neighborEntry" alias="neighborNatDelSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.6" instance="neighborEntry" alias="neighborNatAckRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.7" instance="neighborEntry" alias="neighborNatReqRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.8" instance="neighborEntry" alias="neighborNatDelRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.9" instance="neighborEntry" alias="neighborNatAckSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.10" instance="neighborEntry" alias="neighborDynReqSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.11" instance="neighborEntry" alias="neighborDynDelSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.12" instance="neighborEntry" alias="neighborDynAckRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.13" instance="neighborEntry" alias="neighborDynReqRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.14" instance="neighborEntry" alias="neighborDynDelRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.15" instance="neighborEntry" alias="neighborDynAckSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.16" instance="neighborEntry" alias="neighboRedirReqSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.17" instance="neighborEntry" alias="neighboRedirDelSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.18" instance="neighborEntry" alias="neighboRedirAckRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.19" instance="neighborEntry" alias="neighboRedirReqRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.20" instance="neighborEntry" alias="neighboRedirDelRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.21" instance="neighborEntry" alias="neighboRedirAckSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.22" instance="neighborEntry" alias="neighboConnFailures" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.23" instance="neighborEntry" alias="neighbKeepalTimeout" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.24" instance="neighborEntry" alias="neighbRequesTimeout" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.1.1.25" instance="neighborEntry" alias="neighborMaxLatency" type="integer"/>
+   </group>
+   <group name="neighborAggregates" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.1" instance="0" alias="nghAggrConfigured" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.2" instance="0" alias="nghAggrConnected" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.3" instance="0" alias="nghAggrConnFailures" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.4" instance="0" alias="nghAggrKeepalTimout" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.5" instance="0" alias="nghAggrRequesTimeou" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.6" instance="0" alias="nghAggrMaxLatency" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.7" instance="0" alias="nghAggrNatReqSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.8" instance="0" alias="nghAggrNatDelSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.9" instance="0" alias="nghAggrNatAckRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.10" instance="0" alias="nghAggrNatReqRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.11" instance="0" alias="nghAggrNatDelRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.12" instance="0" alias="nghAggrNatAckSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.13" instance="0" alias="nghAggrDynReqSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.14" instance="0" alias="nghAggrDynDelSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.15" instance="0" alias="nghAggrDynAckRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.16" instance="0" alias="nghAggrDynReqRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.17" instance="0" alias="nghAggrDynDelRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.18" instance="0" alias="nghAggrDynAckSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.19" instance="0" alias="nghAggrRedirReqSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.20" instance="0" alias="nghAggrRedirDelSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.21" instance="0" alias="nghAggrRedirAckRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.22" instance="0" alias="nghAggrRedirReqRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.23" instance="0" alias="nghAggrRedirDelRcvd" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.12.2.24" instance="0" alias="nghAggrRedirAckSent" type="counter32"/>
+   </group>
+   <group name="crlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.11.1.1.1" instance="crlEntry" alias="crlIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.11.1.1.2" instance="crlEntry" alias="crlFeatureName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.11.1.1.3" instance="crlEntry" alias="crlNumCdpErr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.11.1.1.4" instance="crlEntry" alias="crlErrMsg" type="octetstring"/>
+   </group>
+   <group name="capabilityStatus" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.13.1" instance="0" alias="shMaxConnections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.2.13.2" instance="0" alias="shMaxBandwidth" type="counter64"/>
+   </group>
+   <group name="config" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.3.1" instance="0" alias="activeConfig" type="octetstring"/>
+   </group>
+   <group name="inpath" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.3.2.1" instance="0" alias="inpathSupport" type="integer"/>
+   </group>
+   <group name="outofpath" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.3.3.1" instance="0" alias="outofpathSupport" type="integer"/>
+   </group>
+   <group name="datastoreSync" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.3.4.1" instance="0" alias="datastoreSyncPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.3.4.2" instance="0" alias="datastoreSyncAddr" type="string"/>
+   </group>
+   <group name="cpuLoad" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.1" instance="0" alias="cpuLoad1" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.2" instance="0" alias="cpuLoad5" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.3" instance="0" alias="cpuLoad15" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.4" instance="0" alias="cpuUtil1" type="integer"/>
+   </group>
+   <group name="cpuIndivUtilTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.5.1.1" instance="cpuIndivUtilEntry" alias="cpuIndivIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.5.1.2" instance="cpuIndivUtilEntry" alias="cpuIndivId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.5.1.3" instance="cpuIndivUtilEntry" alias="cpuIndivIdleTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.5.1.4" instance="cpuIndivUtilEntry" alias="cpuIndivSystemTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.1.5.1.5" instance="cpuIndivUtilEntry" alias="cpuIndivUserTime" type="integer"/>
+   </group>
+   <group name="connectionCounts" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.2.1" instance="0" alias="optimizedConnection" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.2.2" instance="0" alias="passthrouConnection" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.2.3" instance="0" alias="halfOpenedConnectio" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.2.4" instance="0" alias="halfClosedConnectio" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.2.5" instance="0" alias="establishConnection" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.2.6" instance="0" alias="activeConnections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.2.7" instance="0" alias="totalConnections" type="integer"/>
+   </group>
+   <group name="bandwidthAggregate" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.1.1" instance="0" alias="bwAggInLan" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.1.2" instance="0" alias="bwAggInWan" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.1.3" instance="0" alias="bwAggOutLan" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.1.4" instance="0" alias="bwAggOutWan" type="counter32"/>
+   </group>
+   <group name="bwPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.2.1.1.1" instance="bwPortEntry" alias="bwPortNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.2.1.1.2" instance="bwPortEntry" alias="bwPortInLan" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.2.1.1.3" instance="bwPortEntry" alias="bwPortInWan" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.2.1.1.4" instance="bwPortEntry" alias="bwPortOutLan" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.2.1.1.5" instance="bwPortEntry" alias="bwPortOutWan" type="counter32"/>
+   </group>
+   <group name="bandwidthPassThrough" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.3.1" instance="0" alias="bwPassThroughIn" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.3.2" instance="0" alias="bwPassThroughOut" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.3.3.3" instance="0" alias="bwPassThroughTotal" type="counter64"/>
+   </group>
+   <group name="datastore" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.4.1" instance="0" alias="dsHitsTotal" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.4.2" instance="0" alias="dsMissTotal" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.4.3" instance="0" alias="dsCostPerSegment" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.4.4" instance="0" alias="dsAveDiskUtilizatio" type="integer"/>
+   </group>
+   <group name="ttTalkersTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.1.1.1" instance="ttTalkersEntry" alias="ttTalkerId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.1.1.2" instance="ttTalkersEntry" alias="ttTalkerIp1" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.1.1.3" instance="ttTalkersEntry" alias="ttTalkerPort1" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.1.1.4" instance="ttTalkersEntry" alias="ttTalkerIp2" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.1.1.5" instance="ttTalkersEntry" alias="ttTalkerPort2" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.1.1.6" instance="ttTalkersEntry" alias="ttTalkerByteCount" type="counter64"/>
+   </group>
+   <group name="ttSrcHostTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.2.1.1" instance="ttSrcHostEntry" alias="ttSrcHostId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.2.1.2" instance="ttSrcHostEntry" alias="ttSrcHostIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.2.1.3" instance="ttSrcHostEntry" alias="ttSrcHostByteCount" type="counter64"/>
+   </group>
+   <group name="ttDestHostTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.3.1.1" instance="ttDestHostEntry" alias="ttDestHostId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.3.1.2" instance="ttDestHostEntry" alias="ttDestHostIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.3.1.3" instance="ttDestHostEntry" alias="ttDestHostByteCount" type="counter64"/>
+   </group>
+   <group name="ttAppPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.4.1.1" instance="ttAppPortEntry" alias="ttAppPortId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.4.1.2" instance="ttAppPortEntry" alias="ttAppPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.5.4.1.3" instance="ttAppPortEntry" alias="ttAppPortByteCount" type="counter64"/>
+   </group>
+   <group name="bandwidthHCAggregate" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.1.1" instance="0" alias="bwHCAggInLan" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.1.2" instance="0" alias="bwHCAggInWan" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.1.3" instance="0" alias="bwHCAggOutLan" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.1.4" instance="0" alias="bwAggHCOutWan" type="counter64"/>
+   </group>
+   <group name="bwHCPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.2.1.1.1" instance="bwHCPortEntry" alias="bwHCPortNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.2.1.1.2" instance="bwHCPortEntry" alias="bwHCPortInLan" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.2.1.1.3" instance="bwHCPortEntry" alias="bwHCPortInWan" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.2.1.1.4" instance="bwHCPortEntry" alias="bwHCPortOutLan" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.17163.1.1.5.6.2.1.1.5" instance="bwHCPortEntry" alias="bwHCPortOutWan" type="counter64"/>
+   </group>
+</datacollection-group>
