@@ -1,0 +1,127 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="UBNT-AirMAX-MIB">
+   <resourceType name="ubntRadioEntry" label="ubntRadioEntry" resourceLabel="${ubntRadioMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ubntRadioRssiEntry" label="ubntRadioRssiEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ubntAirMaxEntry" label="ubntAirMaxEntry" resourceLabel="${ubntAirMaxEnabled} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ubntAirSyncEntry" label="ubntAirSyncEntry" resourceLabel="${ubntAirSyncMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ubntAirSelEntry" label="ubntAirSelEntry" resourceLabel="${ubntAirSelEnabled} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ubntWlStatEntry" label="ubntWlStatEntry" resourceLabel="${ubntWlStatHideSsid} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ubntStaEntry" label="ubntStaEntry" resourceLabel="${ubntStaLastIp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="ubntRadioTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.1" instance="ubntRadioEntry" alias="ubntRadioIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.2" instance="ubntRadioEntry" alias="ubntRadioMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.3" instance="ubntRadioEntry" alias="ubntRadioCCode" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.4" instance="ubntRadioEntry" alias="ubntRadioFreq" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.5" instance="ubntRadioEntry" alias="ubntRadioDfsEnabled" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.6" instance="ubntRadioEntry" alias="ubntRadioTxPower" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.7" instance="ubntRadioEntry" alias="ubntRadioDistance" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.8" instance="ubntRadioEntry" alias="ubntRadioChainmask" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.1.1.9" instance="ubntRadioEntry" alias="ubntRadioAntenna" type="octetstring"/>
+   </group>
+   <group name="ubntRadioRssiTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.2.1.1" instance="ubntRadioRssiEntry" alias="ubntRadioRssiIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.2.1.2" instance="ubntRadioRssiEntry" alias="ubntRadioRssi" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.2.1.3" instance="ubntRadioRssiEntry" alias="ubntRadioRssiMgmt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.2.1.4" instance="ubntRadioRssiEntry" alias="ubntRadioRssiExt" type="integer32"/>
+   </group>
+   <group name="ubntAirMaxTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.1" instance="ubntAirMaxEntry" alias="ubntAirMaxIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.2" instance="ubntAirMaxEntry" alias="ubntAirMaxEnabled" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.3" instance="ubntAirMaxEntry" alias="ubntAirMaxQuality" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.4" instance="ubntAirMaxEntry" alias="ubntAirMaxCapacity" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.5" instance="ubntAirMaxEntry" alias="ubntAirMaxPriority" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.6" instance="ubntAirMaxEntry" alias="ubntAirMaxNoAck" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.7" instance="ubntAirMaxEntry" alias="ubntAirMaxAirtime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.8" instance="ubntAirMaxEntry" alias="ubntAirMaxGpsSync" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.6.1.9" instance="ubntAirMaxEntry" alias="ubntAirMaxTdd" type="string"/>
+   </group>
+   <group name="ubntAirSyncTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.3.1.1" instance="ubntAirSyncEntry" alias="ubntAirSyncIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.3.1.2" instance="ubntAirSyncEntry" alias="ubntAirSyncMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.3.1.3" instance="ubntAirSyncEntry" alias="ubntAirSyncCount" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.3.1.4" instance="ubntAirSyncEntry" alias="ubntAirSyncDownUtil" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.3.1.5" instance="ubntAirSyncEntry" alias="ubntAirSyncUpUtil" type="integer32"/>
+   </group>
+   <group name="ubntAirSelTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.4.1.1" instance="ubntAirSelEntry" alias="ubntAirSelIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.4.1.2" instance="ubntAirSelEntry" alias="ubntAirSelEnabled" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.4.1.3" instance="ubntAirSelEntry" alias="ubntAirSelInterval" type="integer32"/>
+   </group>
+   <group name="ubntWlStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.1" instance="ubntWlStatEntry" alias="ubntWlStatIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.2" instance="ubntWlStatEntry" alias="ubntWlStatSsid" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.3" instance="ubntWlStatEntry" alias="ubntWlStatHideSsid" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.4" instance="ubntWlStatEntry" alias="ubntWlStatApMac" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.5" instance="ubntWlStatEntry" alias="ubntWlStatSignal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.6" instance="ubntWlStatEntry" alias="ubntWlStatRssi" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.7" instance="ubntWlStatEntry" alias="ubntWlStatCcq" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.8" instance="ubntWlStatEntry" alias="ubntWlStatNoisFloor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.9" instance="ubntWlStatEntry" alias="ubntWlStatTxRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.10" instance="ubntWlStatEntry" alias="ubntWlStatRxRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.11" instance="ubntWlStatEntry" alias="ubntWlStatSecurity" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.12" instance="ubntWlStatEntry" alias="ubntWlStatWdsEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.13" instance="ubntWlStatEntry" alias="ubntWlStatApRepeate" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.14" instance="ubntWlStatEntry" alias="ubntWlStatChanWidth" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.5.1.15" instance="ubntWlStatEntry" alias="ubntWlStatStaCount" type="gauge32"/>
+   </group>
+   <group name="ubntStaTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.1" instance="ubntStaEntry" alias="ubntStaMac" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.2" instance="ubntStaEntry" alias="ubntStaName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.3" instance="ubntStaEntry" alias="ubntStaSignal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.4" instance="ubntStaEntry" alias="ubntStaNoiseFloor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.5" instance="ubntStaEntry" alias="ubntStaDistance" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.6" instance="ubntStaEntry" alias="ubntStaCcq" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.7" instance="ubntStaEntry" alias="ubntStaAmp" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.8" instance="ubntStaEntry" alias="ubntStaAmq" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.9" instance="ubntStaEntry" alias="ubntStaAmc" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.10" instance="ubntStaEntry" alias="ubntStaLastIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.11" instance="ubntStaEntry" alias="ubntStaTxRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.12" instance="ubntStaEntry" alias="ubntStaRxRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.13" instance="ubntStaEntry" alias="ubntStaTxBytes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.14" instance="ubntStaEntry" alias="ubntStaRxBytes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.15" instance="ubntStaEntry" alias="ubntStaConnTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.16" instance="ubntStaEntry" alias="ubntStaLocalCINR" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.17" instance="ubntStaEntry" alias="ubntStaTxCapacity" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.18" instance="ubntStaEntry" alias="ubntStaRxCapacity" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.19" instance="ubntStaEntry" alias="ubntStaTxAirtime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.20" instance="ubntStaEntry" alias="ubntStaRxAirtime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.7.1.21" instance="ubntStaEntry" alias="ubntStaTxLatency" type="integer32"/>
+   </group>
+   <group name="ubntHostInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.8.1" instance="0" alias="ubntHostLocaltime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.8.2" instance="0" alias="ubntHostNetrole" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.8.3" instance="0" alias="ubntHostCpuLoad" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.8.4" instance="0" alias="ubntHostTemperature" type="integer32"/>
+   </group>
+   <group name="ubntGpsInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.1" instance="0" alias="ubntGpsStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.2" instance="0" alias="ubntGpsFix" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.3" instance="0" alias="ubntGpsLat" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.4" instance="0" alias="ubntGpsLon" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.5" instance="0" alias="ubntGpsAltMeters" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.6" instance="0" alias="ubntGpsAltFeet" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.7" instance="0" alias="ubntGpsSatsVisible" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.8" instance="0" alias="ubntGpsSatsTracked" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.4.9.9" instance="0" alias="ubntGpsHDOP" type="octetstring"/>
+   </group>
+</datacollection-group>
