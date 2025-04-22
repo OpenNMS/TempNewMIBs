@@ -1,0 +1,76 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="UBNT-UniFi-MIB">
+   <resourceType name="unifiIfEntry" label="unifiIfEntry" resourceLabel="${unifiIfFullDuplex} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="unifiRadioEntry" label="unifiRadioEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="unifiVapEntry" label="unifiVapEntry" resourceLabel="${unifiVapUp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="unifiIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.1" instance="unifiIfEntry" alias="unifiIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.2" instance="unifiIfEntry" alias="unifiIfFullDuplex" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.3" instance="unifiIfEntry" alias="unifiIfIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.4" instance="unifiIfEntry" alias="unifiIfMac" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.5" instance="unifiIfEntry" alias="unifiIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.6" instance="unifiIfEntry" alias="unifiIfRxBytes" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.7" instance="unifiIfEntry" alias="unifiIfRxDropped" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.8" instance="unifiIfEntry" alias="unifiIfRxError" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.9" instance="unifiIfEntry" alias="unifiIfRxMulticast" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.10" instance="unifiIfEntry" alias="unifiIfRxPackets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.11" instance="unifiIfEntry" alias="unifiIfSpeed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.12" instance="unifiIfEntry" alias="unifiIfTxBytes" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.13" instance="unifiIfEntry" alias="unifiIfTxDropped" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.14" instance="unifiIfEntry" alias="unifiIfTxError" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.15" instance="unifiIfEntry" alias="unifiIfTxPackets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.2.1.1.16" instance="unifiIfEntry" alias="unifiIfUp" type="string"/>
+   </group>
+   <group name="unifiRadioTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.1" instance="unifiRadioEntry" alias="unifiRadioIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.2" instance="unifiRadioEntry" alias="unifiRadioName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.3" instance="unifiRadioEntry" alias="unifiRadioRadio" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.4" instance="unifiRadioEntry" alias="unifiRadioRxPackets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.5" instance="unifiRadioEntry" alias="unifiRadioTxPackets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.6" instance="unifiRadioEntry" alias="unifiRadioCuTotal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.7" instance="unifiRadioEntry" alias="unifiRadioCuSelfRx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.8" instance="unifiRadioEntry" alias="unifiRadioCuSelfTx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.1.1.9" instance="unifiRadioEntry" alias="unifiRadioOtherBss" type="integer32"/>
+   </group>
+   <group name="unifiVapTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.1" instance="unifiVapEntry" alias="unifiVapIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.2" instance="unifiVapEntry" alias="unifiVapBssId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.3" instance="unifiVapEntry" alias="unifiVapCcq" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.4" instance="unifiVapEntry" alias="unifiVapChannel" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.5" instance="unifiVapEntry" alias="unifiVapExtChannel" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.6" instance="unifiVapEntry" alias="unifiVapEssId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.7" instance="unifiVapEntry" alias="unifiVapName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.8" instance="unifiVapEntry" alias="unifiVapNumStations" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.9" instance="unifiVapEntry" alias="unifiVapRadio" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.10" instance="unifiVapEntry" alias="unifiVapRxBytes" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.11" instance="unifiVapEntry" alias="unifiVapRxCrypts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.12" instance="unifiVapEntry" alias="unifiVapRxDropped" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.13" instance="unifiVapEntry" alias="unifiVapRxErrors" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.14" instance="unifiVapEntry" alias="unifiVapRxFrags" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.15" instance="unifiVapEntry" alias="unifiVapRxPackets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.16" instance="unifiVapEntry" alias="unifiVapTxBytes" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.17" instance="unifiVapEntry" alias="unifiVapTxDropped" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.18" instance="unifiVapEntry" alias="unifiVapTxErrors" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.19" instance="unifiVapEntry" alias="unifiVapTxPackets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.20" instance="unifiVapEntry" alias="unifiVapTxRetries" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.21" instance="unifiVapEntry" alias="unifiVapTxPower" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.22" instance="unifiVapEntry" alias="unifiVapUp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.1.2.1.23" instance="unifiVapEntry" alias="unifiVapUsage" type="octetstring"/>
+   </group>
+   <group name="unifiApSystem" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.3.1" instance="0" alias="unifiApSystemIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.3.2" instance="0" alias="unifiApSystemIsolat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.3.3" instance="0" alias="unifiApSystemModel" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.3.4" instance="0" alias="unifiApSystemUplink" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.3.5" instance="0" alias="unifiApSystemUptime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.6.3.6" instance="0" alias="unifiApSystemVersio" type="octetstring"/>
+   </group>
+</datacollection-group>

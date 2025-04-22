@@ -1,0 +1,11 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="UBNT-MIB">
+   <resourceType name="ubntOREntry" label="ubntOREntry" resourceLabel="${ubntORID} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="ubntORTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.41112.1.1.1.1" instance="ubntOREntry" alias="ubntORIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.1.1.2" instance="ubntOREntry" alias="ubntORID" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.41112.1.1.1.3" instance="ubntOREntry" alias="ubntORDescr" type="octetstring"/>
+   </group>
+</datacollection-group>
