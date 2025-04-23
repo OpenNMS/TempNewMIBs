@@ -1,0 +1,2018 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CHECKPOINT-MIB">
+   <resourceType name="vsxStatusEntry" label="vsxStatusEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vsxStatusCPUUsageEntry" label="vsxStatusCPUUsageEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vsxStatusMemoryUsageEntry" label="vsxStatusMemoryUsageEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vsxStatusCPUUsagePerCPUEntry" label="vsxStatusCPUUsagePerCPUEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vsxCountersEntry" label="vsxCountersEntry" resourceLabel="${vsxCountersIsDataValid} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="raUsersEntry" label="raUsersEntry" resourceLabel="${raInternalIpAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="tunnelEntry" label="tunnelEntry" resourceLabel="${tunnelPeerIpAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="permanentTunnelEntry" label="permanentTunnelEntry" resourceLabel="${permanentTunnelPeerIpAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fwIfEntry" label="fwIfEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fwIfEntry64" label="fwIfEntry64" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fwNetIfEntry" label="fwNetIfEntry" resourceLabel="${fwNetIfIPAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fwLSConnEntry" label="fwLSConnEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgIfEntry" label="fgIfEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="haIfEntry" label="haIfEntry" resourceLabel="${haIP} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="haProblemEntry" label="haProblemEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="haClusterIpEntry" label="haClusterIpEntry" resourceLabel="${haClusterIpAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="haClusterSyncEntry" label="haClusterSyncEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="updatesInstalledEntry" label="updatesInstalledEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="updatesRecommendedEntry" label="updatesRecommendedEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="multiProcEntry" label="multiProcEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="multiDiskEntry" label="multiDiskEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="raidVolumeEntry" label="raidVolumeEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="raidDiskEntry" label="raidDiskEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="tempertureSensorEntry" label="tempertureSensorEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fanSpeedSensorEntry" label="fanSpeedSensorEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="voltageSensorEntry" label="voltageSensorEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="powerSupplyEntry" label="powerSupplyEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="routingEntry" label="routingEntry" resourceLabel="${routingDest} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="licensingEntry" label="licensingEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="svnNetIfTableEntry" label="svnNetIfTableEntry" resourceLabel="${svnNetIfAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vsRoutingEntry" label="vsRoutingEntry" resourceLabel="${vsRoutingDest} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="mgConnectedClientsEntry" label="mgConnectedClientsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="mgConnectedGatewaysEntry" label="mgConnectedGatewaysEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="lsConnectedGatewaysEntry" label="lsConnectedGatewaysEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="lsConnectedClientsEntry" label="lsConnectedClientsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aviEngineEntry" label="aviEngineEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aviTopVirusesEntry" label="aviTopVirusesEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aviTopEverVirusesEntry" label="aviTopEverVirusesEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aviHTTPTopVirusesEntry" label="aviHTTPTopVirusesEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aviFTPTopVirusesEntry" label="aviFTPTopVirusesEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aviSMTPTopVirusesEntry" label="aviSMTPTopVirusesEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aviPOP3TopVirusesEntry" label="aviPOP3TopVirusesEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpsemdCorrelationUnitEntry" label="cpsemdCorrelationUnitEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpseadJobsEntry" label="cpseadJobsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ufTopBlockedCatEntry" label="ufTopBlockedCatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ufTopBlockedSiteEntry" label="ufTopBlockedSiteEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ufTopBlockedUserEntry" label="ufTopBlockedUserEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="voipDOSSipRateLimitingEntry" label="voipDOSSipRateLimitingEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="identityAwarenessDistributedEnvEntry" label="identityAwarenessDistributedEnvEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="identityAwarenessADQueryStatusEntry" label="identityAwarenessADQueryStatusEntry" resourceLabel="${identityAwarenessADQueryStatusDomainIP} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="exchangeAgentsStatusEntry" label="exchangeAgentsStatusEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="thresholdActiveEventsEntry" label="thresholdActiveEventsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="thresholdDestinationsEntry" label="thresholdDestinationsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="thresholdErrorsEntry" label="thresholdErrorsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="vsx" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.11" instance="0" alias="vsxVsSupported" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.12" instance="0" alias="vsxVsConfigured" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.13" instance="0" alias="vsxVsInstalled" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.14" instance="0" alias="vsxVrfConfigured" type="integer"/>
+   </group>
+   <group name="vsxStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.1" instance="vsxStatusEntry" alias="vsxStatusVSId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.2" instance="vsxStatusEntry" alias="vsxStatusVRId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.3" instance="vsxStatusEntry" alias="vsxStatusVsName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.4" instance="vsxStatusEntry" alias="vsxStatusVsType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.5" instance="vsxStatusEntry" alias="vsxStatusMainIP" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.6" instance="vsxStatusEntry" alias="vsxStatusPolicyName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.7" instance="vsxStatusEntry" alias="vsxStatuVsPolicType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.8" instance="vsxStatusEntry" alias="vsxStatSicTrusState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.9" instance="vsxStatusEntry" alias="vsxStatusHAState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.1.1.10" instance="vsxStatusEntry" alias="vsxStatusVSWeight" type="integer"/>
+   </group>
+   <group name="vsxStatusCPUUsageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.2.1.1" instance="vsxStatusCPUUsageEntry" alias="vsxStatCPUUsage1sec" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.2.1.2" instance="vsxStatusCPUUsageEntry" alias="vsxStatCPUUsag10sec" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.2.1.3" instance="vsxStatusCPUUsageEntry" alias="vsxStatCPUUsage1min" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.2.1.4" instance="vsxStatusCPUUsageEntry" alias="vsxStatuCPUUsage1hr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.2.1.5" instance="vsxStatusCPUUsageEntry" alias="vsxStatCPUUsage24hr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.2.1.6" instance="vsxStatusCPUUsageEntry" alias="vsxStatCPUUsageVSId" type="integer"/>
+   </group>
+   <group name="vsxStatusMemoryUsageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.3.1.1" instance="vsxStatusMemoryUsageEntry" alias="vsxStatMemoUsagVSId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.3.1.2" instance="vsxStatusMemoryUsageEntry" alias="vsxStaMemUsagVSName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.3.1.3" instance="vsxStatusMemoryUsageEntry" alias="vsxStatuMemoryUsage" type="integer"/>
+   </group>
+   <group name="vsxStatusCPUUsagePerCPUTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.1" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStaCPUUsaPerCPUId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.2" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStCPUUsaPerCPUNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.3" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStCPUsPeCPUCorNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.4" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStCPUsaPerCPU1sec" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.5" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStCPUsPerCPU10sec" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.6" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStCPUsaPerCPU1min" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.7" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStCPUsaPerCPU1hou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.22.4.1.8" instance="vsxStatusCPUUsagePerCPUEntry" alias="vsStCPUsPerCPU24hou" type="integer"/>
+   </group>
+   <group name="vsxCountersTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.1" instance="vsxCountersEntry" alias="vsxCountersVSId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.2" instance="vsxCountersEntry" alias="vsxCountersConnNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.3" instance="vsxCountersEntry" alias="vsxCountConnPeakNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.4" instance="vsxCountersEntry" alias="vsxCounConnTablLimi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.5" instance="vsxCountersEntry" alias="vsxCountersPackets" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.6" instance="vsxCountersEntry" alias="vsxCountDroppeTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.7" instance="vsxCountersEntry" alias="vsxCountAcceptTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.8" instance="vsxCountersEntry" alias="vsxCountRejectTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.9" instance="vsxCountersEntry" alias="vsxCounByteAcceTota" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.10" instance="vsxCountersEntry" alias="vsxCounByteDropTota" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.11" instance="vsxCountersEntry" alias="vsxCounByteRejeTota" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.12" instance="vsxCountersEntry" alias="vsxCountLoggedTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.16.23.1.1.13" instance="vsxCountersEntry" alias="vsxCountIsDataValid" type="string"/>
+   </group>
+   <group name="raUsersTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.1" instance="raUsersEntry" alias="raInternalIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.19" instance="raUsersEntry" alias="raExternalIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.20" instance="raUsersEntry" alias="raUserState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.21" instance="raUsersEntry" alias="raOfficeMode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.22" instance="raUsersEntry" alias="raIkeOverTCP" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.23" instance="raUsersEntry" alias="raUseUDPEncap" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.24" instance="raUsersEntry" alias="raVisitorMode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.25" instance="raUsersEntry" alias="raRouteTraffic" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.26" instance="raUsersEntry" alias="raCommunity" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.27" instance="raUsersEntry" alias="raTunnelEncAlgorith" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.28" instance="raUsersEntry" alias="raTunnelAuthMethod" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9000.1.29" instance="raUsersEntry" alias="raLogonTime" type="integer"/>
+   </group>
+   <group name="tunnelTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.1" instance="tunnelEntry" alias="tunnelPeerIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.2" instance="tunnelEntry" alias="tunnelPeerObjName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.3" instance="tunnelEntry" alias="tunnelState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.4" instance="tunnelEntry" alias="tunnelCommunity" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.5" instance="tunnelEntry" alias="tunnelNextHop" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.6" instance="tunnelEntry" alias="tunnelInterface" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.7" instance="tunnelEntry" alias="tunnelSourceIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.8" instance="tunnelEntry" alias="tunnelLinkPriority" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.9" instance="tunnelEntry" alias="tunnelProbState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.10" instance="tunnelEntry" alias="tunnelPeerType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9002.1.11" instance="tunnelEntry" alias="tunnelType" type="string"/>
+   </group>
+   <group name="permanentTunnelTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.1" instance="permanentTunnelEntry" alias="permTunnePeerIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.2" instance="permanentTunnelEntry" alias="permTunnPeerObjName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.3" instance="permanentTunnelEntry" alias="permanenTunnelState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.4" instance="permanentTunnelEntry" alias="permanTunnelCommuni" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.5" instance="permanentTunnelEntry" alias="permanTunnelNextHop" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.6" instance="permanentTunnelEntry" alias="permanTunnelInterfa" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.7" instance="permanentTunnelEntry" alias="permTunnSourcIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.8" instance="permanentTunnelEntry" alias="permaTunneLinkPrior" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.9" instance="permanentTunnelEntry" alias="permaTunneProbState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.500.9003.1.10" instance="permanentTunnelEntry" alias="permaTunnelPeerType" type="string"/>
+   </group>
+   <group name="fw" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.1" instance="0" alias="fwModuleState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.2" instance="0" alias="fwFilterName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.3" instance="0" alias="fwFilterDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.4" instance="0" alias="fwAccepted" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.5" instance="0" alias="fwRejected" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.6" instance="0" alias="fwDropped" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.7" instance="0" alias="fwLogged" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.8" instance="0" alias="fwMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.9" instance="0" alias="fwMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.10" instance="0" alias="fwProduct" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.11" instance="0" alias="fwEvent" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.12" instance="0" alias="fwSICTrustState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.21" instance="0" alias="fwProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.22" instance="0" alias="fwVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.23" instance="0" alias="fwVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.24" instance="0" alias="fwKernelBuild" type="integer"/>
+   </group>
+   <group name="fwPolicyStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.1" instance="0" alias="fwPolicyName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.2" instance="0" alias="fwInstallTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.3" instance="0" alias="fwNumConn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.4" instance="0" alias="fwPeakNumConn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.10" instance="0" alias="fwConnTableLimit" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.6" instance="0" alias="fwAcceptedTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.16" instance="0" alias="fwDroppedTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.14" instance="0" alias="fwRejectedTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.13" instance="0" alias="fwLoggedTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.8" instance="0" alias="fwAccepteBytesTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.9" instance="0" alias="fwDroppedBytesTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.15" instance="0" alias="fwRejecteBytesTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.20" instance="0" alias="fwAccepteBytesRates" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.21" instance="0" alias="fwAcceptePcktsRates" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.22" instance="0" alias="fwConnsRate" type="octetstring"/>
+   </group>
+   <group name="fwIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.1" instance="fwIfEntry" alias="fwIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.2" instance="fwIfEntry" alias="fwIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.5" instance="fwIfEntry" alias="fwAcceptPcktsIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.6" instance="fwIfEntry" alias="fwAcceptPcktsOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.7" instance="fwIfEntry" alias="fwAcceptBytesIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.8" instance="fwIfEntry" alias="fwAcceptBytesOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.9" instance="fwIfEntry" alias="fwDropPcktsIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.10" instance="fwIfEntry" alias="fwDropPcktsOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.11" instance="fwIfEntry" alias="fwRejectPcktsIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.12" instance="fwIfEntry" alias="fwRejectPcktsOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.13" instance="fwIfEntry" alias="fwLogIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.5.1.14" instance="fwIfEntry" alias="fwLogOut" type="integer"/>
+   </group>
+   <group name="fwIfTable64" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.1" instance="fwIfEntry64" alias="fwIfIndex64" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.2" instance="fwIfEntry64" alias="fwIfName64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.5" instance="fwIfEntry64" alias="fwAcceptPcktsIn64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.6" instance="fwIfEntry64" alias="fwAcceptPcktsOut64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.7" instance="fwIfEntry64" alias="fwAcceptBytesIn64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.8" instance="fwIfEntry64" alias="fwAcceptBytesOut64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.9" instance="fwIfEntry64" alias="fwDropPcktsIn64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.10" instance="fwIfEntry64" alias="fwDropPcktsOut64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.11" instance="fwIfEntry64" alias="fwRejectPcktsIn64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.12" instance="fwIfEntry64" alias="fwRejectPcktsOut64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.13" instance="fwIfEntry64" alias="fwLogIn64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.25.25.1.14" instance="fwIfEntry64" alias="fwLogOut64" type="octetstring"/>
+   </group>
+   <group name="fwHmem" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.1" instance="0" alias="fwHmem-block-size" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.2" instance="0" alias="fwHmem-reques-bytes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.3" instance="0" alias="fwHme-ini-allo-byte" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.4" instance="0" alias="fwHme-ini-allo-bloc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.5" instance="0" alias="fwHme-ini-allo-pool" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.6" instance="0" alias="fwHme-cur-allo-byte" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.7" instance="0" alias="fwHme-cur-allo-bloc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.8" instance="0" alias="fwHme-cur-allo-pool" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.9" instance="0" alias="fwHmem-maximu-bytes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.10" instance="0" alias="fwHmem-maximu-pools" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.11" instance="0" alias="fwHmem-bytes-used" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.12" instance="0" alias="fwHmem-blocks-used" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.13" instance="0" alias="fwHmem-bytes-unused" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.14" instance="0" alias="fwHmem-block-unused" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.15" instance="0" alias="fwHmem-bytes-peak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.16" instance="0" alias="fwHmem-blocks-peak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.17" instance="0" alias="fwHme-byte-inte-use" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.18" instance="0" alias="fwHmem-numb-of-item" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.19" instance="0" alias="fwHmem-alloc-operat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.20" instance="0" alias="fwHmem-free-operati" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.21" instance="0" alias="fwHmem-failed-alloc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.1.22" instance="0" alias="fwHmem-failed-free" type="integer"/>
+   </group>
+   <group name="fwKmem" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.1" instance="0" alias="fwKme-syst-phys-mem" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.2" instance="0" alias="fwKme-avai-phys-mem" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.3" instance="0" alias="fwKme-aix-heap-size" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.4" instance="0" alias="fwKmem-bytes-used" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.5" instance="0" alias="fwKme-blo-byte-used" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.6" instance="0" alias="fwKm-no-blo-byt-use" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.7" instance="0" alias="fwKmem-bytes-unused" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.8" instance="0" alias="fwKmem-bytes-peak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.9" instance="0" alias="fwKme-blo-byte-peak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.10" instance="0" alias="fwKm-no-blo-byt-pea" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.11" instance="0" alias="fwKme-byte-inte-use" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.12" instance="0" alias="fwKmem-numb-of-item" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.13" instance="0" alias="fwKmem-alloc-operat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.14" instance="0" alias="fwKmem-free-operati" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.15" instance="0" alias="fwKmem-failed-alloc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.2.16" instance="0" alias="fwKmem-failed-free" type="integer"/>
+   </group>
+   <group name="fwInspect" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.3.1" instance="0" alias="fwInspect-packets" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.3.2" instance="0" alias="fwInspect-operation" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.3.3" instance="0" alias="fwInspect-lookups" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.3.4" instance="0" alias="fwInspect-record" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.3.5" instance="0" alias="fwInspect-extract" type="integer"/>
+   </group>
+   <group name="fwCookies" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.4.1" instance="0" alias="fwCookies-total" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.4.2" instance="0" alias="fwCoo-alloCook-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.4.3" instance="0" alias="fwCoo-freeCook-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.4.4" instance="0" alias="fwCoo-dupfCook-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.4.5" instance="0" alias="fwCoo-getfCook-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.4.6" instance="0" alias="fwCoo-putfCook-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.4.7" instance="0" alias="fwCoo-lenfCook-tota" type="integer"/>
+   </group>
+   <group name="fwChains" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.5.1" instance="0" alias="fwChains-alloc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.5.2" instance="0" alias="fwChains-free" type="integer"/>
+   </group>
+   <group name="fwFragments" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.6.1" instance="0" alias="fwFrag-fragments" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.6.2" instance="0" alias="fwFrag-expired" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.6.3" instance="0" alias="fwFrag-packets" type="integer"/>
+   </group>
+   <group name="fwUfp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.8.1" instance="0" alias="fwUfpHitRatio" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.8.2" instance="0" alias="fwUfpInspected" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.8.3" instance="0" alias="fwUfpHits" type="integer"/>
+   </group>
+   <group name="fwSS-http" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.1" instance="0" alias="fwSS-http-pid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.2" instance="0" alias="fwSS-http-proto" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.3" instance="0" alias="fwSS-http-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.4" instance="0" alias="fwSS-http-logi-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.5" instance="0" alias="fwSS-ht-max-ava-soc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.6" instance="0" alias="fwSS-ht-so-in-us-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.7" instance="0" alias="fwSS-ht-so-in-us-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.8" instance="0" alias="fwSS-ht-so-in-us-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.9" instance="0" alias="fwSS-http-sess-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.10" instance="0" alias="fwSS-http-sess-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.11" instance="0" alias="fwSS-http-sess-coun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.12" instance="0" alias="fwSS-ht-aut-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.13" instance="0" alias="fwSS-ht-aut-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.14" instance="0" alias="fwSS-ht-aut-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.15" instance="0" alias="fwSS-http-acce-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.16" instance="0" alias="fwSS-http-reje-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.17" instance="0" alias="fwSS-http-auth-fail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.18" instance="0" alias="fwSS-ht-op-cv-se-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.19" instance="0" alias="fwSS-ht-op-cv-se-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.20" instance="0" alias="fwSS-ht-op-cv-se-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.21" instance="0" alias="fwSS-ht-op-cv-re-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.22" instance="0" alias="fwSS-ht-ss-en-se-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.23" instance="0" alias="fwSS-ht-ss-en-se-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.24" instance="0" alias="fwSS-ht-ss-en-se-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.25" instance="0" alias="fwSS-ht-tra-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.26" instance="0" alias="fwSS-ht-tra-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.27" instance="0" alias="fwSS-ht-tra-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.28" instance="0" alias="fwSS-ht-pro-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.29" instance="0" alias="fwSS-ht-pro-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.30" instance="0" alias="fwSS-ht-pro-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.31" instance="0" alias="fwSS-ht-tun-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.32" instance="0" alias="fwSS-ht-tun-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.33" instance="0" alias="fwSS-ht-tun-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.34" instance="0" alias="fwSS-ht-ftp-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.35" instance="0" alias="fwSS-ht-ftp-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.36" instance="0" alias="fwSS-ht-ftp-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.37" instance="0" alias="fwSS-http-time-stam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.38" instance="0" alias="fwSS-http-is-alive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.39" instance="0" alias="fwSS-http-block-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.40" instance="0" alias="fwSS-http-bloc-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.41" instance="0" alias="fwSS-http-scan-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.42" instance="0" alias="fwSS-ht-bl-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.43" instance="0" alias="fwSS-ht-bl-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.44" instance="0" alias="fwSS-ht-bl-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.45" instance="0" alias="fwSS-ht-bl-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.46" instance="0" alias="fwSS-http-passe-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.47" instance="0" alias="fwSS-ht-pa-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.48" instance="0" alias="fwSS-ht-pa-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.49" instance="0" alias="fwSS-ht-pa-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.50" instance="0" alias="fwSS-ht-pa-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.51" instance="0" alias="fwSS-http-pass-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.52" instance="0" alias="fwSS-ht-bl-by-AV-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.53" instance="0" alias="fwSS-ht-pa-by-AV-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.54" instance="0" alias="fS-h-bl-by-UR-fi-ca" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.55" instance="0" alias="fS-h-bl-by-UR-bl-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.56" instance="0" alias="fS-h-pa-by-UR-al-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.1.57" instance="0" alias="fS-h-pa-by-UR-fi-ca" type="integer"/>
+   </group>
+   <group name="fwSS-ftp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.1" instance="0" alias="fwSS-ftp-pid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.2" instance="0" alias="fwSS-ftp-proto" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.3" instance="0" alias="fwSS-ftp-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.4" instance="0" alias="fwSS-ftp-logic-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.5" instance="0" alias="fwSS-ft-max-ava-soc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.6" instance="0" alias="fwSS-ft-so-in-us-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.7" instance="0" alias="fwSS-ft-so-in-us-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.8" instance="0" alias="fwSS-ft-so-in-us-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.9" instance="0" alias="fwSS-ftp-sess-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.10" instance="0" alias="fwSS-ftp-sess-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.11" instance="0" alias="fwSS-ftp-sess-count" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.12" instance="0" alias="fwSS-ft-aut-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.13" instance="0" alias="fwSS-ft-aut-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.14" instance="0" alias="fwSS-ft-aut-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.15" instance="0" alias="fwSS-ftp-accep-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.16" instance="0" alias="fwSS-ftp-rejec-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.17" instance="0" alias="fwSS-ftp-auth-failu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.18" instance="0" alias="fwSS-ft-op-cv-se-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.19" instance="0" alias="fwSS-ft-op-cv-se-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.20" instance="0" alias="fwSS-ft-op-cv-se-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.21" instance="0" alias="fwSS-ft-op-cv-re-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.22" instance="0" alias="fwSS-ftp-time-stamp" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.23" instance="0" alias="fwSS-ftp-is-alive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.24" instance="0" alias="fwSS-ftp-blocke-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.25" instance="0" alias="fwSS-ftp-bloc-total" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.26" instance="0" alias="fwSS-ftp-scan-total" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.27" instance="0" alias="fwSS-ft-bl-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.28" instance="0" alias="fwSS-ft-bl-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.29" instance="0" alias="fwSS-ft-bl-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.30" instance="0" alias="fwSS-ft-bl-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.31" instance="0" alias="fwSS-ftp-passed-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.32" instance="0" alias="fwSS-ft-pa-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.33" instance="0" alias="fwSS-ft-pa-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.34" instance="0" alias="fwSS-ft-pa-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.35" instance="0" alias="fwSS-ft-pa-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.36" instance="0" alias="fwSS-ftp-pass-total" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.37" instance="0" alias="fwSS-ft-bl-by-AV-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.2.38" instance="0" alias="fwSS-ft-pa-by-AV-se" type="integer"/>
+   </group>
+   <group name="fwSS-telnet" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.1" instance="0" alias="fwSS-telnet-pid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.2" instance="0" alias="fwSS-telnet-proto" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.3" instance="0" alias="fwSS-telnet-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.4" instance="0" alias="fwSS-teln-logi-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.5" instance="0" alias="fwSS-te-max-ava-soc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.6" instance="0" alias="fwSS-te-so-in-us-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.7" instance="0" alias="fwSS-te-so-in-us-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.8" instance="0" alias="fwSS-te-so-in-us-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.9" instance="0" alias="fwSS-telne-sess-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.10" instance="0" alias="fwSS-teln-sess-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.11" instance="0" alias="fwSS-teln-sess-coun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.12" instance="0" alias="fwSS-te-aut-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.13" instance="0" alias="fwSS-te-aut-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.14" instance="0" alias="fwSS-te-aut-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.15" instance="0" alias="fwSS-teln-acce-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.16" instance="0" alias="fwSS-teln-reje-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.17" instance="0" alias="fwSS-teln-auth-fail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.18" instance="0" alias="fwSS-teln-time-stam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.3.19" instance="0" alias="fwSS-telne-is-alive" type="integer"/>
+   </group>
+   <group name="fwSS-rlogin" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.1" instance="0" alias="fwSS-rlogin-pid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.2" instance="0" alias="fwSS-rlogin-proto" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.3" instance="0" alias="fwSS-rlogin-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.4" instance="0" alias="fwSS-rlog-logi-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.5" instance="0" alias="fwSS-rl-max-ava-soc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.6" instance="0" alias="fwSS-rl-so-in-us-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.7" instance="0" alias="fwSS-rl-so-in-us-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.8" instance="0" alias="fwSS-rl-so-in-us-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.9" instance="0" alias="fwSS-rlogi-sess-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.10" instance="0" alias="fwSS-rlog-sess-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.11" instance="0" alias="fwSS-rlog-sess-coun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.12" instance="0" alias="fwSS-rl-aut-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.13" instance="0" alias="fwSS-rl-aut-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.14" instance="0" alias="fwSS-rl-aut-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.15" instance="0" alias="fwSS-rlog-acce-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.16" instance="0" alias="fwSS-rlog-reje-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.17" instance="0" alias="fwSS-rlog-auth-fail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.18" instance="0" alias="fwSS-rlog-time-stam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.4.19" instance="0" alias="fwSS-rlogi-is-alive" type="integer"/>
+   </group>
+   <group name="fwSS-ufp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.5.1" instance="0" alias="fwSS-uf-op-uf-se-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.5.2" instance="0" alias="fwSS-uf-op-uf-se-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.5.3" instance="0" alias="fwSS-uf-op-uf-se-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.5.4" instance="0" alias="fwSS-uf-op-uf-re-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.5.5" instance="0" alias="fwSS-ufp-time-stamp" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.5.6" instance="0" alias="fwSS-ufp-is-alive" type="integer"/>
+   </group>
+   <group name="fwSS-smtp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.1" instance="0" alias="fwSS-smtp-pid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.2" instance="0" alias="fwSS-smtp-proto" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.3" instance="0" alias="fwSS-smtp-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.4" instance="0" alias="fwSS-smtp-logi-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.5" instance="0" alias="fwSS-sm-max-ava-soc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.6" instance="0" alias="fwSS-sm-so-in-us-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.7" instance="0" alias="fwSS-sm-so-in-us-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.8" instance="0" alias="fwSS-sm-so-in-us-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.9" instance="0" alias="fwSS-smtp-sess-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.10" instance="0" alias="fwSS-smtp-sess-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.11" instance="0" alias="fwSS-smtp-sess-coun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.12" instance="0" alias="fwSS-sm-aut-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.13" instance="0" alias="fwSS-sm-aut-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.14" instance="0" alias="fwSS-sm-aut-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.15" instance="0" alias="fwSS-smtp-acce-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.16" instance="0" alias="fwSS-smtp-reje-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.17" instance="0" alias="fwSS-smtp-auth-fail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.18" instance="0" alias="fwSS-smtp-mail-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.19" instance="0" alias="fwSS-smtp-mail-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.20" instance="0" alias="fwSS-smtp-mail-coun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.21" instance="0" alias="fwSS-sm-out-mai-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.22" instance="0" alias="fwSS-sm-out-mai-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.23" instance="0" alias="fwSS-sm-out-mai-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.24" instance="0" alias="fwSS-sm-ma-ma-on-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.25" instance="0" alias="fwSS-smtp-tota-mail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.26" instance="0" alias="fwSS-smtp-time-stam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.27" instance="0" alias="fwSS-smtp-is-alive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.28" instance="0" alias="fwSS-smtp-block-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.29" instance="0" alias="fwSS-smtp-bloc-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.30" instance="0" alias="fwSS-smtp-scan-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.31" instance="0" alias="fwSS-sm-bl-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.32" instance="0" alias="fwSS-sm-bl-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.33" instance="0" alias="fwSS-sm-bl-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.34" instance="0" alias="fwSS-sm-bl-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.35" instance="0" alias="fwSS-smtp-passe-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.36" instance="0" alias="fwSS-sm-pa-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.37" instance="0" alias="fwSS-sm-pa-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.38" instance="0" alias="fwSS-sm-pa-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.39" instance="0" alias="fwSS-sm-pa-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.40" instance="0" alias="fwSS-smtp-pass-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.41" instance="0" alias="fwSS-sm-bl-by-AV-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.6.42" instance="0" alias="fwSS-sm-pa-by-AV-se" type="integer"/>
+   </group>
+   <group name="fwSS-POP3" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.1" instance="0" alias="fwSS-POP3-pid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.2" instance="0" alias="fwSS-POP3-proto" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.3" instance="0" alias="fwSS-POP3-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.4" instance="0" alias="fwSS-POP3-logi-port" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.5" instance="0" alias="fwSS-PO3-ma-ava-soc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.6" instance="0" alias="fSS-PO3-so-in-us-ma" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.7" instance="0" alias="fSS-PO3-so-in-us-cu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.8" instance="0" alias="fSS-PO3-so-in-us-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.9" instance="0" alias="fwSS-POP3-sess-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.10" instance="0" alias="fwSS-POP3-sess-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.11" instance="0" alias="fwSS-POP3-sess-coun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.12" instance="0" alias="fwSS-PO3-au-ses-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.13" instance="0" alias="fwSS-PO3-au-ses-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.14" instance="0" alias="fwSS-PO3-au-ses-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.15" instance="0" alias="fwSS-POP3-acce-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.16" instance="0" alias="fwSS-POP3-reje-sess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.17" instance="0" alias="fwSS-POP3-auth-fail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.18" instance="0" alias="fwSS-POP3-mail-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.19" instance="0" alias="fwSS-POP3-mail-curr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.20" instance="0" alias="fwSS-POP3-mail-coun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.21" instance="0" alias="fwSS-PO3-ou-mai-max" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.22" instance="0" alias="fwSS-PO3-ou-mai-cur" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.23" instance="0" alias="fwSS-PO3-ou-mai-cou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.24" instance="0" alias="fSS-PO3-ma-ma-on-co" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.25" instance="0" alias="fwSS-POP3-tota-mail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.26" instance="0" alias="fwSS-POP3-time-stam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.27" instance="0" alias="fwSS-POP3-is-alive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.28" instance="0" alias="fwSS-POP3-block-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.29" instance="0" alias="fwSS-POP3-bloc-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.30" instance="0" alias="fwSS-POP3-scan-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.31" instance="0" alias="fSS-PO3-bl-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.32" instance="0" alias="fSS-PO3-bl-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.33" instance="0" alias="fSS-PO3-bl-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.34" instance="0" alias="fSS-PO3-bl-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.35" instance="0" alias="fwSS-POP3-passe-cnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.36" instance="0" alias="fSS-PO3-pa-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.37" instance="0" alias="fSS-PO3-pa-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.38" instance="0" alias="fSS-PO3-pa-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.39" instance="0" alias="fSS-PO3-pa-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.40" instance="0" alias="fwSS-POP3-pass-tota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.41" instance="0" alias="fSS-PO3-bl-by-AV-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.7.42" instance="0" alias="fSS-PO3-pa-by-AV-se" type="integer"/>
+   </group>
+   <group name="fwSS-av-total" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.1" instance="0" alias="fwSS-tot-bloc-by-av" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.2" instance="0" alias="fwSS-total-blocked" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.3" instance="0" alias="fwSS-total-scanned" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.4" instance="0" alias="fwSS-to-bl-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.5" instance="0" alias="fwSS-to-bl-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.6" instance="0" alias="fwSS-to-bl-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.7" instance="0" alias="fwSS-to-bl-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.8" instance="0" alias="fwSS-tot-pass-by-av" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.9" instance="0" alias="fwSS-to-pa-by-fi-ty" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.10" instance="0" alias="fwSS-to-pa-by-si-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.11" instance="0" alias="fwSS-to-pa-by-ar-li" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.12" instance="0" alias="fwSS-to-pa-by-in-er" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.13" instance="0" alias="fwSS-total-passed" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.14" instance="0" alias="fwSS-to-bl-by-av-se" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.9.10.15" instance="0" alias="fwSS-to-pa-by-av-se" type="integer"/>
+   </group>
+   <group name="fwConnectionsStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.11.1" instance="0" alias="fwConneStatConneTcp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.11.2" instance="0" alias="fwConneStatConneUdp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.11.3" instance="0" alias="fwConnStatConneIcmp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.11.4" instance="0" alias="fwConnStatConnOther" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.11.5" instance="0" alias="fwConnecStatConnect" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.11.6" instance="0" alias="fwConnStatConneRate" type="integer"/>
+   </group>
+   <group name="fwHmem64" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.1" instance="0" alias="fwHmem64-block-size" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.2" instance="0" alias="fwHmem64-requ-bytes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.3" instance="0" alias="fwHme64-ini-all-byt" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.4" instance="0" alias="fwHme64-ini-all-blo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.5" instance="0" alias="fwHme64-ini-all-poo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.6" instance="0" alias="fwHme64-cur-all-byt" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.7" instance="0" alias="fwHme64-cur-all-blo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.8" instance="0" alias="fwHme64-cur-all-poo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.9" instance="0" alias="fwHmem64-maxi-bytes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.10" instance="0" alias="fwHmem64-maxi-pools" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.11" instance="0" alias="fwHmem64-bytes-used" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.12" instance="0" alias="fwHmem64-block-used" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.13" instance="0" alias="fwHmem64-byte-unuse" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.14" instance="0" alias="fwHmem64-bloc-unuse" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.15" instance="0" alias="fwHmem64-bytes-peak" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.16" instance="0" alias="fwHmem64-block-peak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.17" instance="0" alias="fwHme64-byt-int-use" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.18" instance="0" alias="fwHme64-num-of-item" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.19" instance="0" alias="fwHmem64-allo-opera" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.20" instance="0" alias="fwHmem64-free-opera" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.21" instance="0" alias="fwHmem64-fail-alloc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.26.12.22" instance="0" alias="fwHmem64-faile-free" type="integer"/>
+   </group>
+   <group name="fwNetIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.1" instance="fwNetIfEntry" alias="fwNetIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.2" instance="fwNetIfEntry" alias="fwNetIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.3" instance="fwNetIfEntry" alias="fwNetIfIPAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.4" instance="fwNetIfEntry" alias="fwNetIfNetmask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.5" instance="fwNetIfEntry" alias="fwNetIfFlags" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.6" instance="fwNetIfEntry" alias="fwNetIfPeerName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.7" instance="fwNetIfEntry" alias="fwNetIfRemoteIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.8" instance="fwNetIfEntry" alias="fwNetIfTopology" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.9" instance="fwNetIfEntry" alias="fwNetIfProxyName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.10" instance="fwNetIfEntry" alias="fwNetIfSlaves" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.11" instance="fwNetIfEntry" alias="fwNetIfPorts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.12" instance="fwNetIfEntry" alias="fwNetIfIPV6Addr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.27.1.13" instance="fwNetIfEntry" alias="fwNetIfIPV6AddrLen" type="integer"/>
+   </group>
+   <group name="fwLSConn" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.1" instance="0" alias="fwLSConnOverall" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.2" instance="0" alias="fwLSConnOverallDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.4" instance="0" alias="fwLocalLoggingDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.5" instance="0" alias="fwLocalLoggingStat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.6" instance="0" alias="fwLocaLoggWriteRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.7" instance="0" alias="fwLogginHandlinRate" type="integer"/>
+   </group>
+   <group name="fwLSConnTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.3.1.1" instance="fwLSConnEntry" alias="fwLSConnIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.3.1.2" instance="fwLSConnEntry" alias="fwLSConnName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.3.1.3" instance="fwLSConnEntry" alias="fwLSConnState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.3.1.4" instance="fwLSConnEntry" alias="fwLSConnStateDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.1.30.3.1.5" instance="fwLSConnEntry" alias="fwLSConnSendRate" type="integer"/>
+   </group>
+   <group name="fwSXLGroup" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.36.1.1" instance="0" alias="fwSXLStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.36.1.2" instance="0" alias="fwSXLConnsExisting" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.36.1.3" instance="0" alias="fwSXLConnsAdded" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.36.1.4" instance="0" alias="fwSXLConnsDeleted" type="integer"/>
+   </group>
+   <group name="vpn" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.1" instance="0" alias="cpvProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.2" instance="0" alias="cpvVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.3" instance="0" alias="cpvVerMinor" type="integer"/>
+   </group>
+   <group name="cpvStatistics" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.4.1.1" instance="0" alias="cpvEncPackets" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.4.1.2" instance="0" alias="cpvDecPackets" type="octetstring"/>
+   </group>
+   <group name="cpvErrors" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.4.2.1" instance="0" alias="cpvErrOut" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.4.2.2" instance="0" alias="cpvErrIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.4.2.3" instance="0" alias="cpvErrIke" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.4.2.4" instance="0" alias="cpvErrPolicy" type="octetstring"/>
+   </group>
+   <group name="cpvSaStatistics" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.1" instance="0" alias="cpvCurrEspSAsIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.2" instance="0" alias="cpvTotalEspSAsIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.3" instance="0" alias="cpvCurrEspSAsOut" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.4" instance="0" alias="cpvTotalEspSAsOut" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.5" instance="0" alias="cpvCurrAhSAsIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.6" instance="0" alias="cpvTotalAhSAsIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.7" instance="0" alias="cpvCurrAhSAsOut" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.8" instance="0" alias="cpvTotalAhSAsOut" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.9" instance="0" alias="cpvMaxConncEspSAsIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.10" instance="0" alias="cpvMaxConnEspSAsOut" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.11" instance="0" alias="cpvMaxConncuAhSAsIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.2.12" instance="0" alias="cpvMaxConncAhSAsOut" type="octetstring"/>
+   </group>
+   <group name="cpvSaErrors" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.3.1" instance="0" alias="cpvSaDecrErr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.3.2" instance="0" alias="cpvSaAuthErr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.3.3" instance="0" alias="cpvSaReplayErr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.3.4" instance="0" alias="cpvSaPolicyErr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.3.5" instance="0" alias="cpvSaOtherErrIn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.3.6" instance="0" alias="cpvSaOtherErrOut" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.3.7" instance="0" alias="cpvSaUnknownSpiErr" type="octetstring"/>
+   </group>
+   <group name="cpvIpsecStatistics" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.1" instance="0" alias="cpvIpsUdpEspEncPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.2" instance="0" alias="cpvIpsUdpEspDecPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.3" instance="0" alias="cpvIpsecAhEncPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.4" instance="0" alias="cpvIpsecAhDecPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.5" instance="0" alias="cpvIpsecEspEncPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.6" instance="0" alias="cpvIpsecEspDecPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.7" instance="0" alias="cpvIpseDecoByteBefo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.8" instance="0" alias="cpvIpseDecoByteAfte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.9" instance="0" alias="cpvIpsecDecomOverhe" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.10" instance="0" alias="cpvIpsecDecomprPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.11" instance="0" alias="cpvIpsecDecomprErr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.12" instance="0" alias="cpvIpseCompByteBefo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.13" instance="0" alias="cpvIpseCompByteAfte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.14" instance="0" alias="cpvIpsecComprOverhe" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.15" instance="0" alias="cpvIpseNonCompBytes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.16" instance="0" alias="cpvIpsecCompresPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.17" instance="0" alias="cpvIpseNonComprPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.18" instance="0" alias="cpvIpsecComprErrors" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.19" instance="0" alias="cpvIpsecEspEncBytes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.5.4.20" instance="0" alias="cpvIpsecEspDecBytes" type="octetstring"/>
+   </group>
+   <group name="cpvFwzStatistics" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.1.1" instance="0" alias="cpvFwzEncapsEncPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.1.2" instance="0" alias="cpvFwzEncapsDecPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.1.3" instance="0" alias="cpvFwzEncPkts" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.1.4" instance="0" alias="cpvFwzDecPkts" type="integer"/>
+   </group>
+   <group name="cpvFwzErrors" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.2.1" instance="0" alias="cpvFwzEncapsEncErrs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.2.2" instance="0" alias="cpvFwzEncapsDecErrs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.2.3" instance="0" alias="cpvFwzEncErrs" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.6.2.4" instance="0" alias="cpvFwzDecErrs" type="integer"/>
+   </group>
+   <group name="cpvHwAccelGeneral" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.1.1" instance="0" alias="cpvHwAccelVendor" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.1.2" instance="0" alias="cpvHwAccelStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.1.3" instance="0" alias="cpvHwAccDrivMajoVer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.1.4" instance="0" alias="cpvHwAccDrivMinoVer" type="integer"/>
+   </group>
+   <group name="cpvHwAccelStatistics" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.1" instance="0" alias="cpvHwAcceEspEncPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.2" instance="0" alias="cpvHwAcceEspDecPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.3" instance="0" alias="cpvHwAcceEspEncByte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.4" instance="0" alias="cpvHwAcceEspDecByte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.5" instance="0" alias="cpvHwAccelAhEncPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.6" instance="0" alias="cpvHwAccelAhDecPkts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.7" instance="0" alias="cpvHwAcceAhEncBytes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.8.2.8" instance="0" alias="cpvHwAcceAhDecBytes" type="octetstring"/>
+   </group>
+   <group name="cpvIKEglobals" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.1" instance="0" alias="cpvIKECurrSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.2" instance="0" alias="cpvIKECurrInitSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.3" instance="0" alias="cpvIKECurrRespSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.4" instance="0" alias="cpvIKETotalSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.5" instance="0" alias="cpvIKETotalInitSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.6" instance="0" alias="cpvIKETotalRespSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.7" instance="0" alias="cpvIKETotalSAsAttem" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.8" instance="0" alias="cpvIKETotSAsIniAtte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.9" instance="0" alias="cpvIKETotSAsResAtte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.10" instance="0" alias="cpvIKEMaxConncurSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.11" instance="0" alias="cpvIKEMaxConInitSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.1.12" instance="0" alias="cpvIKEMaxConRespSAs" type="octetstring"/>
+   </group>
+   <group name="cpvIKEerrors" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.2.1" instance="0" alias="cpvIKETotaFailuInit" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.2.2" instance="0" alias="cpvIKENoResp" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.9.2.3" instance="0" alias="cpvIKETotaFailuResp" type="octetstring"/>
+   </group>
+   <group name="cpvIPsecNIC" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.10.1.1" instance="0" alias="cpvIPsecNICsNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.10.1.2" instance="0" alias="cpIPsNITotDowLoaSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.10.1.3" instance="0" alias="cpIPsNICurDowLoaSAs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.10.1.4" instance="0" alias="cpvIPsecNICDecrByte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.10.1.5" instance="0" alias="cpvIPsecNICEncrByte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.10.1.6" instance="0" alias="cpvIPsecNICDecrPack" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.2.10.1.7" instance="0" alias="cpvIPsecNICEncrPack" type="octetstring"/>
+   </group>
+   <group name="fg" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.1" instance="0" alias="fgProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.2" instance="0" alias="fgVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.3" instance="0" alias="fgVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.4" instance="0" alias="fgVersionString" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.5" instance="0" alias="fgModuleKernelBuild" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.6" instance="0" alias="fgStrPolicyName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.7" instance="0" alias="fgInstallTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.8" instance="0" alias="fgNumInterfaces" type="octetstring"/>
+   </group>
+   <group name="fgIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.1" instance="fgIfEntry" alias="fgIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.2" instance="fgIfEntry" alias="fgIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.3" instance="fgIfEntry" alias="fgPolicyName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.4" instance="fgIfEntry" alias="fgRateLimitIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.5" instance="fgIfEntry" alias="fgRateLimitOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.6" instance="fgIfEntry" alias="fgAvrRateIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.7" instance="fgIfEntry" alias="fgAvrRateOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.8" instance="fgIfEntry" alias="fgRetransPcktsIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.9" instance="fgIfEntry" alias="fgRetransPcktsOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.10" instance="fgIfEntry" alias="fgPendPcktsIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.11" instance="fgIfEntry" alias="fgPendPcktsOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.12" instance="fgIfEntry" alias="fgPendBytesIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.13" instance="fgIfEntry" alias="fgPendBytesOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.14" instance="fgIfEntry" alias="fgNumConnIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.3.9.1.15" instance="fgIfEntry" alias="fgNumConnOut" type="integer"/>
+   </group>
+   <group name="ha" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.1" instance="0" alias="haProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.2" instance="0" alias="haInstalled" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.3" instance="0" alias="haVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.4" instance="0" alias="haVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.5" instance="0" alias="haStarted" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.6" instance="0" alias="haState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.7" instance="0" alias="haBlockState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.8" instance="0" alias="haIdentifier" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.10" instance="0" alias="haProtoVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.11" instance="0" alias="haWorkMode" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.14" instance="0" alias="haVersionSting" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.101" instance="0" alias="haStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.102" instance="0" alias="haStatShort" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.103" instance="0" alias="haStatLong" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.999" instance="0" alias="haServicePack" type="integer"/>
+   </group>
+   <group name="haIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.12.1.1" instance="haIfEntry" alias="haIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.12.1.2" instance="haIfEntry" alias="haIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.12.1.3" instance="haIfEntry" alias="haIP" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.12.1.4" instance="haIfEntry" alias="haStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.12.1.5" instance="haIfEntry" alias="haVerified" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.12.1.6" instance="haIfEntry" alias="haTrusted" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.12.1.7" instance="haIfEntry" alias="haShared" type="integer"/>
+   </group>
+   <group name="haProblemTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.13.1.1" instance="haProblemEntry" alias="haProblemIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.13.1.2" instance="haProblemEntry" alias="haProblemName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.13.1.3" instance="haProblemEntry" alias="haProblemStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.13.1.4" instance="haProblemEntry" alias="haProblemPriority" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.13.1.5" instance="haProblemEntry" alias="haProblemVerified" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.13.1.6" instance="haProblemEntry" alias="haProblemDescr" type="octetstring"/>
+   </group>
+   <group name="haClusterIpTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.15.1.1" instance="haClusterIpEntry" alias="haClusterIpIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.15.1.2" instance="haClusterIpEntry" alias="haClusterIpIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.15.1.3" instance="haClusterIpEntry" alias="haClusterIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.15.1.4" instance="haClusterIpEntry" alias="haClusterIpNetMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.15.1.5" instance="haClusterIpEntry" alias="haClusteIpMemberNet" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.15.1.6" instance="haClusterIpEntry" alias="haClusIpMembNetMask" type="string"/>
+   </group>
+   <group name="haClusterSyncTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.16.1.1" instance="haClusterSyncEntry" alias="haClusterSyncIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.16.1.2" instance="haClusterSyncEntry" alias="haClusterSyncName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.16.1.3" instance="haClusterSyncEntry" alias="haClusterSyncAddr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.5.16.1.4" instance="haClusterSyncEntry" alias="haClusteSyncNetMask" type="integer"/>
+   </group>
+   <group name="svn" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.1" instance="0" alias="svnProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.2" instance="0" alias="svnProdVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.3" instance="0" alias="svnProdVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.8" instance="0" alias="svnSysTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.10" instance="0" alias="svnUTCTimeOffset" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.12" instance="0" alias="svnSysStartTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.13" instance="0" alias="svnSysUniqId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.15" instance="0" alias="svnWebUIPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.19" instance="0" alias="svnConnectivity" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.101" instance="0" alias="svnStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.102" instance="0" alias="svnStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.103" instance="0" alias="svnStatLongDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.999" instance="0" alias="svnServicePack" type="integer"/>
+   </group>
+   <group name="svnUpdatesInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.1" instance="0" alias="svnUpdatesInfoBuild" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.2" instance="0" alias="svnUpdateInfoStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.3" instance="0" alias="svnUpdateInfoConnec" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.4" instance="0" alias="svnUpdaInfoAvaiPack" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.5" instance="0" alias="svnUpdaInfoAvaiReco" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.6" instance="0" alias="svnUpdaInfoAvaiHotf" type="integer"/>
+   </group>
+   <group name="updatesInstalledTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.7.1.1" instance="updatesInstalledEntry" alias="updatesInstallIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.7.1.2" instance="updatesInstalledEntry" alias="updatesInstalleName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.7.1.3" instance="updatesInstalledEntry" alias="updatesInstalleType" type="octetstring"/>
+   </group>
+   <group name="updatesRecommendedTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.8.1.1" instance="updatesRecommendedEntry" alias="updatesRecommeIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.8.1.2" instance="updatesRecommendedEntry" alias="updatesRecommenName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.8.1.3" instance="updatesRecommendedEntry" alias="updatesRecommenType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.20.8.1.4" instance="updatesRecommendedEntry" alias="updateRecommeStatus" type="octetstring"/>
+   </group>
+   <group name="svnInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.4.1" instance="0" alias="svnVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.4.2" instance="0" alias="svnBuild" type="integer"/>
+   </group>
+   <group name="svnOSInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.5.1" instance="0" alias="osName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.5.2" instance="0" alias="osMajorVer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.5.3" instance="0" alias="osMinorVer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.5.4" instance="0" alias="osBuildNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.5.5" instance="0" alias="osSPmajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.5.6" instance="0" alias="osSPminor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.5.7" instance="0" alias="osVersionLevel" type="octetstring"/>
+   </group>
+   <group name="svnApplianceInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.16.3" instance="0" alias="svnAppliSeriaNumber" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.16.9" instance="0" alias="svnAppliancManufact" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.16.7" instance="0" alias="svnAppliaProducName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.16.10" instance="0" alias="svnAppliSerieString" type="octetstring"/>
+   </group>
+   <group name="svnMem" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.1.1" instance="0" alias="memTotalVirtual" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.1.2" instance="0" alias="memActiveVirtual" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.1.3" instance="0" alias="memTotalReal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.1.4" instance="0" alias="memActiveReal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.1.5" instance="0" alias="memFreeReal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.1.6" instance="0" alias="memSwapsSec" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.1.7" instance="0" alias="memDiskTransfers" type="integer"/>
+   </group>
+   <group name="svnProc" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.2.1" instance="0" alias="procUsrTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.2.2" instance="0" alias="procSysTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.2.3" instance="0" alias="procIdleTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.2.4" instance="0" alias="procUsage" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.2.5" instance="0" alias="procQueue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.2.6" instance="0" alias="procInterrupts" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.2.7" instance="0" alias="procNum" type="integer"/>
+   </group>
+   <group name="svnDisk" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.3.1" instance="0" alias="diskTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.3.2" instance="0" alias="diskQueue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.3.3" instance="0" alias="diskPercent" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.3.4" instance="0" alias="diskFreeTotal" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.3.5" instance="0" alias="diskFreeAvail" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.3.6" instance="0" alias="diskTotal" type="octetstring"/>
+   </group>
+   <group name="svnMem64" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.4.1" instance="0" alias="memTotalVirtual64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.4.2" instance="0" alias="memActiveVirtual64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.4.3" instance="0" alias="memTotalReal64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.4.4" instance="0" alias="memActiveReal64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.4.5" instance="0" alias="memFreeReal64" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.4.6" instance="0" alias="memSwapsSec64" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.4.7" instance="0" alias="memDiskTransfers64" type="integer"/>
+   </group>
+   <group name="svnVsxInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.21.1" instance="0" alias="vdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.21.2" instance="0" alias="vdType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.21.3" instance="0" alias="ctxId" type="integer"/>
+   </group>
+   <group name="multiProcTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.5.1.1" instance="multiProcEntry" alias="multiProcIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.5.1.2" instance="multiProcEntry" alias="multiProcUserTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.5.1.3" instance="multiProcEntry" alias="multiProcSystemTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.5.1.4" instance="multiProcEntry" alias="multiProcIdleTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.5.1.5" instance="multiProcEntry" alias="multiProcUsage" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.5.1.6" instance="multiProcEntry" alias="multiProcRunQueue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.5.1.7" instance="multiProcEntry" alias="multiProcInterrupts" type="integer"/>
+   </group>
+   <group name="multiDiskTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.1" instance="multiDiskEntry" alias="multiDiskIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.2" instance="multiDiskEntry" alias="multiDiskName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.3" instance="multiDiskEntry" alias="multiDiskSize" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.4" instance="multiDiskEntry" alias="multiDiskUsed" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.5" instance="multiDiskEntry" alias="mulDiskFreeTotaByte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.6" instance="multiDiskEntry" alias="mulDiskFreeTotaPerc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.7" instance="multiDiskEntry" alias="mulDiskFreeAvaiByte" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.6.1.8" instance="multiDiskEntry" alias="mulDiskFreeAvaiPerc" type="integer"/>
+   </group>
+   <group name="raidVolumeTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.1" instance="raidVolumeEntry" alias="raidVolumeIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.2" instance="raidVolumeEntry" alias="raidVolumeID" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.3" instance="raidVolumeEntry" alias="raidVolumeType" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.4" instance="raidVolumeEntry" alias="numOfDisksOnRaid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.5" instance="raidVolumeEntry" alias="raidVolumeMaxLBA" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.6" instance="raidVolumeEntry" alias="raidVolumeState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.7" instance="raidVolumeEntry" alias="raidVolumeFlags" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.1.1.8" instance="raidVolumeEntry" alias="raidVolumeSize" type="integer"/>
+   </group>
+   <group name="raidDiskTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.1" instance="raidDiskEntry" alias="raidDiskIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.2" instance="raidDiskEntry" alias="raidDiskVolumeID" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.3" instance="raidDiskEntry" alias="raidDiskID" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.4" instance="raidDiskEntry" alias="raidDiskNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.5" instance="raidDiskEntry" alias="raidDiskVendor" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.6" instance="raidDiskEntry" alias="raidDiskProductID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.7" instance="raidDiskEntry" alias="raidDiskRevision" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.8" instance="raidDiskEntry" alias="raidDiskMaxLBA" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.9" instance="raidDiskEntry" alias="raidDiskState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.10" instance="raidDiskEntry" alias="raidDiskFlags" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.11" instance="raidDiskEntry" alias="raidDiskSyncState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.7.2.1.12" instance="raidDiskEntry" alias="raidDiskSize" type="integer"/>
+   </group>
+   <group name="tempertureSensorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.1.1.1" instance="tempertureSensorEntry" alias="tempertuSensorIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.1.1.2" instance="tempertureSensorEntry" alias="temperturSensorName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.1.1.3" instance="tempertureSensorEntry" alias="tempertuSensorValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.1.1.4" instance="tempertureSensorEntry" alias="temperturSensorUnit" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.1.1.5" instance="tempertureSensorEntry" alias="temperturSensorType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.1.1.6" instance="tempertureSensorEntry" alias="tempertSensorStatus" type="integer"/>
+   </group>
+   <group name="fanSpeedSensorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.2.1.1" instance="fanSpeedSensorEntry" alias="fanSpeedSensorIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.2.1.2" instance="fanSpeedSensorEntry" alias="fanSpeedSensorName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.2.1.3" instance="fanSpeedSensorEntry" alias="fanSpeedSensorValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.2.1.4" instance="fanSpeedSensorEntry" alias="fanSpeedSensorUnit" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.2.1.5" instance="fanSpeedSensorEntry" alias="fanSpeedSensorType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.2.1.6" instance="fanSpeedSensorEntry" alias="fanSpeedSensoStatus" type="integer"/>
+   </group>
+   <group name="voltageSensorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.3.1.1" instance="voltageSensorEntry" alias="voltageSensorIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.3.1.2" instance="voltageSensorEntry" alias="voltageSensorName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.3.1.3" instance="voltageSensorEntry" alias="voltageSensorValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.3.1.4" instance="voltageSensorEntry" alias="voltageSensorUnit" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.3.1.5" instance="voltageSensorEntry" alias="voltageSensorType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.8.3.1.6" instance="voltageSensorEntry" alias="voltageSensorStatus" type="integer"/>
+   </group>
+   <group name="powerSupplyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.9.1.1.1" instance="powerSupplyEntry" alias="powerSupplyIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.7.9.1.1.2" instance="powerSupplyEntry" alias="powerSupplyStatus" type="octetstring"/>
+   </group>
+   <group name="routingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.6.1.1" instance="routingEntry" alias="routingIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.6.1.2" instance="routingEntry" alias="routingDest" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.6.1.3" instance="routingEntry" alias="routingMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.6.1.4" instance="routingEntry" alias="routingGatweway" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.6.1.5" instance="routingEntry" alias="routingIntrfName" type="octetstring"/>
+   </group>
+   <group name="svnRoutingModify" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.9.2" instance="0" alias="svnRouteModDest" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.9.3" instance="0" alias="svnRouteModMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.9.4" instance="0" alias="svnRouteModGateway" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.9.5" instance="0" alias="svnRouteModIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.9.6" instance="0" alias="svnRouteModIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.9.10" instance="0" alias="svnRouteModAction" type="integer"/>
+   </group>
+   <group name="svnLogDaemon" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.11.1" instance="0" alias="svnLogDStat" type="octetstring"/>
+   </group>
+   <group name="supportedPlatforms" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.1" instance="0" alias="checkPointUTM-1450" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.2" instance="0" alias="checkPointUTM-11050" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.3" instance="0" alias="checkPointUTM-12050" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.4" instance="0" alias="checkPointUTM-1130" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.5" instance="0" alias="checkPointUTM-1270" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.6" instance="0" alias="checkPointUTM-1570" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.7" instance="0" alias="checkPointUTM-11070" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.8" instance="0" alias="checkPointUTM-12070" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.9" instance="0" alias="checkPointUTM-13070" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.10" instance="0" alias="checPoinPower-15070" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.11" instance="0" alias="checPoinPower-19070" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.12" instance="0" alias="checPoinPower-11100" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.13" instance="0" alias="checkPointSmart-15" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.14" instance="0" alias="checkPointSmart-125" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.15" instance="0" alias="checkPointSmart-150" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.16" instance="0" alias="checPointSmart-1150" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.17" instance="0" alias="checkPointIP150" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.18" instance="0" alias="checkPointIP280" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.19" instance="0" alias="checkPointIP290" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.20" instance="0" alias="checkPointIP390" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.21" instance="0" alias="checkPointIP560" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.22" instance="0" alias="checkPointIP690" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.23" instance="0" alias="checkPointIP1280" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.24" instance="0" alias="checkPointIP2450" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.25" instance="0" alias="chePoiUNIUniWal1000" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.26" instance="0" alias="chePoiUNIUniWal2000" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.27" instance="0" alias="chePoiUNIUniWal4000" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.28" instance="0" alias="chePoiUNIUniWall100" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.29" instance="0" alias="checkPointDLP-19571" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.30" instance="0" alias="checkPointDLP-12571" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.31" instance="0" alias="checkPointIPS-12076" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.32" instance="0" alias="checkPointIPS-15076" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.33" instance="0" alias="checkPointIPS-19076" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.34" instance="0" alias="checkPoint2200" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.35" instance="0" alias="checkPoint4200" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.36" instance="0" alias="checkPoint4400" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.37" instance="0" alias="checkPoint4600" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.38" instance="0" alias="checkPoint4800" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.39" instance="0" alias="checkPointTE250" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.40" instance="0" alias="checkPoint12200" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.41" instance="0" alias="checkPoint12400" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.42" instance="0" alias="checkPoint12600" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.43" instance="0" alias="checkPointTE1000" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.44" instance="0" alias="checkPoint13500" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.45" instance="0" alias="checkPoint21400" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.46" instance="0" alias="checkPoint21600" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.47" instance="0" alias="checkPoint21700" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.48" instance="0" alias="checkPointVMware" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.49" instance="0" alias="checkPointOpenServe" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.50" instance="0" alias="checPointSmart-1205" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.51" instance="0" alias="checPointSmart-1210" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.52" instance="0" alias="checPointSmart-1225" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.53" instance="0" alias="checPoinSmart-13050" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.54" instance="0" alias="checPoinSmart-13150" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.55" instance="0" alias="checkPoint13800" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.56" instance="0" alias="checkPoint21800" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.57" instance="0" alias="checkPointTE250X" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.58" instance="0" alias="checkPointTE1000X" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.59" instance="0" alias="checkPointTE2000X" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.60" instance="0" alias="checkPointTE100X" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.61" instance="0" alias="checkPoint23500" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.62" instance="0" alias="checkPoint23800" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.63" instance="0" alias="checkPoint15400" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.64" instance="0" alias="checkPoint15600" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.65" instance="0" alias="checkPoint3200" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.66" instance="0" alias="checkPoint5200" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.67" instance="0" alias="checkPoint5400" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.68" instance="0" alias="checkPoint5600" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.69" instance="0" alias="checkPoint5800" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.70" instance="0" alias="checkPoint5900" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.71" instance="0" alias="checkPoint3100" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.123.1.72" instance="0" alias="checkPoint5100" type="octetstring"/>
+   </group>
+   <group name="licensingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.1" instance="licensingEntry" alias="licensingIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.2" instance="licensingEntry" alias="licensingID" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.3" instance="licensingEntry" alias="licensBladeGUIOrder" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.4" instance="licensingEntry" alias="licensingBladeName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.5" instance="licensingEntry" alias="licensingState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.6" instance="licensingEntry" alias="licensiExpiratiDate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.7" instance="licensingEntry" alias="licensingImpact" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.8" instance="licensingEntry" alias="licensinBladeActive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.9" instance="licensingEntry" alias="licensingTotalQuota" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.1.1.10" instance="licensingEntry" alias="licensingUsedQuota" type="integer"/>
+   </group>
+   <group name="licensingAssetInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.1" instance="0" alias="licensAssetAccounId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.2" instance="0" alias="liceAssetPackaDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.3" instance="0" alias="licensAssetContaiCK" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.4" instance="0" alias="licensAssetCKSignat" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.5" instance="0" alias="licenAssetContaiSKU" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.6" instance="0" alias="liceAssetSuppoLevel" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.7" instance="0" alias="liceAssetSuppoExpir" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.18.2.8" instance="0" alias="liceAssetActivStatu" type="octetstring"/>
+   </group>
+   <group name="svnNetIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.1" instance="svnNetIfTableEntry" alias="svnNetIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.2" instance="svnNetIfTableEntry" alias="svnNetIfVsid" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.3" instance="svnNetIfTableEntry" alias="svnNetIfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.4" instance="svnNetIfTableEntry" alias="svnNetIfAddress" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.5" instance="svnNetIfTableEntry" alias="svnNetIfMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.6" instance="svnNetIfTableEntry" alias="svnNetIfMTU" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.7" instance="svnNetIfTableEntry" alias="svnNetIfState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.8" instance="svnNetIfTableEntry" alias="svnNetIfMAC" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.9" instance="svnNetIfTableEntry" alias="svnNetIfDescription" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.10" instance="svnNetIfTableEntry" alias="svnNetIfOperState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.13" instance="svnNetIfTableEntry" alias="svnNetIfRXBytes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.14" instance="svnNetIfTableEntry" alias="svnNetIfRXDrops" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.15" instance="svnNetIfTableEntry" alias="svnNetIfRXErrors" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.16" instance="svnNetIfTableEntry" alias="svnNetIfRXPackets" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.17" instance="svnNetIfTableEntry" alias="svnNetIfTXBytes" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.18" instance="svnNetIfTableEntry" alias="svnNetIfTXDrops" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.19" instance="svnNetIfTableEntry" alias="svnNetIfTXErrors" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.50.1.1.20" instance="svnNetIfTableEntry" alias="svnNetIfTXPackets" type="octetstring"/>
+   </group>
+   <group name="vsRoutingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.51.1.1" instance="vsRoutingEntry" alias="vsRoutingIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.51.1.2" instance="vsRoutingEntry" alias="vsRoutingDest" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.51.1.3" instance="vsRoutingEntry" alias="vsRoutingMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.51.1.4" instance="vsRoutingEntry" alias="vsRoutingGateway" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.51.1.5" instance="vsRoutingEntry" alias="vsRoutingIntrfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.6.51.1.6" instance="vsRoutingEntry" alias="vsRoutingVsId" type="integer"/>
+   </group>
+   <group name="mngmt" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.1" instance="0" alias="mgProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.2" instance="0" alias="mgVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.3" instance="0" alias="mgVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.4" instance="0" alias="mgBuildNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.5" instance="0" alias="mgActiveStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.6" instance="0" alias="mgFwmIsAlive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.9" instance="0" alias="mgMgmtHAJournals" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.10" instance="0" alias="mgIsLicenseViolatio" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.11" instance="0" alias="mgLicenseViolatiMsg" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.101" instance="0" alias="mgStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.102" instance="0" alias="mgStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.103" instance="0" alias="mgStatLongDescr" type="octetstring"/>
+   </group>
+   <group name="mgConnectedClientsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.7.1.1" instance="mgConnectedClientsEntry" alias="mgIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.7.1.2" instance="mgConnectedClientsEntry" alias="mgClientName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.7.1.3" instance="mgConnectedClientsEntry" alias="mgClientHost" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.7.1.4" instance="mgConnectedClientsEntry" alias="mgClientDbLock" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.7.1.5" instance="mgConnectedClientsEntry" alias="mgApplicationType" type="octetstring"/>
+   </group>
+   <group name="mgLogServerInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.1" instance="0" alias="mgLSLogReceiveRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.2" instance="0" alias="mgLSLogReceRatePeak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.3" instance="0" alias="mgLSLogRecRate10Min" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.6" instance="0" alias="mgLSLogRecRate1Hour" type="integer"/>
+   </group>
+   <group name="mgConnectedGatewaysTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.4.1.1" instance="mgConnectedGatewaysEntry" alias="mglsGWIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.4.1.2" instance="mgConnectedGatewaysEntry" alias="mglsGWIP" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.4.1.3" instance="mgConnectedGatewaysEntry" alias="mglsGWState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.4.1.4" instance="mgConnectedGatewaysEntry" alias="mglsGWLastLoginTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.4.1.5" instance="mgConnectedGatewaysEntry" alias="mglsGWLogReceivRate" type="integer"/>
+   </group>
+   <group name="mgIndexerInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.1" instance="0" alias="mgIndInfTotReadLogs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.2" instance="0" alias="mgInInToUpAndLogInd" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.3" instance="0" alias="mgInInfTotReaLogErr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.4" instance="0" alias="mgInInToUpAnLoInErr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.5" instance="0" alias="mgInInUpAnLogIndRat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.6" instance="0" alias="mgIndInfReaLogsRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.7" instance="0" alias="mInInUpAnLoInRa10mi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.8" instance="0" alias="mgInInReLogRat10min" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.9" instance="0" alias="mInInUpAnLoInRa60mi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.10" instance="0" alias="mgInInReLogRat60min" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.11" instance="0" alias="mgInInUpAnLoInRaPea" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.12" instance="0" alias="mgInInfReaLogRatPea" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.7.14.5.13" instance="0" alias="mgIndInfReaLogsDela" type="integer"/>
+   </group>
+   <group name="wam" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.1" instance="0" alias="wamProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.2" instance="0" alias="wamVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.3" instance="0" alias="wamVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.4" instance="0" alias="wamState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.5" instance="0" alias="wamName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.101" instance="0" alias="wamStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.102" instance="0" alias="wamStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.103" instance="0" alias="wamStatLongDescr" type="octetstring"/>
+   </group>
+   <group name="wamPluginPerformance" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.6.1" instance="0" alias="wamAcceptReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.6.2" instance="0" alias="wamRejectReq" type="integer"/>
+   </group>
+   <group name="wamPolicy" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.7.1" instance="0" alias="wamPolicyName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.7.2" instance="0" alias="wamPolicyUpdate" type="octetstring"/>
+   </group>
+   <group name="wamUagQueries" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.8.1" instance="0" alias="wamUagHost" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.8.2" instance="0" alias="wamUagIp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.8.3" instance="0" alias="wamUagPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.8.4" instance="0" alias="wamUagNoQueries" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.8.5" instance="0" alias="wamUagLastQuery" type="octetstring"/>
+   </group>
+   <group name="wamGlobalPerformance" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.9.1" instance="0" alias="wamOpenSessions" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.8.9.2" instance="0" alias="wamLastSession" type="octetstring"/>
+   </group>
+   <group name="dtps" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.1" instance="0" alias="dtpsProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.2" instance="0" alias="dtpsVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.3" instance="0" alias="dtpsVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.4" instance="0" alias="dtpsLicensedUsers" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.5" instance="0" alias="dtpsConnectedUsers" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.101" instance="0" alias="dtpsStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.102" instance="0" alias="dtpsStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.9.103" instance="0" alias="dtpsStatLongDescr" type="octetstring"/>
+   </group>
+   <group name="ls" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.1" instance="0" alias="lsProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.2" instance="0" alias="lsVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.3" instance="0" alias="lsVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.4" instance="0" alias="lsBuildNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.5" instance="0" alias="lsFwmIsAlive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.101" instance="0" alias="lsStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.102" instance="0" alias="lsStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.103" instance="0" alias="lsStatLongDescr" type="octetstring"/>
+   </group>
+   <group name="lsLoggingInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.1" instance="0" alias="lsLogReceiveRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.2" instance="0" alias="lsLogReceivRatePeak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.3" instance="0" alias="lsLogReceiRate10Min" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.6" instance="0" alias="lsLogReceiRate1Hour" type="integer"/>
+   </group>
+   <group name="lsConnectedGatewaysTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.4.1.1" instance="lsConnectedGatewaysEntry" alias="lsGWIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.4.1.2" instance="lsConnectedGatewaysEntry" alias="lsGWIP" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.4.1.3" instance="lsConnectedGatewaysEntry" alias="lsGWState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.4.1.4" instance="lsConnectedGatewaysEntry" alias="lsGWLastLoginTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.4.1.5" instance="lsConnectedGatewaysEntry" alias="lsGWLogReceiveRate" type="integer"/>
+   </group>
+   <group name="lsIndexerInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.1" instance="0" alias="lsIndInfTotReadLogs" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.2" instance="0" alias="lsInInToUpAndLogInd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.3" instance="0" alias="lsInInfTotReaLogErr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.4" instance="0" alias="lsInInToUpAnLoInErr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.5" instance="0" alias="lsInInUpAnLogIndRat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.6" instance="0" alias="lsIndInfReaLogsRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.7" instance="0" alias="lsInInUpAnLoInRaPea" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.14.5.8" instance="0" alias="lsInInfReaLogRatPea" type="integer"/>
+   </group>
+   <group name="lsConnectedClientsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.7.1.1" instance="lsConnectedClientsEntry" alias="lsIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.7.1.2" instance="lsConnectedClientsEntry" alias="lsClientName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.7.1.3" instance="lsConnectedClientsEntry" alias="lsClientHost" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.7.1.4" instance="lsConnectedClientsEntry" alias="lsClientDbLock" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.11.7.1.5" instance="lsConnectedClientsEntry" alias="lsApplicationType" type="octetstring"/>
+   </group>
+   <group name="gxInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.1.1" instance="0" alias="gxProdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.1.2" instance="0" alias="gxProdVersion" type="octetstring"/>
+   </group>
+   <group name="gx" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.2" instance="0" alias="gxProdVerMajor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.3" instance="0" alias="gxProdVerMinor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.4" instance="0" alias="gxBuild" type="integer"/>
+   </group>
+   <group name="gxCreateInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.1" instance="0" alias="gxCreateSinceInstal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.2" instance="0" alias="gxActContxt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.3" instance="0" alias="gxDropPlicyCreate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.4" instance="0" alias="gxDropMalfoReqCreat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.5" instance="0" alias="gxDropMalfRespCreat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.6" instance="0" alias="gxExpiredCreate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.7" instance="0" alias="gxBadCauseCreate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.8" instance="0" alias="gxSecondNsapiEntrie" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.11" instance="0" alias="gxActv0v1PdnConns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.12" instance="0" alias="gxTunnelApnsEntries" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.5.13" instance="0" alias="gxTunnelsEntries" type="integer"/>
+   </group>
+   <group name="gxDeleteInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.6.1" instance="0" alias="gxDeleteSinceInstal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.6.2" instance="0" alias="gxDropOutOfContDele" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.6.3" instance="0" alias="gxDropMalfoReqDelet" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.6.4" instance="0" alias="gxDropMalfRespDelet" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.6.5" instance="0" alias="gxExpiredDelete" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.6.6" instance="0" alias="gxBadCauseDelete" type="integer"/>
+   </group>
+   <group name="gxUpdateInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.7.1" instance="0" alias="gxUpdateSinceInstal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.7.2" instance="0" alias="gxDropOutOfContUpda" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.7.3" instance="0" alias="gxDropMalfoReqUpdat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.7.4" instance="0" alias="gxDropMalfRespUpdat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.7.5" instance="0" alias="gxExpiredUpdate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.7.6" instance="0" alias="gxBadCauseUpdate" type="integer"/>
+   </group>
+   <group name="gxPathMngInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.1" instance="0" alias="gxEchoSinceInstall" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.2" instance="0" alias="gxVnspSinceInstall" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.3" instance="0" alias="gxDropPolicyEcho" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.4" instance="0" alias="gxDropMalforReqEcho" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.5" instance="0" alias="gxDropMalfoRespEcho" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.6" instance="0" alias="gxExpiredEcho" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.7" instance="0" alias="gxDropVnsp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.8.8" instance="0" alias="gxGtpPathEntries" type="integer"/>
+   </group>
+   <group name="gxGpduInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.9.1" instance="0" alias="gxGpdu1MinAvgRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.9.2" instance="0" alias="gxDropOutOfContGpdu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.9.3" instance="0" alias="gxDropAnti-spooGpdu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.9.4" instance="0" alias="gxDropMs-MsGpdu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.9.5" instance="0" alias="gxDropBadSeqGpdu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.9.6" instance="0" alias="gxDropBadGpdu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.9.7" instance="0" alias="gxGpduExpiredTunnel" type="integer"/>
+   </group>
+   <group name="gxInitiateInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.10.1" instance="0" alias="gxInitiaSinceInstal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.10.2" instance="0" alias="gxDropInitiationReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.10.3" instance="0" alias="gxDropInitiatioResp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.10.4" instance="0" alias="gxExpiredInitiatAct" type="integer"/>
+   </group>
+   <group name="gxGTPv2CreateInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.1" instance="0" alias="gxGTPv2CreSesSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.2" instance="0" alias="gxGTPv2CreBeaSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.3" instance="0" alias="gxGTPv2ExpiCreaSess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.4" instance="0" alias="gxGTPv2ExpiCreaBear" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.5" instance="0" alias="gxGTPv2DrMaCrSesReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.6" instance="0" alias="gxGTPv2DrMaCrSesRes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.7" instance="0" alias="gxGTPv2DrMaCrBeaReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.8" instance="0" alias="gxGTPv2DrMaCrBeaRes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.9" instance="0" alias="gxGTPv2DroPolCreSes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.10" instance="0" alias="gxGTPv2DroPolCreBea" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.11" instance="0" alias="gxGTPv2ActPDN" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.11.12" instance="0" alias="gxGTPv2ActDataBeare" type="integer"/>
+   </group>
+   <group name="gxGTPv2DeleteInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.1" instance="0" alias="gxGTPv2DelSesSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.2" instance="0" alias="gxGTPv2DelBeaSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.3" instance="0" alias="gxGTPv2ExpiDeleSess" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.4" instance="0" alias="gxGTPv2ExpiDeleBear" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.5" instance="0" alias="gxGTPv2DrMaDeSesReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.6" instance="0" alias="gxGTPv2DrMaDeSesRes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.7" instance="0" alias="gxGTPv2DrMaDeBeaReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.8" instance="0" alias="gxGTPv2DrMaDeBeaRes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.9" instance="0" alias="gxGTPv2DroPolDelSes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.12.10" instance="0" alias="gxGTPv2DroPolDelBea" type="integer"/>
+   </group>
+   <group name="gxGTPv2UpdateInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.1" instance="0" alias="gxGTPv2UpdBeaSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.2" instance="0" alias="gxGTPv2ExpiUpdaBear" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.3" instance="0" alias="gxGTPv2ModBeaSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.4" instance="0" alias="gxGTPv2ExpiModiBear" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.5" instance="0" alias="gxGTPv2DrMaUpBeaReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.6" instance="0" alias="gxGTPv2DrMaUpBeaRes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.7" instance="0" alias="gxGTPv2DrMaMoBeaReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.8" instance="0" alias="gxGTPv2DrMaMoBeaRes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.9" instance="0" alias="gxGTPv2DroPolUpdBea" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.13.10" instance="0" alias="gxGTPv2DroPolModBea" type="integer"/>
+   </group>
+   <group name="gxGTPv2PathMngInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.14.1" instance="0" alias="gxGTPv2EchoSincInst" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.14.2" instance="0" alias="gxGTPv2VnspSincInst" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.14.3" instance="0" alias="gxGTPv2ExpiredEcho" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.14.4" instance="0" alias="gxGTPv2DroMalEchReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.14.5" instance="0" alias="gxGTPv2DroMalEchRes" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.14.6" instance="0" alias="gxGTPv2DropPoliEcho" type="integer"/>
+   </group>
+   <group name="gxGTPv2CmdInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.15.1" instance="0" alias="gxGTPv2MoBeCmSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.15.2" instance="0" alias="gxGTPv2MoBeFaInSiIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.15.3" instance="0" alias="gxGTPv2DeBeCmSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.15.4" instance="0" alias="gxGTPv2DeBeFaInSiIn" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.15.5" instance="0" alias="gxGTPv2BeReCmSinIns" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.20.15.6" instance="0" alias="gxGTPv2BeReFaInSiIn" type="integer"/>
+   </group>
+   <group name="asmSynatk" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.1.1" instance="0" alias="asmSynatSynAckTimeo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.1.2" instance="0" alias="asmSynatSynAckReset" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.1.3" instance="0" alias="asmSynatkModeChange" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.1.4" instance="0" alias="asmSynatkCurrenMode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.1.5" instance="0" alias="asmSynaNumbAckeSyns" type="integer"/>
+   </group>
+   <group name="asmSmallPmtu" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.2.1" instance="0" alias="smalPMTUNumbOfAttac" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.2.2" instance="0" alias="smaPMTValOfMinMTUsi" type="integer"/>
+   </group>
+   <group name="asmSeqval" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.3.1" instance="0" alias="sequeVerifInvaliAck" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.3.2" instance="0" alias="sequVerifInvalSeque" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.1.3.3" instance="0" alias="sequenVerifiInvalid" type="integer"/>
+   </group>
+   <group name="asmHttpWorms" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.1.1.1" instance="0" alias="httpWorms" type="integer"/>
+   </group>
+   <group name="asmHostPortScan" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.3.1.1" instance="0" alias="numOfhostPortScan" type="integer"/>
+   </group>
+   <group name="asmIPSweep" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.2.3.2.1" instance="0" alias="numOfIpSweep" type="integer"/>
+   </group>
+   <group name="asmHttpFormatViolatoin" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.1.2.1" instance="0" alias="httpURLLengthViolat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.1.2.2" instance="0" alias="httpHeadeLengtViola" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.1.2.3" instance="0" alias="httpMaxHeaderReache" type="integer"/>
+   </group>
+   <group name="asmHttpAsciiViolation" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.1.3.1" instance="0" alias="numOfHttpASCIIViola" type="integer"/>
+   </group>
+   <group name="asmHttpP2PHeaderFilter" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.1.4.1" instance="0" alias="numOfHttpP2PHeaders" type="integer"/>
+   </group>
+   <group name="asmCIFSWorms" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.2.1.1" instance="0" alias="numOfCIFSworms" type="integer"/>
+   </group>
+   <group name="asmCIFSNullSession" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.2.2.1" instance="0" alias="numOfCIFSNullSessio" type="integer"/>
+   </group>
+   <group name="asmCIFSBlockedPopUps" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.2.3.1" instance="0" alias="numOfCIFSBlocPopUps" type="integer"/>
+   </group>
+   <group name="asmCIFSBlockedCommands" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.2.4.1" instance="0" alias="numOfCIFSBlockComma" type="integer"/>
+   </group>
+   <group name="asmCIFSPasswordLengthViolations" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.2.5.1" instance="0" alias="numOfCIFPasLengViol" type="integer"/>
+   </group>
+   <group name="asmP2POtherConAttempts" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.3.1.1" instance="0" alias="numOfP2POtheConAtte" type="integer"/>
+   </group>
+   <group name="asmP2PKazaaConAttempts" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.3.2.1" instance="0" alias="numOfP2PKazaConAtte" type="integer"/>
+   </group>
+   <group name="asmP2PeMuleConAttempts" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.3.3.1" instance="0" alias="numOfP2PeMulConAtte" type="integer"/>
+   </group>
+   <group name="asmP2PGnutellaConAttempts" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.3.4.1" instance="0" alias="numOfGnuteConAttemp" type="integer"/>
+   </group>
+   <group name="asmP2PSkypeCon" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.3.5.1" instance="0" alias="numOfP2PSkypeCon" type="integer"/>
+   </group>
+   <group name="asmP2PBitTorrentCon" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.17.1.3.3.6.1" instance="0" alias="numOfBitTorrentCon" type="integer"/>
+   </group>
+   <group name="avi" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.101" instance="0" alias="aviStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.102" instance="0" alias="aviStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.103" instance="0" alias="aviStatLongDescr" type="octetstring"/>
+   </group>
+   <group name="aviEngineTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.1" instance="aviEngineEntry" alias="aviEngineIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.2" instance="aviEngineEntry" alias="aviEngineName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.3" instance="aviEngineEntry" alias="aviEngineVer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.4" instance="aviEngineEntry" alias="aviEngineDate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.5" instance="aviEngineEntry" alias="aviSignatureName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.6" instance="aviEngineEntry" alias="aviSignatureVer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.7" instance="aviEngineEntry" alias="aviSignatureDate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.8" instance="aviEngineEntry" alias="aviLastSigCheckTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.9" instance="aviEngineEntry" alias="aviLastSigLocation" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.1.1.1.10" instance="aviEngineEntry" alias="aviLastLicExp" type="octetstring"/>
+   </group>
+   <group name="aviTopVirusesTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.2.1.1.1" instance="aviTopVirusesEntry" alias="aviTopVirusesIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.2.1.1.2" instance="aviTopVirusesEntry" alias="aviTopVirusesName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.2.1.1.3" instance="aviTopVirusesEntry" alias="aviTopVirusesCnt" type="integer"/>
+   </group>
+   <group name="aviTopEverVirusesTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.3.1.1.1" instance="aviTopEverVirusesEntry" alias="aviTopEverViruIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.3.1.1.2" instance="aviTopEverVirusesEntry" alias="aviTopEverVirusName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.3.1.1.3" instance="aviTopEverVirusesEntry" alias="aviTopEverViruseCnt" type="integer"/>
+   </group>
+   <group name="aviServicesHTTP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.1.1" instance="0" alias="aviHTTPState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.1.2" instance="0" alias="aviHTTPLastViruName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.1.3" instance="0" alias="aviHTTPLastViruTime" type="integer"/>
+   </group>
+   <group name="aviHTTPTopVirusesTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.1.4.1.1" instance="aviHTTPTopVirusesEntry" alias="aviHTTPTopViruIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.1.4.1.2" instance="aviHTTPTopVirusesEntry" alias="aviHTTPTopVirusName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.1.4.1.3" instance="aviHTTPTopVirusesEntry" alias="aviHTTPTopViruseCnt" type="integer"/>
+   </group>
+   <group name="aviServicesFTP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.2.1" instance="0" alias="aviFTPState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.2.2" instance="0" alias="aviFTPLastVirusName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.2.3" instance="0" alias="aviFTPLastVirusTime" type="integer"/>
+   </group>
+   <group name="aviFTPTopVirusesTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.2.4.1.1" instance="aviFTPTopVirusesEntry" alias="aviFTPTopVirusIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.2.4.1.2" instance="aviFTPTopVirusesEntry" alias="aviFTPTopViruseName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.2.4.1.3" instance="aviFTPTopVirusesEntry" alias="aviFTPTopVirusesCnt" type="integer"/>
+   </group>
+   <group name="aviServicesSMTP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.3.1" instance="0" alias="aviSMTPState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.3.2" instance="0" alias="aviSMTPLastViruName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.3.3" instance="0" alias="aviSMTPLastViruTime" type="integer"/>
+   </group>
+   <group name="aviSMTPTopVirusesTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.3.4.1.1" instance="aviSMTPTopVirusesEntry" alias="aviSMTPTopViruIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.3.4.1.2" instance="aviSMTPTopVirusesEntry" alias="aviSMTPTopVirusName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.3.4.1.3" instance="aviSMTPTopVirusesEntry" alias="aviSMTPTopViruseCnt" type="integer"/>
+   </group>
+   <group name="aviServicesPOP3" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.4.1" instance="0" alias="aviPOP3State" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.4.2" instance="0" alias="aviPOP3LastViruName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.4.3" instance="0" alias="aviPOP3LastViruTime" type="integer"/>
+   </group>
+   <group name="aviPOP3TopVirusesTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.4.4.1.1" instance="aviPOP3TopVirusesEntry" alias="aviPOP3TopViruIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.4.4.1.2" instance="aviPOP3TopVirusesEntry" alias="aviPOP3TopVirusName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.24.4.4.4.1.3" instance="aviPOP3TopVirusesEntry" alias="aviPOP3TopViruseCnt" type="integer"/>
+   </group>
+   <group name="cpsemd" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.101" instance="0" alias="cpsemdStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.102" instance="0" alias="cpsemStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.103" instance="0" alias="cpsemdStatLongDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.1" instance="0" alias="cpsemdProcAlive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.2" instance="0" alias="cpsemNewEventHandle" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.3" instance="0" alias="cpsemdUpdateHandled" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.4" instance="0" alias="cpsemdLastEventTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.5" instance="0" alias="cpsemdCurrentDBSize" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.6" instance="0" alias="cpsemdDBCapacity" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.7" instance="0" alias="cpsemdNumEvents" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.8" instance="0" alias="cpsemdDBDiskSpace" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.10" instance="0" alias="cpsemdDBIsFull" type="integer"/>
+   </group>
+   <group name="cpsemdCorrelationUnitTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.9.1.1" instance="cpsemdCorrelationUnitEntry" alias="cpsemCorreUnitIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.9.1.2" instance="cpsemdCorrelationUnitEntry" alias="cpsemdCorrelaUnitIP" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.9.1.3" instance="cpsemdCorrelationUnitEntry" alias="cpsCorUniLasRcvTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.9.1.4" instance="cpsemdCorrelationUnitEntry" alias="cpsCorUniNumEveRcvd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.1.9.1.5" instance="cpsemdCorrelationUnitEntry" alias="cpsemdConnecDuratio" type="integer"/>
+   </group>
+   <group name="cpsead" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.101" instance="0" alias="cpseadStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.102" instance="0" alias="cpseaStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.103" instance="0" alias="cpseadStatLongDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.1" instance="0" alias="cpseadProcAlive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.2" instance="0" alias="cpseadConnecteToSem" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.3" instance="0" alias="cpseadNumProcesLogs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.5" instance="0" alias="cpseNoFreeDiskSpace" type="integer"/>
+   </group>
+   <group name="cpseadJobsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.1" instance="cpseadJobsEntry" alias="cpseadJobIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.2" instance="cpseadJobsEntry" alias="cpseadJobID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.3" instance="cpseadJobsEntry" alias="cpseadJobName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.4" instance="cpseadJobsEntry" alias="cpseadJobState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.5" instance="cpseadJobsEntry" alias="cpseadJobIsOnline" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.6" instance="cpseadJobsEntry" alias="cpseadJobLogServer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.7" instance="cpseadJobsEntry" alias="cpseadJobDataType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.8" instance="cpseadJobsEntry" alias="cpseConneToLogServe" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.9" instance="cpseadJobsEntry" alias="cpseadNumAnalyzLogs" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.10" instance="cpseadJobsEntry" alias="cpseadFileName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.11" instance="cpseadJobsEntry" alias="cpseaFileCurrePosit" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.12" instance="cpseadJobsEntry" alias="cpseaStateDescrCode" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.25.2.4.1.13" instance="cpseadJobsEntry" alias="cpseadStateDescript" type="octetstring"/>
+   </group>
+   <group name="uf" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.101" instance="0" alias="ufStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.102" instance="0" alias="ufStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.103" instance="0" alias="ufStatLongDescr" type="octetstring"/>
+   </group>
+   <group name="ufEngine" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.1" instance="0" alias="ufEngineName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.2" instance="0" alias="ufEngineVer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.3" instance="0" alias="ufEngineDate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.4" instance="0" alias="ufSignatureDate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.5" instance="0" alias="ufSignatureVer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.6" instance="0" alias="ufLastSigCheckTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.7" instance="0" alias="ufLastSigLocation" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.1.8" instance="0" alias="ufLastLicExp" type="octetstring"/>
+   </group>
+   <group name="ufSS" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.1" instance="0" alias="ufIsMonitor" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.2" instance="0" alias="ufScannedCnt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.3" instance="0" alias="ufBlockedCnt" type="integer"/>
+   </group>
+   <group name="ufTopBlockedCatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.4.1.1" instance="ufTopBlockedCatEntry" alias="ufTopBlockeCatIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.4.1.2" instance="ufTopBlockedCatEntry" alias="ufTopBlockedCatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.4.1.3" instance="ufTopBlockedCatEntry" alias="ufTopBlockedCatCnt" type="integer"/>
+   </group>
+   <group name="ufTopBlockedSiteTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.5.1.1" instance="ufTopBlockedSiteEntry" alias="ufTopBlockSiteIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.5.1.2" instance="ufTopBlockedSiteEntry" alias="ufTopBlockeSiteName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.5.1.3" instance="ufTopBlockedSiteEntry" alias="ufTopBlockedSiteCnt" type="integer"/>
+   </group>
+   <group name="ufTopBlockedUserTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.6.1.1" instance="ufTopBlockedUserEntry" alias="ufTopBlockUserIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.6.1.2" instance="ufTopBlockedUserEntry" alias="ufTopBlockeUserName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.29.2.6.1.3" instance="ufTopBlockedUserEntry" alias="ufTopBlockedUserCnt" type="integer"/>
+   </group>
+   <group name="ms" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.1" instance="0" alias="msProductName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.2" instance="0" alias="msMajorVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.3" instance="0" alias="msMinorVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.4" instance="0" alias="msBuildNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.5" instance="0" alias="msVersionStr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.7" instance="0" alias="msExpirationDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.8" instance="0" alias="msEngineVer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.9" instance="0" alias="msEngineDate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.101" instance="0" alias="msStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.102" instance="0" alias="msStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.103" instance="0" alias="msStatLongDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.999" instance="0" alias="msServicePack" type="octetstring"/>
+   </group>
+   <group name="msSpam" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.1" instance="0" alias="msSpamNumScannEmail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.2" instance="0" alias="msSpamNumSpamEmails" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.3" instance="0" alias="msSpaNumHanSpamEmai" type="integer"/>
+   </group>
+   <group name="msSpamControls" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.4.1" instance="0" alias="msSpamContSpamEngin" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.4.2" instance="0" alias="msSpamContrIpRepuat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.4.3" instance="0" alias="msSpamControlsSPF" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.4.4" instance="0" alias="msSpamContDomaiKeys" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.4.5" instance="0" alias="msSpamControlsRDNS" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.30.6.4.6" instance="0" alias="msSpamControlsRBL" type="integer"/>
+   </group>
+   <group name="voip" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.1" instance="0" alias="voipProductName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.2" instance="0" alias="voipMajorVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.3" instance="0" alias="voipMinorVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.4" instance="0" alias="voipBuildNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.5" instance="0" alias="voipVersionStr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.101" instance="0" alias="voipStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.102" instance="0" alias="voipStatShortDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.103" instance="0" alias="voipStatLongDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.999" instance="0" alias="voipServicePack" type="octetstring"/>
+   </group>
+   <group name="voipDOSSipNetwork" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.1" instance="0" alias="voiDOSSipNetReqInte" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.2" instance="0" alias="voDOSipNetReqConThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.3" instance="0" alias="voDOSipNetReqCurVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.4" instance="0" alias="voiDOSSipNetRegInte" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.5" instance="0" alias="voDOSipNetRegConThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.6" instance="0" alias="voDOSipNetRegCurVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.7" instance="0" alias="voDOSipNetCalIniInt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.8" instance="0" alias="voDOSiNeCaIniConThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.1.9" instance="0" alias="voDOSiNeCaInICurVal" type="integer"/>
+   </group>
+   <group name="voipDOSSipRateLimitingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.1" instance="voipDOSSipRateLimitingEntry" alias="voDOSipRatLimTabInd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.2" instance="voipDOSSipRateLimitingEntry" alias="voDOSiRaLimTabIpAdd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.3" instance="voipDOSSipRateLimitingEntry" alias="voDOSipRatLimTabInt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.4" instance="voipDOSSipRateLimitingEntry" alias="voDOSiRaLiTabConThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.5" instance="voipDOSSipRateLimitingEntry" alias="vDOSiRaLiTaNuDOSiRe" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.6" instance="voipDOSSipRateLimitingEntry" alias="voDOSiRaLiTaNuTrReq" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.7" instance="voipDOSSipRateLimitingEntry" alias="vDOSiRaLiTaNuNoTrRe" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.6.1.2.1.8" instance="voipDOSSipRateLimitingEntry" alias="voDOSiRaLiTaNuReSer" type="integer"/>
+   </group>
+   <group name="voipCACConcurrentCalls" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.7.1.1" instance="0" alias="voiCACConCalConThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.31.7.1.2" instance="0" alias="voiCACConCalCurrVal" type="integer"/>
+   </group>
+   <group name="identityAwareness" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.1" instance="0" alias="identAwareProduName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.2" instance="0" alias="identAwareAuthUsers" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.3" instance="0" alias="idenAwarUnAuthUsers" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.4" instance="0" alias="ideAwarAuthUserKerb" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.5" instance="0" alias="ideAwarAuthMachKerb" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.6" instance="0" alias="ideAwarAuthUserPass" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.7" instance="0" alias="ideAwaAutUserADQuer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.8" instance="0" alias="ideAwaAutMachADQuer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.9" instance="0" alias="idenAwarLoggInAgent" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.10" instance="0" alias="ideAwaLogInCaptPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.11" instance="0" alias="ideAwarLoggInADQuer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.12" instance="0" alias="ideAwarAntiSpofProt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.13" instance="0" alias="ideAwaSucUseLogKerb" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.14" instance="0" alias="ideAwaSucMacLogKerb" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.15" instance="0" alias="ideAwaSucUseLogPass" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.16" instance="0" alias="idAwaSucUseLogADQue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.17" instance="0" alias="idAwaSucMacLogADQue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.18" instance="0" alias="idAwaUnSucUseLogKer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.19" instance="0" alias="idAwaUnSucMacLogKer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.20" instance="0" alias="idAwaUnSucUseLogPas" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.21" instance="0" alias="ideAwarSuccUserLDAP" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.22" instance="0" alias="ideAwaUnSucUserLDAP" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.23" instance="0" alias="identAwareDataTrans" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.39" instance="0" alias="idenAwareRADIUAccou" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.40" instance="0" alias="ideAwaIdeColActDire" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.41" instance="0" alias="ideAwaIdeColCiscISE" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.42" instance="0" alias="idenAwareTermiServe" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.43" instance="0" alias="idenAwareRemotAcces" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.44" instance="0" alias="idenAwarIdentWebAPI" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.101" instance="0" alias="identiAwareneStatus" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.102" instance="0" alias="ideAwarStatShorDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.103" instance="0" alias="ideAwarStatLongDesc" type="octetstring"/>
+   </group>
+   <group name="identityAwarenessDistributedEnvTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.24.1.1" instance="identityAwarenessDistributedEnvEntry" alias="ideAwaDisEnvTabInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.24.1.2" instance="identityAwarenessDistributedEnvEntry" alias="idAwaDisEnvTabGwNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.24.1.3" instance="identityAwarenessDistributedEnvEntry" alias="ideAwaDisEnvTabDisc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.24.1.4" instance="identityAwarenessDistributedEnvEntry" alias="idAwDiEnTaBruForAtt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.24.1.5" instance="identityAwarenessDistributedEnvEntry" alias="ideAwaDisEnvTabStat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.24.1.6" instance="identityAwarenessDistributedEnvEntry" alias="idAwaDisEnvTabIsLoc" type="integer"/>
+   </group>
+   <group name="identityAwarenessADQueryStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.25.1.1" instance="identityAwarenessADQueryStatusEntry" alias="idAwaADQueStaTabInd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.25.1.2" instance="identityAwarenessADQueryStatusEntry" alias="idAwaADQueStaCurSta" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.25.1.3" instance="identityAwarenessADQueryStatusEntry" alias="idAwaADQueStaDomNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.25.1.4" instance="identityAwarenessADQueryStatusEntry" alias="ideAwaADQueStaDomIP" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.38.25.1.5" instance="identityAwarenessADQueryStatusEntry" alias="ideAwaADQueStatEven" type="integer"/>
+   </group>
+   <group name="applicationControlSubscription" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.1.1" instance="0" alias="applContrSubscStatu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.1.2" instance="0" alias="applContSubsExpDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.1.3" instance="0" alias="appliContrSubscDesc" type="octetstring"/>
+   </group>
+   <group name="applicationControlUpdate" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.2.1" instance="0" alias="applContrUpdatStatu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.2.2" instance="0" alias="appliContrUpdatDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.2.3" instance="0" alias="appliContrNextUpdat" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.2.4" instance="0" alias="applicControVersion" type="octetstring"/>
+   </group>
+   <group name="applicationControl" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.101" instance="0" alias="appliContrStatuCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.102" instance="0" alias="appContStatShorDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.39.103" instance="0" alias="appContStatLongDesc" type="octetstring"/>
+   </group>
+   <group name="exchangeAgentsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.1" instance="exchangeAgentsStatusEntry" alias="excAgenStatTablInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.2" instance="exchangeAgentsStatusEntry" alias="exchangeAgentName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.3" instance="exchangeAgentsStatusEntry" alias="exchangeAgentStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.4" instance="exchangeAgentsStatusEntry" alias="exchanAgentTotalMsg" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.5" instance="exchangeAgentsStatusEntry" alias="exchAgenTotaScanMsg" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.6" instance="exchangeAgentsStatusEntry" alias="exchaAgentDroppeMsg" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.7" instance="exchangeAgentsStatusEntry" alias="exchangeAgentUpTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.8" instance="exchangeAgentsStatusEntry" alias="excAgeTimSinLastMsg" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.9" instance="exchangeAgentsStatusEntry" alias="exchanAgentQueueLen" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.10" instance="exchangeAgentsStatusEntry" alias="exchangeQueueLen" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.11" instance="exchangeAgentsStatusEntry" alias="excAgeAvgTimePerMsg" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.12" instance="exchangeAgentsStatusEntry" alias="exAgAvgTimPerScaMsg" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.13" instance="exchangeAgentsStatusEntry" alias="exchangAgentVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.14" instance="exchangeAgentsStatusEntry" alias="exchangeCPUUsage" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.15" instance="exchangeAgentsStatusEntry" alias="exchangeMemoryUsage" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.1.1.1.16" instance="exchangeAgentsStatusEntry" alias="excAgenPoliTimeStam" type="integer"/>
+   </group>
+   <group name="dlp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.11" instance="0" alias="dlpVersionString" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.12" instance="0" alias="dlpLicenseStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.13" instance="0" alias="dlpLdapStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.14" instance="0" alias="dlpTotalScans" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.15" instance="0" alias="dlpSMTPScans" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.16" instance="0" alias="dlpSMTPIncidents" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.17" instance="0" alias="dlpLastSMTPScan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.18" instance="0" alias="dlpNumQuarantined" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.19" instance="0" alias="dlpQrntMsgsSize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.20" instance="0" alias="dlpSentEMails" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.21" instance="0" alias="dlpExpiredEMails" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.22" instance="0" alias="dlpDiscardEMails" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.23" instance="0" alias="dlpPostfixQLen" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.24" instance="0" alias="dlpPostfixErrors" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.25" instance="0" alias="dlpPostfixQOldMsg" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.26" instance="0" alias="dlpPostfixQMsgsSz" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.27" instance="0" alias="dlpPostfixQFreeSp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.28" instance="0" alias="dlpQrntFreeSpace" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.29" instance="0" alias="dlpQrntStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.30" instance="0" alias="dlpHttpScans" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.31" instance="0" alias="dlpHttpIncidents" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.32" instance="0" alias="dlpHttpLastScan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.33" instance="0" alias="dlpFtpScans" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.34" instance="0" alias="dlpFtpIncidents" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.35" instance="0" alias="dlpFtpLastScan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.36" instance="0" alias="dlpBypassStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.37" instance="0" alias="dlpUserCheckClnts" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.38" instance="0" alias="dlpLastPolStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.101" instance="0" alias="dlpStatusCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.102" instance="0" alias="dlpStatusShortDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.44.103" instance="0" alias="dlpStatusLongDesc" type="octetstring"/>
+   </group>
+   <group name="thresholds" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.1" instance="0" alias="thresholdPolicy" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.2" instance="0" alias="thresholdState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.3" instance="0" alias="thresholdStateDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.4" instance="0" alias="thresholdEnabled" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.5" instance="0" alias="thresholdActive" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.6" instance="0" alias="threEventSinceStart" type="integer"/>
+   </group>
+   <group name="thresholdActiveEventsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.1" instance="thresholdActiveEventsEntry" alias="threActivEventIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.2" instance="thresholdActiveEventsEntry" alias="thresActivEventName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.3" instance="thresholdActiveEventsEntry" alias="threActivEventCateg" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.4" instance="thresholdActiveEventsEntry" alias="threActivEventSever" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.5" instance="thresholdActiveEventsEntry" alias="threActivEventSubje" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.6" instance="thresholdActiveEventsEntry" alias="thrActiEvenSubjValu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.7" instance="thresholdActiveEventsEntry" alias="thrActiEvenActiTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.7.1.8" instance="thresholdActiveEventsEntry" alias="threActivEventState" type="octetstring"/>
+   </group>
+   <group name="thresholdDestinationsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.8.1.1" instance="thresholdDestinationsEntry" alias="threshoDestinaIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.8.1.2" instance="thresholdDestinationsEntry" alias="threshoDestinatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.8.1.3" instance="thresholdDestinationsEntry" alias="threshoDestinatType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.8.1.4" instance="thresholdDestinationsEntry" alias="threshoSendingState" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.8.1.5" instance="thresholdDestinationsEntry" alias="thresSendiStateDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.8.1.6" instance="thresholdDestinationsEntry" alias="thresholdAlertCount" type="integer"/>
+   </group>
+   <group name="thresholdErrorsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.9.1.1" instance="thresholdErrorsEntry" alias="thresholdErrorIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.9.1.2" instance="thresholdErrorsEntry" alias="thresholdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.9.1.3" instance="thresholdErrorsEntry" alias="thresholThresholOID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.9.1.4" instance="thresholdErrorsEntry" alias="thresholdErrorDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.42.9.1.5" instance="thresholdErrorsEntry" alias="thresholdErrorTime" type="octetstring"/>
+   </group>
+   <group name="advancedUrlFilteringSubscription" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.1.1" instance="0" alias="advaUrlFiltSubsStat" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.1.2" instance="0" alias="advUrlFilSubExpDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.1.3" instance="0" alias="advaUrlFiltSubsDesc" type="octetstring"/>
+   </group>
+   <group name="advancedUrlFilteringUpdate" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.2.1" instance="0" alias="advaUrlFiltUpdaStat" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.2.2" instance="0" alias="advaUrlFiltUpdaDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.2.3" instance="0" alias="advaUrlFiltNextUpda" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.2.4" instance="0" alias="advanUrlFilteVersio" type="octetstring"/>
+   </group>
+   <group name="advancedUrlFilteringRADStatus" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.3.1" instance="0" alias="advUrlFilRADStaCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.3.2" instance="0" alias="advUrlFilRADStaDesc" type="octetstring"/>
+   </group>
+   <group name="advancedUrlFiltering" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.101" instance="0" alias="advaUrlFiltStatCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.102" instance="0" alias="advUrlFilStaShoDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.43.103" instance="0" alias="advUrlFilStaLonDesc" type="octetstring"/>
+   </group>
+   <group name="antiBotSubscription" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.2.1" instance="0" alias="antiBotSubscrStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.2.2" instance="0" alias="antiBotSubscExpDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.2.3" instance="0" alias="antiBotSubscripDesc" type="octetstring"/>
+   </group>
+   <group name="antiVirusSubscription" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.3.1" instance="0" alias="antiVirusSubscStatu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.3.2" instance="0" alias="antiViruSubsExpDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.3.3" instance="0" alias="antiVirusSubscrDesc" type="octetstring"/>
+   </group>
+   <group name="antiSpamSubscription" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.4.1" instance="0" alias="antiSpamSubscStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.4.2" instance="0" alias="antiSpamSubsExpDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.4.3" instance="0" alias="antiSpamSubscriDesc" type="octetstring"/>
+   </group>
+   <group name="amwABUpdate" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.1.1" instance="0" alias="amwABUpdateStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.1.2" instance="0" alias="amwABUpdateDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.1.3" instance="0" alias="amwABNextUpdate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.1.4" instance="0" alias="amwABVersion" type="octetstring"/>
+   </group>
+   <group name="amwAVUpdate" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.5.1" instance="0" alias="amwAVUpdateStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.5.2" instance="0" alias="amwAVUpdateDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.5.3" instance="0" alias="amwAVNextUpdate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.5.4" instance="0" alias="amwAVVersion" type="octetstring"/>
+   </group>
+   <group name="amw" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.101" instance="0" alias="amwStatusCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.102" instance="0" alias="amwStatusShortDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.46.103" instance="0" alias="amwStatusLongDesc" type="octetstring"/>
+   </group>
+   <group name="te" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.25" instance="0" alias="teSubscriptioStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.26" instance="0" alias="teCloudSubscrStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.20" instance="0" alias="teSubscriptiExpDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.27" instance="0" alias="teSubscriptionDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.16" instance="0" alias="teUpdateStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.17" instance="0" alias="teUpdateDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.101" instance="0" alias="teStatusCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.102" instance="0" alias="teStatusShortDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.49.103" instance="0" alias="teStatusLongDesc" type="octetstring"/>
+   </group>
+   <group name="treatExtarctionSubscription" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.1.1" instance="0" alias="treaExtarSubscStatu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.1.2" instance="0" alias="treaExtaSubsExpDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.1.3" instance="0" alias="treatExtarSubscDesc" type="octetstring"/>
+   </group>
+   <group name="treatExtarctionStatistics" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.2.1" instance="0" alias="treExtaTotaScanAtta" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.2.2" instance="0" alias="treaExtarCleanAttac" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.2.3" instance="0" alias="treExtaOrigAttaAcce" type="integer"/>
+   </group>
+   <group name="treatExtarction" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.101" instance="0" alias="treatExtarStatuCode" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.102" instance="0" alias="treExtaStatShorDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2620.1.50.103" instance="0" alias="treExtaStatLongDesc" type="octetstring"/>
+   </group>
+</datacollection-group>

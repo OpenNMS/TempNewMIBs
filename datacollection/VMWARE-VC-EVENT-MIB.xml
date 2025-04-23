@@ -1,0 +1,12 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="VMWARE-VC-EVENT-MIB">
+   <group name="vmwVC" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.301" instance="0" alias="vmwVpxdTrapType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.302" instance="0" alias="vmwVpxdHostName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.303" instance="0" alias="vmwVpxdVMName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.304" instance="0" alias="vmwVpxdOldStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.305" instance="0" alias="vmwVpxdNewStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.306" instance="0" alias="vmwVpxdObjValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.307" instance="0" alias="vmwVpxdTargetObj" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.3.308" instance="0" alias="vmwVpxdTargeObjType" type="string"/>
+   </group>
+</datacollection-group>
