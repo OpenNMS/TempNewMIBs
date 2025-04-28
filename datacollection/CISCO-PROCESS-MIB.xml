@@ -1,0 +1,138 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-PROCESS-MIB">
+   <resourceType name="cpmCPUTotalEntry" label="cpmCPUTotalEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmProcessEntry" label="cpmProcessEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmProcessExtEntry" label="cpmProcessExtEntry" resourceLabel="${cpmProcExtPriority} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmProcessExtRevEntry" label="cpmProcessExtRevEntry" resourceLabel="${cpmProcExtPriorityRev} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmCPUThresholdEntry" label="cpmCPUThresholdEntry" resourceLabel="${cpmCPUThresholdClass} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmCPUHistoryEntry" label="cpmCPUHistoryEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmThreadEntry" label="cpmThreadEntry" resourceLabel="${cpmThreadState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmVirtualProcessEntry" label="cpmVirtualProcessEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cpmCPUProcessHistoryEntry" label="cpmCPUProcessHistoryEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="cpmCPUTotalTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.1" instance="cpmCPUTotalEntry" alias="cpmCPUTotalIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.2" instance="cpmCPUTotalEntry" alias="cpmCPUTotaPhysIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.3" instance="cpmCPUTotalEntry" alias="cpmCPUTotal5sec" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.4" instance="cpmCPUTotalEntry" alias="cpmCPUTotal1min" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.5" instance="cpmCPUTotalEntry" alias="cpmCPUTotal5min" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.6" instance="cpmCPUTotalEntry" alias="cpmCPUTotal5secRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.7" instance="cpmCPUTotalEntry" alias="cpmCPUTotal1minRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.8" instance="cpmCPUTotalEntry" alias="cpmCPUTotal5minRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.9" instance="cpmCPUTotalEntry" alias="cpmCPUMonInterval" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.10" instance="cpmCPUTotalEntry" alias="cpmCPUTotMonIntValu" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.11" instance="cpmCPUTotalEntry" alias="cpmCPUIntMonIntValu" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.12" instance="cpmCPUTotalEntry" alias="cpmCPUMemoryUsed" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.13" instance="cpmCPUTotalEntry" alias="cpmCPUMemoryFree" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.14" instance="cpmCPUTotalEntry" alias="cpmCPUMemoKernReser" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.1.1.1.15" instance="cpmCPUTotalEntry" alias="cpmCPUMemoryLowest" type="gauge32"/>
+   </group>
+   <group name="cpmProcessTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.1.1.1" instance="cpmProcessEntry" alias="cpmProcessPID" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.1.1.2" instance="cpmProcessEntry" alias="cpmProcessName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.1.1.4" instance="cpmProcessEntry" alias="cpmProcessuSecs" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.1.1.5" instance="cpmProcessEntry" alias="cpmProcesTimeCreate" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.1.1.6" instance="cpmProcessEntry" alias="cpmProceAveragUSecs" type="integer"/>
+   </group>
+   <group name="cpmProcessExtTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.1" instance="cpmProcessExtEntry" alias="cpmProcExtMemAlloca" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.2" instance="cpmProcessExtEntry" alias="cpmProcExtMemFreed" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.3" instance="cpmProcessExtEntry" alias="cpmProcExtInvoked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.4" instance="cpmProcessExtEntry" alias="cpmProcExtRuntime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.5" instance="cpmProcessExtEntry" alias="cpmProcExtUtil5Sec" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.6" instance="cpmProcessExtEntry" alias="cpmProcExtUtil1Min" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.7" instance="cpmProcessExtEntry" alias="cpmProcExtUtil5Min" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.2.1.8" instance="cpmProcessExtEntry" alias="cpmProcExtPriority" type="string"/>
+   </group>
+   <group name="cpmProcessExtRevTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.1" instance="cpmProcessExtRevEntry" alias="cpmProExtMemAlloRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.2" instance="cpmProcessExtRevEntry" alias="cpmProExtMemFreeRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.3" instance="cpmProcessExtRevEntry" alias="cpmProcExtInvokeRev" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.4" instance="cpmProcessExtRevEntry" alias="cpmProcExtRuntimRev" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.5" instance="cpmProcessExtRevEntry" alias="cpmProExtUti5SecRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.6" instance="cpmProcessExtRevEntry" alias="cpmProExtUti1MinRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.7" instance="cpmProcessExtRevEntry" alias="cpmProExtUti5MinRev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.8" instance="cpmProcessExtRevEntry" alias="cpmProcExtPrioriRev" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.9" instance="cpmProcessExtRevEntry" alias="cpmProcessType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.10" instance="cpmProcessExtRevEntry" alias="cpmProcessRespawn" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.11" instance="cpmProcessExtRevEntry" alias="cpmProceRespawCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.12" instance="cpmProcessExtRevEntry" alias="cpmProResAftLasPatc" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.13" instance="cpmProcessExtRevEntry" alias="cpmProcesMemoryCore" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.14" instance="cpmProcessExtRevEntry" alias="cpmProcLastRestUser" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.15" instance="cpmProcessExtRevEntry" alias="cpmProcTextSegmSize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.16" instance="cpmProcessExtRevEntry" alias="cpmProcDataSegmSize" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.17" instance="cpmProcessExtRevEntry" alias="cpmProcessStackSize" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.3.1.18" instance="cpmProcessExtRevEntry" alias="cpmProcDynaMemoSize" type="gauge32"/>
+   </group>
+   <group name="cpmCPUThresholdTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.4.1.1" instance="cpmCPUThresholdEntry" alias="cpmCPUThresholClass" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.4.1.2" instance="cpmCPUThresholdEntry" alias="cpmCPURisiThreValue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.4.1.3" instance="cpmCPUThresholdEntry" alias="cpmCPURisiThrePerio" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.4.1.4" instance="cpmCPUThresholdEntry" alias="cpmCPUFallThreValue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.4.1.5" instance="cpmCPUThresholdEntry" alias="cpmCPUFallThrePerio" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.4.1.6" instance="cpmCPUThresholdEntry" alias="cpmCPUThreEntrStatu" type="string"/>
+   </group>
+   <group name="cpmCPUHistory" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.1" instance="0" alias="cpmCPUHistorThresho" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.2" instance="0" alias="cpmCPUHistorySize" type="integer"/>
+   </group>
+   <group name="cpmCPUHistoryTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.3.1.1" instance="cpmCPUHistoryEntry" alias="cpmCPUHistoReportId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.3.1.2" instance="cpmCPUHistoryEntry" alias="cpmCPUHistReporSize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.3.1.3" instance="cpmCPUHistoryEntry" alias="cpmCPUHistTotalUtil" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.3.1.4" instance="cpmCPUHistoryEntry" alias="cpmCPUHistInterUtil" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.3.1.5" instance="cpmCPUHistoryEntry" alias="cpmCPUHistCreatTime" type="timeticks"/>
+   </group>
+   <group name="cpmThreadTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.3.1.1.1" instance="cpmThreadEntry" alias="cpmThreadID" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.3.1.1.2" instance="cpmThreadEntry" alias="cpmThreadName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.3.1.1.3" instance="cpmThreadEntry" alias="cpmThreadPriority" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.3.1.1.4" instance="cpmThreadEntry" alias="cpmThreadState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.3.1.1.5" instance="cpmThreadEntry" alias="cpmThreaBlockProces" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.3.1.1.6" instance="cpmThreadEntry" alias="cpmThreadCpuUtiliza" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.3.1.1.7" instance="cpmThreadEntry" alias="cpmThreadStackSize" type="gauge32"/>
+   </group>
+   <group name="cpmVirtualProcessTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.1" instance="cpmVirtualProcessEntry" alias="cpmVirtualProcessID" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.2" instance="cpmVirtualProcessEntry" alias="cpmVirtuaProcesName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.3" instance="cpmVirtualProcessEntry" alias="cpmVirtProcUtil5Sec" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.4" instance="cpmVirtualProcessEntry" alias="cpmVirtProcUtil1Min" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.5" instance="cpmVirtualProcessEntry" alias="cpmVirtProcUtil5Min" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.6" instance="cpmVirtualProcessEntry" alias="cpmVirtProcMemAlloc" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.7" instance="cpmVirtualProcessEntry" alias="cpmVirtProcMemFreed" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.8" instance="cpmVirtualProcessEntry" alias="cpmVirtProcInvoCoun" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.4.1.1.9" instance="cpmVirtualProcessEntry" alias="cpmVirtuProceRuntim" type="counter32"/>
+   </group>
+   <group name="cpmCPUProcessHistoryTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.4.1.1" instance="cpmCPUProcessHistoryEntry" alias="cpmCPUProcHistIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.4.1.2" instance="cpmCPUProcessHistoryEntry" alias="cpmCPUHistoryProcId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.4.1.3" instance="cpmCPUProcessHistoryEntry" alias="cpmCPUHistoProcName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.4.1.4" instance="cpmCPUProcessHistoryEntry" alias="cpmCPUHistProcCreat" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.109.1.2.5.4.1.5" instance="cpmCPUProcessHistoryEntry" alias="cpmCPUHistoProcUtil" type="gauge32"/>
+   </group>
+</datacollection-group>

@@ -1,0 +1,770 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-STACK-MIB">
+   <resourceType name="sysTrapReceiverEntry" label="sysTrapReceiverEntry" resourceLabel="${sysTrapReceiverType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="sysCommunityEntry" label="sysCommunityEntry" resourceLabel="${sysCommunityAccess} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="sysFddiRingEntry" label="sysFddiRingEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="sysTrafficMeterEntry" label="sysTrafficMeterEntry" resourceLabel="${sysTrafficMeterType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="chassisComponentEntry" label="chassisComponentEntry" resourceLabel="${chassisComponentType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="moduleEntry" label="moduleEntry" resourceLabel="${moduleType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portEntry" label="portEntry" resourceLabel="${portType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="brouterPortEntry" label="brouterPortEntry" resourceLabel="${brouterPortIpAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="filterMacEntry" label="filterMacEntry" resourceLabel="${filterMacType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="filterVendorEntry" label="filterVendorEntry" resourceLabel="${filterVendorType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="filterProtocolEntry" label="filterProtocolEntry" resourceLabel="${filterProtocolType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="filterTestEntry" label="filterTestEntry" resourceLabel="${filterTestType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="filterPortEntry" label="filterPortEntry" resourceLabel="${filterPortSuppressionViolation} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vlanEntry" label="vlanEntry" resourceLabel="${vlanSpantreeEnable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vlanPortEntry" label="vlanPortEntry" resourceLabel="${vlanPortSwitchLevel} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vmpsEntry" label="vmpsEntry" resourceLabel="${vmpsAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vlanTrunkMappingEntry" label="vlanTrunkMappingEntry" resourceLabel="${vlanTrunkMappingType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portSecurityEntry" label="portSecurityEntry" resourceLabel="${portSecurityAdminStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portSecurityExtEntry" label="portSecurityExtEntry" resourceLabel="${portSecurityExtControlStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="tokenRingPortEntry" label="tokenRingPortEntry" resourceLabel="${tokenRingPortSetACbits} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="tokenRingDripLocalVlanStatusEntry" label="tokenRingDripLocalVlanStatusEntry" resourceLabel="${tokenRingDripLocalPortStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="tokenRingPortSoftErrEntry" label="tokenRingPortSoftErrEntry" resourceLabel="${tokenRingPortSoftErrResetCounters} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="mcastRouterEntry" label="mcastRouterEntry" resourceLabel="${mcastRouterAdminStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="dnsServerEntry" label="dnsServerEntry" resourceLabel="${dnsServerAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="syslogServerEntry" label="syslogServerEntry" resourceLabel="${syslogServerAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="syslogMessageControlEntry" label="syslogMessageControlEntry" resourceLabel="${syslogMessageFacility} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ntpServerEntry" label="ntpServerEntry" resourceLabel="${ntpServerAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ntpAuthenticationEntry" label="ntpAuthenticationEntry" resourceLabel="${ntpAuthenticationTrustedMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="tacacsServerEntry" label="tacacsServerEntry" resourceLabel="${tacacsServerAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ipPermitListEntry" label="ipPermitListEntry" resourceLabel="${ipPermitAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ipPermitDeniedListEntry" label="ipPermitDeniedListEntry" resourceLabel="${ipPermitDeniedAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portChannelEntry" label="portChannelEntry" resourceLabel="${portChannelAdminStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portCpbEntry" label="portCpbEntry" resourceLabel="${portCpbSecurity} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portTopNControlEntry" label="portTopNControlEntry" resourceLabel="${portTopNRateBase} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portTopNEntry" label="portTopNEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="mdgGatewayEntry" label="mdgGatewayEntry" resourceLabel="${mdgGatewayAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="radiusServerEntry" label="radiusServerEntry" resourceLabel="${radiusServerAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="traceRouteQueryEntry" label="traceRouteQueryEntry" resourceLabel="${traceRouteQueryDNSEnable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="traceRouteDataEntry" label="traceRouteDataEntry" resourceLabel="${traceRouteDataGatewayIp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="voicePortIfConfigEntry" label="voicePortIfConfigEntry" resourceLabel="${voicePortIfDHCPEnabled} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="voicePortCallManagerEntry" label="voicePortCallManagerEntry" resourceLabel="${voicePortCallManagerIpAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="voicePortOperDnsServerEntry" label="voicePortOperDnsServerEntry" resourceLabel="${voicePortOperDnsServerIpAddr} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="portJumboFrameEntry" label="portJumboFrameEntry" resourceLabel="${portJumboFrameEnable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="switchAccelerationModuleEntry" label="switchAccelerationModuleEntry" resourceLabel="${switchAccelerationModuleEnable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="systemGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.1" instance="0" alias="sysMgmtType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.2" instance="0" alias="sysIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.3" instance="0" alias="sysNetMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.4" instance="0" alias="sysBroadcast" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.7" instance="0" alias="sysAttachType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.8" instance="0" alias="sysTraffic" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.9" instance="0" alias="sysReset" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.10" instance="0" alias="sysBaudRate" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.11" instance="0" alias="sysInsertMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.12" instance="0" alias="sysClearMacTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.13" instance="0" alias="sysClearPortTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.15" instance="0" alias="sysEnableModem" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.16" instance="0" alias="sysEnableRedirects" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.17" instance="0" alias="sysEnableRmon" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.18" instance="0" alias="sysArpAgingTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.19" instance="0" alias="sysTrafficPeak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.20" instance="0" alias="sysTrafficPeakTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.21" instance="0" alias="sysCommunityRwa" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.22" instance="0" alias="sysCommunityRw" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.23" instance="0" alias="sysCommunityRo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.24" instance="0" alias="sysEnablChassiTraps" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.25" instance="0" alias="sysEnablModuleTraps" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.26" instance="0" alias="sysEnablBridgeTraps" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.27" instance="0" alias="sysIpVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.28" instance="0" alias="sysConfigChangeTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.29" instance="0" alias="sysEnablRepeatTraps" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.30" instance="0" alias="sysBannerMotd" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.31" instance="0" alias="sysEnabIpPermiTraps" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.33" instance="0" alias="sysEnableVmpsTraps" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.34" instance="0" alias="sysConfigChangeInfo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.35" instance="0" alias="sysEnablConfigTraps" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.36" instance="0" alias="sysConfigRegister" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.37" instance="0" alias="sysBootVariable" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.38" instance="0" alias="sysBootedImage" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.39" instance="0" alias="sysEnableEntityTrap" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.40" instance="0" alias="sysEnableStpxTrap" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.41" instance="0" alias="sysExtRmoVlaModEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.42" instance="0" alias="sysExteRmonNetfPass" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.43" instance="0" alias="sysExteRmonNetfEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.44" instance="0" alias="sysExtRmoVlaAgeEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.45" instance="0" alias="sysExtendRmonEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.46" instance="0" alias="sysConsPrimLogiAuth" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.47" instance="0" alias="sysConsPrimEnabAuth" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.48" instance="0" alias="sysTelnPrimLogiAuth" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.49" instance="0" alias="sysTelnPrimEnabAuth" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.50" instance="0" alias="sysStartConfiSource" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.51" instance="0" alias="sysStarConfSourFile" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.52" instance="0" alias="sysConfSuperModulNo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.53" instance="0" alias="sysStandbPortEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.54" instance="0" alias="sysPortFastBpduGuar" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.55" instance="0" alias="sysErrDisaTimeEnabl" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.56" instance="0" alias="sysErrDisaTimeInter" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.57" instance="0" alias="sysTraMonHigWatMark" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.58" instance="0" alias="sysHighAvailaEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.59" instance="0" alias="sysHighAvaiVersEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.60" instance="0" alias="sysHighAvaiOperStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.61" instance="0" alias="sysHigAvaNotRunReas" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.62" instance="0" alias="sysExtRmoNetModMask" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.63" instance="0" alias="sshPublicKeySize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.64" instance="0" alias="sysMaxRmonMemory" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.65" instance="0" alias="sysMacReduAdmiEnabl" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.66" instance="0" alias="sysMacReduOperEnabl" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.67" instance="0" alias="sysStatus" type="string"/>
+   </group>
+   <group name="sysTrapReceiverTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.5.1.1" instance="sysTrapReceiverEntry" alias="sysTrapReceiverType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.5.1.2" instance="sysTrapReceiverEntry" alias="sysTrapReceiverAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.5.1.3" instance="sysTrapReceiverEntry" alias="sysTrapReceiverComm" type="octetstring"/>
+   </group>
+   <group name="sysCommunityTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.6.1.1" instance="sysCommunityEntry" alias="sysCommunityAccess" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.6.1.2" instance="sysCommunityEntry" alias="sysCommunityString" type="octetstring"/>
+   </group>
+   <group name="sysFddiRingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.14.1.1" instance="sysFddiRingEntry" alias="sysFddiRingSMTIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.14.1.2" instance="sysFddiRingEntry" alias="sysFddiRingAddress" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.14.1.3" instance="sysFddiRingEntry" alias="sysFddiRingNext" type="octetstring"/>
+   </group>
+   <group name="sysTrafficMeterTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.32.1.1" instance="sysTrafficMeterEntry" alias="sysTrafficMeterType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.32.1.2" instance="sysTrafficMeterEntry" alias="sysTrafficMeter" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.32.1.3" instance="sysTrafficMeterEntry" alias="sysTrafficMeterPeak" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.1.32.1.4" instance="sysTrafficMeterEntry" alias="sysTrafMetePeakTime" type="timeticks"/>
+   </group>
+   <group name="chassisGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.1" instance="0" alias="chassisSysType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.2" instance="0" alias="chassisBkplType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.3" instance="0" alias="chassisPs1Type" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.4" instance="0" alias="chassisPs1Status" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.5" instance="0" alias="chassiPs1TestResult" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.6" instance="0" alias="chassisPs2Type" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.7" instance="0" alias="chassisPs2Status" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.8" instance="0" alias="chassiPs2TestResult" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.9" instance="0" alias="chassisFanStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.10" instance="0" alias="chassiFanTestResult" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.11" instance="0" alias="chassisMinorAlarm" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.12" instance="0" alias="chassisMajorAlarm" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.13" instance="0" alias="chassisTempAlarm" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.14" instance="0" alias="chassisNumSlots" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.15" instance="0" alias="chassisSlotConfig" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.16" instance="0" alias="chassisModel" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.17" instance="0" alias="chassisSerialNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.19" instance="0" alias="chasSeriaNumbeStrin" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.20" instance="0" alias="chassisPs3Type" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.21" instance="0" alias="chassisPs3Status" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.22" instance="0" alias="chassiPs3TestResult" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.23" instance="0" alias="chassisPEMInstalled" type="string"/>
+   </group>
+   <group name="chassisComponentTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.18.1.1" instance="chassisComponentEntry" alias="chassisComponeIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.18.1.2" instance="chassisComponentEntry" alias="chassisComponenType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.18.1.3" instance="chassisComponentEntry" alias="chasCompoSeriaNumbe" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.18.1.4" instance="chassisComponentEntry" alias="chassComponHwVersio" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.2.18.1.5" instance="chassisComponentEntry" alias="chassisComponeModel" type="octetstring"/>
+   </group>
+   <group name="moduleTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.1" instance="moduleEntry" alias="moduleIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.2" instance="moduleEntry" alias="moduleType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.3" instance="moduleEntry" alias="moduleSerialNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.4" instance="moduleEntry" alias="moduleHwHiVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.5" instance="moduleEntry" alias="moduleHwLoVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.6" instance="moduleEntry" alias="moduleFwHiVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.7" instance="moduleEntry" alias="moduleFwLoVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.8" instance="moduleEntry" alias="moduleSwHiVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.9" instance="moduleEntry" alias="moduleSwLoVersion" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.10" instance="moduleEntry" alias="moduleStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.11" instance="moduleEntry" alias="moduleTestResult" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.12" instance="moduleEntry" alias="moduleAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.13" instance="moduleEntry" alias="moduleName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.14" instance="moduleEntry" alias="moduleNumPorts" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.15" instance="moduleEntry" alias="modulePortStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.16" instance="moduleEntry" alias="moduleSubType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.17" instance="moduleEntry" alias="moduleModel" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.18" instance="moduleEntry" alias="moduleHwVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.19" instance="moduleEntry" alias="moduleFwVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.20" instance="moduleEntry" alias="moduleSwVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.21" instance="moduleEntry" alias="moduleStandbyStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.22" instance="moduleEntry" alias="moduleIPAddress" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.23" instance="moduleEntry" alias="moduleIPAddressVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.24" instance="moduleEntry" alias="moduleSubType2" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.25" instance="moduleEntry" alias="moduleSlotNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.26" instance="moduleEntry" alias="moduSeriaNumbeStrin" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.27" instance="moduleEntry" alias="modulEntPhysicIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.3.1.1.28" instance="moduleEntry" alias="moduleAdditioStatus" type="octetstring"/>
+   </group>
+   <group name="portTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.1" instance="portEntry" alias="portModuleIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.2" instance="portEntry" alias="portIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.3" instance="portEntry" alias="portCrossIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.4" instance="portEntry" alias="portName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.5" instance="portEntry" alias="portType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.6" instance="portEntry" alias="portOperStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.7" instance="portEntry" alias="portCrossGroupIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.8" instance="portEntry" alias="portAdditionaStatus" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.9" instance="portEntry" alias="portAdminSpeed" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.10" instance="portEntry" alias="portDuplex" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.11" instance="portEntry" alias="portIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.12" instance="portEntry" alias="portSpantrFastStart" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.13" instance="portEntry" alias="portAdmiRxFlowContr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.14" instance="portEntry" alias="portOperRxFlowContr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.15" instance="portEntry" alias="portAdmiTxFlowContr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.16" instance="portEntry" alias="portOperTxFlowContr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.17" instance="portEntry" alias="portMacContTranFram" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.18" instance="portEntry" alias="portMacContReceFram" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.19" instance="portEntry" alias="porMacConPauTraFram" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.20" instance="portEntry" alias="porMacConPauRecFram" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.21" instance="portEntry" alias="porMacConUnkProFram" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.22" instance="portEntry" alias="portLinkFaultStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.23" instance="portEntry" alias="portAdditOperStatus" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.24" instance="portEntry" alias="portInlinPowerDetec" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.25" instance="portEntry" alias="portEntPhysicaIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.4.1.1.26" instance="portEntry" alias="porErrDisTimOutEnab" type="string"/>
+   </group>
+   <group name="tftpGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.5.1" instance="0" alias="tftpHost" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.5.2" instance="0" alias="tftpFile" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.5.3" instance="0" alias="tftpModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.5.4" instance="0" alias="tftpAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.5.5" instance="0" alias="tftpResult" type="string"/>
+   </group>
+   <group name="brouterGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.1" instance="0" alias="brouterEnableRip" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.2" instance="0" alias="brouteEnableSpantre" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.3" instance="0" alias="brouEnablGiantCheck" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.4" instance="0" alias="broutEnableIpFragme" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.5" instance="0" alias="brouteEnableUnreach" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.6" instance="0" alias="brouterCamAgingTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.7" instance="0" alias="brouterCamMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.8" instance="0" alias="broutIpxSnapToEther" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.9" instance="0" alias="broIpx8023RawToFddi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.10" instance="0" alias="broutEtherReceivMax" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.11" instance="0" alias="broutEtherTransmMax" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.12" instance="0" alias="brouteFddiReceivMax" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.13" instance="0" alias="brouteFddiTransmMax" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.15" instance="0" alias="broutIpx8022ToEther" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.16" instance="0" alias="brouEnablTransEncap" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.17" instance="0" alias="broutEnablFddiCheck" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.18" instance="0" alias="brouterEnableAPaRT" type="string"/>
+   </group>
+   <group name="brouterPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.1" instance="brouterPortEntry" alias="brouterPortModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.2" instance="brouterPortEntry" alias="brouterPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.3" instance="brouterPortEntry" alias="brouterPortIpVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.4" instance="brouterPortEntry" alias="brouterPortIpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.5" instance="brouterPortEntry" alias="brouterPortNetMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.6" instance="brouterPortEntry" alias="brouterPortBroadcas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.7" instance="brouterPortEntry" alias="broutPortBridgeVlan" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.6.14.1.8" instance="brouterPortEntry" alias="broutePortIpHelpers" type="octetstring"/>
+   </group>
+   <group name="filterMacTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.1.1.1" instance="filterMacEntry" alias="filterMacModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.1.1.2" instance="filterMacEntry" alias="filterMacPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.1.1.3" instance="filterMacEntry" alias="filterMacAddress" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.1.1.4" instance="filterMacEntry" alias="filterMacType" type="string"/>
+   </group>
+   <group name="filterVendorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.2.1.1" instance="filterVendorEntry" alias="filterVendorModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.2.1.2" instance="filterVendorEntry" alias="filterVendorPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.2.1.3" instance="filterVendorEntry" alias="filterVendorId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.2.1.4" instance="filterVendorEntry" alias="filterVendorType" type="string"/>
+   </group>
+   <group name="filterProtocolTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.3.1.1" instance="filterProtocolEntry" alias="filterProtocoModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.3.1.2" instance="filterProtocolEntry" alias="filterProtocolPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.3.1.3" instance="filterProtocolEntry" alias="filterProtocolValue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.3.1.4" instance="filterProtocolEntry" alias="filterProtocolType" type="string"/>
+   </group>
+   <group name="filterTestTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.4.1.1" instance="filterTestEntry" alias="filterTestModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.4.1.2" instance="filterTestEntry" alias="filterTestPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.4.1.3" instance="filterTestEntry" alias="filterTestIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.4.1.4" instance="filterTestEntry" alias="filterTestType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.4.1.5" instance="filterTestEntry" alias="filterTestOffset" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.4.1.6" instance="filterTestEntry" alias="filterTestValue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.4.1.7" instance="filterTestEntry" alias="filterTestMask" type="integer"/>
+   </group>
+   <group name="filterPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.1" instance="filterPortEntry" alias="filterPortModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.2" instance="filterPortEntry" alias="filterPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.3" instance="filterPortEntry" alias="filterPortComplex" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.4" instance="filterPortEntry" alias="filtePortBroadThrot" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.5" instance="filterPortEntry" alias="filtePortBroadThres" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.6" instance="filterPortEntry" alias="filtePortBroadDisca" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.7" instance="filterPortEntry" alias="filPortBroaThreFrac" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.8" instance="filterPortEntry" alias="filtePortSupprOptio" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.7.5.1.9" instance="filterPortEntry" alias="filtePortSupprViola" type="string"/>
+   </group>
+   <group name="monitorGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.1" instance="0" alias="monitorSourceModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.2" instance="0" alias="monitorSourcePort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.3" instance="0" alias="monitoDestinaModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.4" instance="0" alias="monitorDestinatPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.5" instance="0" alias="monitorDirection" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.6" instance="0" alias="monitorEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.7" instance="0" alias="moniAdminSourcPorts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.8.8" instance="0" alias="monitOperSourcPorts" type="octetstring"/>
+   </group>
+   <group name="vlanTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.2.1.1" instance="vlanEntry" alias="vlanIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.2.1.2" instance="vlanEntry" alias="vlanSpantreeEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.2.1.3" instance="vlanEntry" alias="vlanIfIndex" type="integer"/>
+   </group>
+   <group name="vlanPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.1" instance="vlanPortEntry" alias="vlanPortModule" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.2" instance="vlanPortEntry" alias="vlanPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.3" instance="vlanPortEntry" alias="vlanPortVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.5" instance="vlanPortEntry" alias="vlanPortIslVlanAllo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.6" instance="vlanPortEntry" alias="vlanPortSwitchLevel" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.7" instance="vlanPortEntry" alias="vlanPortIslAdmiStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.8" instance="vlanPortEntry" alias="vlanPortIslOperStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.9" instance="vlanPortEntry" alias="vlanPortIslPrioVlan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.10" instance="vlanPortEntry" alias="vlanPortAdminStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.11" instance="vlanPortEntry" alias="vlanPortOperStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.3.1.12" instance="vlanPortEntry" alias="vlanPortAuxiliaVlan" type="integer"/>
+   </group>
+   <group name="vmpsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.4.1.1" instance="vmpsEntry" alias="vmpsAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.4.1.2" instance="vmpsEntry" alias="vmpsType" type="string"/>
+   </group>
+   <group name="vlanGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.5" instance="0" alias="vmpsAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.6" instance="0" alias="vmpsAccessed" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.7" instance="0" alias="vlanTrunkMappingMax" type="integer"/>
+   </group>
+   <group name="vlanTrunkMappingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.8.1.1" instance="vlanTrunkMappingEntry" alias="vlaTrunMappFromVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.8.1.2" instance="vlanTrunkMappingEntry" alias="vlanTrunMappiToVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.8.1.3" instance="vlanTrunkMappingEntry" alias="vlanTrunkMappinType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.8.1.4" instance="vlanTrunkMappingEntry" alias="vlanTrunkMappinOper" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.9.8.1.5" instance="vlanTrunkMappingEntry" alias="vlanTrunkMappiStatu" type="string"/>
+   </group>
+   <group name="portSecurityTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.1" instance="portSecurityEntry" alias="portSecurModulIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.2" instance="portSecurityEntry" alias="portSecuriPortIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.3" instance="portSecurityEntry" alias="portSecurAdminStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.4" instance="portSecurityEntry" alias="portSecurOperStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.5" instance="portSecurityEntry" alias="portSecuLastSrcAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.6" instance="portSecurityEntry" alias="portSecuSecuSrcAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.7" instance="portSecurityEntry" alias="portSecurMaxSrcAddr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.8" instance="portSecurityEntry" alias="portSecuriAgingTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.9" instance="portSecurityEntry" alias="portSecuShutTimeOut" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.1.1.10" instance="portSecurityEntry" alias="portSecurViolaPolic" type="string"/>
+   </group>
+   <group name="portSecurityExtTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.2.1.1" instance="portSecurityExtEntry" alias="portSecuExtModuInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.2.1.2" instance="portSecurityExtEntry" alias="portSecuExtPortInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.2.1.3" instance="portSecurityExtEntry" alias="porSecExtSecSrcAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.10.2.1.4" instance="portSecurityExtEntry" alias="portSecuExtContStat" type="string"/>
+   </group>
+   <group name="tokenRingPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.1" instance="tokenRingPortEntry" alias="tokenRingModulIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.2" instance="tokenRingPortEntry" alias="tokenRingPortIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.3" instance="tokenRingPortEntry" alias="tokRingPortSetACbit" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.4" instance="tokenRingPortEntry" alias="tokenRingPortMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.9" instance="tokenRingPortEntry" alias="tokRinPorEarTokeRel" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.10" instance="tokenRingPortEntry" alias="tokRingPortPrioThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.11" instance="tokenRingPortEntry" alias="tokRinPorPriMinXmit" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.12" instance="tokenRingPortEntry" alias="tokRinPorCfgLosThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.1.1.13" instance="tokenRingPortEntry" alias="tokRinPorCfgLosInte" type="integer"/>
+   </group>
+   <group name="tokenRingGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.2" instance="0" alias="tokRinDriDisCrfMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.3" instance="0" alias="tokRinDriAreRedMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.4" instance="0" alias="tokRinDriLocaNodeID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.5" instance="0" alias="tokRingDripLastRevi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.6" instance="0" alias="tokRinDriLasChaRevi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.7" instance="0" alias="tokRingDripAdveRece" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.8" instance="0" alias="tokRingDripAdveTran" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.9" instance="0" alias="tokRingDripAdveProc" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.10" instance="0" alias="tokRinDriInpQueDrop" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.11" instance="0" alias="tokRinDriOutQueDrop" type="counter32"/>
+   </group>
+   <group name="tokenRingDripLocalVlanStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.12.1.1" instance="tokenRingDripLocalVlanStatusEntry" alias="tokenRingDripVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.12.1.2" instance="tokenRingDripLocalVlanStatusEntry" alias="tokRinDriLocPorStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.12.1.3" instance="tokenRingDripLocalVlanStatusEntry" alias="tokRinDriRemPorStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.12.1.4" instance="tokenRingDripLocalVlanStatusEntry" alias="tokRinDriRemPorConf" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.12.1.5" instance="tokenRingDripLocalVlanStatusEntry" alias="tokeRingDripDistCrf" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.12.1.6" instance="tokenRingDripLocalVlanStatusEntry" alias="tokeRingDripBackCrf" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.12.1.7" instance="tokenRingDripLocalVlanStatusEntry" alias="tokRinDriOwneNodeID" type="octetstring"/>
+   </group>
+   <group name="tokenRingPortSoftErrTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.14.1.1" instance="tokenRingPortSoftErrEntry" alias="tokRinPorSofErrThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.14.1.2" instance="tokenRingPortSoftErrEntry" alias="toRiPorSofErrRepInt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.14.1.3" instance="tokenRingPortSoftErrEntry" alias="toRiPorSofErrResCou" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.14.1.4" instance="tokenRingPortSoftErrEntry" alias="toRiPoSoErLasCouRes" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.11.14.1.5" instance="tokenRingPortSoftErrEntry" alias="tokRinPorSofErrEnab" type="string"/>
+   </group>
+   <group name="mcastRouterTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.12.1.1.1" instance="mcastRouterEntry" alias="mcasRouteModulIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.12.1.1.2" instance="mcastRouterEntry" alias="mcastRoutePortIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.12.1.1.3" instance="mcastRouterEntry" alias="mcasRouteAdminStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.12.1.1.4" instance="mcastRouterEntry" alias="mcastRouteOperStatu" type="string"/>
+   </group>
+   <group name="multicastGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.12.2" instance="0" alias="mcastEnableCgmp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.12.3" instance="0" alias="mcastEnableIgmp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.12.4" instance="0" alias="mcastEnableRgmp" type="string"/>
+   </group>
+   <group name="dnsGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.13.1" instance="0" alias="dnsEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.13.3" instance="0" alias="dnsDomainName" type="octetstring"/>
+   </group>
+   <group name="dnsServerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.13.2.1.1" instance="dnsServerEntry" alias="dnsServerAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.13.2.1.2" instance="dnsServerEntry" alias="dnsServerType" type="string"/>
+   </group>
+   <group name="syslogServerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.1.1.1" instance="syslogServerEntry" alias="syslogServerAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.1.1.2" instance="syslogServerEntry" alias="syslogServerType" type="string"/>
+   </group>
+   <group name="syslogGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.2" instance="0" alias="syslogConsoleEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.3" instance="0" alias="syslogHostEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.5" instance="0" alias="sysloTimeStampOptio" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.6" instance="0" alias="syslogTelnetEnable" type="string"/>
+   </group>
+   <group name="syslogMessageControlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.4.1.1" instance="syslogMessageControlEntry" alias="syslogMessagFacilit" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.14.4.1.2" instance="syslogMessageControlEntry" alias="syslogMessagSeverit" type="string"/>
+   </group>
+   <group name="ntpGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.1" instance="0" alias="ntpBcastClient" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.2" instance="0" alias="ntpBcastDelay" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.3" instance="0" alias="ntpClient" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.5" instance="0" alias="ntpSummertimeStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.6" instance="0" alias="ntpSummerTimezoName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.7" instance="0" alias="ntpTimezoneName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.8" instance="0" alias="ntpTimezoOffsetHour" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.9" instance="0" alias="ntpTimezOffseMinute" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.10" instance="0" alias="ntpAuthenticaEnable" type="string"/>
+   </group>
+   <group name="ntpServerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.4.1.1" instance="ntpServerEntry" alias="ntpServerAddress" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.4.1.2" instance="ntpServerEntry" alias="ntpServerType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.4.1.3" instance="ntpServerEntry" alias="ntpServerPublicKey" type="integer"/>
+   </group>
+   <group name="ntpAuthenticationTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.11.1.1" instance="ntpAuthenticationEntry" alias="ntpAuthentPublicKey" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.11.1.2" instance="ntpAuthenticationEntry" alias="ntpAuthentSecretKey" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.11.1.3" instance="ntpAuthenticationEntry" alias="ntpAuthenTrusteMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.15.11.1.4" instance="ntpAuthenticationEntry" alias="ntpAuthenticatiType" type="string"/>
+   </group>
+   <group name="tacacsGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.1" instance="0" alias="tacacsLoginAuthenti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.2" instance="0" alias="tacacsEnableAuthent" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.3" instance="0" alias="tacaLocalLoginAuthe" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.4" instance="0" alias="tacaLocalEnablAuthe" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.5" instance="0" alias="tacacNumLoginAttemp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.6" instance="0" alias="tacacsDirectRequest" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.7" instance="0" alias="tacacsTimeout" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.8" instance="0" alias="tacacsAuthKey" type="octetstring"/>
+   </group>
+   <group name="tacacsServerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.9.1.1" instance="tacacsServerEntry" alias="tacacsServerAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.16.9.1.2" instance="tacacsServerEntry" alias="tacacsServerType" type="string"/>
+   </group>
+   <group name="ipPermitListGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.1" instance="0" alias="ipPermitEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.4" instance="0" alias="ipPermAcceTypeEnabl" type="octetstring"/>
+   </group>
+   <group name="ipPermitListTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.2.1.1" instance="ipPermitListEntry" alias="ipPermitAddress" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.2.1.2" instance="ipPermitListEntry" alias="ipPermitMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.2.1.3" instance="ipPermitListEntry" alias="ipPermitType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.2.1.4" instance="ipPermitListEntry" alias="ipPermitAccessType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.2.1.5" instance="ipPermitListEntry" alias="ipPermTelnConnLimit" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.2.1.6" instance="ipPermitListEntry" alias="ipPermSshConneLimit" type="integer"/>
+   </group>
+   <group name="ipPermitDeniedListTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.3.1.1" instance="ipPermitDeniedListEntry" alias="ipPermiDeniedAddres" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.3.1.2" instance="ipPermitDeniedListEntry" alias="ipPermiDeniedAccess" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.17.3.1.3" instance="ipPermitDeniedListEntry" alias="ipPermitDeniedTime" type="timeticks"/>
+   </group>
+   <group name="portChannelTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.1" instance="portChannelEntry" alias="portChannModulIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.2" instance="portChannelEntry" alias="portChannePortIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.3" instance="portChannelEntry" alias="portChannelPorts" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.4" instance="portChannelEntry" alias="portChannAdminStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.5" instance="portChannelEntry" alias="portChannOperStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.6" instance="portChannelEntry" alias="portChanNeigDevicId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.7" instance="portChannelEntry" alias="portChanNeighPortId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.8" instance="portChannelEntry" alias="portChanProtInPacke" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.9" instance="portChannelEntry" alias="portChanProtOutPack" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.18.1.1.10" instance="portChannelEntry" alias="portChannelIfIndex" type="integer"/>
+   </group>
+   <group name="portCpbTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.1" instance="portCpbEntry" alias="portCpbModuleIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.2" instance="portCpbEntry" alias="portCpbPortIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.3" instance="portCpbEntry" alias="portCpbSpeed" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.4" instance="portCpbEntry" alias="portCpbDuplex" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.5" instance="portCpbEntry" alias="portCpbTrunEncaType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.6" instance="portCpbEntry" alias="portCpbTrunkMode" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.7" instance="portCpbEntry" alias="portCpbChannel" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.8" instance="portCpbEntry" alias="portCpbBroadcSuppre" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.9" instance="portCpbEntry" alias="portCpbFlowControl" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.10" instance="portCpbEntry" alias="portCpbSecurity" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.11" instance="portCpbEntry" alias="portCpbVlanMembersh" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.12" instance="portCpbEntry" alias="portCpbPortfast" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.13" instance="portCpbEntry" alias="portCpbUdld" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.14" instance="portCpbEntry" alias="portCpbInlinePower" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.15" instance="portCpbEntry" alias="portCpbAuxiliarVlan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.16" instance="portCpbEntry" alias="portCpbSpan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.17" instance="portCpbEntry" alias="portCpbCosRewrite" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.18" instance="portCpbEntry" alias="portCpbTosRewrite" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.19" instance="portCpbEntry" alias="portCpbCopsGrouping" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.20" instance="portCpbEntry" alias="portCpbDot1x" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.19.1.1.21" instance="portCpbEntry" alias="portCpbIgmpFilter" type="string"/>
+   </group>
+   <group name="portTopNControlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.1" instance="portTopNControlEntry" alias="portTopNControIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.2" instance="portTopNControlEntry" alias="portTopNRateBase" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.3" instance="portTopNControlEntry" alias="portTopNType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.4" instance="portTopNControlEntry" alias="portTopNMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.5" instance="portTopNControlEntry" alias="portTopNReporStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.6" instance="portTopNControlEntry" alias="portTopNDuration" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.7" instance="portTopNControlEntry" alias="portTopNTimeRemaini" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.8" instance="portTopNControlEntry" alias="portTopNStartTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.9" instance="portTopNControlEntry" alias="portTopNRequestSize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.10" instance="portTopNControlEntry" alias="portTopNGrantedSize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.11" instance="portTopNControlEntry" alias="portTopNOwner" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.1.1.12" instance="portTopNControlEntry" alias="portTopNStatus" type="string"/>
+   </group>
+   <group name="portTopNTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.1" instance="portTopNEntry" alias="portTopNIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.2" instance="portTopNEntry" alias="portTopNModulNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.3" instance="portTopNEntry" alias="portTopNPortNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.4" instance="portTopNEntry" alias="portTopNUtilization" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.5" instance="portTopNEntry" alias="portTopNIOOctets" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.6" instance="portTopNEntry" alias="portTopNIOPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.7" instance="portTopNEntry" alias="portTopNIOBroadcast" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.8" instance="portTopNEntry" alias="portTopNIOMulticast" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.9" instance="portTopNEntry" alias="portTopNInErrors" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.20.2.1.10" instance="portTopNEntry" alias="porTopNBuffOverFlow" type="counter32"/>
+   </group>
+   <group name="mdgGatewayTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.21.1.1.1" instance="mdgGatewayEntry" alias="mdgGatewayAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.21.1.1.2" instance="mdgGatewayEntry" alias="mdgGatewayType" type="string"/>
+   </group>
+   <group name="radiusGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.1" instance="0" alias="radiusLoginAuthenti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.2" instance="0" alias="radiusEnableAuthent" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.3" instance="0" alias="radiusDeadtime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.4" instance="0" alias="radiusAuthKey" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.5" instance="0" alias="radiusTimeout" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.6" instance="0" alias="radiusRetransmits" type="integer"/>
+   </group>
+   <group name="radiusServerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.7.1.1" instance="radiusServerEntry" alias="radiusServerAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.7.1.2" instance="radiusServerEntry" alias="radiuServerAuthPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.22.7.1.3" instance="radiusServerEntry" alias="radiusServerType" type="string"/>
+   </group>
+   <group name="traceRouteGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.1" instance="0" alias="traceRouteMaxQuerie" type="integer"/>
+   </group>
+   <group name="traceRouteQueryTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.1" instance="traceRouteQueryEntry" alias="tracRouteQueryIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.2" instance="traceRouteQueryEntry" alias="traceRouteHost" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.3" instance="traceRouteQueryEntry" alias="tracRoutQuerDNSEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.4" instance="traceRouteQueryEntry" alias="traRoutQuerWaitTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.5" instance="traceRouteQueryEntry" alias="tracRoutQuerInitTTL" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.6" instance="traceRouteQueryEntry" alias="tracRoutQueryMaxTTL" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.7" instance="traceRouteQueryEntry" alias="tracRoutQuerUDPPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.8" instance="traceRouteQueryEntry" alias="traRoutQuerPackCoun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.9" instance="traceRouteQueryEntry" alias="traRoutQuerPackSize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.10" instance="traceRouteQueryEntry" alias="traceRouteQueryTOS" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.21" instance="traceRouteQueryEntry" alias="tracRouteQueryResul" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.22" instance="traceRouteQueryEntry" alias="traceRouteQueryTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.23" instance="traceRouteQueryEntry" alias="tracRouteQueryOwner" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.2.1.24" instance="traceRouteQueryEntry" alias="tracRouteQueryStatu" type="string"/>
+   </group>
+   <group name="traceRouteDataTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.3.1.1" instance="traceRouteDataEntry" alias="traceRouteDataIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.3.1.2" instance="traceRouteDataEntry" alias="traRoutDataGateName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.3.1.3" instance="traceRouteDataEntry" alias="tracRoutDataGatewIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.3.1.4" instance="traceRouteDataEntry" alias="traceRouteDataRtt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.3.1.5" instance="traceRouteDataEntry" alias="tracRoutDataHopCoun" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.24.3.1.6" instance="traceRouteDataEntry" alias="traceRouteDataError" type="string"/>
+   </group>
+   <group name="fileCopyGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.1" instance="0" alias="fileCopyProtocol" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.2" instance="0" alias="fileCopyRemotServer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.3" instance="0" alias="fileCopySrcFileName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.4" instance="0" alias="fileCopyDstFileName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.5" instance="0" alias="fileCopyModulNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.6" instance="0" alias="fileCopyUserName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.7" instance="0" alias="fileCopyAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.8" instance="0" alias="fileCopyResult" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.9" instance="0" alias="filCopResRcpErrMess" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.25.10" instance="0" alias="filCopyRuntConfPart" type="string"/>
+   </group>
+   <group name="voicePortIfConfigTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.1" instance="voicePortIfConfigEntry" alias="voiPorIfConModuInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.2" instance="voicePortIfConfigEntry" alias="voiPorIfConPortInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.3" instance="voicePortIfConfigEntry" alias="voicPortIfDHCPEnabl" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.4" instance="voicePortIfConfigEntry" alias="voicePortIfIpAddres" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.5" instance="voicePortIfConfigEntry" alias="voicPortIfIpNetMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.6" instance="voicePortIfConfigEntry" alias="voiPorIfTftServAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.7" instance="voicePortIfConfigEntry" alias="voicPortIfGateAddre" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.8" instance="voicePortIfConfigEntry" alias="voiPorIfDnsServAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.9" instance="voicePortIfConfigEntry" alias="voicePortIfDnsDomai" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.1.1.10" instance="voicePortIfConfigEntry" alias="voiPorIfOperDnsDoma" type="octetstring"/>
+   </group>
+   <group name="voicePortCallManagerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.2.1.1" instance="voicePortCallManagerEntry" alias="voicePortModulIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.2.1.2" instance="voicePortCallManagerEntry" alias="voicePortIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.2.1.3" instance="voicePortCallManagerEntry" alias="voiPortCallManaInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.2.1.4" instance="voicePortCallManagerEntry" alias="voiPorCalManaIpAddr" type="string"/>
+   </group>
+   <group name="voicePortOperDnsServerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.3.1.1" instance="voicePortOperDnsServerEntry" alias="voicPortDnsModuInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.3.1.2" instance="voicePortOperDnsServerEntry" alias="voicPortDnsPortInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.3.1.3" instance="voicePortOperDnsServerEntry" alias="voiPorOpeDnsSerInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.3.1.4" instance="voicePortOperDnsServerEntry" alias="voPorOpeDnsSerIpAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.26.3.1.5" instance="voicePortOperDnsServerEntry" alias="voiPorOpeDnsSerSour" type="string"/>
+   </group>
+   <group name="portJumboFrameTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.27.1.1.1" instance="portJumboFrameEntry" alias="porJumbFramModuInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.27.1.1.2" instance="portJumboFrameEntry" alias="porJumbFramPortInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.27.1.1.3" instance="portJumboFrameEntry" alias="portJumboFrameEnabl" type="string"/>
+   </group>
+   <group name="switchAccelerationModuleTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.28.1.1.1" instance="switchAccelerationModuleEntry" alias="switAccelModulIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.28.1.1.2" instance="switchAccelerationModuleEntry" alias="switAccelModulEnabl" type="string"/>
+   </group>
+   <group name="configGrp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.29.1" instance="0" alias="configMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.29.2" instance="0" alias="confiTextFileLocati" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.29.3" instance="0" alias="configWriteMem" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.5.1.29.4" instance="0" alias="confiWriteMemStatus" type="string"/>
+   </group>
+</datacollection-group>

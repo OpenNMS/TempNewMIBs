@@ -1,0 +1,462 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-CLASS-BASED-QOS-MIB">
+   <resourceType name="cbQosMeasureIPSLACfgEntry" label="cbQosMeasureIPSLACfgEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosServicePolicyEntry" label="cbQosServicePolicyEntry" resourceLabel="${cbQosIfType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosInterfacePolicyEntry" label="cbQosInterfacePolicyEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosFrameRelayPolicyEntry" label="cbQosFrameRelayPolicyEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosATMPVCPolicyEntry" label="cbQosATMPVCPolicyEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosObjectsEntry" label="cbQosObjectsEntry" resourceLabel="${cbQosObjectsType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosPolicyMapCfgEntry" label="cbQosPolicyMapCfgEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosCMCfgEntry" label="cbQosCMCfgEntry" resourceLabel="${cbQosCMInfo} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosMatchStmtCfgEntry" label="cbQosMatchStmtCfgEntry" resourceLabel="${cbQosMatchStmtInfo} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosQueueingCfgEntry" label="cbQosQueueingCfgEntry" resourceLabel="${cbQosQueueingCfgBandwidthUnits} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosREDCfgEntry" label="cbQosREDCfgEntry" resourceLabel="${cbQosREDCfgDscpPrec} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosREDClassCfgEntry" label="cbQosREDClassCfgEntry" resourceLabel="${cbQosREDClassCfgThresholdUnit} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosPoliceCfgEntry" label="cbQosPoliceCfgEntry" resourceLabel="${cbQosPoliceCfgConformAction} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosPoliceActionCfgEntry" label="cbQosPoliceActionCfgEntry" resourceLabel="${cbQosPoliceActionCfgConform} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosTSCfgEntry" label="cbQosTSCfgEntry" resourceLabel="${cbQosTSCfgAdaptiveEnabled} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosSetCfgEntry" label="cbQosSetCfgEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosCMStatsEntry" label="cbQosCMStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosMatchStmtStatsEntry" label="cbQosMatchStmtStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosPoliceStatsEntry" label="cbQosPoliceStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosQueueingStatsEntry" label="cbQosQueueingStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosTSStatsEntry" label="cbQosTSStatsEntry" resourceLabel="${cbQosTSStatsActive} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosREDClassStatsEntry" label="cbQosREDClassStatsEntry" resourceLabel="${cbQosREDMeanQSizeUnits} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosIPHCCfgEntry" label="cbQosIPHCCfgEntry" resourceLabel="${cbQosIPHCCfgOption} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosIPHCStatsEntry" label="cbQosIPHCStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosSetStatsEntry" label="cbQosSetStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosPoliceColorStatsEntry" label="cbQosPoliceColorStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosTableMapCfgEntry" label="cbQosTableMapCfgEntry" resourceLabel="${cbQosTableMapCfgBehavior} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosTableMapValueCfgEntry" label="cbQosTableMapValueCfgEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosTableMapSetCfgEntry" label="cbQosTableMapSetCfgEntry" resourceLabel="${cbQosTMSetIpDscpFromType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosEBCfgEntry" label="cbQosEBCfgEntry" resourceLabel="${cbQosEBCfgMechanism} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbQosEBStatsEntry" label="cbQosEBStatsEntry" resourceLabel="${cbQosEBStatsCorvilEBStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="cbQosMeasureIPSLACfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.31.1.1.1" instance="cbQosMeasureIPSLACfgEntry" alias="cbQoMeaIPSCfgGroInd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.31.1.1.2" instance="cbQosMeasureIPSLACfgEntry" alias="cbQoMeaIPSCfgGroNam" type="octetstring"/>
+   </group>
+   <group name="cbQosServicePolicyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.1" instance="cbQosServicePolicyEntry" alias="cbQosPolicyIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.2" instance="cbQosServicePolicyEntry" alias="cbQosIfType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.3" instance="cbQosServicePolicyEntry" alias="cbQosPolicyDirectio" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.4" instance="cbQosServicePolicyEntry" alias="cbQosIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.5" instance="cbQosServicePolicyEntry" alias="cbQosFrDLCI" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.6" instance="cbQosServicePolicyEntry" alias="cbQosAtmVPI" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.7" instance="cbQosServicePolicyEntry" alias="cbQosAtmVCI" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.8" instance="cbQosServicePolicyEntry" alias="cbQosEntityIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.1.1.1.9" instance="cbQosServicePolicyEntry" alias="cbQosVlanIndex" type="integer"/>
+   </group>
+   <group name="cbQosInterfacePolicyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.2.1.1.1" instance="cbQosInterfacePolicyEntry" alias="cbQosIFPolicyIndex" type="integer"/>
+   </group>
+   <group name="cbQosFrameRelayPolicyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.3.1.1.1" instance="cbQosFrameRelayPolicyEntry" alias="cbQosFRPolicyIndex" type="integer"/>
+   </group>
+   <group name="cbQosATMPVCPolicyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.4.1.1.1" instance="cbQosATMPVCPolicyEntry" alias="cbQosATMPolicyIndex" type="integer"/>
+   </group>
+   <group name="cbQosObjectsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.5.1.1.1" instance="cbQosObjectsEntry" alias="cbQosObjectsIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.5.1.1.2" instance="cbQosObjectsEntry" alias="cbQosConfigIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.5.1.1.3" instance="cbQosObjectsEntry" alias="cbQosObjectsType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.5.1.1.4" instance="cbQosObjectsEntry" alias="cbQosPareObjecIndex" type="integer"/>
+   </group>
+   <group name="cbQosPolicyMapCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.6.1.1.1" instance="cbQosPolicyMapCfgEntry" alias="cbQosPolicyMapName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.6.1.1.2" instance="cbQosPolicyMapCfgEntry" alias="cbQosPolicyMapDesc" type="octetstring"/>
+   </group>
+   <group name="cbQosCMCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.7.1.1.1" instance="cbQosCMCfgEntry" alias="cbQosCMName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.7.1.1.2" instance="cbQosCMCfgEntry" alias="cbQosCMDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.7.1.1.3" instance="cbQosCMCfgEntry" alias="cbQosCMInfo" type="string"/>
+   </group>
+   <group name="cbQosMatchStmtCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.8.1.1.1" instance="cbQosMatchStmtCfgEntry" alias="cbQosMatchStmtName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.8.1.1.2" instance="cbQosMatchStmtCfgEntry" alias="cbQosMatchStmtInfo" type="string"/>
+   </group>
+   <group name="cbQosQueueingCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.1" instance="cbQosQueueingCfgEntry" alias="cbQosQueueCfgBandwi" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.2" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgBandUnit" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.3" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgFlowEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.4" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgPrioEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.5" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgAggQSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.6" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgIndQSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.7" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgDynQNumb" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.8" instance="cbQosQueueingCfgEntry" alias="cbQoQueCfgPriBurSiz" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.9" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgQLimUnit" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.10" instance="cbQosQueueingCfgEntry" alias="cbQosQueCfgAggQLimi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.9.1.1.11" instance="cbQosQueueingCfgEntry" alias="cbQoQuCfgAggQLimTim" type="integer"/>
+   </group>
+   <group name="cbQosREDCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.10.1.1.1" instance="cbQosREDCfgEntry" alias="cbQosREDCfgExpoWeig" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.10.1.1.2" instance="cbQosREDCfgEntry" alias="cbQosREDCfgMeanQsiz" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.10.1.1.3" instance="cbQosREDCfgEntry" alias="cbQosREDCfgDscpPrec" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.10.1.1.4" instance="cbQosREDCfgEntry" alias="cbQosREDCfgECNEnabl" type="string"/>
+   </group>
+   <group name="cbQosREDClassCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.1" instance="cbQosREDClassCfgEntry" alias="cbQosREDValue" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.2" instance="cbQosREDClassCfgEntry" alias="cbQosREDCfgMinThres" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.3" instance="cbQosREDClassCfgEntry" alias="cbQosREDCfgMaxThres" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.4" instance="cbQosREDClassCfgEntry" alias="cbQoREDCfgPktDroPro" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.5" instance="cbQosREDClassCfgEntry" alias="cbQoREDClaCfgThrUni" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.6" instance="cbQosREDClassCfgEntry" alias="cbQoREDClaCfgMinThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.7" instance="cbQosREDClassCfgEntry" alias="cbQoREDClaCfgMaxThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.8" instance="cbQosREDClassCfgEntry" alias="cbQoREClCfMinThrTim" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.11.1.1.9" instance="cbQosREDClassCfgEntry" alias="cbQoREClCfMaxThrTim" type="integer"/>
+   </group>
+   <group name="cbQosPoliceCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.1" instance="cbQosPoliceCfgEntry" alias="cbQosPoliceCfgRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.2" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgBursSize" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.3" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgExtBurSiz" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.4" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgConfActi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.5" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgConSetVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.6" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgExceActi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.7" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgExcSetVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.8" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgViolActi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.9" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgVioSetVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.10" instance="cbQosPoliceCfgEntry" alias="cbQosPoliceCfgPir" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.11" instance="cbQosPoliceCfgEntry" alias="cbQosPolicCfgRate64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.12" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgRateType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.13" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgPerRatVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.14" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgPerPirVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.15" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgCellRate" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.16" instance="cbQosPoliceCfgEntry" alias="cbQosPoliCfgCellPir" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.17" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgBursCell" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.18" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgExtBurCel" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.19" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgBursTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.20" instance="cbQosPoliceCfgEntry" alias="cbQoPolCfgExtBurTim" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.21" instance="cbQosPoliceCfgEntry" alias="cbQosPoliceCfgCdvt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.22" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgConfColo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.12.1.1.23" instance="cbQosPoliceCfgEntry" alias="cbQosPolCfgExceColo" type="octetstring"/>
+   </group>
+   <group name="cbQosPoliceActionCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.21.1.1.1" instance="cbQosPoliceActionCfgEntry" alias="cbQosPolActiCfgInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.21.1.1.2" instance="cbQosPoliceActionCfgEntry" alias="cbQosPolActiCfgConf" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.21.1.1.3" instance="cbQosPoliceActionCfgEntry" alias="cbQoPoAcCfConSetVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.21.1.1.4" instance="cbQosPoliceActionCfgEntry" alias="cbQosPolActiCfgExce" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.21.1.1.5" instance="cbQosPoliceActionCfgEntry" alias="cbQoPoAcCfExcSetVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.21.1.1.6" instance="cbQosPoliceActionCfgEntry" alias="cbQosPolActiCfgViol" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.21.1.1.7" instance="cbQosPoliceActionCfgEntry" alias="cbQoPoAcCfVioSetVal" type="integer"/>
+   </group>
+   <group name="cbQosTSCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.1" instance="cbQosTSCfgEntry" alias="cbQosTSCfgRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.2" instance="cbQosTSCfgEntry" alias="cbQosTSCfgBurstSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.3" instance="cbQosTSCfgEntry" alias="cbQosTSCfgExtBurSiz" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.4" instance="cbQosTSCfgEntry" alias="cbQosTSCfgAdapEnabl" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.5" instance="cbQosTSCfgEntry" alias="cbQosTSCfgAdaptRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.6" instance="cbQosTSCfgEntry" alias="cbQosTSCfgLimitType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.7" instance="cbQosTSCfgEntry" alias="cbQosTSCfgRateType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.8" instance="cbQosTSCfgEntry" alias="cbQosTSCfgPerRatVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.9" instance="cbQosTSCfgEntry" alias="cbQosTSCfgBurstTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.10" instance="cbQosTSCfgEntry" alias="cbQosTSCfgExtBurTim" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.13.1.1.11" instance="cbQosTSCfgEntry" alias="cbQosTSCfgRate64" type="counter64"/>
+   </group>
+   <group name="cbQosSetCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.1" instance="cbQosSetCfgEntry" alias="cbQosSetCfgFeature" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.2" instance="cbQosSetCfgEntry" alias="cbQosSetCfgIpDSCVal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.3" instance="cbQosSetCfgEntry" alias="cbQosSetCfgIpPreVal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.4" instance="cbQosSetCfgEntry" alias="cbQoSetCfgQosGroVal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.5" instance="cbQosSetCfgEntry" alias="cbQosSetCfgL2CosVal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.6" instance="cbQosSetCfgEntry" alias="cbQoSetCfgMplExpVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.7" instance="cbQosSetCfgEntry" alias="cbQoSetCfgDisClaVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.8" instance="cbQosSetCfgEntry" alias="cbQoSeCfMpExToMoVal" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.9" instance="cbQosSetCfgEntry" alias="cbQosSetCfgSrpPrior" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.14.1.1.10" instance="cbQosSetCfgEntry" alias="cbQosSetCfgFrFecBec" type="integer"/>
+   </group>
+   <group name="cbQosCMStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.1" instance="cbQosCMStatsEntry" alias="cbQosCMPrePolPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.2" instance="cbQosCMStatsEntry" alias="cbQosCMPrePolicyPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.3" instance="cbQosCMStatsEntry" alias="cbQosCMPrePoliPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.4" instance="cbQosCMStatsEntry" alias="cbQosCMPrePolBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.5" instance="cbQosCMStatsEntry" alias="cbQosCMPrePolicByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.6" instance="cbQosCMStatsEntry" alias="cbQosCMPrePolByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.7" instance="cbQosCMStatsEntry" alias="cbQosCMPrePolBitRat" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.8" instance="cbQosCMStatsEntry" alias="cbQosCMPosPolBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.9" instance="cbQosCMStatsEntry" alias="cbQosCMPostPoliByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.10" instance="cbQosCMStatsEntry" alias="cbQosCMPosPolByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.11" instance="cbQosCMStatsEntry" alias="cbQosCMPosPolBitRat" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.12" instance="cbQosCMStatsEntry" alias="cbQosCMDropPktOverf" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.13" instance="cbQosCMStatsEntry" alias="cbQosCMDropPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.14" instance="cbQosCMStatsEntry" alias="cbQosCMDropPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.15" instance="cbQosCMStatsEntry" alias="cbQosCMDropByteOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.16" instance="cbQosCMStatsEntry" alias="cbQosCMDropByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.17" instance="cbQosCMStatsEntry" alias="cbQosCMDropByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.18" instance="cbQosCMStatsEntry" alias="cbQosCMDropBitRate" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.19" instance="cbQosCMStatsEntry" alias="cbQoCMNoBuDroPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.20" instance="cbQosCMStatsEntry" alias="cbQosCMNoBufDropPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.15.1.1.21" instance="cbQosCMStatsEntry" alias="cbQoCMNoBufDroPkt64" type="counter64"/>
+   </group>
+   <group name="cbQosMatchStmtStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.16.1.1.1" instance="cbQosMatchStmtStatsEntry" alias="cbQoMatPrePolPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.16.1.1.2" instance="cbQosMatchStmtStatsEntry" alias="cbQosMatcPrePoliPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.16.1.1.3" instance="cbQosMatchStmtStatsEntry" alias="cbQosMatPrePolPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.16.1.1.4" instance="cbQosMatchStmtStatsEntry" alias="cbQoMatPrePolBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.16.1.1.5" instance="cbQosMatchStmtStatsEntry" alias="cbQosMatPrePoliByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.16.1.1.6" instance="cbQosMatchStmtStatsEntry" alias="cbQosMatPrePolByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.16.1.1.7" instance="cbQosMatchStmtStatsEntry" alias="cbQoMatPrePolBitRat" type="gauge32"/>
+   </group>
+   <group name="cbQosPoliceStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.1" instance="cbQosPoliceStatsEntry" alias="cbQosPolConfPktOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.2" instance="cbQosPoliceStatsEntry" alias="cbQosPolicConforPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.3" instance="cbQosPoliceStatsEntry" alias="cbQosPoliConfoPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.4" instance="cbQosPoliceStatsEntry" alias="cbQosPolConByteOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.5" instance="cbQosPoliceStatsEntry" alias="cbQosPolicConfoByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.6" instance="cbQosPoliceStatsEntry" alias="cbQosPoliConfByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.7" instance="cbQosPoliceStatsEntry" alias="cbQosPolConfBitRate" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.8" instance="cbQosPoliceStatsEntry" alias="cbQosPolExcePktOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.9" instance="cbQosPoliceStatsEntry" alias="cbQosPolicExceedPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.10" instance="cbQosPoliceStatsEntry" alias="cbQosPoliExceePkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.11" instance="cbQosPoliceStatsEntry" alias="cbQosPolExcByteOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.12" instance="cbQosPoliceStatsEntry" alias="cbQosPolicExceeByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.13" instance="cbQosPoliceStatsEntry" alias="cbQosPoliExceByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.14" instance="cbQosPoliceStatsEntry" alias="cbQosPolExceBitRate" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.15" instance="cbQosPoliceStatsEntry" alias="cbQosPolViolPktOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.16" instance="cbQosPoliceStatsEntry" alias="cbQosPolicViolatPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.17" instance="cbQosPoliceStatsEntry" alias="cbQosPoliViolaPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.18" instance="cbQosPoliceStatsEntry" alias="cbQosPolVioByteOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.19" instance="cbQosPoliceStatsEntry" alias="cbQosPolicViolaByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.20" instance="cbQosPoliceStatsEntry" alias="cbQosPoliViolByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.17.1.1.21" instance="cbQosPoliceStatsEntry" alias="cbQosPolViolBitRate" type="gauge32"/>
+   </group>
+   <group name="cbQosQueueingStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.1" instance="cbQosQueueingStatsEntry" alias="cbQosQueuCurrQDepth" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.2" instance="cbQosQueueingStatsEntry" alias="cbQosQueueMaxQDepth" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.3" instance="cbQosQueueingStatsEntry" alias="cbQosQueDisByteOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.4" instance="cbQosQueueingStatsEntry" alias="cbQosQueueDiscaByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.5" instance="cbQosQueueingStatsEntry" alias="cbQosQueuDiscByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.6" instance="cbQosQueueingStatsEntry" alias="cbQosQueDiscPktOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.7" instance="cbQosQueueingStatsEntry" alias="cbQosQueueDiscarPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.18.1.1.8" instance="cbQosQueueingStatsEntry" alias="cbQosQueuDiscaPkt64" type="counter64"/>
+   </group>
+   <group name="cbQosTSStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.1" instance="cbQosTSStatsEntry" alias="cbQosTSStaDelBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.2" instance="cbQosTSStatsEntry" alias="cbQosTSStatDelaByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.3" instance="cbQosTSStatsEntry" alias="cbQosTSStaDelByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.4" instance="cbQosTSStatsEntry" alias="cbQosTSStaDelPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.5" instance="cbQosTSStatsEntry" alias="cbQosTSStatDelayPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.6" instance="cbQosTSStatsEntry" alias="cbQosTSStaDelaPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.7" instance="cbQosTSStatsEntry" alias="cbQosTSStaDroBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.8" instance="cbQosTSStatsEntry" alias="cbQosTSStatDropByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.9" instance="cbQosTSStatsEntry" alias="cbQosTSStaDroByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.10" instance="cbQosTSStatsEntry" alias="cbQosTSStaDroPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.11" instance="cbQosTSStatsEntry" alias="cbQosTSStatsDropPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.12" instance="cbQosTSStatsEntry" alias="cbQosTSStaDropPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.13" instance="cbQosTSStatsEntry" alias="cbQosTSStatsActive" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.19.1.1.14" instance="cbQosTSStatsEntry" alias="cbQosTSStaCurrQSize" type="gauge32"/>
+   </group>
+   <group name="cbQosREDClassStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.1" instance="cbQosREDClassStatsEntry" alias="cbQoREDRanDroPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.2" instance="cbQosREDClassStatsEntry" alias="cbQosREDRandDropPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.3" instance="cbQosREDClassStatsEntry" alias="cbQosREDRanDroPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.4" instance="cbQosREDClassStatsEntry" alias="cbQoREDRanDroBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.5" instance="cbQosREDClassStatsEntry" alias="cbQosREDRanDropByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.6" instance="cbQosREDClassStatsEntry" alias="cbQosREDRanDroByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.7" instance="cbQosREDClassStatsEntry" alias="cbQoREDTaiDroPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.8" instance="cbQosREDClassStatsEntry" alias="cbQosREDTailDropPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.9" instance="cbQosREDClassStatsEntry" alias="cbQosREDTaiDroPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.10" instance="cbQosREDClassStatsEntry" alias="cbQoREDTaiDroBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.11" instance="cbQosREDClassStatsEntry" alias="cbQosREDTaiDropByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.12" instance="cbQosREDClassStatsEntry" alias="cbQosREDTaiDroByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.13" instance="cbQosREDClassStatsEntry" alias="cbQosREDTranPktOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.14" instance="cbQosREDClassStatsEntry" alias="cbQosREDTransmitPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.15" instance="cbQosREDClassStatsEntry" alias="cbQosREDTransmPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.16" instance="cbQosREDClassStatsEntry" alias="cbQosREDTraByteOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.17" instance="cbQosREDClassStatsEntry" alias="cbQosREDTransmiByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.18" instance="cbQosREDClassStatsEntry" alias="cbQosREDTransByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.19" instance="cbQosREDClassStatsEntry" alias="cbQosREDMarkPktOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.20" instance="cbQosREDClassStatsEntry" alias="cbQosREDECNMarkPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.21" instance="cbQosREDClassStatsEntry" alias="cbQosREDECMarkPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.22" instance="cbQosREDClassStatsEntry" alias="cbQosREDMarByteOver" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.23" instance="cbQosREDClassStatsEntry" alias="cbQosREDECNMarkByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.24" instance="cbQosREDClassStatsEntry" alias="cbQosREDEMarkByte64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.25" instance="cbQosREDClassStatsEntry" alias="cbQosREDMeaQSizUnit" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.20.1.1.26" instance="cbQosREDClassStatsEntry" alias="cbQosREDMeanQSize" type="integer"/>
+   </group>
+   <group name="cbQosIPHCCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.22.1.1.1" instance="cbQosIPHCCfgEntry" alias="cbQosIPHCCfgOption" type="string"/>
+   </group>
+   <group name="cbQosIPHCStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.1" instance="cbQosIPHCStatsEntry" alias="cbQoIPHRtpSenPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.2" instance="cbQosIPHCStatsEntry" alias="cbQosIPHCRtpSentPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.3" instance="cbQosIPHCStatsEntry" alias="cbQosIPHRtpSenPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.4" instance="cbQosIPHCStatsEntry" alias="cbQoIPRtCmOutPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.5" instance="cbQosIPHCStatsEntry" alias="cbQoIPHRtpCmpOutPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.6" instance="cbQosIPHCStatsEntry" alias="cbQoIPRtCmpOutPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.7" instance="cbQosIPHCStatsEntry" alias="cbQoIPHRtpSavBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.8" instance="cbQosIPHCStatsEntry" alias="cbQosIPHRtpSaveByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.9" instance="cbQosIPHCStatsEntry" alias="cbQosIPHRtpSavByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.10" instance="cbQosIPHCStatsEntry" alias="cbQoIPHRtpSenBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.11" instance="cbQosIPHCStatsEntry" alias="cbQosIPHRtpSentByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.12" instance="cbQosIPHCStatsEntry" alias="cbQosIPHRtpSenByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.13" instance="cbQosIPHCStatsEntry" alias="cbQoIPHRtpSenBytRat" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.14" instance="cbQosIPHCStatsEntry" alias="cbQoIPHTcpSenPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.15" instance="cbQosIPHCStatsEntry" alias="cbQosIPHCTcpSentPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.16" instance="cbQosIPHCStatsEntry" alias="cbQosIPHTcpSenPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.17" instance="cbQosIPHCStatsEntry" alias="cbQoIPTcCmOutPktOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.18" instance="cbQosIPHCStatsEntry" alias="cbQoIPHTcpCmpOutPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.19" instance="cbQosIPHCStatsEntry" alias="cbQoIPTcCmpOutPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.20" instance="cbQosIPHCStatsEntry" alias="cbQoIPHTcpSavBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.21" instance="cbQosIPHCStatsEntry" alias="cbQosIPHTcpSaveByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.22" instance="cbQosIPHCStatsEntry" alias="cbQosIPHTcpSavByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.23" instance="cbQosIPHCStatsEntry" alias="cbQoIPHTcpSenBytOve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.24" instance="cbQosIPHCStatsEntry" alias="cbQosIPHTcpSentByte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.25" instance="cbQosIPHCStatsEntry" alias="cbQosIPHTcpSenByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.23.1.1.26" instance="cbQosIPHCStatsEntry" alias="cbQoIPHTcpSenBytRat" type="gauge32"/>
+   </group>
+   <group name="cbQosSetStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.1" instance="cbQosSetStatsEntry" alias="cbQosSetDscpPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.2" instance="cbQosSetStatsEntry" alias="cbQosSetPrecedPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.3" instance="cbQosSetStatsEntry" alias="cbQosSetQosGroPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.4" instance="cbQosSetStatsEntry" alias="cbQosSetFrDePkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.5" instance="cbQosSetStatsEntry" alias="cbQosSetAtmClpPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.6" instance="cbQosSetStatsEntry" alias="cbQosSetL2CosPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.7" instance="cbQosSetStatsEntry" alias="cbQoSeMpExpImpPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.8" instance="cbQosSetStatsEntry" alias="cbQosSetDisClaPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.9" instance="cbQosSetStatsEntry" alias="cbQoSeMpExToMoPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.10" instance="cbQosSetStatsEntry" alias="cbQosSetSrpPriPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.11" instance="cbQosSetStatsEntry" alias="cbQoSeFrFecBecPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.12" instance="cbQosSetStatsEntry" alias="cbQosSetDscTunPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.24.1.1.13" instance="cbQosSetStatsEntry" alias="cbQosSetPreTunPkt64" type="counter64"/>
+   </group>
+   <group name="cbQosPoliceColorStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.1" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoCfColCfmPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.2" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoCfColCfmByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.3" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoCfColExdPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.4" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoCfColExdByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.5" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoCfColVltPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.6" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoCfColVltByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.7" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoExColExdPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.8" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoExColExdByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.9" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoExColVltPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.10" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoExColVltByt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.11" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoVlColVltPkt64" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.25.1.1.12" instance="cbQosPoliceColorStatsEntry" alias="cbQoPoVlColVltByt64" type="counter64"/>
+   </group>
+   <group name="cbQosTableMapCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.26.1.1.1" instance="cbQosTableMapCfgEntry" alias="cbQosTablMapCfgInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.26.1.1.2" instance="cbQosTableMapCfgEntry" alias="cbQosTablMapCfgName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.26.1.1.3" instance="cbQosTableMapCfgEntry" alias="cbQosTablMapCfgBeha" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.26.1.1.4" instance="cbQosTableMapCfgEntry" alias="cbQoTabMapCfgDftVal" type="integer"/>
+   </group>
+   <group name="cbQosTableMapValueCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.27.1.1.1" instance="cbQosTableMapValueCfgEntry" alias="cbQoTabMapValCfgFro" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.27.1.1.2" instance="cbQosTableMapValueCfgEntry" alias="cbQosTabMapValCfgTo" type="integer"/>
+   </group>
+   <group name="cbQosTableMapSetCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.1" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeIpDscFroTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.2" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeIpDscMapNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.3" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeIpPreFroTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.4" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeIpPreMapNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.5" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeQoGroFroTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.6" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeQoGroMapNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.7" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeL2CosFroTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.8" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeL2CosMapNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.9" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeMpExImFrTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.10" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeMpExImMaNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.11" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeMpExToFrTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.28.1.1.12" instance="cbQosTableMapSetCfgEntry" alias="cbQoTMSeMpExToMaNam" type="octetstring"/>
+   </group>
+   <group name="cbQosEBCfgTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.29.1.1.1" instance="cbQosEBCfgEntry" alias="cbQosEBCfgMechanism" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.29.1.1.2" instance="cbQosEBCfgEntry" alias="cbQosEBCfgDropTarge" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.29.1.1.3" instance="cbQosEBCfgEntry" alias="cbQosEBCfgDelaTarge" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.29.1.1.4" instance="cbQosEBCfgEntry" alias="cbQosEBCfgDelaThres" type="integer"/>
+   </group>
+   <group name="cbQosEBStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.30.1.1.1" instance="cbQosEBStatsEntry" alias="cbQosEBStaCorEBValu" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.30.1.1.2" instance="cbQosEBStatsEntry" alias="cbQosEBStaCorEBStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.166.1.30.1.1.3" instance="cbQosEBStatsEntry" alias="cbQosEBStatCorviCTD" type="octetstring"/>
+   </group>
+</datacollection-group>

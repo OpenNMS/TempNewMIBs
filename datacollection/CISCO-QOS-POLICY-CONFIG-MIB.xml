@@ -1,0 +1,27 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-QOS-POLICY-CONFIG-MIB">
+   <resourceType name="qosPrIfEntry" label="qosPrIfEntry" resourceLabel="${qosPrIfAdminPolicySource} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="qosIfCapabilityEntry" label="qosIfCapabilityEntry" resourceLabel="${qosIfDirection} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="qosPolicyGlobalObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.1.1" instance="0" alias="qosEnabled" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.1.2" instance="0" alias="qosPrAdmiPolicSourc" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.1.3" instance="0" alias="qosPrOperPolicSourc" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.1.4" instance="0" alias="qosRsvpAdmiPoliSour" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.1.5" instance="0" alias="qosRsvpOperPoliSour" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.1.6" instance="0" alias="qosCopsPolicyStatus" type="string"/>
+   </group>
+   <group name="qosPrIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.2.1.1.1" instance="qosPrIfEntry" alias="qosPrIfAdmiPoliSour" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.2.1.1.2" instance="qosPrIfEntry" alias="qosPrIfOperPoliSour" type="string"/>
+   </group>
+   <group name="qosIfCapabilityTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.2.2.1.1" instance="qosIfCapabilityEntry" alias="qosIfDirection" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.2.2.1.2" instance="qosIfCapabilityEntry" alias="qosIfQType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.159.1.2.2.1.3" instance="qosIfCapabilityEntry" alias="qosIfCapabilities" type="octetstring"/>
+   </group>
+</datacollection-group>

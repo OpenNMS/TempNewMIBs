@@ -1,0 +1,144 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-BGP4-MIB">
+   <resourceType name="cbgpRouteEntry" label="cbgpRouteEntry" resourceLabel="${cbgpRouteAfi} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeerEntry" label="cbgpPeerEntry" resourceLabel="${cbgpPeerPrevState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeerCapsEntry" label="cbgpPeerCapsEntry" resourceLabel="${cbgpPeerCapCode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeerAddrFamilyEntry" label="cbgpPeerAddrFamilyEntry" resourceLabel="${cbgpPeerAddrFamilyAfi} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeerAddrFamilyPrefixEntry" label="cbgpPeerAddrFamilyPrefixEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeer2Entry" label="cbgpPeer2Entry" resourceLabel="${cbgpPeer2Type} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeer2CapsEntry" label="cbgpPeer2CapsEntry" resourceLabel="${cbgpPeer2CapCode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeer2AddrFamilyEntry" label="cbgpPeer2AddrFamilyEntry" resourceLabel="${cbgpPeer2AddrFamilyAfi} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cbgpPeer2AddrFamilyPrefixEntry" label="cbgpPeer2AddrFamilyPrefixEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="cbgpGlobal" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.3.1" instance="0" alias="cbgpNotifsEnable" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.3.2" instance="0" alias="cbgpLocalAs" type="integer"/>
+   </group>
+   <group name="cbgpRouteTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.1" instance="cbgpRouteEntry" alias="cbgpRouteAfi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.2" instance="cbgpRouteEntry" alias="cbgpRouteSafi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.3" instance="cbgpRouteEntry" alias="cbgpRoutePeerType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.4" instance="cbgpRouteEntry" alias="cbgpRoutePeer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.5" instance="cbgpRouteEntry" alias="cbgpRouteAddrPrefix" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.6" instance="cbgpRouteEntry" alias="cbgpRoutAddrPrefLen" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.7" instance="cbgpRouteEntry" alias="cbgpRouteOrigin" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.8" instance="cbgpRouteEntry" alias="cbgpRoutASPathSegme" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.9" instance="cbgpRouteEntry" alias="cbgpRouteNextHop" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.10" instance="cbgpRouteEntry" alias="cbgpRouteMedPresent" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.11" instance="cbgpRouteEntry" alias="cbgRoutMultExitDisc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.12" instance="cbgpRouteEntry" alias="cbgRoutLocaPrefPres" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.13" instance="cbgpRouteEntry" alias="cbgpRouteLocalPref" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.14" instance="cbgpRouteEntry" alias="cbgpRouteAtomiAggre" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.15" instance="cbgpRouteEntry" alias="cbgpRouteAggregatAS" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.16" instance="cbgpRouteEntry" alias="cbgRoutAggrAddrType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.17" instance="cbgpRouteEntry" alias="cbgpRouteAggregAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.18" instance="cbgpRouteEntry" alias="cbgpRouteBest" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.1.1.1.19" instance="cbgpRouteEntry" alias="cbgpRouteUnknowAttr" type="octetstring"/>
+   </group>
+   <group name="cbgpPeerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.1" instance="cbgpPeerEntry" alias="cbgpPeerPrefiAccept" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.2" instance="cbgpPeerEntry" alias="cbgpPeerPrefiDenied" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.3" instance="cbgpPeerEntry" alias="cbgpPeerPrefixLimit" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.4" instance="cbgpPeerEntry" alias="cbgpPeerPrefiAdvert" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.5" instance="cbgpPeerEntry" alias="cbgpPeerPrefiSuppre" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.6" instance="cbgpPeerEntry" alias="cbgpPeerPrefiWithdr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.7" instance="cbgpPeerEntry" alias="cbgpPeerLastErroTxt" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.1.1.8" instance="cbgpPeerEntry" alias="cbgpPeerPrevState" type="string"/>
+   </group>
+   <group name="cbgpPeerCapsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.2.1.1" instance="cbgpPeerCapsEntry" alias="cbgpPeerCapCode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.2.1.2" instance="cbgpPeerCapsEntry" alias="cbgpPeerCapIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.2.1.3" instance="cbgpPeerCapsEntry" alias="cbgpPeerCapValue" type="octetstring"/>
+   </group>
+   <group name="cbgpPeerAddrFamilyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.3.1.1" instance="cbgpPeerAddrFamilyEntry" alias="cbgpPeerAddrFamiAfi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.3.1.2" instance="cbgpPeerAddrFamilyEntry" alias="cbgPeerAddrFamiSafi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.3.1.3" instance="cbgpPeerAddrFamilyEntry" alias="cbgPeerAddrFamiName" type="octetstring"/>
+   </group>
+   <group name="cbgpPeerAddrFamilyPrefixTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.1" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgpPeerAccepPrefix" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.2" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgpPeerDeniePrefix" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.3" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgPeerPrefAdmiLimi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.4" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgpPeerPrefiThresh" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.5" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgPeerPrefCleaThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.6" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgpPeerAdverPrefix" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.7" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgpPeerSupprPrefix" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.4.1.8" instance="cbgpPeerAddrFamilyPrefixEntry" alias="cbgpPeerWithdPrefix" type="gauge32"/>
+   </group>
+   <group name="cbgpPeer2Table" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.1" instance="cbgpPeer2Entry" alias="cbgpPeer2Type" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.2" instance="cbgpPeer2Entry" alias="cbgpPeer2RemoteAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.3" instance="cbgpPeer2Entry" alias="cbgpPeer2State" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.4" instance="cbgpPeer2Entry" alias="cbgpPeer2AdminStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.5" instance="cbgpPeer2Entry" alias="cbgpPeer2NegotVersi" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.6" instance="cbgpPeer2Entry" alias="cbgpPeer2LocalAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.7" instance="cbgpPeer2Entry" alias="cbgpPeer2LocalPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.8" instance="cbgpPeer2Entry" alias="cbgpPeer2LocalAs" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.9" instance="cbgpPeer2Entry" alias="cbgpPeer2LocalIdent" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.10" instance="cbgpPeer2Entry" alias="cbgpPeer2RemotePort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.11" instance="cbgpPeer2Entry" alias="cbgpPeer2RemoteAs" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.12" instance="cbgpPeer2Entry" alias="cbgpPeer2RemotIdent" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.13" instance="cbgpPeer2Entry" alias="cbgpPeer2InUpdates" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.14" instance="cbgpPeer2Entry" alias="cbgpPeer2OutUpdates" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.15" instance="cbgpPeer2Entry" alias="cbgpPeer2InTotaMess" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.16" instance="cbgpPeer2Entry" alias="cbgPeer2OutTotaMess" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.17" instance="cbgpPeer2Entry" alias="cbgpPeer2LastError" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.18" instance="cbgpPeer2Entry" alias="cbgPeer2FsmEstaTran" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.19" instance="cbgpPeer2Entry" alias="cbgPeer2FsmEstaTime" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.20" instance="cbgpPeer2Entry" alias="cbgPee2ConnRetrInte" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.21" instance="cbgpPeer2Entry" alias="cbgpPeer2HoldTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.22" instance="cbgpPeer2Entry" alias="cbgpPeer2KeepAlive" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.23" instance="cbgpPeer2Entry" alias="cbgPee2HoldTimeConf" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.24" instance="cbgpPeer2Entry" alias="cbgPee2KeepAlivConf" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.25" instance="cbgpPeer2Entry" alias="cbgPee2MinASOriInte" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.26" instance="cbgpPeer2Entry" alias="cbgPee2MinRouAdvInt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.27" instance="cbgpPeer2Entry" alias="cbgPee2InUpdElaTime" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.28" instance="cbgpPeer2Entry" alias="cbgPeer2LastErroTxt" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.5.1.29" instance="cbgpPeer2Entry" alias="cbgpPeer2PrevState" type="string"/>
+   </group>
+   <group name="cbgpPeer2CapsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.6.1.1" instance="cbgpPeer2CapsEntry" alias="cbgpPeer2CapCode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.6.1.2" instance="cbgpPeer2CapsEntry" alias="cbgpPeer2CapIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.6.1.3" instance="cbgpPeer2CapsEntry" alias="cbgpPeer2CapValue" type="octetstring"/>
+   </group>
+   <group name="cbgpPeer2AddrFamilyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.7.1.1" instance="cbgpPeer2AddrFamilyEntry" alias="cbgPeer2AddrFamiAfi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.7.1.2" instance="cbgpPeer2AddrFamilyEntry" alias="cbgPee2AddrFamiSafi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.7.1.3" instance="cbgpPeer2AddrFamilyEntry" alias="cbgPee2AddrFamiName" type="octetstring"/>
+   </group>
+   <group name="cbgpPeer2AddrFamilyPrefixTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.1" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgpPeer2AccepPrefi" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.2" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgpPeer2DeniePrefi" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.3" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgPee2PrefAdmiLimi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.4" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgpPeer2PrefiThres" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.5" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgPee2PrefCleaThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.6" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgpPeer2AdverPrefi" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.7" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgpPeer2SupprPrefi" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.187.1.2.8.1.8" instance="cbgpPeer2AddrFamilyPrefixEntry" alias="cbgpPeer2WithdPrefi" type="gauge32"/>
+   </group>
+</datacollection-group>

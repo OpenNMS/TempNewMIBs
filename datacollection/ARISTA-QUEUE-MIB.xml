@@ -1,0 +1,28 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="ARISTA-QUEUE-MIB">
+   <resourceType name="aristaIngressQueueEntry" label="aristaIngressQueueEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="aristaEgressQueueEntry" label="aristaEgressQueueEntry" resourceLabel="${aristaEgressPacketType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="aristaIngressQueueTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.1.1.1" instance="aristaIngressQueueEntry" alias="aristaIngresIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.1.1.2" instance="aristaIngressQueueEntry" alias="arisIngreQueueIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.1.1.3" instance="aristaIngressQueueEntry" alias="ariIngrQueuPktsDrop" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.1.1.4" instance="aristaIngressQueueEntry" alias="ariIngrQueuByteDrop" type="counter64"/>
+   </group>
+   <group name="aristaEgressQueueTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.1" instance="aristaEgressQueueEntry" alias="aristaEgressIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.2" instance="aristaEgressQueueEntry" alias="arisEgresQueueIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.3" instance="aristaEgressQueueEntry" alias="aristEgresPackeType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.4" instance="aristaEgressQueueEntry" alias="aristEgresQueuePkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.5" instance="aristaEgressQueueEntry" alias="arisEgresQueueBytes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.6" instance="aristaEgressQueueEntry" alias="ariEgreQueuPktsDrop" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.7" instance="aristaEgressQueueEntry" alias="ariEgreQueuByteDrop" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.8" instance="aristaEgressQueueEntry" alias="ariEgrQuePktDroQFul" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.9" instance="aristaEgressQueueEntry" alias="arEgrQuePktDroNoBuf" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.6.1.2.1.10" instance="aristaEgressQueueEntry" alias="ariEgreQueuDropPrec" type="string"/>
+   </group>
+</datacollection-group>

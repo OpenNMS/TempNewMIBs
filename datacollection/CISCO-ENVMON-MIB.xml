@@ -1,0 +1,58 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-ENVMON-MIB">
+   <resourceType name="ciscoEnvMonVoltageStatusEntry" label="ciscoEnvMonVoltageStatusEntry" resourceLabel="${ciscoEnvMonVoltageState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ciscoEnvMonTemperatureStatusEntry" label="ciscoEnvMonTemperatureStatusEntry" resourceLabel="${ciscoEnvMonTemperatureState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ciscoEnvMonFanStatusEntry" label="ciscoEnvMonFanStatusEntry" resourceLabel="${ciscoEnvMonFanState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="ciscoEnvMonSupplyStatusEntry" label="ciscoEnvMonSupplyStatusEntry" resourceLabel="${ciscoEnvMonSupplyState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="ciscoEnvMonObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.1" instance="0" alias="ciscoEnvMonPresent" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.6" instance="0" alias="ciscEnvMonAlarConta" type="octetstring"/>
+   </group>
+   <group name="ciscoEnvMonVoltageStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.2.1.1" instance="ciscoEnvMonVoltageStatusEntry" alias="cisEnvMonVolStaInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.2.1.2" instance="ciscoEnvMonVoltageStatusEntry" alias="cisEnvMonVolStaDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.2.1.3" instance="ciscoEnvMonVoltageStatusEntry" alias="cisEnvMonVolStaValu" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.2.1.4" instance="ciscoEnvMonVoltageStatusEntry" alias="cisEnvMonVolThreLow" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.2.1.5" instance="ciscoEnvMonVoltageStatusEntry" alias="cisEnvMonVolThrHigh" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.2.1.6" instance="ciscoEnvMonVoltageStatusEntry" alias="cisEnvMonVolLasShut" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.2.1.7" instance="ciscoEnvMonVoltageStatusEntry" alias="ciscEnvMonVoltState" type="string"/>
+   </group>
+   <group name="ciscoEnvMonTemperatureStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.3.1.1" instance="ciscoEnvMonTemperatureStatusEntry" alias="cisEnvMonTemStaInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.3.1.2" instance="ciscoEnvMonTemperatureStatusEntry" alias="cisEnvMonTemStaDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.3.1.3" instance="ciscoEnvMonTemperatureStatusEntry" alias="cisEnvMonTemStaValu" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.3.1.4" instance="ciscoEnvMonTemperatureStatusEntry" alias="ciscEnvMonTempThres" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.3.1.5" instance="ciscoEnvMonTemperatureStatusEntry" alias="cisEnvMonTemLasShut" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.3.1.6" instance="ciscoEnvMonTemperatureStatusEntry" alias="ciscEnvMonTempState" type="string"/>
+   </group>
+   <group name="ciscoEnvMonFanStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.4.1.1" instance="ciscoEnvMonFanStatusEntry" alias="cisEnvMonFanStaInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.4.1.2" instance="ciscoEnvMonFanStatusEntry" alias="cisEnvMonFanStaDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.4.1.3" instance="ciscoEnvMonFanStatusEntry" alias="ciscoEnvMonFanState" type="string"/>
+   </group>
+   <group name="ciscoEnvMonSupplyStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.5.1.1" instance="ciscoEnvMonSupplyStatusEntry" alias="cisEnvMonSupStaInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.5.1.2" instance="ciscoEnvMonSupplyStatusEntry" alias="cisEnvMonSupStaDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.5.1.3" instance="ciscoEnvMonSupplyStatusEntry" alias="ciscEnvMonSuppState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.1.5.1.4" instance="ciscoEnvMonSupplyStatusEntry" alias="ciscEnvMonSuppSourc" type="string"/>
+   </group>
+   <group name="ciscoEnvMonMIBNotificationEnables" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.2.1" instance="0" alias="cisEnvMonEnaShuNoti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.2.2" instance="0" alias="cisEnvMonEnaVolNoti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.2.3" instance="0" alias="cisEnvMonEnaTemNoti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.2.4" instance="0" alias="cisEnvMonEnaFanNoti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.2.5" instance="0" alias="ciEnMonEnaRedSupNot" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.13.2.6" instance="0" alias="ciEnMonEnaStaChaNot" type="string"/>
+   </group>
+</datacollection-group>

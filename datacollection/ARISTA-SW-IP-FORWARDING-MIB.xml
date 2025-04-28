@@ -1,0 +1,54 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="ARISTA-SW-IP-FORWARDING-MIB">
+   <resourceType name="aristaSwFwdIpStatsEntry" label="aristaSwFwdIpStatsEntry" resourceLabel="${aristaSwFwdIpStatsIPVersion} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="aristaSwFwdIpStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.1" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaIPVers" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.3" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaInRece" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.4" instance="aristaSwFwdIpStatsEntry" alias="arSwFwdIpStaHCInRec" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.5" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaInOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.6" instance="aristaSwFwdIpStatsEntry" alias="arSwFwdIpStaHCInOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.7" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInHdrErr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.8" instance="aristaSwFwdIpStatsEntry" alias="arSwFwdIpStaInNoRou" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.9" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInAddErr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.10" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInUnkPro" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.11" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInTruPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.12" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInForDat" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.13" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCInFoDat" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.14" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaReaReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.15" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaReaOKs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.16" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaReaFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.17" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaInDisc" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.18" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaInDeli" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.19" instance="aristaSwFwdIpStatsEntry" alias="arSwFwdIpStaHCInDel" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.20" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaOutReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.21" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaHCOutReq" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.22" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaOutNoRou" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.23" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutForDat" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.24" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCOuFoDat" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.25" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaOutDis" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.26" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutFraReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.27" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutFraOKs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.28" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutFraFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.29" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutFraCre" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.30" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaOutTra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.31" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaHCOutTra" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.32" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaOutOct" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.33" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaHCOutOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.34" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInMcaPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.35" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCInMcPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.36" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInMcaOct" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.37" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCInMcOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.38" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutMcaPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.39" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCOuMcPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.40" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutMcaOct" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.41" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCOuMcOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.42" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStaInBcaPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.43" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCInBcPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.44" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStOutBcaPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.45" instance="aristaSwFwdIpStatsEntry" alias="arSwFwIpStHCOuBcPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.46" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaDisTim" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.1.1.1.1.47" instance="aristaSwFwdIpStatsEntry" alias="ariSwFwdIpStaRefRat" type="integer"/>
+   </group>
+</datacollection-group>
