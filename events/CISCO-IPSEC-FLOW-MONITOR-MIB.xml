@@ -1,0 +1,455 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-IPSEC-FLOW-MONITOR-MIB">
+   <resourceType name="cikePeerEntry" label="cikePeerEntry" resourceLabel="${cikePeerLocalType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cikeTunnelEntry" label="cikeTunnelEntry" resourceLabel="${cikeTunLocalType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cikePeerCorrEntry" label="cikePeerCorrEntry" resourceLabel="${cikePeerCorrLocalType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cikePhase1GWStatsEntry" label="cikePhase1GWStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cipSecTunnelEntry" label="cipSecTunnelEntry" resourceLabel="${cipSecTunIkeTunnelAlive} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cipSecEndPtEntry" label="cipSecEndPtEntry" resourceLabel="${cipSecEndPtLocalType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cipSecSpiEntry" label="cipSecSpiEntry" resourceLabel="${cipSecSpiDirection} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cipSecPhase2GWStatsEntry" label="cipSecPhase2GWStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cikeTunnelHistEntry" label="cikeTunnelHistEntry" resourceLabel="${cikeTunHistTermReason} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cipSecTunnelHistEntry" label="cipSecTunnelHistEntry" resourceLabel="${cipSecTunHistTermReason} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cipSecEndPtHistEntry" label="cipSecEndPtHistEntry" resourceLabel="${cipSecEndPtHistLocalType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cikeFailEntry" label="cikeFailEntry" resourceLabel="${cikeFailReason} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cipSecFailEntry" label="cipSecFailEntry" resourceLabel="${cipSecFailReason} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="cipSecLevels" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.1.1" instance="0" alias="cipSecMibLevel" type="integer32"/>
+   </group>
+   <group name="cikeGlobalStats" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.1" instance="0" alias="cikeGlobaActivTunne" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.2" instance="0" alias="cikeGlobaPreviTunne" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.3" instance="0" alias="cikeGlobalInOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.4" instance="0" alias="cikeGlobalInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.5" instance="0" alias="cikeGlobaInDropPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.6" instance="0" alias="cikeGlobalInNotifys" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.7" instance="0" alias="cikeGlobaInP2Exchgs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.8" instance="0" alias="cikGlobInP2ExchInva" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.9" instance="0" alias="cikGlobInP2ExchReje" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.10" instance="0" alias="cikGloInP2SaDelRequ" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.11" instance="0" alias="cikeGlobalOutOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.12" instance="0" alias="cikeGlobalOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.13" instance="0" alias="cikeGlobOutDropPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.14" instance="0" alias="cikeGlobalOutNotify" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.15" instance="0" alias="cikeGlobaOutP2Exchg" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.16" instance="0" alias="cikGloOutP2ExchInva" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.17" instance="0" alias="cikGloOutP2ExchReje" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.18" instance="0" alias="cikGloOutP2SaDelReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.19" instance="0" alias="cikeGlobaInitTunnel" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.20" instance="0" alias="cikGlobInitTunnFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.21" instance="0" alias="cikGlobRespTunnFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.22" instance="0" alias="cikeGlobSysCapFails" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.23" instance="0" alias="cikeGlobalAuthFails" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.24" instance="0" alias="cikeGlobaDecryFails" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.25" instance="0" alias="cikGlobHashValiFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.1.26" instance="0" alias="cikeGlobalNoSaFails" type="counter32"/>
+   </group>
+   <group name="cikePeerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.1" instance="cikePeerEntry" alias="cikePeerLocalType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.2" instance="cikePeerEntry" alias="cikePeerLocalValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.3" instance="cikePeerEntry" alias="cikePeerRemoteType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.4" instance="cikePeerEntry" alias="cikePeerRemoteValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.5" instance="cikePeerEntry" alias="cikePeerIntIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.6" instance="cikePeerEntry" alias="cikePeerLocalAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.7" instance="cikePeerEntry" alias="cikePeerRemoteAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.8" instance="cikePeerEntry" alias="cikePeerActiveTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.2.1.9" instance="cikePeerEntry" alias="cikPeerActiTunnInde" type="integer32"/>
+   </group>
+   <group name="cikeTunnelTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.1" instance="cikeTunnelEntry" alias="cikeTunIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.2" instance="cikeTunnelEntry" alias="cikeTunLocalType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.3" instance="cikeTunnelEntry" alias="cikeTunLocalValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.4" instance="cikeTunnelEntry" alias="cikeTunLocalAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.5" instance="cikeTunnelEntry" alias="cikeTunLocalName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.6" instance="cikeTunnelEntry" alias="cikeTunRemoteType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.7" instance="cikeTunnelEntry" alias="cikeTunRemoteValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.8" instance="cikeTunnelEntry" alias="cikeTunRemoteAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.9" instance="cikeTunnelEntry" alias="cikeTunRemoteName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.10" instance="cikeTunnelEntry" alias="cikeTunNegoMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.11" instance="cikeTunnelEntry" alias="cikeTunDiffHellmGrp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.12" instance="cikeTunnelEntry" alias="cikeTunEncryptAlgo" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.13" instance="cikeTunnelEntry" alias="cikeTunHashAlgo" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.14" instance="cikeTunnelEntry" alias="cikeTunAuthMethod" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.15" instance="cikeTunnelEntry" alias="cikeTunLifeTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.16" instance="cikeTunnelEntry" alias="cikeTunActiveTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.17" instance="cikeTunnelEntry" alias="cikeTunSaRefreThres" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.18" instance="cikeTunnelEntry" alias="cikeTunTotalRefresh" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.19" instance="cikeTunnelEntry" alias="cikeTunInOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.20" instance="cikeTunnelEntry" alias="cikeTunInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.21" instance="cikeTunnelEntry" alias="cikeTunInDropPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.22" instance="cikeTunnelEntry" alias="cikeTunInNotifys" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.23" instance="cikeTunnelEntry" alias="cikeTunInP2Exchgs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.24" instance="cikeTunnelEntry" alias="cikeTunInP2ExchInva" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.25" instance="cikeTunnelEntry" alias="cikeTunInP2ExchReje" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.26" instance="cikeTunnelEntry" alias="cikTunInP2SaDelRequ" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.27" instance="cikeTunnelEntry" alias="cikeTunOutOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.28" instance="cikeTunnelEntry" alias="cikeTunOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.29" instance="cikeTunnelEntry" alias="cikeTunOutDropPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.30" instance="cikeTunnelEntry" alias="cikeTunOutNotifys" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.31" instance="cikeTunnelEntry" alias="cikeTunOutP2Exchgs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.32" instance="cikeTunnelEntry" alias="cikTunOutP2ExchInva" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.33" instance="cikeTunnelEntry" alias="cikTunOutP2ExchReje" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.34" instance="cikeTunnelEntry" alias="cikTunOutP2SaDelReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.3.1.35" instance="cikeTunnelEntry" alias="cikeTunStatus" type="string"/>
+   </group>
+   <group name="cikePeerCorrTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.4.1.1" instance="cikePeerCorrEntry" alias="cikPeerCorrLocaType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.4.1.2" instance="cikePeerCorrEntry" alias="cikPeerCorrLocaValu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.4.1.3" instance="cikePeerCorrEntry" alias="cikPeerCorrRemoType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.4.1.4" instance="cikePeerCorrEntry" alias="cikPeerCorrRemoValu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.4.1.5" instance="cikePeerCorrEntry" alias="cikePeerCorrIntInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.4.1.6" instance="cikePeerCorrEntry" alias="cikePeerCorrSeqNum" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.4.1.7" instance="cikePeerCorrEntry" alias="ciPeeCorIpSecTunInd" type="integer32"/>
+   </group>
+   <group name="cikePhase1GWStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.1" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWActiTunn" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.2" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWPrevTunn" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.3" instance="cikePhase1GWStatsEntry" alias="cikePhase1GWInOctet" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.4" instance="cikePhase1GWStatsEntry" alias="cikePhase1GWInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.5" instance="cikePhase1GWStatsEntry" alias="cikPha1GWInDropPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.6" instance="cikePhase1GWStatsEntry" alias="cikePhase1GWInNotif" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.7" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWInP2Exch" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.8" instance="cikePhase1GWStatsEntry" alias="cikPha1GWInP2ExcInv" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.9" instance="cikePhase1GWStatsEntry" alias="cikPha1GWInP2ExcRej" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.10" instance="cikePhase1GWStatsEntry" alias="ciPh1GWInP2SaDelReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.11" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWOutOctet" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.12" instance="cikePhase1GWStatsEntry" alias="cikePhase1GWOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.13" instance="cikePhase1GWStatsEntry" alias="cikPha1GWOutDroPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.14" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWOutNotif" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.15" instance="cikePhase1GWStatsEntry" alias="cikPhas1GWOutP2Exch" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.16" instance="cikePhase1GWStatsEntry" alias="ciPha1GWOutP2ExcInv" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.17" instance="cikePhase1GWStatsEntry" alias="ciPha1GWOutP2ExcRej" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.18" instance="cikePhase1GWStatsEntry" alias="ciPh1GWOuP2SaDelReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.19" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWInitTunn" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.20" instance="cikePhase1GWStatsEntry" alias="cikPha1GWIniTunFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.21" instance="cikePhase1GWStatsEntry" alias="cikPha1GWResTunFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.22" instance="cikePhase1GWStatsEntry" alias="cikPha1GWSysCapFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.23" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWAuthFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.24" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWDecrFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.25" instance="cikePhase1GWStatsEntry" alias="cikPha1GWHasValFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.2.5.1.26" instance="cikePhase1GWStatsEntry" alias="cikePhas1GWNoSaFail" type="counter32"/>
+   </group>
+   <group name="cipSecGlobalStats" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.1" instance="0" alias="cipSecGlobActiTunne" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.2" instance="0" alias="cipSecGlobPrevTunne" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.3" instance="0" alias="cipSecGlobaInOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.4" instance="0" alias="cipSecGlobHcInOctet" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.5" instance="0" alias="cipSecGlobInOctWrap" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.6" instance="0" alias="cipSecGloInDecoOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.7" instance="0" alias="cipSecGloHcInDecOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.8" instance="0" alias="ciSecGloInDecOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.9" instance="0" alias="cipSecGlobalInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.10" instance="0" alias="cipSecGlobalInDrops" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.11" instance="0" alias="cipSecGloInReplDrop" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.12" instance="0" alias="cipSecGlobalInAuths" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.13" instance="0" alias="cipSecGloInAuthFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.14" instance="0" alias="cipSecGlobaInDecryp" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.15" instance="0" alias="cipSecGloInDecrFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.16" instance="0" alias="cipSecGlobaOutOctet" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.17" instance="0" alias="cipSecGlobHcOutOcte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.18" instance="0" alias="cipSecGloOutOctWrap" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.19" instance="0" alias="cipSecGloOutUncOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.20" instance="0" alias="ciSecGloHcOutUncOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.21" instance="0" alias="ciSeGloOutUncOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.22" instance="0" alias="cipSecGlobalOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.23" instance="0" alias="cipSecGlobaOutDrops" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.24" instance="0" alias="cipSecGlobaOutAuths" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.25" instance="0" alias="cipSecGloOutAutFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.26" instance="0" alias="cipSecGlobaOutEncry" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.27" instance="0" alias="cipSecGloOutEncFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.28" instance="0" alias="cipSecGloProUseFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.29" instance="0" alias="cipSecGlobNoSaFails" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.1.30" instance="0" alias="cipSecGloSysCapFail" type="counter32"/>
+   </group>
+   <group name="cipSecTunnelTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.1" instance="cipSecTunnelEntry" alias="cipSecTunIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.2" instance="cipSecTunnelEntry" alias="cipSecTunIkeTunInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.3" instance="cipSecTunnelEntry" alias="cipSecTunIkeTunAliv" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.4" instance="cipSecTunnelEntry" alias="cipSecTunLocalAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.5" instance="cipSecTunnelEntry" alias="cipSecTunRemoteAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.6" instance="cipSecTunnelEntry" alias="cipSecTunKeyType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.7" instance="cipSecTunnelEntry" alias="cipSecTunEncapMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.8" instance="cipSecTunnelEntry" alias="cipSecTunLifeSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.9" instance="cipSecTunnelEntry" alias="cipSecTunLifeTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.10" instance="cipSecTunnelEntry" alias="cipSecTunActiveTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.11" instance="cipSecTunnelEntry" alias="ciSecTunSaLifSizThr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.12" instance="cipSecTunnelEntry" alias="ciSecTunSaLifTimThr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.13" instance="cipSecTunnelEntry" alias="cipSecTunTotalRefre" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.14" instance="cipSecTunnelEntry" alias="cipSecTunExpiSaInst" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.15" instance="cipSecTunnelEntry" alias="cipSecTunCurrSaInst" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.16" instance="cipSecTunnelEntry" alias="ciSeTuInSaDifHelGrp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.17" instance="cipSecTunnelEntry" alias="cipSecTunInSaEncAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.18" instance="cipSecTunnelEntry" alias="ciSeTunInSaAhAutAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.19" instance="cipSecTunnelEntry" alias="ciSeTuInSaEspAutAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.20" instance="cipSecTunnelEntry" alias="cipSecTunInSaDecAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.21" instance="cipSecTunnelEntry" alias="ciSeTuOuSaDifHelGrp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.22" instance="cipSecTunnelEntry" alias="ciSecTunOutSaEncAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.23" instance="cipSecTunnelEntry" alias="ciSeTuOutSaAhAutAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.24" instance="cipSecTunnelEntry" alias="ciSeTuOuSaEspAutAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.25" instance="cipSecTunnelEntry" alias="ciSecTunOutSaComAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.26" instance="cipSecTunnelEntry" alias="cipSecTunInOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.27" instance="cipSecTunnelEntry" alias="cipSecTunHcInOctets" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.28" instance="cipSecTunnelEntry" alias="cipSecTunInOctWraps" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.29" instance="cipSecTunnelEntry" alias="cipSecTunInDecoOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.30" instance="cipSecTunnelEntry" alias="cipSecTunHcInDecOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.31" instance="cipSecTunnelEntry" alias="ciSecTunInDecOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.32" instance="cipSecTunnelEntry" alias="cipSecTunInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.33" instance="cipSecTunnelEntry" alias="cipSecTunInDropPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.34" instance="cipSecTunnelEntry" alias="ciSecTunInRepDroPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.35" instance="cipSecTunnelEntry" alias="cipSecTunInAuths" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.36" instance="cipSecTunnelEntry" alias="cipSecTunInAuthFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.37" instance="cipSecTunnelEntry" alias="cipSecTunInDecrypts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.38" instance="cipSecTunnelEntry" alias="cipSecTunInDecrFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.39" instance="cipSecTunnelEntry" alias="cipSecTunOutOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.40" instance="cipSecTunnelEntry" alias="cipSecTunHcOutOctet" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.41" instance="cipSecTunnelEntry" alias="cipSecTunOutOctWrap" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.42" instance="cipSecTunnelEntry" alias="cipSecTunOutUncOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.43" instance="cipSecTunnelEntry" alias="ciSecTunHcOutUncOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.44" instance="cipSecTunnelEntry" alias="ciSeTunOutUncOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.45" instance="cipSecTunnelEntry" alias="cipSecTunOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.46" instance="cipSecTunnelEntry" alias="cipSecTunOutDroPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.47" instance="cipSecTunnelEntry" alias="cipSecTunOutAuths" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.48" instance="cipSecTunnelEntry" alias="cipSecTunOutAutFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.49" instance="cipSecTunnelEntry" alias="cipSecTunOutEncrypt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.50" instance="cipSecTunnelEntry" alias="cipSecTunOutEncFail" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.2.1.51" instance="cipSecTunnelEntry" alias="cipSecTunStatus" type="string"/>
+   </group>
+   <group name="cipSecEndPtTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.1" instance="cipSecEndPtEntry" alias="cipSecEndPtIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.2" instance="cipSecEndPtEntry" alias="cipSecEndPtLocaName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.3" instance="cipSecEndPtEntry" alias="cipSecEndPtLocaType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.4" instance="cipSecEndPtEntry" alias="cipSecEndPtLocAddr1" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.5" instance="cipSecEndPtEntry" alias="cipSecEndPtLocAddr2" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.6" instance="cipSecEndPtEntry" alias="cipSecEndPtLocaProt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.7" instance="cipSecEndPtEntry" alias="cipSecEndPtLocaPort" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.8" instance="cipSecEndPtEntry" alias="cipSecEndPtRemoName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.9" instance="cipSecEndPtEntry" alias="cipSecEndPtRemoType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.10" instance="cipSecEndPtEntry" alias="cipSecEndPtRemAddr1" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.11" instance="cipSecEndPtEntry" alias="cipSecEndPtRemAddr2" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.12" instance="cipSecEndPtEntry" alias="cipSecEndPtRemoProt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.3.1.13" instance="cipSecEndPtEntry" alias="cipSecEndPtRemoPort" type="integer32"/>
+   </group>
+   <group name="cipSecSpiTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.4.1.1" instance="cipSecSpiEntry" alias="cipSecSpiIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.4.1.2" instance="cipSecSpiEntry" alias="cipSecSpiDirection" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.4.1.3" instance="cipSecSpiEntry" alias="cipSecSpiValue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.4.1.4" instance="cipSecSpiEntry" alias="cipSecSpiProtocol" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.4.1.5" instance="cipSecSpiEntry" alias="cipSecSpiStatus" type="string"/>
+   </group>
+   <group name="cipSecPhase2GWStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.1" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWActTunn" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.2" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWPreTunn" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.3" instance="cipSecPhase2GWStatsEntry" alias="cipSecPhas2GWInOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.4" instance="cipSecPhase2GWStatsEntry" alias="ciSecPha2GWInOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.5" instance="cipSecPhase2GWStatsEntry" alias="ciSecPha2GWInDecOct" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.6" instance="cipSecPhase2GWStatsEntry" alias="ciSePh2GWInDeOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.7" instance="cipSecPhase2GWStatsEntry" alias="cipSecPhas2GWInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.8" instance="cipSecPhase2GWStatsEntry" alias="cipSecPhas2GWInDrop" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.9" instance="cipSecPhase2GWStatsEntry" alias="ciSecPha2GWInRepDro" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.10" instance="cipSecPhase2GWStatsEntry" alias="cipSecPhas2GWInAuth" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.11" instance="cipSecPhase2GWStatsEntry" alias="ciSecPha2GWInAutFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.12" instance="cipSecPhase2GWStatsEntry" alias="cipSecPhas2GWInDecr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.13" instance="cipSecPhase2GWStatsEntry" alias="ciSecPha2GWInDecFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.14" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWOutOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.15" instance="cipSecPhase2GWStatsEntry" alias="ciSePha2GWOutOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.16" instance="cipSecPhase2GWStatsEntry" alias="ciSePha2GWOutUncOct" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.17" instance="cipSecPhase2GWStatsEntry" alias="ciSePh2GWOuUnOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.18" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.19" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWOutDrop" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.20" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWOutAuth" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.21" instance="cipSecPhase2GWStatsEntry" alias="ciSePha2GWOutAutFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.22" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWOutEncr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.23" instance="cipSecPhase2GWStatsEntry" alias="ciSePha2GWOutEncFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.24" instance="cipSecPhase2GWStatsEntry" alias="ciSePha2GWProUseFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.25" instance="cipSecPhase2GWStatsEntry" alias="cipSecPha2GWNoSaFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.3.5.1.26" instance="cipSecPhase2GWStatsEntry" alias="ciSePha2GWSysCapFai" type="counter32"/>
+   </group>
+   <group name="cipSecHistGlobalCntl" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.1.1.1" instance="0" alias="cipSecHistTableSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.1.1.2" instance="0" alias="cipSecHistChecPoint" type="string"/>
+   </group>
+   <group name="cikeTunnelHistTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.1" instance="cikeTunnelHistEntry" alias="cikeTunHistIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.2" instance="cikeTunnelHistEntry" alias="cikeTunHistTermReas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.3" instance="cikeTunnelHistEntry" alias="cikeTunHistActiInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.4" instance="cikeTunnelHistEntry" alias="cikTunHisPeeLocType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.5" instance="cikeTunnelHistEntry" alias="cikTunHisPeeLocValu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.6" instance="cikeTunnelHistEntry" alias="cikTunHisPeeIntInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.7" instance="cikeTunnelHistEntry" alias="cikTunHisPeeRemType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.8" instance="cikeTunnelHistEntry" alias="cikTunHisPeeRemValu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.9" instance="cikeTunnelHistEntry" alias="cikeTunHistLocaAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.10" instance="cikeTunnelHistEntry" alias="cikeTunHistLocaName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.11" instance="cikeTunnelHistEntry" alias="cikeTunHistRemoAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.12" instance="cikeTunnelHistEntry" alias="cikeTunHistRemoName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.13" instance="cikeTunnelHistEntry" alias="cikeTunHistNegoMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.14" instance="cikeTunnelHistEntry" alias="cikTunHisDifHellGrp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.15" instance="cikeTunnelHistEntry" alias="cikeTunHistEncrAlgo" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.16" instance="cikeTunnelHistEntry" alias="cikeTunHistHashAlgo" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.17" instance="cikeTunnelHistEntry" alias="cikeTunHistAuthMeth" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.18" instance="cikeTunnelHistEntry" alias="cikeTunHistLifeTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.19" instance="cikeTunnelHistEntry" alias="cikeTunHistStarTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.20" instance="cikeTunnelHistEntry" alias="cikeTunHistActiTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.21" instance="cikeTunnelHistEntry" alias="cikeTunHistTotaRefr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.22" instance="cikeTunnelHistEntry" alias="cikeTunHistTotalSas" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.23" instance="cikeTunnelHistEntry" alias="cikeTunHistInOctets" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.24" instance="cikeTunnelHistEntry" alias="cikeTunHistInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.25" instance="cikeTunnelHistEntry" alias="cikTunHisInDropPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.26" instance="cikeTunnelHistEntry" alias="cikeTunHistInNotify" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.27" instance="cikeTunnelHistEntry" alias="cikeTunHistInP2Exch" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.28" instance="cikeTunnelHistEntry" alias="cikTunHisInP2ExcInv" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.29" instance="cikeTunnelHistEntry" alias="cikTunHisInP2ExcRej" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.30" instance="cikeTunnelHistEntry" alias="ciTuHisInP2SaDelReq" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.31" instance="cikeTunnelHistEntry" alias="cikeTunHistOutOctet" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.32" instance="cikeTunnelHistEntry" alias="cikeTunHistOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.33" instance="cikeTunnelHistEntry" alias="cikTunHisOutDroPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.34" instance="cikeTunnelHistEntry" alias="cikeTunHistOutNotif" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.35" instance="cikeTunnelHistEntry" alias="cikTunHistOutP2Exch" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.36" instance="cikeTunnelHistEntry" alias="ciTunHisOutP2ExcInv" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.37" instance="cikeTunnelHistEntry" alias="ciTunHisOutP2ExcRej" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.2.1.1.38" instance="cikeTunnelHistEntry" alias="ciTuHiOutP2SaDelReq" type="counter32"/>
+   </group>
+   <group name="cipSecTunnelHistTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.1" instance="cipSecTunnelHistEntry" alias="cipSecTunHistIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.2" instance="cipSecTunnelHistEntry" alias="cipSecTunHisTerReas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.3" instance="cipSecTunnelHistEntry" alias="cipSecTunHisActInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.4" instance="cipSecTunnelHistEntry" alias="ciSeTunHisIkeTunInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.5" instance="cipSecTunnelHistEntry" alias="cipSecTunHisLocAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.6" instance="cipSecTunnelHistEntry" alias="cipSecTunHisRemAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.7" instance="cipSecTunnelHistEntry" alias="cipSecTunHisKeyType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.8" instance="cipSecTunnelHistEntry" alias="cipSecTunHisEncMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.9" instance="cipSecTunnelHistEntry" alias="cipSecTunHisLifSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.10" instance="cipSecTunnelHistEntry" alias="cipSecTunHisLifTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.11" instance="cipSecTunnelHistEntry" alias="cipSecTunHisStaTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.12" instance="cipSecTunnelHistEntry" alias="cipSecTunHisActTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.13" instance="cipSecTunnelHistEntry" alias="cipSecTunHisTotRefr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.14" instance="cipSecTunnelHistEntry" alias="cipSecTunHisTotaSas" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.15" instance="cipSecTunnelHistEntry" alias="ciSeTuHiInSaDiHeGrp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.16" instance="cipSecTunnelHistEntry" alias="ciSeTuHisInSaEncAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.17" instance="cipSecTunnelHistEntry" alias="ciSeTuHiInSaAhAuAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.18" instance="cipSecTunnelHistEntry" alias="ciSeTuHiInSaEsAuAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.19" instance="cipSecTunnelHistEntry" alias="ciSeTuHisInSaDecAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.20" instance="cipSecTunnelHistEntry" alias="ciSeTuHiOuSaDiHeGrp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.21" instance="cipSecTunnelHistEntry" alias="ciSeTuHiOutSaEncAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.22" instance="cipSecTunnelHistEntry" alias="ciSeTuHiOuSaAhAuAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.23" instance="cipSecTunnelHistEntry" alias="ciSeTuHiOuSaEsAuAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.24" instance="cipSecTunnelHistEntry" alias="ciSeTuHiOutSaComAlg" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.25" instance="cipSecTunnelHistEntry" alias="cipSecTunHistInOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.26" instance="cipSecTunnelHistEntry" alias="cipSecTunHisHcInOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.27" instance="cipSecTunnelHistEntry" alias="ciSecTunHisInOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.28" instance="cipSecTunnelHistEntry" alias="ciSecTunHisInDecOct" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.29" instance="cipSecTunnelHistEntry" alias="ciSeTuHisHcInDecOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.30" instance="cipSecTunnelHistEntry" alias="ciSeTuHiInDecOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.31" instance="cipSecTunnelHistEntry" alias="cipSecTunHistInPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.32" instance="cipSecTunnelHistEntry" alias="ciSecTunHisInDroPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.33" instance="cipSecTunnelHistEntry" alias="ciSeTuHiInRepDroPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.34" instance="cipSecTunnelHistEntry" alias="cipSecTunHistInAuth" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.35" instance="cipSecTunnelHistEntry" alias="ciSecTunHisInAutFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.36" instance="cipSecTunnelHistEntry" alias="cipSecTunHistInDecr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.37" instance="cipSecTunnelHistEntry" alias="ciSecTunHisInDecFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.38" instance="cipSecTunnelHistEntry" alias="cipSecTunHisOutOcte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.39" instance="cipSecTunnelHistEntry" alias="ciSecTunHisHcOutOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.40" instance="cipSecTunnelHistEntry" alias="ciSeTunHisOutOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.41" instance="cipSecTunnelHistEntry" alias="ciSeTunHisOutUncOct" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.42" instance="cipSecTunnelHistEntry" alias="ciSeTuHiHcOutUncOct" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.43" instance="cipSecTunnelHistEntry" alias="ciSeTuHiOuUncOctWra" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.44" instance="cipSecTunnelHistEntry" alias="cipSecTunHisOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.45" instance="cipSecTunnelHistEntry" alias="ciSeTunHisOutDroPkt" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.46" instance="cipSecTunnelHistEntry" alias="cipSecTunHisOutAuth" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.47" instance="cipSecTunnelHistEntry" alias="ciSeTunHisOutAutFai" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.48" instance="cipSecTunnelHistEntry" alias="cipSecTunHisOutEncr" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.1.1.49" instance="cipSecTunnelHistEntry" alias="ciSeTunHisOutEncFai" type="counter32"/>
+   </group>
+   <group name="cipSecEndPtHistTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.1" instance="cipSecEndPtHistEntry" alias="cipSecEndPtHistInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.2" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisTunInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.3" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisActInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.4" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisLocNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.5" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisLocTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.6" instance="cipSecEndPtHistEntry" alias="ciSeEndPtHisLocAdd1" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.7" instance="cipSecEndPtHistEntry" alias="ciSeEndPtHisLocAdd2" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.8" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisLocPro" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.9" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisLocPor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.10" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisRemNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.11" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisRemTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.12" instance="cipSecEndPtHistEntry" alias="ciSeEndPtHisRemAdd1" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.13" instance="cipSecEndPtHistEntry" alias="ciSeEndPtHisRemAdd2" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.14" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisRemPro" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.4.3.2.1.15" instance="cipSecEndPtHistEntry" alias="ciSecEndPtHisRemPor" type="integer32"/>
+   </group>
+   <group name="cipSecFailGlobalCntl" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.1.1.1" instance="0" alias="cipSecFailTableSize" type="integer32"/>
+   </group>
+   <group name="cikeFailTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.1" instance="cikeFailEntry" alias="cikeFailIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.2" instance="cikeFailEntry" alias="cikeFailReason" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.3" instance="cikeFailEntry" alias="cikeFailTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.4" instance="cikeFailEntry" alias="cikeFailLocalType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.5" instance="cikeFailEntry" alias="cikeFailLocalValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.6" instance="cikeFailEntry" alias="cikeFailRemoteType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.7" instance="cikeFailEntry" alias="cikeFailRemoteValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.8" instance="cikeFailEntry" alias="cikeFailLocalAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.2.1.1.9" instance="cikeFailEntry" alias="cikeFailRemoteAddr" type="octetstring"/>
+   </group>
+   <group name="cipSecFailTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.3.1.1.1" instance="cipSecFailEntry" alias="cipSecFailIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.3.1.1.2" instance="cipSecFailEntry" alias="cipSecFailReason" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.3.1.1.3" instance="cipSecFailEntry" alias="cipSecFailTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.3.1.1.4" instance="cipSecFailEntry" alias="cipSecFailTunnIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.3.1.1.5" instance="cipSecFailEntry" alias="cipSecFailSaSpi" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.3.1.1.6" instance="cipSecFailEntry" alias="cipSecFaiPktSrcAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.5.3.1.1.7" instance="cipSecFailEntry" alias="cipSecFaiPktDstAddr" type="octetstring"/>
+   </group>
+   <group name="cipSecTrapCntl" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.1" instance="0" alias="ciSeTraCntIkeTunSta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.2" instance="0" alias="ciSeTraCntIkeTunSto" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.3" instance="0" alias="ciSeTraCntIkeSysFai" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.4" instance="0" alias="ciSeTrCnIkCerCrlFai" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.5" instance="0" alias="ciSeTraCntIkeProFai" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.6" instance="0" alias="cipSecTraCntIkeNoSa" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.7" instance="0" alias="ciSeTrCnIpSecTunSta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.8" instance="0" alias="ciSeTrCnIpSecTunSto" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.9" instance="0" alias="ciSeTrCnIpSecSysFai" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.10" instance="0" alias="ciSeTrCnIpSeSeUpFai" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.11" instance="0" alias="ciSeTrCnIpSeEaTuTer" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.12" instance="0" alias="ciSeTrCnIpSecProFai" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.171.1.6.13" instance="0" alias="ciSeTraCntIpSecNoSa" type="string"/>
+   </group>
+</datacollection-group>

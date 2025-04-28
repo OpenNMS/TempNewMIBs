@@ -1,0 +1,197 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-VTP-MIB">
+   <resourceType name="managementDomainEntry" label="managementDomainEntry" resourceLabel="${managementDomainLocalMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpVlanEntry" label="vtpVlanEntry" resourceLabel="${vtpVlanState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpInternalVlanEntry" label="vtpInternalVlanEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpEditControlEntry" label="vtpEditControlEntry" resourceLabel="${vtpVlanEditOperation} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpVlanEditEntry" label="vtpVlanEditEntry" resourceLabel="${vtpVlanEditState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpStatsEntry" label="vtpStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vlanTrunkPortEntry" label="vlanTrunkPortEntry" resourceLabel="${vlanTrunkPortEncapsulationType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpDiscoverEntry" label="vtpDiscoverEntry" resourceLabel="${vtpDiscoverAction} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpDiscoverResultEntry" label="vtpDiscoverResultEntry" resourceLabel="${vtpDiscoverResultConflicting} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpDatabaseEntry" label="vtpDatabaseEntry" resourceLabel="${vtpDatabaseLocalMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vtpAuthEntry" label="vtpAuthEntry" resourceLabel="${vtpAuthPasswordType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="vtpStatus" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.1.1" instance="0" alias="vtpVersion" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.1.2" instance="0" alias="vtpMaxVlanStorage" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.1.3" instance="0" alias="vtpNotificatEnabled" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.1.4" instance="0" alias="vtpVlanCreaNotiEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.1.5" instance="0" alias="vtpVlanDeleNotiEnab" type="string"/>
+   </group>
+   <group name="managementDomainTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.1" instance="managementDomainEntry" alias="managemeDomainIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.2" instance="managementDomainEntry" alias="managemenDomainName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.3" instance="managementDomainEntry" alias="managDomaiLocalMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.4" instance="managementDomainEntry" alias="manaDomaConfRevNumb" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.5" instance="managementDomainEntry" alias="managDomaiLastUpdat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.6" instance="managementDomainEntry" alias="managDomaiLastChang" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.7" instance="managementDomainEntry" alias="managDomaiRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.8" instance="managementDomainEntry" alias="managDomaiTftpServe" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.9" instance="managementDomainEntry" alias="managDomaiTftpPathn" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.10" instance="managementDomainEntry" alias="manaDomaiPruniState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.2.1.1.11" instance="managementDomainEntry" alias="manaDomaiVersiInUse" type="string"/>
+   </group>
+   <group name="vtpVlanTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.1" instance="vtpVlanEntry" alias="vtpVlanIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.2" instance="vtpVlanEntry" alias="vtpVlanState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.3" instance="vtpVlanEntry" alias="vtpVlanType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.4" instance="vtpVlanEntry" alias="vtpVlanName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.5" instance="vtpVlanEntry" alias="vtpVlanMtu" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.6" instance="vtpVlanEntry" alias="vtpVlanDot10Said" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.7" instance="vtpVlanEntry" alias="vtpVlanRingNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.8" instance="vtpVlanEntry" alias="vtpVlanBridgeNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.9" instance="vtpVlanEntry" alias="vtpVlanStpType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.10" instance="vtpVlanEntry" alias="vtpVlanParentVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.11" instance="vtpVlanEntry" alias="vtpVlanTranslaVlan1" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.12" instance="vtpVlanEntry" alias="vtpVlanTranslaVlan2" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.13" instance="vtpVlanEntry" alias="vtpVlanBridgeType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.14" instance="vtpVlanEntry" alias="vtpVlanAreHopCount" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.15" instance="vtpVlanEntry" alias="vtpVlanSteHopCount" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.16" instance="vtpVlanEntry" alias="vtpVlanIsCRFBackup" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.17" instance="vtpVlanEntry" alias="vtpVlanTypeExt" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.1.1.18" instance="vtpVlanEntry" alias="vtpVlanIfIndex" type="integer32"/>
+   </group>
+   <group name="internalVlanInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.2.1" instance="0" alias="vtpInteVlanAlloPoli" type="string"/>
+   </group>
+   <group name="vtpInternalVlanTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.3.2.2.1.1" instance="vtpInternalVlanEntry" alias="vtpInternaVlanOwner" type="octetstring"/>
+   </group>
+   <group name="vtpEditControlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.1.1.1" instance="vtpEditControlEntry" alias="vtpVlanEditOperatio" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.1.1.2" instance="vtpEditControlEntry" alias="vtpVlanApplyStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.1.1.3" instance="vtpEditControlEntry" alias="vtpVlanEditBuffOwne" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.1.1.4" instance="vtpEditControlEntry" alias="vtpVlaEdiConRevNumb" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.1.1.5" instance="vtpEditControlEntry" alias="vtpVlanEditModiVlan" type="integer32"/>
+   </group>
+   <group name="vtpVlanEditTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.1" instance="vtpVlanEditEntry" alias="vtpVlanEditIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.2" instance="vtpVlanEditEntry" alias="vtpVlanEditState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.3" instance="vtpVlanEditEntry" alias="vtpVlanEditType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.4" instance="vtpVlanEditEntry" alias="vtpVlanEditName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.5" instance="vtpVlanEditEntry" alias="vtpVlanEditMtu" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.6" instance="vtpVlanEditEntry" alias="vtpVlaEditDot10Said" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.7" instance="vtpVlanEditEntry" alias="vtpVlanEditRingNumb" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.8" instance="vtpVlanEditEntry" alias="vtpVlanEditBridNumb" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.9" instance="vtpVlanEditEntry" alias="vtpVlanEditStpType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.10" instance="vtpVlanEditEntry" alias="vtpVlanEditPareVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.11" instance="vtpVlanEditEntry" alias="vtpVlanEditRowStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.12" instance="vtpVlanEditEntry" alias="vtpVlaEditTranVlan1" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.13" instance="vtpVlanEditEntry" alias="vtpVlaEditTranVlan2" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.14" instance="vtpVlanEditEntry" alias="vtpVlanEditBridType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.15" instance="vtpVlanEditEntry" alias="vtpVlaEdiAreHopCoun" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.16" instance="vtpVlanEditEntry" alias="vtpVlaEdiSteHopCoun" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.17" instance="vtpVlanEditEntry" alias="vtpVlaEditIsCRFBack" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.18" instance="vtpVlanEditEntry" alias="vtpVlanEditTypeExt" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.4.2.1.19" instance="vtpVlanEditEntry" alias="vtpVlanEditTypeExt2" type="octetstring"/>
+   </group>
+   <group name="vtpStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.1" instance="vtpStatsEntry" alias="vtpInSummaryAdverts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.2" instance="vtpStatsEntry" alias="vtpInSubsetAdverts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.3" instance="vtpStatsEntry" alias="vtpInAdvertRequests" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.4" instance="vtpStatsEntry" alias="vtpOutSummarAdverts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.5" instance="vtpStatsEntry" alias="vtpOutSubsetAdverts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.6" instance="vtpStatsEntry" alias="vtpOutAdvertRequest" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.7" instance="vtpStatsEntry" alias="vtpConfRevNumbError" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.5.1.1.8" instance="vtpStatsEntry" alias="vtpConfiDigesErrors" type="counter32"/>
+   </group>
+   <group name="vlanTrunkPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.1" instance="vlanTrunkPortEntry" alias="vlanTrunPortIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.2" instance="vlanTrunkPortEntry" alias="vlaTrunPortManaDoma" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.3" instance="vlanTrunkPortEntry" alias="vlaTrunPortEncaType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.4" instance="vlanTrunkPortEntry" alias="vlaTrunPortVlanEnab" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.5" instance="vlanTrunkPortEntry" alias="vlaTrunPortNatiVlan" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.6" instance="vlanTrunkPortEntry" alias="vlanTrunPortRowStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.7" instance="vlanTrunkPortEntry" alias="vlanTrunPortInJoins" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.8" instance="vlanTrunkPortEntry" alias="vlanTrunPortOutJoin" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.9" instance="vlanTrunkPortEntry" alias="vlanTrunPortOldAdve" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.10" instance="vlanTrunkPortEntry" alias="vlaTruPorVlaPruElig" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.11" instance="vlanTrunkPortEntry" alias="vlaTruPorVlaXmiJoin" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.12" instance="vlanTrunkPortEntry" alias="vlaTruPorVlaRcvJoin" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.13" instance="vlanTrunkPortEntry" alias="vlaTrunPortDynaStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.14" instance="vlanTrunkPortEntry" alias="vlaTrunPortDynaStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.15" instance="vlanTrunkPortEntry" alias="vlanTrunPortVtpEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.16" instance="vlanTrunkPortEntry" alias="vlaTruPorEncOpeType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.17" instance="vlanTrunkPortEntry" alias="vlaTruPorVlanEnab2k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.18" instance="vlanTrunkPortEntry" alias="vlaTruPorVlanEnab3k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.19" instance="vlanTrunkPortEntry" alias="vlaTruPorVlanEnab4k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.20" instance="vlanTrunkPortEntry" alias="vtpVlanPruniEligi2k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.21" instance="vlanTrunkPortEntry" alias="vtpVlanPruniEligi3k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.22" instance="vlanTrunkPortEntry" alias="vtpVlanPruniEligi4k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.23" instance="vlanTrunkPortEntry" alias="vlTruPorVlaXmiJoi2k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.24" instance="vlanTrunkPortEntry" alias="vlTruPorVlaXmiJoi3k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.25" instance="vlanTrunkPortEntry" alias="vlTruPorVlaXmiJoi4k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.26" instance="vlanTrunkPortEntry" alias="vlTruPorVlaRcvJoi2k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.27" instance="vlanTrunkPortEntry" alias="vlTruPorVlaRcvJoi3k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.28" instance="vlanTrunkPortEntry" alias="vlTruPorVlaRcvJoi4k" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.1.1.29" instance="vlanTrunkPortEntry" alias="vlaTruPortDot1qTunn" type="string"/>
+   </group>
+   <group name="vlanTrunkPorts" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.2" instance="0" alias="vlaTruPortSetSeriNo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.6.3" instance="0" alias="vlaTrunPortDot1qTag" type="string"/>
+   </group>
+   <group name="vtpDiscoverTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.1.1.1" instance="vtpDiscoverEntry" alias="vtpDiscoverAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.1.1.2" instance="vtpDiscoverEntry" alias="vtpDiscoverStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.1.1.3" instance="vtpDiscoverEntry" alias="vtpLastDiscoverTime" type="timeticks"/>
+   </group>
+   <group name="vtpDiscoverResultTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.2.1.1" instance="vtpDiscoverResultEntry" alias="vtpDiscoResultIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.2.1.2" instance="vtpDiscoverResultEntry" alias="vtpDiscResuDataName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.2.1.3" instance="vtpDiscoverResultEntry" alias="vtpDiscoResulConfli" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.2.1.4" instance="vtpDiscoverResultEntry" alias="vtpDiscResulDevicId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.2.1.5" instance="vtpDiscoverResultEntry" alias="vtpDiscResuPrimServ" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.2.1.6" instance="vtpDiscoverResultEntry" alias="vtpDiscResuRevNumbe" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.7.2.1.7" instance="vtpDiscoverResultEntry" alias="vtpDiscResuSystName" type="octetstring"/>
+   </group>
+   <group name="vtpDatabaseTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.1" instance="vtpDatabaseEntry" alias="vtpDatabaseIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.2" instance="vtpDatabaseEntry" alias="vtpDatabaseName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.3" instance="vtpDatabaseEntry" alias="vtpDatabasLocalMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.4" instance="vtpDatabaseEntry" alias="vtpDatabasRevNumber" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.5" instance="vtpDatabaseEntry" alias="vtpDatabPrimaServer" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.6" instance="vtpDatabaseEntry" alias="vtpDataPrimaServeId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.7" instance="vtpDatabaseEntry" alias="vtpDataTakeOverPrim" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.8.1.1.8" instance="vtpDatabaseEntry" alias="vtpDataTakeOverPass" type="octetstring"/>
+   </group>
+   <group name="vtpAuthenticationTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.9.1.1.1" instance="vtpAuthEntry" alias="vtpAuthPassword" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.9.1.1.2" instance="vtpAuthEntry" alias="vtpAuthPasswordType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.1.9.1.1.3" instance="vtpAuthEntry" alias="vtpAuthSecretKey" type="octetstring"/>
+   </group>
+   <group name="vtpNotificationsObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.46.2.1.1" instance="0" alias="vtpVlanPortLocaSegm" type="integer32"/>
+   </group>
+</datacollection-group>

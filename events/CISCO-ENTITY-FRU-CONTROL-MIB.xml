@@ -1,0 +1,153 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-ENTITY-FRU-CONTROL-MIB">
+   <resourceType name="cefcFRUPowerSupplyGroupEntry" label="cefcFRUPowerSupplyGroupEntry" resourceLabel="${cefcPowerRedundancyMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcFRUPowerStatusEntry" label="cefcFRUPowerStatusEntry" resourceLabel="${cefcFRUPowerAdminStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcFRUPowerSupplyValueEntry" label="cefcFRUPowerSupplyValueEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcModuleEntry" label="cefcModuleEntry" resourceLabel="${cefcModuleAdminStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcIntelliModuleEntry" label="cefcIntelliModuleEntry" resourceLabel="${cefcIntelliModuleIPAddrType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcModuleLocalSwitchingEntry" label="cefcModuleLocalSwitchingEntry" resourceLabel="${cefcModuleLocalSwitchingMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcFanTrayStatusEntry" label="cefcFanTrayStatusEntry" resourceLabel="${cefcFanTrayOperStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcPhysicalEntry" label="cefcPhysicalEntry" resourceLabel="${cefcPhysicalStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcPowerSupplyInputEntry" label="cefcPowerSupplyInputEntry" resourceLabel="${cefcPowerSupplyInputType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcPowerSupplyOutputEntry" label="cefcPowerSupplyOutputEntry" resourceLabel="${cefcPSOutputModeInOperation} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcChassisCoolingEntry" label="cefcChassisCoolingEntry" resourceLabel="${cefcChassisPerSlotCoolingUnit} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcFanCoolingEntry" label="cefcFanCoolingEntry" resourceLabel="${cefcFanCoolingCapacityUnit} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcModuleCoolingEntry" label="cefcModuleCoolingEntry" resourceLabel="${cefcModuleCoolingUnit} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcFanCoolingCapEntry" label="cefcFanCoolingCapEntry" resourceLabel="${cefcFanCoolingCapCapacityUnit} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcConnectorRatingEntry" label="cefcConnectorRatingEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cefcModulePowerConsumptionEntry" label="cefcModulePowerConsumptionEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="cefcFRUPowerSupplyGroupTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.1.1.1" instance="cefcFRUPowerSupplyGroupEntry" alias="cefcPowerRedundMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.1.1.2" instance="cefcFRUPowerSupplyGroupEntry" alias="cefcPowerUnits" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.1.1.3" instance="cefcFRUPowerSupplyGroupEntry" alias="cefcTotalAvailCurre" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.1.1.4" instance="cefcFRUPowerSupplyGroupEntry" alias="cefcTotalDrawnCurre" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.1.1.5" instance="cefcFRUPowerSupplyGroupEntry" alias="cefPoweReduOperMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.1.1.6" instance="cefcFRUPowerSupplyGroupEntry" alias="cefcPoweNonReduReas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.1.1.7" instance="cefcFRUPowerSupplyGroupEntry" alias="cefTotaDrawInliCurr" type="integer32"/>
+   </group>
+   <group name="cefcFRUPowerStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.2.1.1" instance="cefcFRUPowerStatusEntry" alias="cefcFRUPoweAdmiStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.2.1.2" instance="cefcFRUPowerStatusEntry" alias="cefcFRUPoweOperStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.2.1.3" instance="cefcFRUPowerStatusEntry" alias="cefcFRUCurrent" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.2.1.4" instance="cefcFRUPowerStatusEntry" alias="cefcFRUPowerCapabil" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.2.1.5" instance="cefcFRUPowerStatusEntry" alias="cefcFRURealTimeCurr" type="integer32"/>
+   </group>
+   <group name="cefcFRUPower" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.3" instance="0" alias="cefMaxDefInLinePowe" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.5" instance="0" alias="ceMaxDefHigInLinPow" type="integer"/>
+   </group>
+   <group name="cefcFRUPowerSupplyValueTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.4.1.1" instance="cefcFRUPowerSupplyValueEntry" alias="cefcFRUTotaSystCurr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.4.1.2" instance="cefcFRUPowerSupplyValueEntry" alias="cefcFRUDrawSystCurr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.4.1.3" instance="cefcFRUPowerSupplyValueEntry" alias="cefcFRUTotaInliCurr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.1.4.1.4" instance="cefcFRUPowerSupplyValueEntry" alias="cefcFRUDrawInliCurr" type="integer32"/>
+   </group>
+   <group name="cefcModuleTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.1" instance="cefcModuleEntry" alias="cefcModulAdminStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.2" instance="cefcModuleEntry" alias="cefcModulOperStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.3" instance="cefcModuleEntry" alias="cefcModulResetReaso" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.4" instance="cefcModuleEntry" alias="cefModStaLasChaTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.5" instance="cefcModuleEntry" alias="cefModLasCleConTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.6" instance="cefcModuleEntry" alias="cefModuReseReasDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.7" instance="cefcModuleEntry" alias="cefModStaChaReaDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.1.1.8" instance="cefcModuleEntry" alias="cefcModuleUpTime" type="integer"/>
+   </group>
+   <group name="cefcIntelliModuleTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.2.1.1" instance="cefcIntelliModuleEntry" alias="cefIntModIPAddrType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.2.1.2" instance="cefcIntelliModuleEntry" alias="cefcInteModulIPAddr" type="octetstring"/>
+   </group>
+   <group name="cefcModuleLocalSwitchingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.2.3.1.1" instance="cefcModuleLocalSwitchingEntry" alias="cefModuLocaSwitMode" type="string"/>
+   </group>
+   <group name="cefcFanTrayStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.4.1.1.1" instance="cefcFanTrayStatusEntry" alias="cefcFanTrayOperStat" type="string"/>
+   </group>
+   <group name="cefcPhysicalTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.5.1.1.1" instance="cefcPhysicalEntry" alias="cefcPhysicalStatus" type="string"/>
+   </group>
+   <group name="cefcPowerSupplyInputTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.6.1.1.1" instance="cefcPowerSupplyInputEntry" alias="cefPoweSuppInpuInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.6.1.1.2" instance="cefcPowerSupplyInputEntry" alias="cefPoweSuppInpuType" type="string"/>
+   </group>
+   <group name="cefcPowerSupplyOutputTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.6.2.1.1" instance="cefcPowerSupplyOutputEntry" alias="cefcPSOutpModeIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.6.2.1.2" instance="cefcPowerSupplyOutputEntry" alias="cefcPSOutpModeCurre" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.6.2.1.3" instance="cefcPowerSupplyOutputEntry" alias="cefPSOutpModeInOper" type="string"/>
+   </group>
+   <group name="cefcChassisCoolingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.1.1.1" instance="cefcChassisCoolingEntry" alias="cefChaPerSloCoolCap" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.1.1.2" instance="cefcChassisCoolingEntry" alias="cefChaPerSloCooUnit" type="string"/>
+   </group>
+   <group name="cefcFanCoolingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.2.1.1" instance="cefcFanCoolingEntry" alias="cefcFanCoolinCapaci" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.2.1.2" instance="cefcFanCoolingEntry" alias="cefcFanCoolCapaUnit" type="string"/>
+   </group>
+   <group name="cefcModuleCoolingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.3.1.1" instance="cefcModuleCoolingEntry" alias="cefcModuleCooling" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.3.1.2" instance="cefcModuleCoolingEntry" alias="cefcModulCoolinUnit" type="string"/>
+   </group>
+   <group name="cefcFanCoolingCapTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.4.1.1" instance="cefcFanCoolingCapEntry" alias="cefcFanCoolCapIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.4.1.2" instance="cefcFanCoolingCapEntry" alias="cefFanCooCapModDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.4.1.3" instance="cefcFanCoolingCapEntry" alias="cefcFanCoolCapCapac" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.4.1.4" instance="cefcFanCoolingCapEntry" alias="cefcFanCoolCapCurre" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.7.4.1.5" instance="cefcFanCoolingCapEntry" alias="cefFanCooCapCapUnit" type="string"/>
+   </group>
+   <group name="cefcConnectorRatingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.8.1.1.1" instance="cefcConnectorRatingEntry" alias="cefcConnectorRating" type="integer32"/>
+   </group>
+   <group name="cefcModulePowerConsumptionTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.8.2.1.1" instance="cefcModulePowerConsumptionEntry" alias="cefcModulPowerConsu" type="integer32"/>
+   </group>
+   <group name="cefcMIBNotificationEnables" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.3.1" instance="0" alias="cefcMIBEnabStatNoti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.117.1.3.2" instance="0" alias="cefEnaPSOutChanNoti" type="string"/>
+   </group>
+</datacollection-group>

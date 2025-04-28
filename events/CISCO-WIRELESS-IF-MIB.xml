@@ -1,0 +1,367 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="CISCO-WIRELESS-IF-MIB">
+   <resourceType name="cwrRadioBaseEntry" label="cwrRadioBaseEntry" resourceLabel="${cwrAcquisitionMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrRadioPhyEntry" label="cwrRadioPhyEntry" resourceLabel="${cwrThroughput} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrPhyQualityEntry" label="cwrPhyQualityEntry" resourceLabel="${cwrArqReset} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrPhyCorrectedBytesEntry" label="cwrPhyCorrectedBytesEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrRfEntry" label="cwrRfEntry" resourceLabel="${cwrRFOpMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrIntFreqEntry" label="cwrIntFreqEntry" resourceLabel="${cwrIfTxOscState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrLinkMetricsThreshEntry" label="cwrLinkMetricsThreshEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrCumulativeMetricsEntry" label="cwrCumulativeMetricsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwr24HrMetricsEntry" label="cwr24HrMetricsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwr1HrMetricsEntry" label="cwr1HrMetricsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwr1MinMetricsEntry" label="cwr1MinMetricsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwr1SecMetricsEntry" label="cwr1SecMetricsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrHistCtrlEntry" label="cwrHistCtrlEntry" resourceLabel="${cwrHistClass} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrHistSummaryEntry" label="cwrHistSummaryEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrHistDataEntry" label="cwrHistDataEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrThresholdEntry" label="cwrThresholdEntry" resourceLabel="${cwrThreshAttribute} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrTlCtrlEntry" label="cwrTlCtrlEntry" resourceLabel="${cwrTlClass} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrTlSummaryEntry" label="cwrTlSummaryEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrTlDataEntry" label="cwrTlDataEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrSnapshotCtrlEntry" label="cwrSnapshotCtrlEntry" resourceLabel="${cwrSnapshotAction} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrSnapSummaryEntry" label="cwrSnapSummaryEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrSnapDataEntry" label="cwrSnapDataEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrAntennaEntry" label="cwrAntennaEntry" resourceLabel="${cwrAntennaPolarization} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrLoopbackEntry" label="cwrLoopbackEntry" resourceLabel="${cwrLocalLoopbackPoint} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrScopePortEntry" label="cwrScopePortEntry" resourceLabel="${cwrScopePortOn} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="cwrRadioTrapEntry" label="cwrRadioTrapEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="cwrRadioCommon" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.2.1" instance="0" alias="cwrRadioNextIndex" type="integer32"/>
+   </group>
+   <group name="cwrRadioBaseTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.2" instance="cwrRadioBaseEntry" alias="cwrAcquisitionMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.3" instance="cwrRadioBaseEntry" alias="cwrSelfTest" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.4" instance="cwrRadioBaseEntry" alias="cwrBasePrivacSuppor" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.5" instance="cwrRadioBaseEntry" alias="cwrTxRfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.6" instance="cwrRadioBaseEntry" alias="cwrRx1RfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.7" instance="cwrRadioBaseEntry" alias="cwrRx2RfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.8" instance="cwrRadioBaseEntry" alias="cwrClockRefExt" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.1.1.9" instance="cwrRadioBaseEntry" alias="cwrAntAlignment" type="string"/>
+   </group>
+   <group name="cwrRadioPhyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.1" instance="cwrRadioPhyEntry" alias="cwrNumRxAntenna" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.2" instance="cwrRadioPhyEntry" alias="cwrBandwidth" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.3" instance="cwrRadioPhyEntry" alias="cwrThroughput" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.4" instance="cwrRadioPhyEntry" alias="cwrOperatingBand" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.5" instance="cwrRadioPhyEntry" alias="cwrTxFrequency" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.6" instance="cwrRadioPhyEntry" alias="cwrRxFrequency" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.7" instance="cwrRadioPhyEntry" alias="cwrTxPower" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.8" instance="cwrRadioPhyEntry" alias="cwrCableLoss" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.9" instance="cwrRadioPhyEntry" alias="cwrOpStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.10" instance="cwrRadioPhyEntry" alias="cwrCableLossDiversi" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.3.2.1.11" instance="cwrRadioPhyEntry" alias="cwrBurstSize" type="string"/>
+   </group>
+   <group name="cwrPhyQualityTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.1" instance="cwrPhyQualityEntry" alias="cwrArqPctBw" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.2" instance="cwrPhyQualityEntry" alias="cwrArqVoiceLatency" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.3" instance="cwrPhyQualityEntry" alias="cwrArqDataLatency" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.4" instance="cwrPhyQualityEntry" alias="cwrArqBurstSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.5" instance="cwrPhyQualityEntry" alias="cwrArqTypicaBitRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.6" instance="cwrPhyQualityEntry" alias="cwrArqMinBitRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.7" instance="cwrPhyQualityEntry" alias="cwrArqMaxLatenJitte" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.8" instance="cwrPhyQualityEntry" alias="cwrArqReset" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.1.1.9" instance="cwrPhyQualityEntry" alias="cwrArqOn" type="string"/>
+   </group>
+   <group name="cwrPhyCorrectedBytesTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.1" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq1ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.2" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq2ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.3" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq3ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.4" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq4ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.5" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq5ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.6" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq6ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.7" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq7ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.8" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq8ByteErrs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.4.2.1.9" instance="cwrPhyCorrectedBytesEntry" alias="cwrArq9ByteErrs" type="counter64"/>
+   </group>
+   <group name="cwrRfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.1" instance="cwrRfEntry" alias="cwrRfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.2" instance="cwrRfEntry" alias="cwrRfResIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.3" instance="cwrRfEntry" alias="cwrRFOpMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.4" instance="cwrRfEntry" alias="cwrTxFreqRangeMin" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.5" instance="cwrRfEntry" alias="cwrTxFreqRangeMax" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.6" instance="cwrRfEntry" alias="cwrRxFreqRangeMin" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.7" instance="cwrRfEntry" alias="cwrRxFreqRangeMax" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.8" instance="cwrRfEntry" alias="cwrMinTxPower" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.9" instance="cwrRfEntry" alias="cwrMaxTxPower" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.10" instance="cwrRfEntry" alias="cwrRfTxOscState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.11" instance="cwrRfEntry" alias="cwrRfAntIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.12" instance="cwrRfEntry" alias="cwrRfRxOscState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.13" instance="cwrRfEntry" alias="cwrRfTemperature" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.14" instance="cwrRfEntry" alias="cwrRfSuppVoltaState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.15" instance="cwrRfEntry" alias="cwrRfStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.16" instance="cwrRfEntry" alias="cwrRfContChannStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.1.1.17" instance="cwrRfEntry" alias="cwrBurstSizeGroup" type="octetstring"/>
+   </group>
+   <group name="cwrIntFreqTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.2.1.1" instance="cwrIntFreqEntry" alias="cwrIfTxOscState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.2.1.2" instance="cwrIntFreqEntry" alias="cwrIfRxOscState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.2.1.3" instance="cwrIntFreqEntry" alias="cwrIfRefOscState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.2.1.4" instance="cwrIntFreqEntry" alias="cwrIfResIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.2.1.5" instance="cwrIntFreqEntry" alias="cwrIfInpFreq" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.5.2.1.6" instance="cwrIntFreqEntry" alias="cwrIfOutFreq" type="integer32"/>
+   </group>
+   <group name="cwrLinkMetricsThresholdTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.1" instance="cwrLinkMetricsThreshEntry" alias="cwrLinkCwESThresh" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.2" instance="cwrLinkMetricsThreshEntry" alias="cwrLinkLowCwDSThres" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.3" instance="cwrLinkMetricsThreshEntry" alias="cwrLinkHighCwDSThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.4" instance="cwrLinkMetricsThreshEntry" alias="cwrLinkCSESThresh" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.5" instance="cwrLinkMetricsThreshEntry" alias="cwrLin1HrESAlarThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.6" instance="cwrLinkMetricsThreshEntry" alias="cwrLin1HrSESAlaThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.7" instance="cwrLinkMetricsThreshEntry" alias="cwrLin1HrCSEAlaThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.8" instance="cwrLinkMetricsThreshEntry" alias="cwrLin1HrDCMAlaThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.9" instance="cwrLinkMetricsThreshEntry" alias="cwrLin24HrESAlaThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.10" instance="cwrLinkMetricsThreshEntry" alias="cwrLin24HrSESAlaThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.11" instance="cwrLinkMetricsThreshEntry" alias="cwrLin24HrCSEAlaThr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.1.1.12" instance="cwrLinkMetricsThreshEntry" alias="cwrLin24HrDCMAlaThr" type="integer"/>
+   </group>
+   <group name="cwrCumulativeMetricsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.1" instance="cwrCumulativeMetricsEntry" alias="cwrAvailableSeconds" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.2" instance="cwrCumulativeMetricsEntry" alias="cwrUnAvailabSeconds" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.3" instance="cwrCumulativeMetricsEntry" alias="cwrSyncLossSeconds" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.4" instance="cwrCumulativeMetricsEntry" alias="cwrPctErroFreeSecon" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.5" instance="cwrCumulativeMetricsEntry" alias="cwrPctErroreSeconds" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.6" instance="cwrCumulativeMetricsEntry" alias="cwrPctSeveErroSecon" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.7" instance="cwrCumulativeMetricsEntry" alias="cwrPctAvailSeconds" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.8" instance="cwrCumulativeMetricsEntry" alias="cwrPctCwDegraMinute" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.9" instance="cwrCumulativeMetricsEntry" alias="cwrSyncSuccessCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.10" instance="cwrCumulativeMetricsEntry" alias="cwrSyncFailureCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.11" instance="cwrCumulativeMetricsEntry" alias="cwrManagedSyncLoss" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.12" instance="cwrCumulativeMetricsEntry" alias="cwrAutomatiSyncLoss" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.13" instance="cwrCumulativeMetricsEntry" alias="cwrLastSyncSuccTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.14" instance="cwrCumulativeMetricsEntry" alias="cwrLastSyncFailTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.15" instance="cwrCumulativeMetricsEntry" alias="cwrEffecPhyDataRate" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.2.1.16" instance="cwrCumulativeMetricsEntry" alias="cwrPctEffPhyDatRate" type="gauge32"/>
+   </group>
+   <group name="cwr24HrMetricsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.1" instance="cwr24HrMetricsEntry" alias="cwr24HrMetricsIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.2" instance="cwr24HrMetricsEntry" alias="cwr24HrUpdateTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.3" instance="cwr24HrMetricsEntry" alias="cwr24HrErroFreeSeco" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.4" instance="cwr24HrMetricsEntry" alias="cwr24HrErroreSecond" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.5" instance="cwr24HrMetricsEntry" alias="cwr24HrSevErroSecon" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.6" instance="cwr24HrMetricsEntry" alias="cwr24HrConSvErrSeco" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.7" instance="cwr24HrMetricsEntry" alias="cwr24HrDegradMinute" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.8" instance="cwr24HrMetricsEntry" alias="cwr24HrTotaErroCode" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.3.1.9" instance="cwr24HrMetricsEntry" alias="cwr24HrTotalCodewor" type="counter64"/>
+   </group>
+   <group name="cwr1HrMetricsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.1" instance="cwr1HrMetricsEntry" alias="cwr1HrMetricsIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.2" instance="cwr1HrMetricsEntry" alias="cwr1HrUpdateTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.3" instance="cwr1HrMetricsEntry" alias="cwr1HrErroFreeSecon" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.4" instance="cwr1HrMetricsEntry" alias="cwr1HrErroreSeconds" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.5" instance="cwr1HrMetricsEntry" alias="cwr1HrSevErrorSecon" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.6" instance="cwr1HrMetricsEntry" alias="cwr1HrConsSvErrSeco" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.7" instance="cwr1HrMetricsEntry" alias="cwr1HrDegradMinutes" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.8" instance="cwr1HrMetricsEntry" alias="cwr1HrErroreCodewor" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.4.1.9" instance="cwr1HrMetricsEntry" alias="cwr1HrTotalCodeword" type="counter64"/>
+   </group>
+   <group name="cwr1MinMetricsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.1" instance="cwr1MinMetricsEntry" alias="cwr1MinMetricsIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.2" instance="cwr1MinMetricsEntry" alias="cwr1MinUpdateTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.3" instance="cwr1MinMetricsEntry" alias="cwr1MinErroFreeSeco" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.4" instance="cwr1MinMetricsEntry" alias="cwr1MinErroreSecond" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.5" instance="cwr1MinMetricsEntry" alias="cwr1MinSevErroSecon" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.6" instance="cwr1MinMetricsEntry" alias="cw1MinConSvCwErrSec" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.7" instance="cwr1MinMetricsEntry" alias="cwr1MinDegradSecond" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.8" instance="cwr1MinMetricsEntry" alias="cwr1MinErroreCodewo" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.5.1.9" instance="cwr1MinMetricsEntry" alias="cwr1MinCodewords" type="counter64"/>
+   </group>
+   <group name="cwr1SecMetricsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.1" instance="cwr1SecMetricsEntry" alias="cwr1SecIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.2" instance="cwr1SecMetricsEntry" alias="cwr1SecUpdateTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.3" instance="cwr1SecMetricsEntry" alias="cwr1SecRxCodewords" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.4" instance="cwr1SecMetricsEntry" alias="cwr1SecRSCodewError" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.5" instance="cwr1SecMetricsEntry" alias="cwr1SecArqCodeError" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.6" instance="cwr1SecMetricsEntry" alias="cwr1SecRxRrCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.7" instance="cwr1SecMetricsEntry" alias="cwr1SecRxRrEvenCoun" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.8" instance="cwr1SecMetricsEntry" alias="cwr1SecTxArqCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.9" instance="cwr1SecMetricsEntry" alias="cwr1SecTxArqEveCoun" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.10" instance="cwr1SecMetricsEntry" alias="cwr1SecCorSynBytErr" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.11" instance="cwr1SecMetricsEntry" alias="cwr1SecConsecCwErrs" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.6.6.1.12" instance="cwr1SecMetricsEntry" alias="cwr1SecPosARQGooCod" type="counter64"/>
+   </group>
+   <group name="cwrHistCtrlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.1" instance="cwrHistCtrlEntry" alias="cwrHistIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.2" instance="cwrHistCtrlEntry" alias="cwrHistClass" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.3" instance="cwrHistCtrlEntry" alias="cwrRfResourceId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.4" instance="cwrHistCtrlEntry" alias="cwrDspNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.5" instance="cwrHistCtrlEntry" alias="cwrStartBinValue" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.6" instance="cwrHistCtrlEntry" alias="cwrBinDelta" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.7" instance="cwrHistCtrlEntry" alias="cwrNumHistBins" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.8" instance="cwrHistCtrlEntry" alias="cwrUpdateRate" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.9" instance="cwrHistCtrlEntry" alias="cwrCollDuration" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.10" instance="cwrHistCtrlEntry" alias="cwrOwnerId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.11" instance="cwrHistCtrlEntry" alias="cwrHistBitShift" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.12" instance="cwrHistCtrlEntry" alias="cwrHistToneSelectio" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.13" instance="cwrHistCtrlEntry" alias="cwrHistToneValue" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.14" instance="cwrHistCtrlEntry" alias="cwrHistAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.15" instance="cwrHistCtrlEntry" alias="cwrHistStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.16" instance="cwrHistCtrlEntry" alias="cwrHistRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.1.1.17" instance="cwrHistCtrlEntry" alias="cwrHistPeriodicSum" type="string"/>
+   </group>
+   <group name="cwrHistSummaryTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.2.1.1" instance="cwrHistSummaryEntry" alias="cwrHistUpdateTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.2.1.2" instance="cwrHistSummaryEntry" alias="cwrHistMin" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.2.1.3" instance="cwrHistSummaryEntry" alias="cwrHistMax" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.2.1.4" instance="cwrHistSummaryEntry" alias="cwrHistMean" type="integer32"/>
+   </group>
+   <group name="cwrHistDataTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.3.1.1" instance="cwrHistDataEntry" alias="cwrHistBinIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.7.3.1.2" instance="cwrHistDataEntry" alias="cwrValue" type="integer32"/>
+   </group>
+   <group name="cwrThresholdTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.1" instance="cwrThresholdEntry" alias="cwrThreshIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.2" instance="cwrThresholdEntry" alias="cwrThreshAttribute" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.3" instance="cwrThresholdEntry" alias="cwrThreshType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.4" instance="cwrThresholdEntry" alias="cwrThreshAntId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.5" instance="cwrThresholdEntry" alias="cwrThreshValue" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.6" instance="cwrThresholdEntry" alias="cwrThreshHysterTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.7" instance="cwrThresholdEntry" alias="cwrThreshLimitTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.8" instance="cwrThresholdEntry" alias="cwrThreshDspNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.1.1.9" instance="cwrThresholdEntry" alias="cwrThreshRowStatus" type="string"/>
+   </group>
+   <group name="cwrTlCtrlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.1" instance="cwrTlCtrlEntry" alias="cwrTlIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.2" instance="cwrTlCtrlEntry" alias="cwrTlClass" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.3" instance="cwrTlCtrlEntry" alias="cwrTlRfResourceId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.4" instance="cwrTlCtrlEntry" alias="cwrTlDspNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.5" instance="cwrTlCtrlEntry" alias="cwrTlNumDataValues" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.6" instance="cwrTlCtrlEntry" alias="cwrTlDecimatiFactor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.7" instance="cwrTlCtrlEntry" alias="cwrTlPreSumShift" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.8" instance="cwrTlCtrlEntry" alias="cwrTlToneSelection" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.9" instance="cwrTlCtrlEntry" alias="cwrTlToneValue" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.10" instance="cwrTlCtrlEntry" alias="cwrTlThreshIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.11" instance="cwrTlCtrlEntry" alias="cwrTlAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.12" instance="cwrTlCtrlEntry" alias="cwrTlStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.13" instance="cwrTlCtrlEntry" alias="cwrTlPosTrigBufMgmt" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.2.1.14" instance="cwrTlCtrlEntry" alias="cwrTlRowStatus" type="string"/>
+   </group>
+   <group name="cwrTlSummaryTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.3.1.1" instance="cwrTlSummaryEntry" alias="cwrTlUpdateTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.3.1.2" instance="cwrTlSummaryEntry" alias="cwrTlNumValues" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.3.1.3" instance="cwrTlSummaryEntry" alias="cwrTlTriggerLoc" type="integer32"/>
+   </group>
+   <group name="cwrTlDataTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.4.1.1" instance="cwrTlDataEntry" alias="cwrTlValueIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.8.4.1.2" instance="cwrTlDataEntry" alias="cwrTlValue" type="integer32"/>
+   </group>
+   <group name="cwrSnapshotCtrlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.1.1.1" instance="cwrSnapshotCtrlEntry" alias="cwrSnapshotDspNum" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.1.1.2" instance="cwrSnapshotCtrlEntry" alias="cwrSnapshotType" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.1.1.3" instance="cwrSnapshotCtrlEntry" alias="cwrSnapshotAction" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.1.1.4" instance="cwrSnapshotCtrlEntry" alias="cwrSnapshotStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.1.1.5" instance="cwrSnapshotCtrlEntry" alias="cwrSnapshoRowStatus" type="string"/>
+   </group>
+   <group name="cwrSnapSummaryTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.2" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr1Id" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.3" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr1Size" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.4" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr2Id" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.5" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr2Size" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.6" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr3Id" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.7" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr3Size" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.8" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr4Id" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.2.1.9" instance="cwrSnapSummaryEntry" alias="cwrSnapAttr4Size" type="integer32"/>
+   </group>
+   <group name="cwrSnapDataTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.3.1.1" instance="cwrSnapDataEntry" alias="cwrSnapValueIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.3.1.2" instance="cwrSnapDataEntry" alias="cwrRealPart" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.9.3.1.3" instance="cwrSnapDataEntry" alias="cwrImaginaryPart" type="integer32"/>
+   </group>
+   <group name="cwrAntennaTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.10.1.1.1" instance="cwrAntennaEntry" alias="cwrAntennaIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.10.1.1.2" instance="cwrAntennaEntry" alias="cwrAntennaXDim" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.10.1.1.3" instance="cwrAntennaEntry" alias="cwrAntennaYDim" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.10.1.1.4" instance="cwrAntennaEntry" alias="cwrAntennaType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.10.1.1.5" instance="cwrAntennaEntry" alias="cwrAntennaDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.10.1.1.6" instance="cwrAntennaEntry" alias="cwrAntennaGain" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.10.1.1.7" instance="cwrAntennaEntry" alias="cwrAntennaPolarizat" type="string"/>
+   </group>
+   <group name="cwrLoopbackTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.1.1.1.1.1" instance="cwrLoopbackEntry" alias="cwrLocalLoopbaPoint" type="string"/>
+   </group>
+   <group name="cwrScopePortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.1.1.2.1.1" instance="cwrScopePortEntry" alias="cwrScopePortOn" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.1.1.2.1.2" instance="cwrScopePortEntry" alias="cwrScopePortDsp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.1.1.1.2.1.3" instance="cwrScopePortEntry" alias="cwrScopePortAttribu" type="integer32"/>
+   </group>
+   <group name="cwrRadioTrapTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.9.9.136.2.1.1.1.1" instance="cwrRadioTrapEntry" alias="cwrTrapReason" type="octetstring"/>
+   </group>
+</datacollection-group>

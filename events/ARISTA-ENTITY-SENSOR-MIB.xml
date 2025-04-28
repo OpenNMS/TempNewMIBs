@@ -1,0 +1,13 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="ARISTA-ENTITY-SENSOR-MIB">
+   <resourceType name="aristaEntSensorThresholdEntry" label="aristaEntSensorThresholdEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="aristaEntSensorThresholdTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.30065.3.12.1.1.1.1" instance="aristaEntSensorThresholdEntry" alias="ariEntSenThrLowWarn" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.12.1.1.1.2" instance="aristaEntSensorThresholdEntry" alias="ariEntSenThrLowCrit" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.12.1.1.1.3" instance="aristaEntSensorThresholdEntry" alias="ariEntSenThrHigWarn" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.12.1.1.1.4" instance="aristaEntSensorThresholdEntry" alias="ariEntSenThrHigCrit" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.30065.3.12.1.1.1.5" instance="aristaEntSensorThresholdEntry" alias="arisEntSensStatDesc" type="octetstring"/>
+   </group>
+</datacollection-group>
