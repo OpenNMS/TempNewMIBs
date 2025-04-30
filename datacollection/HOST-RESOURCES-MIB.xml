@@ -1,0 +1,137 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="HOST-RESOURCES-MIB">
+   <resourceType name="hrStorageEntry" label="hrStorageEntry" resourceLabel="${hrStorageType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrDeviceEntry" label="hrDeviceEntry" resourceLabel="${hrDeviceType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrProcessorEntry" label="hrProcessorEntry" resourceLabel="${hrProcessorFrwID} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrNetworkEntry" label="hrNetworkEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrPrinterEntry" label="hrPrinterEntry" resourceLabel="${hrPrinterStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrDiskStorageEntry" label="hrDiskStorageEntry" resourceLabel="${hrDiskStorageAccess} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrPartitionEntry" label="hrPartitionEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrFSEntry" label="hrFSEntry" resourceLabel="${hrFSType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrSWRunEntry" label="hrSWRunEntry" resourceLabel="${hrSWRunID} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrSWRunPerfEntry" label="hrSWRunPerfEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hrSWInstalledEntry" label="hrSWInstalledEntry" resourceLabel="${hrSWInstalledID} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="hrSystem" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.25.1.1" instance="0" alias="hrSystemUptime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.2.1.25.1.2" instance="0" alias="hrSystemDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.1.3" instance="0" alias="hrSystInitLoadDevic" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.1.4" instance="0" alias="hrSystInitLoadParam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.1.5" instance="0" alias="hrSystemNumUsers" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.1.6" instance="0" alias="hrSystemProcesses" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.1.7" instance="0" alias="hrSystemMaxProcesse" type="integer32"/>
+   </group>
+   <group name="hrStorage" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.25.2.2" instance="0" alias="hrMemorySize" type="integer32"/>
+   </group>
+   <group name="hrStorageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.2.3.1.1" instance="hrStorageEntry" alias="hrStorageIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.2.3.1.2" instance="hrStorageEntry" alias="hrStorageType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.2.3.1.3" instance="hrStorageEntry" alias="hrStorageDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.2.3.1.4" instance="hrStorageEntry" alias="hrStoragAllocaUnits" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.2.3.1.5" instance="hrStorageEntry" alias="hrStorageSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.2.3.1.6" instance="hrStorageEntry" alias="hrStorageUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.2.3.1.7" instance="hrStorageEntry" alias="hrStoraAllocaFailur" type="counter32"/>
+   </group>
+   <group name="hrDeviceTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.3.2.1.1" instance="hrDeviceEntry" alias="hrDeviceIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.2.1.2" instance="hrDeviceEntry" alias="hrDeviceType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.2.1.3" instance="hrDeviceEntry" alias="hrDeviceDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.2.1.4" instance="hrDeviceEntry" alias="hrDeviceID" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.2.1.5" instance="hrDeviceEntry" alias="hrDeviceStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.2.1.6" instance="hrDeviceEntry" alias="hrDeviceErrors" type="counter32"/>
+   </group>
+   <group name="hrProcessorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.3.3.1.1" instance="hrProcessorEntry" alias="hrProcessorFrwID" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.3.1.2" instance="hrProcessorEntry" alias="hrProcessorLoad" type="integer32"/>
+   </group>
+   <group name="hrNetworkTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.3.4.1.1" instance="hrNetworkEntry" alias="hrNetworkIfIndex" type="integer32"/>
+   </group>
+   <group name="hrPrinterTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.3.5.1.1" instance="hrPrinterEntry" alias="hrPrinterStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.5.1.2" instance="hrPrinterEntry" alias="hrPrinDeteErroState" type="octetstring"/>
+   </group>
+   <group name="hrDiskStorageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.3.6.1.1" instance="hrDiskStorageEntry" alias="hrDiskStorageAccess" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.6.1.2" instance="hrDiskStorageEntry" alias="hrDiskStorageMedia" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.6.1.3" instance="hrDiskStorageEntry" alias="hrDiskStoragRemoveb" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.6.1.4" instance="hrDiskStorageEntry" alias="hrDiskStoragCapacit" type="integer32"/>
+   </group>
+   <group name="hrPartitionTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.3.7.1.1" instance="hrPartitionEntry" alias="hrPartitionIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.7.1.2" instance="hrPartitionEntry" alias="hrPartitionLabel" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.7.1.3" instance="hrPartitionEntry" alias="hrPartitionID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.7.1.4" instance="hrPartitionEntry" alias="hrPartitionSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.7.1.5" instance="hrPartitionEntry" alias="hrPartitionFSIndex" type="integer32"/>
+   </group>
+   <group name="hrFSTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.1" instance="hrFSEntry" alias="hrFSIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.2" instance="hrFSEntry" alias="hrFSMountPoint" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.3" instance="hrFSEntry" alias="hrFSRemotMountPoint" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.4" instance="hrFSEntry" alias="hrFSType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.5" instance="hrFSEntry" alias="hrFSAccess" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.6" instance="hrFSEntry" alias="hrFSBootable" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.7" instance="hrFSEntry" alias="hrFSStorageIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.8" instance="hrFSEntry" alias="hrFSLasFullBackDate" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.3.8.1.9" instance="hrFSEntry" alias="hrFSLasPartBackDate" type="octetstring"/>
+   </group>
+   <group name="hrSWRun" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.25.4.1" instance="0" alias="hrSWOSIndex" type="integer32"/>
+   </group>
+   <group name="hrSWRunTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.4.2.1.1" instance="hrSWRunEntry" alias="hrSWRunIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.4.2.1.2" instance="hrSWRunEntry" alias="hrSWRunName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.4.2.1.3" instance="hrSWRunEntry" alias="hrSWRunID" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.4.2.1.4" instance="hrSWRunEntry" alias="hrSWRunPath" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.4.2.1.5" instance="hrSWRunEntry" alias="hrSWRunParameters" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.4.2.1.6" instance="hrSWRunEntry" alias="hrSWRunType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.4.2.1.7" instance="hrSWRunEntry" alias="hrSWRunStatus" type="string"/>
+   </group>
+   <group name="hrSWRunPerfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.5.1.1.1" instance="hrSWRunPerfEntry" alias="hrSWRunPerfCPU" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.5.1.1.2" instance="hrSWRunPerfEntry" alias="hrSWRunPerfMem" type="integer32"/>
+   </group>
+   <group name="hrSWInstalled" ifType="ignore">
+      <mibObj oid=".1.3.6.1.2.1.25.6.1" instance="0" alias="hrSWInstaLastChange" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.2.1.25.6.2" instance="0" alias="hrSWInsLastUpdaTime" type="timeticks"/>
+   </group>
+   <group name="hrSWInstalledTable" ifType="all">
+      <mibObj oid=".1.3.6.1.2.1.25.6.3.1.1" instance="hrSWInstalledEntry" alias="hrSWInstalledIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.2.1.25.6.3.1.2" instance="hrSWInstalledEntry" alias="hrSWInstalledName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.2.1.25.6.3.1.3" instance="hrSWInstalledEntry" alias="hrSWInstalledID" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.6.3.1.4" instance="hrSWInstalledEntry" alias="hrSWInstalledType" type="string"/>
+      <mibObj oid=".1.3.6.1.2.1.25.6.3.1.5" instance="hrSWInstalledEntry" alias="hrSWInstalledDate" type="octetstring"/>
+   </group>
+</datacollection-group>

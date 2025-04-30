@@ -1,0 +1,242 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="Juniper-MPLS-MIB">
+   <resourceType name="juniMplsGroupTargetedHelloSendEntry" label="juniMplsGroupTargetedHelloSendEntry" resourceLabel="${juniMplsGroupTargetedHelloSendAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsGroupTargetedHelloReceiveEntry" label="juniMplsGroupTargetedHelloReceiveEntry" resourceLabel="${juniMplsGroupTargetedHelloReceiveAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsGroupLdpLabelAdverRouteListEntry" label="juniMplsGroupLdpLabelAdverRouteListEntry" resourceLabel="${juniMplsGroupLabelAdverListMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsGroupLdpProfileEntry" label="juniMplsGroupLdpProfileEntry" resourceLabel="${juniMplsGroupLdpProfileCrLdpAdminState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsGroupRsvpProfileEntry" label="juniMplsGroupRsvpProfileEntry" resourceLabel="${juniMplsGroupRsvpProfileRowStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsIfMajorEntry" label="juniMplsIfMajorEntry" resourceLabel="${juniMplsIfMajorRowStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsIfMinorEntry" label="juniMplsIfMinorEntry" resourceLabel="${juniMplsIfMinorRowStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsIfMinorPathOptionEntry" label="juniMplsIfMinorPathOptionEntry" resourceLabel="${juniMplsIfMinorPathOptionProtocol} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsTunnelProfileEntry" label="juniMplsTunnelProfileEntry" resourceLabel="${juniMplsTunnelProfileAdminStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsTunnelProfilePathOptionEntry" label="juniMplsTunnelProfilePathOptionEntry" resourceLabel="${juniMplsTunnelProfilePathOptionProtocol} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsTunnelProfileDynamicEndpointEntry" label="juniMplsTunnelProfileDynamicEndpointEntry" resourceLabel="${juniMplsTunnelProfileDynamicEndpointType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsTunnelProfileTunnelEndpointEntry" label="juniMplsTunnelProfileTunnelEndpointEntry" resourceLabel="${juniMplsTunnelProfileTunnelEndpointAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsExplicitPathEntry" label="juniMplsExplicitPathEntry" resourceLabel="${juniMplsExplicitPathAdminState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniMplsExplicitPathNodeEntry" label="juniMplsExplicitPathNodeEntry" resourceLabel="${juniMplsExplicitPathNodeLoose} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="juniMplsGroup" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.1" instance="0" alias="junMplsGrouMplsEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.2" instance="0" alias="junMplsGrouReopTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.3" instance="0" alias="junMplGroLabRangLow" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.4" instance="0" alias="junMplGroLabRanHigh" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.5" instance="0" alias="juMpGroLspRetTimNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.6" instance="0" alias="juMpGroLspRetIntNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.7" instance="0" alias="junMplGroLspRetTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.8" instance="0" alias="junMplGroLspRetInte" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.9" instance="0" alias="juMpGroLdpRetTimNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.10" instance="0" alias="juMpGroLdpRetIntNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.11" instance="0" alias="junMplGroLdpRetTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.12" instance="0" alias="junMplGroLdpRetInte" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.13" instance="0" alias="junMplGroLdpSesRetr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.14" instance="0" alias="juMpGroLdpSesRetTim" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.15" instance="0" alias="juMpGrToDriIpProNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.16" instance="0" alias="juMpGrToDrLdEgIpInt" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.17" instance="0" alias="juMpGrToDrLdInIpInt" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.18" instance="0" alias="jMGToDrLdEgIpInHoOn" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.19" instance="0" alias="jMGToDrLdInIpInHoOn" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.20" instance="0" alias="jMGTDLdEgIpInPoLiTy" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.21" instance="0" alias="jMGTDLdInIpInPoLiTy" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.22" instance="0" alias="jMGToDrLdEgIpInPoLi" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.23" instance="0" alias="jMGToDrLdInIpInPoLi" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.24" instance="0" alias="junMplGroTopDrivLdp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.25" instance="0" alias="juMpGrLsLaDisCtrMod" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.26" instance="0" alias="juMpGroLdpAdvHosOnl" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.27" instance="0" alias="juniMplsGrouLsrStat" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.28" instance="0" alias="juniMplsGrouReopNow" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.1.29" instance="0" alias="junMplGrouIpTtlProp" type="string"/>
+   </group>
+   <group name="juniMplsGroupTargetedHelloSendTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.1.1.1" instance="juniMplsGroupTargetedHelloSendEntry" alias="juMpGroTarHelSenAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.1.1.2" instance="juniMplsGroupTargetedHelloSendEntry" alias="juMpGrLdTaHelSenMod" type="string"/>
+   </group>
+   <group name="juniMplsGroupTargetedHelloReceiveTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.2.1.1" instance="juniMplsGroupTargetedHelloReceiveEntry" alias="juMpGroTarHelRecAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.2.1.2" instance="juniMplsGroupTargetedHelloReceiveEntry" alias="juMpGrLdTaHelRecMod" type="string"/>
+   </group>
+   <group name="juniMplsGroupLdpLabelAdverRouteListTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.3.1.1" instance="juniMplsGroupLdpLabelAdverRouteListEntry" alias="juMpGrLdLaAdRoLiNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.3.1.2" instance="juniMplsGroupLdpLabelAdverRouteListEntry" alias="juMpGrLdLaAdNbLiNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.3.1.3" instance="juniMplsGroupLdpLabelAdverRouteListEntry" alias="juMpGroLabAdvLisMod" type="string"/>
+   </group>
+   <group name="juniMplsGroupLdpProfileTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.4.1.1" instance="juniMplsGroupLdpProfileEntry" alias="junMplGroLdpProName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.4.1.2" instance="juniMplsGroupLdpProfileEntry" alias="juMpGrLdPrHelHolTim" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.4.1.3" instance="juniMplsGroupLdpProfileEntry" alias="juMpGrLdPrCrLdAdSta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.4.1.4" instance="juniMplsGroupLdpProfileEntry" alias="juMpGroLdpProRowSta" type="string"/>
+   </group>
+   <group name="juniMplsGroupRsvpProfileTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.5.1.1" instance="juniMplsGroupRsvpProfileEntry" alias="junMplGroRsvProName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.5.1.2" instance="juniMplsGroupRsvpProfileEntry" alias="juMpGroRsvProRefPer" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.5.1.3" instance="juniMplsGroupRsvpProfileEntry" alias="juMpGrRsPrCleTimFac" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.1.2.5.1.4" instance="juniMplsGroupRsvpProfileEntry" alias="juMpGroRsvProRowSta" type="string"/>
+   </group>
+   <group name="juniMplsIfMajorLayer" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.1" instance="0" alias="junMplIfMajNexIfInd" type="integer32"/>
+   </group>
+   <group name="juniMplsIfMajorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.1" instance="juniMplsIfMajorEntry" alias="juniMplsIfMajoIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.2" instance="juniMplsIfMajorEntry" alias="junMplIfMajoRowStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.3" instance="juniMplsIfMajorEntry" alias="junMplIfMajLowIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.4" instance="juniMplsIfMajorEntry" alias="junMplIfMajAdmiStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.5" instance="juniMplsIfMajorEntry" alias="juMplIfMajLdpAdmSta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.6" instance="juniMplsIfMajorEntry" alias="juMplIfMajLdpProNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.7" instance="juniMplsIfMajorEntry" alias="juMplIfMajLdpVpiSta" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.8" instance="juniMplsIfMajorEntry" alias="juMplIfMajLdpVpiSto" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.9" instance="juniMplsIfMajorEntry" alias="juMplIfMajLdpVciSta" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.10" instance="juniMplsIfMajorEntry" alias="juMplIfMajLdpVciSto" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.11" instance="juniMplsIfMajorEntry" alias="juMplIfMajRsvAdmSta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.12" instance="juniMplsIfMajorEntry" alias="juMplIfMajRsvProNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.13" instance="juniMplsIfMajorEntry" alias="juMplIfMajRsvVpiSta" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.14" instance="juniMplsIfMajorEntry" alias="juMplIfMajRsvVpiSto" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.15" instance="juniMplsIfMajorEntry" alias="juMplIfMajRsvVciSta" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.16" instance="juniMplsIfMajorEntry" alias="juMplIfMajRsvVciSto" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.17" instance="juniMplsIfMajorEntry" alias="juMplIfMajLabSpaTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.18" instance="juniMplsIfMajorEntry" alias="junMplsIfMajoOpStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.2.1.2.1.19" instance="juniMplsIfMajorEntry" alias="juMpIfMaCrLdpAdmSta" type="string"/>
+   </group>
+   <group name="juniMplsIfMinorLayer" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.1" instance="0" alias="junMplIfMinNexIfInd" type="integer32"/>
+   </group>
+   <group name="juniMplsIfMinorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.1" instance="juniMplsIfMinorEntry" alias="juniMplsIfMinoIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.2" instance="juniMplsIfMinorEntry" alias="junMplIfMinoRowStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.3" instance="juniMplsIfMinorEntry" alias="junMplIfMinLowIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.4" instance="juniMplsIfMinorEntry" alias="junMplIfMinAdmiStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.5" instance="juniMplsIfMinorEntry" alias="junMplIfMinEndpAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.6" instance="juniMplsIfMinorEntry" alias="juMplIfMinEndDstMas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.7" instance="juniMplsIfMinorEntry" alias="juMplIfMinTunMetMod" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.8" instance="juniMplsIfMinorEntry" alias="juMplIfMinAbsTunMet" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.9" instance="juniMplsIfMinorEntry" alias="juMplIfMinRelTunMet" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.10" instance="juniMplsIfMinorEntry" alias="juMplIfMinLabDisPro" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.11" instance="juniMplsIfMinorEntry" alias="junMplIfMinAnnToOsp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.12" instance="juniMplsIfMinorEntry" alias="junMplIfMinAnnToIsi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.13" instance="juniMplsIfMinorEntry" alias="junMplIfMinAnnToBgp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.14" instance="juniMplsIfMinorEntry" alias="juniMplsIfMinoBandw" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.15" instance="juniMplsIfMinorEntry" alias="juniMplsIfMinoAffin" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.16" instance="juniMplsIfMinorEntry" alias="junMplIfMinAffiMask" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.17" instance="juniMplsIfMinorEntry" alias="junMplIfMinSetuPrio" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.18" instance="juniMplsIfMinorEntry" alias="junMplIfMinHoldPrio" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.19" instance="juniMplsIfMinorEntry" alias="junMplIfMinTunnName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.20" instance="juniMplsIfMinorEntry" alias="juMplIfMinTunRetTim" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.21" instance="juniMplsIfMinorEntry" alias="juMplIfMinTunRetInt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.22" instance="juniMplsIfMinorEntry" alias="juMpIfMiTuRetTimNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.23" instance="juniMplsIfMinorEntry" alias="juMpIfMiTuRetIntNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.24" instance="juniMplsIfMinorEntry" alias="juMplIfMinBasTunNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.25" instance="juniMplsIfMinorEntry" alias="juMplIfMinVpnOuiNum" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.26" instance="juniMplsIfMinorEntry" alias="junMplIfMinoVpnInde" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.27" instance="juniMplsIfMinorEntry" alias="junMplIfMinTunOpSta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.28" instance="juniMplsIfMinorEntry" alias="juMplIfMinTarDynTun" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.1.2.1.29" instance="juniMplsIfMinorEntry" alias="juniMplsIfMinoReopt" type="string"/>
+   </group>
+   <group name="juniMplsIfMinorPathOptionTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.2.1.1.1" instance="juniMplsIfMinorPathOptionEntry" alias="juMplIfMinPatOptInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.2.1.1.2" instance="juniMplsIfMinorPathOptionEntry" alias="juMplIfMinPatOptNum" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.2.1.1.3" instance="juniMplsIfMinorPathOptionEntry" alias="juMplIfMinPatOptPro" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.2.1.1.4" instance="juniMplsIfMinorPathOptionEntry" alias="juMplIfMinPatOptLoc" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.2.1.1.5" instance="juniMplsIfMinorPathOptionEntry" alias="juMpIfMiPaOptPatNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.2.1.1.6" instance="juniMplsIfMinorPathOptionEntry" alias="juMpIfMiPatOptPatId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.3.2.1.1.7" instance="juniMplsIfMinorPathOptionEntry" alias="juMpIfMiPaOptRowSta" type="string"/>
+   </group>
+   <group name="juniMplsTunnelProfileTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.1" instance="juniMplsTunnelProfileEntry" alias="junMplsTunnProfName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.2" instance="juniMplsTunnelProfileEntry" alias="junMplTunProAdmStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.3" instance="juniMplsTunnelProfileEntry" alias="juMpTunProBasTunNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.4" instance="juniMplsTunnelProfileEntry" alias="juMplTunProIpProNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.5" instance="juniMplsTunnelProfileEntry" alias="juMpTunProLabDisPro" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.6" instance="juniMplsTunnelProfileEntry" alias="juMplTunProAnnToOsp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.7" instance="juniMplsTunnelProfileEntry" alias="juMplTunProAnnToIsi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.8" instance="juniMplsTunnelProfileEntry" alias="juMplTunProAnnToBgp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.9" instance="juniMplsTunnelProfileEntry" alias="junMplTunProMetMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.10" instance="juniMplsTunnelProfileEntry" alias="junMplTunProAbsMetr" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.11" instance="juniMplsTunnelProfileEntry" alias="junMplTunProRelMetr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.12" instance="juniMplsTunnelProfileEntry" alias="junMplsTunnProfBand" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.13" instance="juniMplsTunnelProfileEntry" alias="junMplsTunnProfAffi" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.14" instance="juniMplsTunnelProfileEntry" alias="junMplTunProAffMask" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.15" instance="juniMplsTunnelProfileEntry" alias="junMplTunProSetPrio" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.16" instance="juniMplsTunnelProfileEntry" alias="junMplTunProHolPrio" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.17" instance="juniMplsTunnelProfileEntry" alias="junMplTunProRetTime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.18" instance="juniMplsTunnelProfileEntry" alias="junMplTunProRetInte" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.19" instance="juniMplsTunnelProfileEntry" alias="juMpTunProRetTimNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.20" instance="juniMplsTunnelProfileEntry" alias="juMpTunProRetIntNor" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.21" instance="juniMplsTunnelProfileEntry" alias="juMpTunProVpnOuiNum" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.22" instance="juniMplsTunnelProfileEntry" alias="junMplTunProVpnInde" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.23" instance="juniMplsTunnelProfileEntry" alias="junMplTunProRowStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.1.1.1.24" instance="juniMplsTunnelProfileEntry" alias="juMpTunProTarDynTun" type="string"/>
+   </group>
+   <group name="juniMplsTunnelProfilePathOptionTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.1.1.1" instance="juniMplsTunnelProfilePathOptionEntry" alias="juMpTunProNamPatOpt" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.1.1.2" instance="juniMplsTunnelProfilePathOptionEntry" alias="juMpTunProPatOptNum" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.1.1.3" instance="juniMplsTunnelProfilePathOptionEntry" alias="juMpTunProPatOptPro" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.1.1.4" instance="juniMplsTunnelProfilePathOptionEntry" alias="juMpTunProPatOptLoc" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.1.1.5" instance="juniMplsTunnelProfilePathOptionEntry" alias="juMpTuPrPaOptPatNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.1.1.6" instance="juniMplsTunnelProfilePathOptionEntry" alias="juMpTuPrPatOptPatId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.1.1.7" instance="juniMplsTunnelProfilePathOptionEntry" alias="juMpTuPrPaOptRowSta" type="string"/>
+   </group>
+   <group name="juniMplsTunnelProfileDynamicEndpointTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.2.1.1" instance="juniMplsTunnelProfileDynamicEndpointEntry" alias="juMpTunProNamDynEnd" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.2.1.2" instance="juniMplsTunnelProfileDynamicEndpointEntry" alias="juMpTunProDynEndTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.2.1.3" instance="juniMplsTunnelProfileDynamicEndpointEntry" alias="juMpTuPrDyEnPoLiTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.2.1.4" instance="juniMplsTunnelProfileDynamicEndpointEntry" alias="juMpTuPrDyEndLisNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.2.1.5" instance="juniMplsTunnelProfileDynamicEndpointEntry" alias="juMpTuPrDyEndRowSta" type="string"/>
+   </group>
+   <group name="juniMplsTunnelProfileTunnelEndpointTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.3.1.1" instance="juniMplsTunnelProfileTunnelEndpointEntry" alias="juMpTunProNamTunEnd" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.3.1.2" instance="juniMplsTunnelProfileTunnelEndpointEntry" alias="juMpTunProTunEndAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.3.1.3" instance="juniMplsTunnelProfileTunnelEndpointEntry" alias="juMpTuPrTuEndDstMas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.4.2.3.1.4" instance="juniMplsTunnelProfileTunnelEndpointEntry" alias="juMpTuPrTuEndRowSta" type="string"/>
+   </group>
+   <group name="juniMplsExplicitPathTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.1.1.1" instance="juniMplsExplicitPathEntry" alias="junMplsExplPathName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.1.1.2" instance="juniMplsExplicitPathEntry" alias="junMplExpPatAdmStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.1.1.3" instance="juniMplsExplicitPathEntry" alias="junMplExpPatRowStat" type="string"/>
+   </group>
+   <group name="juniMplsExplicitPathNodeTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.2.1.1" instance="juniMplsExplicitPathNodeEntry" alias="junMplExpPatNodName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.2.1.2" instance="juniMplsExplicitPathNodeEntry" alias="juMpExpPatNodIndNum" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.2.1.3" instance="juniMplsExplicitPathNodeEntry" alias="junMplExpPatNodLoos" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.2.1.4" instance="juniMplsExplicitPathNodeEntry" alias="juMpExpPatNodHopAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.2.1.5" instance="juniMplsExplicitPathNodeEntry" alias="juMpExPaNoHopAddMas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.54.1.5.1.2.1.6" instance="juniMplsExplicitPathNodeEntry" alias="juMpExpPatNodRowSta" type="string"/>
+   </group>
+</datacollection-group>

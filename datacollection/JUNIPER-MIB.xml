@@ -1,0 +1,147 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="JUNIPER-MIB">
+   <resourceType name="jnxContainersEntry" label="jnxContainersEntry" resourceLabel="${jnxContainersType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxContentsEntry" label="jnxContentsEntry" resourceLabel="${jnxContentsType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxLEDEntry" label="jnxLEDEntry" resourceLabel="${jnxLEDAssociateTable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxFilledEntry" label="jnxFilledEntry" resourceLabel="${jnxFilledState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxOperatingEntry" label="jnxOperatingEntry" resourceLabel="${jnxOperatingState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxRedundancyEntry" label="jnxRedundancyEntry" resourceLabel="${jnxRedundancyConfig} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxFruEntry" label="jnxFruEntry" resourceLabel="${jnxFruType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="jnxBoxAnatomy" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.1" instance="0" alias="jnxBoxClass" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.2" instance="0" alias="jnxBoxDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.3" instance="0" alias="jnxBoxSerialNo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.4" instance="0" alias="jnxBoxRevision" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.5" instance="0" alias="jnxBoxInstalled" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.7" instance="0" alias="jnxContenLastChange" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.9" instance="0" alias="jnxLEDLastChange" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.11" instance="0" alias="jnxFilledLastChange" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.16" instance="0" alias="jnxBoxKerMemUsePerc" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.17" instance="0" alias="jnxBoxSystDomaiType" type="string"/>
+   </group>
+   <group name="jnxContainersTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.6.1.1" instance="jnxContainersEntry" alias="jnxContainersIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.6.1.2" instance="jnxContainersEntry" alias="jnxContainersView" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.6.1.3" instance="jnxContainersEntry" alias="jnxContainersLevel" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.6.1.4" instance="jnxContainersEntry" alias="jnxContainersWithin" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.6.1.5" instance="jnxContainersEntry" alias="jnxContainersType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.6.1.6" instance="jnxContainersEntry" alias="jnxContainersDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.6.1.7" instance="jnxContainersEntry" alias="jnxContainersCount" type="integer32"/>
+   </group>
+   <group name="jnxContentsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.1" instance="jnxContentsEntry" alias="jnxConteContaiIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.2" instance="jnxContentsEntry" alias="jnxContentsL1Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.3" instance="jnxContentsEntry" alias="jnxContentsL2Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.4" instance="jnxContentsEntry" alias="jnxContentsL3Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.5" instance="jnxContentsEntry" alias="jnxContentsType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.6" instance="jnxContentsEntry" alias="jnxContentsDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.7" instance="jnxContentsEntry" alias="jnxContentsSerialNo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.8" instance="jnxContentsEntry" alias="jnxContentsRevision" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.9" instance="jnxContentsEntry" alias="jnxContentsInstalle" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.10" instance="jnxContentsEntry" alias="jnxContentsPartNo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.11" instance="jnxContentsEntry" alias="jnxContentChassisId" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.12" instance="jnxContentsEntry" alias="jnxConteChassiDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.8.1.13" instance="jnxContentsEntry" alias="jnxContChasCleiCode" type="octetstring"/>
+   </group>
+   <group name="jnxLEDTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.1" instance="jnxLEDEntry" alias="jnxLEDAssociatTable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.2" instance="jnxLEDEntry" alias="jnxLEDAssociatIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.3" instance="jnxLEDEntry" alias="jnxLEDL1Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.4" instance="jnxLEDEntry" alias="jnxLEDL2Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.5" instance="jnxLEDEntry" alias="jnxLEDL3Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.6" instance="jnxLEDEntry" alias="jnxLEDOriginator" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.7" instance="jnxLEDEntry" alias="jnxLEDDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.8" instance="jnxLEDEntry" alias="jnxLEDState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.10.1.9" instance="jnxLEDEntry" alias="jnxLEDStateOrdered" type="string"/>
+   </group>
+   <group name="jnxFilledTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.1" instance="jnxFilledEntry" alias="jnxFilleContaiIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.2" instance="jnxFilledEntry" alias="jnxFilledL1Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.3" instance="jnxFilledEntry" alias="jnxFilledL2Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.4" instance="jnxFilledEntry" alias="jnxFilledL3Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.5" instance="jnxFilledEntry" alias="jnxFilledDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.6" instance="jnxFilledEntry" alias="jnxFilledState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.7" instance="jnxFilledEntry" alias="jnxFilledChassisId" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.12.1.8" instance="jnxFilledEntry" alias="jnxFilleChassiDescr" type="octetstring"/>
+   </group>
+   <group name="jnxOperatingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.1" instance="jnxOperatingEntry" alias="jnxOperaContenIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.2" instance="jnxOperatingEntry" alias="jnxOperatingL1Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.3" instance="jnxOperatingEntry" alias="jnxOperatingL2Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.4" instance="jnxOperatingEntry" alias="jnxOperatingL3Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.5" instance="jnxOperatingEntry" alias="jnxOperatingDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.6" instance="jnxOperatingEntry" alias="jnxOperatingState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.7" instance="jnxOperatingEntry" alias="jnxOperatingTemp" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.8" instance="jnxOperatingEntry" alias="jnxOperatingCPU" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.9" instance="jnxOperatingEntry" alias="jnxOperatingISR" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.10" instance="jnxOperatingEntry" alias="jnxOperatinDRAMSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.11" instance="jnxOperatingEntry" alias="jnxOperatingBuffer" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.12" instance="jnxOperatingEntry" alias="jnxOperatingHeap" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.13" instance="jnxOperatingEntry" alias="jnxOperatingUpTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.14" instance="jnxOperatingEntry" alias="jnxOperatLastRestar" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.15" instance="jnxOperatingEntry" alias="jnxOperatingMemory" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.16" instance="jnxOperatingEntry" alias="jnxOperaStateOrdere" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.17" instance="jnxOperatingEntry" alias="jnxOperatiChassisId" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.18" instance="jnxOperatingEntry" alias="jnxOperaChassiDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.19" instance="jnxOperatingEntry" alias="jnxOperatRestarTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.20" instance="jnxOperatingEntry" alias="jnxOpera1MinLoadAvg" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.21" instance="jnxOperatingEntry" alias="jnxOpera5MinLoadAvg" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.13.1.22" instance="jnxOperatingEntry" alias="jnxOper15MinLoadAvg" type="gauge32"/>
+   </group>
+   <group name="jnxRedundancyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.1" instance="jnxRedundancyEntry" alias="jnxRedunContenIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.2" instance="jnxRedundancyEntry" alias="jnxRedundancL1Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.3" instance="jnxRedundancyEntry" alias="jnxRedundancL2Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.4" instance="jnxRedundancyEntry" alias="jnxRedundancL3Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.5" instance="jnxRedundancyEntry" alias="jnxRedundancyDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.6" instance="jnxRedundancyEntry" alias="jnxRedundancyConfig" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.7" instance="jnxRedundancyEntry" alias="jnxRedundancyState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.8" instance="jnxRedundancyEntry" alias="jnxRedunSwitchCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.9" instance="jnxRedundancyEntry" alias="jnxRedundSwitchTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.10" instance="jnxRedundancyEntry" alias="jnxRedunSwitcReason" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.11" instance="jnxRedundancyEntry" alias="jnxRedunKeepaHeartb" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.12" instance="jnxRedundancyEntry" alias="jnxRedunKeepaTimeou" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.13" instance="jnxRedundancyEntry" alias="jnxRedunKeepaElapse" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.14" instance="jnxRedundancyEntry" alias="jnxRedundKeepalLoss" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.15" instance="jnxRedundancyEntry" alias="jnxRedundaChassisId" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.14.1.16" instance="jnxRedundancyEntry" alias="jnxRedunChassiDescr" type="octetstring"/>
+   </group>
+   <group name="jnxFruTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.1" instance="jnxFruEntry" alias="jnxFruContentsIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.2" instance="jnxFruEntry" alias="jnxFruL1Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.3" instance="jnxFruEntry" alias="jnxFruL2Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.4" instance="jnxFruEntry" alias="jnxFruL3Index" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.5" instance="jnxFruEntry" alias="jnxFruName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.6" instance="jnxFruEntry" alias="jnxFruType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.7" instance="jnxFruEntry" alias="jnxFruSlot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.8" instance="jnxFruEntry" alias="jnxFruState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.9" instance="jnxFruEntry" alias="jnxFruTemp" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.10" instance="jnxFruEntry" alias="jnxFruOfflineReason" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.11" instance="jnxFruEntry" alias="jnxFruLastPowerOff" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.12" instance="jnxFruEntry" alias="jnxFruLastPowerOn" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.13" instance="jnxFruEntry" alias="jnxFruPowerUpTime" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.14" instance="jnxFruEntry" alias="jnxFruChassisId" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.15" instance="jnxFruEntry" alias="jnxFruChassisDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.1.15.1.16" instance="jnxFruEntry" alias="jnxFruPsdAssignment" type="integer32"/>
+   </group>
+</datacollection-group>

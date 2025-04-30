@@ -1,0 +1,69 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="Juniper-ROUTER-MIB">
+   <resourceType name="juniRouterEntry" label="juniRouterEntry" resourceLabel="${juniRouterRowStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniRouterProtocolEntry" label="juniRouterProtocolEntry" resourceLabel="${juniRouterProtocolProtocolIndex} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniRouterVrfEntry" label="juniRouterVrfEntry" resourceLabel="${juniRouterVrfRowStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="juniRouterVrfRouteTargetEntry" label="juniRouterVrfRouteTargetEntry" resourceLabel="${juniRouterVrfRouteTargetAddrFormat} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="juniRouterSummaryScalars" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.6.1.1" instance="0" alias="juRoSumNonParVRsCon" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.6.1.2" instance="0" alias="junRouSumParVRsConf" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.6.1.3" instance="0" alias="junRoutSummVRFsConf" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.6.1.4" instance="0" alias="junRoutSummTotaConf" type="counter32"/>
+   </group>
+   <group name="juniRouterObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.1" instance="0" alias="junRoutNextRoutInde" type="integer"/>
+   </group>
+   <group name="juniRouterTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.2.1.1" instance="juniRouterEntry" alias="juniRouterIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.2.1.2" instance="juniRouterEntry" alias="juniRouterName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.2.1.3" instance="juniRouterEntry" alias="juniRouterRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.2.1.4" instance="juniRouterEntry" alias="juniRouterVrf" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.2.1.5" instance="juniRouterEntry" alias="juniRouteContexName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.2.1.6" instance="juniRouterEntry" alias="juniRoutContEnginID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.2.1.7" instance="juniRouterEntry" alias="juniRoutSummVRFCoun" type="counter32"/>
+   </group>
+   <group name="juniRouterProtocolTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.3.1.1" instance="juniRouterProtocolEntry" alias="junRoutProtRoutInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.3.1.2" instance="juniRouterProtocolEntry" alias="junRoutProtProtInde" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.3.1.3" instance="juniRouterProtocolEntry" alias="juniRoutProtRowStat" type="string"/>
+   </group>
+   <group name="juniRouterVrfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.1" instance="juniRouterVrfEntry" alias="juniRoutVrfRoutInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.2" instance="juniRouterVrfEntry" alias="junRouVrfRouVrfInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.3" instance="juniRouterVrfEntry" alias="juRoVrIp4UnImRouMap" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.4" instance="juniRouterVrfEntry" alias="juRoVrIp4UnExRouMap" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.5" instance="juniRouterVrfEntry" alias="juniRoutVrfRoutDist" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.7" instance="juniRouterVrfEntry" alias="juniRoutVrfRowStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.8" instance="juniRouterVrfEntry" alias="juniRoutVrfRoutName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.9" instance="juniRouterVrfEntry" alias="juniRoutVrfRoutDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.10" instance="juniRouterVrfEntry" alias="juRoVrIp4UnGlExRoMa" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.11" instance="juniRouterVrfEntry" alias="juRoVrIp4UnExRoMaFi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.12" instance="juniRouterVrfEntry" alias="juRoVrIp6UnImRouMap" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.13" instance="juniRouterVrfEntry" alias="juRoVrIp6UnExRouMap" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.14" instance="juniRouterVrfEntry" alias="juRoVrIp6UnGlExRoMa" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.15" instance="juniRouterVrfEntry" alias="juRoVrIp6UnExRoMaFi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.16" instance="juniRouterVrfEntry" alias="juRoVrIp4UnGlImRoMa" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.17" instance="juniRouterVrfEntry" alias="juRoVrIp4UnGlImMaRo" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.18" instance="juniRouterVrfEntry" alias="juRoVrIp6UnGlImRoMa" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.4.1.19" instance="juniRouterVrfEntry" alias="juRoVrIp6UnGlImMaRo" type="integer"/>
+   </group>
+   <group name="juniRouterVrfRouteTargetTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.5.1.1" instance="juniRouterVrfRouteTargetEntry" alias="juRoVrfRouTarRouInd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.5.1.2" instance="juniRouterVrfRouteTargetEntry" alias="juRoVrRoTaRouVrfInd" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.5.1.3" instance="juniRouterVrfRouteTargetEntry" alias="juRoVrfRouTarAddFor" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.5.1.4" instance="juniRouterVrfRouteTargetEntry" alias="juRoVrfRouTarRouTar" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.5.1.5" instance="juniRouterVrfRouteTargetEntry" alias="junRouVrfRouTarType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.4874.2.2.32.1.5.1.6" instance="juniRouterVrfRouteTargetEntry" alias="juRoVrfRouTarRowSta" type="string"/>
+   </group>
+</datacollection-group>

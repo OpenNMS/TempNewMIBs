@@ -1,0 +1,389 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="F5-BIGIP-APM-MIB">
+   <resourceType name="apmPaStatEntry" label="apmPaStatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="apmPcStatEntry" label="apmPcStatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="apmPrStatEntry" label="apmPrStatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="apmPgStatEntry" label="apmPgStatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="apmPmStatEntry" label="apmPmStatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="apmLeasepoolStatEntry" label="apmLeasepoolStatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="apmAclStatEntry" label="apmAclStatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="apmProfileAccessStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.1" instance="0" alias="apmPaStatResetStats" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.2" instance="0" alias="apmPaStatNumber" type="integer"/>
+   </group>
+   <group name="apmPaStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.1" instance="apmPaStatEntry" alias="apmPaStatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.2" instance="apmPaStatEntry" alias="apmPaStaConSyncStat" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.3" instance="apmPaStatEntry" alias="apmPaStatTotalSessi" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.4" instance="apmPaStatEntry" alias="apPaStaTotEstStaSes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.5" instance="apmPaStatEntry" alias="apmPaStaCurActiSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.6" instance="apmPaStatEntry" alias="apmPaStaCurPendSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.7" instance="apmPaStatEntry" alias="apmPaStaCurCompSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.8" instance="apmPaStatEntry" alias="apmPaStaUseLoggSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.9" instance="apmPaStatEntry" alias="apmPaStaAdmTermSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.10" instance="apmPaStatEntry" alias="apmPaStaMisTermSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.11" instance="apmPaStatEntry" alias="apPaStaAccPolResAll" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.12" instance="apmPaStatEntry" alias="apPaStaAccPolResDen" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.13" instance="apmPaStatEntry" alias="apPaStaAccPolResRed" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.14" instance="apmPaStatEntry" alias="apPaStAcPoReReWiSes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.15" instance="apmPaStatEntry" alias="apPaStEnDeAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.16" instance="apmPaStatEntry" alias="apPaStEnDeAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.17" instance="apmPaStatEntry" alias="apPaStEnDeAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.18" instance="apmPaStatEntry" alias="apPaStEnDeAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.19" instance="apmPaStatEntry" alias="apPaStEnDeAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.20" instance="apmPaStatEntry" alias="apPaStEnDeAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.21" instance="apmPaStatEntry" alias="apPaStEnReAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.22" instance="apmPaStatEntry" alias="apPaStEnReAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.23" instance="apmPaStatEntry" alias="apPaStEnReAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.24" instance="apmPaStatEntry" alias="apPaStEnReAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.25" instance="apmPaStatEntry" alias="apPaStEnReAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.26" instance="apmPaStatEntry" alias="apPaStEnReAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.27" instance="apmPaStatEntry" alias="apPaStEnAlAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.28" instance="apmPaStatEntry" alias="apPaStEnAlAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.29" instance="apmPaStatEntry" alias="apPaStEnAlAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.30" instance="apmPaStatEntry" alias="apPaStEnAlAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.31" instance="apmPaStatEntry" alias="apPaStEnAlAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.32" instance="apmPaStatEntry" alias="apPaStEnAlAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.33" instance="apmPaStatEntry" alias="apmPaStaAdAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.34" instance="apmPaStatEntry" alias="apmPaStaAdAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.35" instance="apmPaStatEntry" alias="apmPaStaAdAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.36" instance="apmPaStatEntry" alias="apmPaStaAdAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.37" instance="apmPaStatEntry" alias="apmPaStaAdAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.38" instance="apmPaStatEntry" alias="apPaStAdAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.39" instance="apmPaStatEntry" alias="apPaStClCeAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.40" instance="apmPaStatEntry" alias="apPaStClCeAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.41" instance="apmPaStatEntry" alias="apPaStClCeAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.42" instance="apmPaStatEntry" alias="apPaStClCeAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.43" instance="apmPaStatEntry" alias="apPaStClCeAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.44" instance="apmPaStatEntry" alias="apPaStClCeAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.45" instance="apmPaStatEntry" alias="apPaStaHttAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.46" instance="apmPaStatEntry" alias="apPaStaHttAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.47" instance="apmPaStatEntry" alias="apPaStaHttAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.48" instance="apmPaStatEntry" alias="apPaStaHttAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.49" instance="apmPaStatEntry" alias="apPaStaHttAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.50" instance="apmPaStatEntry" alias="apPaStHtAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.51" instance="apmPaStatEntry" alias="apPaStaLdaAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.52" instance="apmPaStatEntry" alias="apPaStaLdaAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.53" instance="apmPaStatEntry" alias="apPaStaLdaAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.54" instance="apmPaStatEntry" alias="apPaStaLdaAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.55" instance="apmPaStatEntry" alias="apPaStaLdaAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.56" instance="apmPaStatEntry" alias="apPaStLdAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.57" instance="apmPaStatEntry" alias="apPaStaRadAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.58" instance="apmPaStatEntry" alias="apPaStaRadAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.59" instance="apmPaStatEntry" alias="apPaStaRadAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.60" instance="apmPaStatEntry" alias="apPaStaRadAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.61" instance="apmPaStatEntry" alias="apPaStaRadAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.62" instance="apmPaStatEntry" alias="apPaStRaAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.63" instance="apmPaStatEntry" alias="apPaStaSecAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.64" instance="apmPaStatEntry" alias="apPaStaSecAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.65" instance="apmPaStatEntry" alias="apPaStaSecAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.66" instance="apmPaStatEntry" alias="apPaStaSecAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.67" instance="apmPaStatEntry" alias="apPaStaSecAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.68" instance="apmPaStatEntry" alias="apPaStSeAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.69" instance="apmPaStatEntry" alias="apPaStRaAcAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.70" instance="apmPaStatEntry" alias="apPaStRaAcAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.71" instance="apmPaStatEntry" alias="apPaStRaAcAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.72" instance="apmPaStatEntry" alias="apPaStRaAcAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.73" instance="apmPaStatEntry" alias="apPaStRaAcAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.74" instance="apmPaStatEntry" alias="apPaStRaAcAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.75" instance="apmPaStatEntry" alias="apPaStEpLiFcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.76" instance="apmPaStatEntry" alias="apPaStEpLiFcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.77" instance="apmPaStatEntry" alias="apPaStEpLiFcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.78" instance="apmPaStatEntry" alias="apPaStEpLiFcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.79" instance="apmPaStatEntry" alias="apPaStEpLiFcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.80" instance="apmPaStatEntry" alias="aPaStEpLiFcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.81" instance="apmPaStatEntry" alias="apPaStEpLiPcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.82" instance="apmPaStatEntry" alias="apPaStEpLiPcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.83" instance="apmPaStatEntry" alias="apPaStEpLiPcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.84" instance="apmPaStatEntry" alias="apPaStEpLiPcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.85" instance="apmPaStatEntry" alias="apPaStEpLiPcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.86" instance="apmPaStatEntry" alias="aPaStEpLiPcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.87" instance="apmPaStatEntry" alias="apPaStEpMaFcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.88" instance="apmPaStatEntry" alias="apPaStEpMaFcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.89" instance="apmPaStatEntry" alias="apPaStEpMaFcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.90" instance="apmPaStatEntry" alias="apPaStEpMaFcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.91" instance="apmPaStatEntry" alias="apPaStEpMaFcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.92" instance="apmPaStatEntry" alias="aPaStEpMaFcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.93" instance="apmPaStatEntry" alias="apPaStEpMaPcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.94" instance="apmPaStatEntry" alias="apPaStEpMaPcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.95" instance="apmPaStatEntry" alias="apPaStEpMaPcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.96" instance="apmPaStatEntry" alias="apPaStEpMaPcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.97" instance="apmPaStatEntry" alias="apPaStEpMaPcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.98" instance="apmPaStatEntry" alias="aPaStEpMaPcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.99" instance="apmPaStatEntry" alias="apPaStEpWiCcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.100" instance="apmPaStatEntry" alias="apPaStEpWiCcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.101" instance="apmPaStatEntry" alias="apPaStEpWiCcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.102" instance="apmPaStatEntry" alias="apPaStEpWiCcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.103" instance="apmPaStatEntry" alias="apPaStEpWiCcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.104" instance="apmPaStatEntry" alias="aPaStEpWiCcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.105" instance="apmPaStatEntry" alias="apPaStEpAvAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.106" instance="apmPaStatEntry" alias="apPaStEpAvAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.107" instance="apmPaStatEntry" alias="apPaStEpAvAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.108" instance="apmPaStatEntry" alias="apPaStEpAvAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.109" instance="apmPaStatEntry" alias="apPaStEpAvAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.110" instance="apmPaStatEntry" alias="apPaStEpAvAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.111" instance="apmPaStatEntry" alias="aPaStEpWiOsInAgToIn" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.112" instance="apmPaStatEntry" alias="aPaStEpWiOsInAgToUs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.113" instance="apmPaStatEntry" alias="aPaStEpWiOsInAgToSu" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.114" instance="apmPaStatEntry" alias="aPaStEpWiOsInAgToFa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.115" instance="apmPaStatEntry" alias="aPaStEpWiOsInAgToEr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.116" instance="apmPaStatEntry" alias="aPSEpWiOsInAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.117" instance="apmPaStatEntry" alias="apPaStEpWiFcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.118" instance="apmPaStatEntry" alias="apPaStEpWiFcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.119" instance="apmPaStatEntry" alias="apPaStEpWiFcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.120" instance="apmPaStatEntry" alias="apPaStEpWiFcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.121" instance="apmPaStatEntry" alias="apPaStEpWiFcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.122" instance="apmPaStatEntry" alias="aPaStEpWiFcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.123" instance="apmPaStatEntry" alias="apPaStEpWiMcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.124" instance="apmPaStatEntry" alias="apPaStEpWiMcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.125" instance="apmPaStatEntry" alias="apPaStEpWiMcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.126" instance="apmPaStatEntry" alias="apPaStEpWiMcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.127" instance="apmPaStatEntry" alias="apPaStEpWiMcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.128" instance="apmPaStatEntry" alias="aPaStEpWiMcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.129" instance="apmPaStatEntry" alias="apPaStEpFwAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.130" instance="apmPaStatEntry" alias="apPaStEpFwAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.131" instance="apmPaStatEntry" alias="apPaStEpFwAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.132" instance="apmPaStatEntry" alias="apPaStEpFwAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.133" instance="apmPaStatEntry" alias="apPaStEpFwAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.134" instance="apmPaStatEntry" alias="apPaStEpFwAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.135" instance="apmPaStatEntry" alias="apPaStEpWinPcTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.136" instance="apmPaStatEntry" alias="apPaStEpWinPcTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.137" instance="apmPaStatEntry" alias="apPaStEpWinPcTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.138" instance="apmPaStatEntry" alias="apPaStEpWinPcTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.139" instance="apmPaStatEntry" alias="apPaStEpWinPcTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.140" instance="apmPaStatEntry" alias="apPaStEpWiPcToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.141" instance="apmPaStatEntry" alias="apPaStEpWinPwTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.142" instance="apmPaStatEntry" alias="apPaStEpWinPwTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.143" instance="apmPaStatEntry" alias="apPaStEpWinPwTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.144" instance="apmPaStatEntry" alias="apPaStEpWinPwTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.145" instance="apmPaStatEntry" alias="apPaStEpWinPwTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.146" instance="apmPaStatEntry" alias="apPaStEpWiPwToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.147" instance="apmPaStatEntry" alias="apPaStEpWiRcAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.148" instance="apmPaStatEntry" alias="apPaStEpWiRcAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.149" instance="apmPaStatEntry" alias="apPaStEpWiRcAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.150" instance="apmPaStatEntry" alias="apPaStEpWiRcAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.151" instance="apmPaStatEntry" alias="apPaStEpWiRcAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.152" instance="apmPaStatEntry" alias="aPaStEpWiRcAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.153" instance="apmPaStatEntry" alias="apPaStEpWiGpAgToIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.154" instance="apmPaStatEntry" alias="apPaStEpWiGpAgToUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.155" instance="apmPaStatEntry" alias="apPaStEpWiGpAgToSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.156" instance="apmPaStatEntry" alias="apPaStEpWiGpAgToFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.157" instance="apmPaStatEntry" alias="apPaStEpWiGpAgToErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.158" instance="apmPaStatEntry" alias="aPaStEpWiGpAgToSeVa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.159" instance="apmPaStatEntry" alias="apPaStExLoAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.160" instance="apmPaStatEntry" alias="apPaStExLoAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.161" instance="apmPaStatEntry" alias="apPaStExLoAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.162" instance="apmPaStatEntry" alias="apPaStExLoAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.163" instance="apmPaStatEntry" alias="apPaStExLoAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.164" instance="apmPaStatEntry" alias="apPaStExLoAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.165" instance="apmPaStatEntry" alias="apPaStaLogAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.166" instance="apmPaStatEntry" alias="apPaStaLogAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.167" instance="apmPaStatEntry" alias="apPaStaLogAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.168" instance="apmPaStatEntry" alias="apPaStaLogAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.169" instance="apmPaStatEntry" alias="apPaStaLogAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.170" instance="apmPaStatEntry" alias="apPaStLoAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.171" instance="apmPaStatEntry" alias="apmPaStaRaAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.172" instance="apmPaStatEntry" alias="apmPaStaRaAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.173" instance="apmPaStatEntry" alias="apmPaStaRaAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.174" instance="apmPaStatEntry" alias="apmPaStaRaAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.175" instance="apmPaStatEntry" alias="apmPaStaRaAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.176" instance="apmPaStatEntry" alias="apPaStRaAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.177" instance="apmPaStatEntry" alias="apPaStaRdsAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.178" instance="apmPaStatEntry" alias="apPaStaRdsAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.179" instance="apmPaStatEntry" alias="apPaStaRdsAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.180" instance="apmPaStatEntry" alias="apPaStaRdsAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.181" instance="apmPaStatEntry" alias="apPaStaRdsAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.182" instance="apmPaStatEntry" alias="apPaStRdAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.183" instance="apmPaStatEntry" alias="apmPaStaVaAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.184" instance="apmPaStatEntry" alias="apmPaStaVaAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.185" instance="apmPaStatEntry" alias="apmPaStaVaAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.186" instance="apmPaStatEntry" alias="apmPaStaVaAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.187" instance="apmPaStatEntry" alias="apmPaStaVaAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.188" instance="apmPaStatEntry" alias="apPaStVaAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.189" instance="apmPaStatEntry" alias="apmPaStaIeAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.190" instance="apmPaStatEntry" alias="apmPaStaIeAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.191" instance="apmPaStatEntry" alias="apmPaStaIeAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.192" instance="apmPaStatEntry" alias="apmPaStaIeAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.193" instance="apmPaStatEntry" alias="apmPaStaIeAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.194" instance="apmPaStatEntry" alias="apPaStIeAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.195" instance="apmPaStatEntry" alias="apPaStaLogAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.196" instance="apmPaStatEntry" alias="apPaStaLogAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.197" instance="apmPaStatEntry" alias="apPaStaLogAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.198" instance="apmPaStatEntry" alias="apPaStaLogAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.199" instance="apmPaStatEntry" alias="apPaStaLogAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.200" instance="apmPaStatEntry" alias="apPaStLoAgTotSesVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.201" instance="apmPaStatEntry" alias="apPaStDeBoAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.202" instance="apmPaStatEntry" alias="apPaStDeBoAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.203" instance="apmPaStatEntry" alias="apPaStDeBoAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.204" instance="apmPaStatEntry" alias="apPaStDeBoAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.205" instance="apmPaStatEntry" alias="apPaStDeBoAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.206" instance="apmPaStatEntry" alias="apPaStDeBoAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.207" instance="apmPaStatEntry" alias="apPaStMeBoAgeTotIns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.208" instance="apmPaStatEntry" alias="apPaStMeBoAgeTotUsa" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.209" instance="apmPaStatEntry" alias="apPaStMeBoAgeTotSuc" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.210" instance="apmPaStatEntry" alias="apPaStMeBoAgeTotFai" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.211" instance="apmPaStatEntry" alias="apPaStMeBoAgeTotErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.212" instance="apmPaStatEntry" alias="apPaStMeBoAgToSeVar" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.213" instance="apmPaStatEntry" alias="apmPaStaApdNoResErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.214" instance="apmPaStatEntry" alias="apmPaStaApdNoSesErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.215" instance="apmPaStatEntry" alias="apPaStApNoDevInfErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.216" instance="apmPaStatEntry" alias="apmPaStaApdNoTokErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.217" instance="apmPaStatEntry" alias="apmPaStaApdNoSigErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.218" instance="apmPaStatEntry" alias="apPaStaApdTotMisErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.219" instance="apmPaStatEntry" alias="apPaStaApdInvSigErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.220" instance="apmPaStatEntry" alias="apPaStApMcPipIniErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.221" instance="apmPaStatEntry" alias="apPaStApMcSeSeVaErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.222" instance="apmPaStatEntry" alias="apPaStApMcPipCloErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.223" instance="apmPaStatEntry" alias="apmPaStaApdApResErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.224" instance="apmPaStatEntry" alias="apmPaStaApdApIntErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.225" instance="apmPaStatEntry" alias="apmPaStatAllowReque" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.226" instance="apmPaStatEntry" alias="apmPaStatDenieReque" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.1.3.1.227" instance="apmPaStatEntry" alias="apmPaStatVsName" type="octetstring"/>
+   </group>
+   <group name="apmProfileConnectivityStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.1" instance="0" alias="apmPcStatResetStats" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.2" instance="0" alias="apmPcStatNumber" type="integer"/>
+   </group>
+   <group name="apmPcStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.1" instance="apmPcStatEntry" alias="apmPcStatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.2" instance="apmPcStatEntry" alias="apmPcStatTotConns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.3" instance="apmPcStatEntry" alias="apmPcStatCurConns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.4" instance="apmPcStatEntry" alias="apmPcStatMaxConns" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.5" instance="apmPcStatEntry" alias="apmPcStatIngressRaw" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.6" instance="apmPcStatEntry" alias="apmPcStatEgressRaw" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.7" instance="apmPcStatEntry" alias="apmPcStatIngreCompr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.2.3.1.8" instance="apmPcStatEntry" alias="apmPcStatEgresCompr" type="counter64"/>
+   </group>
+   <group name="apmProfileRewriteStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.1" instance="0" alias="apmPrStatResetStats" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.2" instance="0" alias="apmPrStatNumber" type="integer"/>
+   </group>
+   <group name="apmPrStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.1" instance="apmPrStatEntry" alias="apmPrStatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.2" instance="apmPrStatEntry" alias="apmPrStaClieReqByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.3" instance="apmPrStatEntry" alias="apmPrStaCliRespByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.4" instance="apmPrStatEntry" alias="apmPrStaServReqByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.5" instance="apmPrStatEntry" alias="apmPrStaSerRespByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.6" instance="apmPrStatEntry" alias="apmPrStatClientReqs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.7" instance="apmPrStatEntry" alias="apmPrStatClienResps" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.8" instance="apmPrStatEntry" alias="apmPrStatServerReqs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.3.3.1.9" instance="apmPrStatEntry" alias="apmPrStatServeResps" type="counter64"/>
+   </group>
+   <group name="apmProfileAccessAgentStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.1" instance="0" alias="apmPgStatResetStats" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.2" instance="0" alias="apmPgStatNumber" type="integer"/>
+   </group>
+   <group name="apmPgStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.1" instance="apmPgStatEntry" alias="apmPgStatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.2" instance="apmPgStatEntry" alias="apmPgStatAgentName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.3" instance="apmPgStatEntry" alias="apmPgStatInstances" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.4" instance="apmPgStatEntry" alias="apmPgStatUsages" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.5" instance="apmPgStatEntry" alias="apmPgStatSuccesses" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.6" instance="apmPgStatEntry" alias="apmPgStatFailures" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.7" instance="apmPgStatEntry" alias="apmPgStatErrors" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.7.3.1.8" instance="apmPgStatEntry" alias="apmPgStatSessioVars" type="counter64"/>
+   </group>
+   <group name="apmProfileAccessMiscStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.1" instance="0" alias="apmPmStatResetStats" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.2" instance="0" alias="apmPmStatNumber" type="integer"/>
+   </group>
+   <group name="apmPmStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.1" instance="apmPmStatEntry" alias="apmPmStatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.2" instance="apmPmStatEntry" alias="apmPmStaConSyncStat" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.3" instance="apmPmStatEntry" alias="apmPmStaInsResuErro" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.4" instance="apmPmStatEntry" alias="apmPmStaInsSessErro" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.5" instance="apmPmStatEntry" alias="apPmStaInsDevInfErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.6" instance="apmPmStatEntry" alias="apmPmStaInsTokeErro" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.7" instance="apmPmStatEntry" alias="apmPmStaInsSignErro" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.8" instance="apmPmStatEntry" alias="apPmStaInsDatMsmErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.9" instance="apmPmStatEntry" alias="apPmStaInsCliSigErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.10" instance="apmPmStatEntry" alias="apmPmStaMemInitErro" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.11" instance="apmPmStatEntry" alias="apPmStaMemSesVarErr" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.12" instance="apmPmStatEntry" alias="apmPmStaMemClosErro" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.13" instance="apmPmStatEntry" alias="apmPmStatResulError" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.8.3.1.14" instance="apmPmStatEntry" alias="apmPmStatInterError" type="counter64"/>
+   </group>
+   <group name="apmAccessStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.1" instance="0" alias="apmAcceStatReseStat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.2" instance="0" alias="apmAcceStatTotaSess" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.3" instance="0" alias="apmAccStaCurActSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.4" instance="0" alias="apmAccStaCurPenSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.5" instance="0" alias="apmAccStaCurEndSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.6" instance="0" alias="apmAccStaUseLogSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.7" instance="0" alias="apmAccStaAdmTerSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.8" instance="0" alias="apmAccStaMisTerSess" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.9" instance="0" alias="apmAcceStatResuAllo" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.10" instance="0" alias="apmAcceStatResuDeny" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.11" instance="0" alias="apmAcceStatResuRedi" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.4.12" instance="0" alias="apAcStaResRedWitSes" type="counter64"/>
+   </group>
+   <group name="apmGlobalConnectivityStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.1" instance="0" alias="apmGloConStaResStat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.2" instance="0" alias="apmGloConStaTotConn" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.3" instance="0" alias="apmGloConStaCurConn" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.4" instance="0" alias="apmGloConStaMaxConn" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.5" instance="0" alias="apmGloConStaIngrRaw" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.6" instance="0" alias="apmGloConStaEgreRaw" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.7" instance="0" alias="apmGloConStaIngComp" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.5.8" instance="0" alias="apmGloConStaEgrComp" type="counter64"/>
+   </group>
+   <group name="apmGlobalRewriteStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.1" instance="0" alias="apmGloRewStaResStat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.2" instance="0" alias="apGlRewStaCliReqByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.3" instance="0" alias="apGlRewStaCliResByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.4" instance="0" alias="apGlRewStaSerReqByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.5" instance="0" alias="apGlRewStaSerResByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.6" instance="0" alias="apmGloRewStaCliReqs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.7" instance="0" alias="apmGloRewStaCliResp" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.8" instance="0" alias="apmGloRewStaSerReqs" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.1.6.9" instance="0" alias="apmGloRewStaSerResp" type="counter64"/>
+   </group>
+   <group name="apmLeasepoolStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.1" instance="0" alias="apmLeasStatReseStat" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.2" instance="0" alias="apmLeasepStatNumber" type="integer"/>
+   </group>
+   <group name="apmLeasepoolStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.1" instance="apmLeasepoolStatEntry" alias="apmLeasepooStatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.2" instance="apmLeasepoolStatEntry" alias="apmLeasStatCurMembe" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.3" instance="apmLeasepoolStatEntry" alias="apmLeasStatCurAssig" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.4" instance="apmLeasepoolStatEntry" alias="apmLeaseStatCurFree" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.5" instance="apmLeasepoolStatEntry" alias="apmLeasStatMaxAssig" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.6" instance="apmLeasepoolStatEntry" alias="apmLeaStaTotPicRequ" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.7" instance="apmLeasepoolStatEntry" alias="apmLeaStaTotPicFail" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.8" instance="apmLeasepoolStatEntry" alias="apmLeaStaTotResRequ" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.9" instance="apmLeasepoolStatEntry" alias="apmLeaStaTotResFail" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.10" instance="apmLeasepoolStatEntry" alias="apmLeaStaTotRelRequ" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.2.1.3.1.11" instance="apmLeasepoolStatEntry" alias="apmLeaStaTotRelFail" type="counter64"/>
+   </group>
+   <group name="apmAclStat" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.3.1.1" instance="0" alias="apmAclStatReseStats" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.3.1.2" instance="0" alias="apmAclStatNumber" type="integer"/>
+   </group>
+   <group name="apmAclStatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.3.1.3.1.1" instance="apmAclStatEntry" alias="apmAclStatName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.3.1.3.1.2" instance="apmAclStatEntry" alias="apmAclStatActiAllow" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.3.1.3.1.3" instance="apmAclStatEntry" alias="apmAclStatActiConti" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.3.1.3.1.4" instance="apmAclStatEntry" alias="apmAclStatActiDisca" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.3375.2.6.3.1.3.1.5" instance="apmAclStatEntry" alias="apmAclStatActiRejec" type="counter64"/>
+   </group>
+</datacollection-group>

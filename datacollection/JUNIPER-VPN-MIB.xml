@@ -1,0 +1,91 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="JUNIPER-VPN-MIB">
+   <resourceType name="jnxVpnEntry" label="jnxVpnEntry" resourceLabel="${jnxVpnType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxVpnIfEntry" label="jnxVpnIfEntry" resourceLabel="${jnxVpnIfVpnType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxVpnPwEntry" label="jnxVpnPwEntry" resourceLabel="${jnxVpnPwVpnType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxVpnRTEntry" label="jnxVpnRTEntry" resourceLabel="${jnxVpnRTVpnType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="jnxVpnInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.1.1" instance="0" alias="jnxVpnConfigureVpns" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.1.2" instance="0" alias="jnxVpnActiveVpns" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.1.3" instance="0" alias="jnxVpnNextIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.1.4" instance="0" alias="jnxVpnNextPwIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.1.5" instance="0" alias="jnxVpnNextRTIndex" type="integer"/>
+   </group>
+   <group name="jnxVpnTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.1" instance="jnxVpnEntry" alias="jnxVpnType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.2" instance="jnxVpnEntry" alias="jnxVpnName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.3" instance="jnxVpnEntry" alias="jnxVpnRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.4" instance="jnxVpnEntry" alias="jnxVpnStorageType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.5" instance="jnxVpnEntry" alias="jnxVpnDescription" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.6" instance="jnxVpnEntry" alias="jnxVpnIdentifieType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.7" instance="jnxVpnEntry" alias="jnxVpnIdentifier" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.8" instance="jnxVpnEntry" alias="jnxVpnConfigurSites" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.9" instance="jnxVpnEntry" alias="jnxVpnActiveSites" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.10" instance="jnxVpnEntry" alias="jnxVpnLocalAddresse" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.11" instance="jnxVpnEntry" alias="jnxVpnTotalAddresse" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.2.1.12" instance="jnxVpnEntry" alias="jnxVpnAge" type="timeticks"/>
+   </group>
+   <group name="jnxVpnIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.1" instance="jnxVpnIfEntry" alias="jnxVpnIfVpnType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.2" instance="jnxVpnIfEntry" alias="jnxVpnIfVpnName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.3" instance="jnxVpnIfEntry" alias="jnxVpnIfIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.4" instance="jnxVpnIfEntry" alias="jnxVpnIfRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.5" instance="jnxVpnIfEntry" alias="jnxVpnIfStorageType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.6" instance="jnxVpnIfEntry" alias="jnxVpnIfAssociatePw" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.7" instance="jnxVpnIfEntry" alias="jnxVpnIfProtocol" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.8" instance="jnxVpnIfEntry" alias="jnxVpnIfInBandwidth" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.9" instance="jnxVpnIfEntry" alias="jnxVpnIfOutBandwidt" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.3.1.10" instance="jnxVpnIfEntry" alias="jnxVpnIfStatus" type="string"/>
+   </group>
+   <group name="jnxVpnPwTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.1" instance="jnxVpnPwEntry" alias="jnxVpnPwVpnType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.2" instance="jnxVpnPwEntry" alias="jnxVpnPwVpnName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.3" instance="jnxVpnPwEntry" alias="jnxVpnPwIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.4" instance="jnxVpnPwEntry" alias="jnxVpnPwRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.5" instance="jnxVpnPwEntry" alias="jnxVpnPwStorageType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.6" instance="jnxVpnPwEntry" alias="jnxVpnPwAssocInterf" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.7" instance="jnxVpnPwEntry" alias="jnxVpnPwLocalSiteId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.8" instance="jnxVpnPwEntry" alias="jnxVpnPwRemotSiteId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.9" instance="jnxVpnPwEntry" alias="jnxVpnRemPeIdAddTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.10" instance="jnxVpnPwEntry" alias="jnxVpnRemoPeIdAddre" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.11" instance="jnxVpnPwEntry" alias="jnxVpnPwTunnelType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.12" instance="jnxVpnPwEntry" alias="jnxVpnPwTunnelName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.13" instance="jnxVpnPwEntry" alias="jnxVpnPwReceivDemux" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.14" instance="jnxVpnPwEntry" alias="jnxVpnPwTransmDemux" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.15" instance="jnxVpnPwEntry" alias="jnxVpnPwStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.16" instance="jnxVpnPwEntry" alias="jnxVpnPwTunneStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.17" instance="jnxVpnPwEntry" alias="jnxVpnPwRemSiteStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.18" instance="jnxVpnPwEntry" alias="jnxVpnPwTimeUp" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.19" instance="jnxVpnPwEntry" alias="jnxVpnPwTransitions" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.20" instance="jnxVpnPwEntry" alias="jnxVpnPwLastTransit" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.21" instance="jnxVpnPwEntry" alias="jnxVpnPwPacketsSent" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.22" instance="jnxVpnPwEntry" alias="jnxVpnPwOctetsSent" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.23" instance="jnxVpnPwEntry" alias="jnxVpnPwPackeReceiv" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.24" instance="jnxVpnPwEntry" alias="jnxVpnPwOctetReceiv" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.25" instance="jnxVpnPwEntry" alias="jnxVpnPwLRPackeSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.26" instance="jnxVpnPwEntry" alias="jnxVpnPwLROctetSent" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.27" instance="jnxVpnPwEntry" alias="jnxVpnPwLRPackRecei" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.4.1.28" instance="jnxVpnPwEntry" alias="jnxVpnPwLROcteRecei" type="counter32"/>
+   </group>
+   <group name="jnxVpnRTTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.1" instance="jnxVpnRTEntry" alias="jnxVpnRTVpnType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.2" instance="jnxVpnRTEntry" alias="jnxVpnRTVpnName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.3" instance="jnxVpnRTEntry" alias="jnxVpnRTIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.4" instance="jnxVpnRTEntry" alias="jnxVpnRTRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.5" instance="jnxVpnRTEntry" alias="jnxVpnRTStorageType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.6" instance="jnxVpnRTEntry" alias="jnxVpnRTType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.7" instance="jnxVpnRTEntry" alias="jnxVpnRT" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.26.1.5.1.8" instance="jnxVpnRTEntry" alias="jnxVpnRTFunction" type="string"/>
+   </group>
+</datacollection-group>

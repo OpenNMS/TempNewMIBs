@@ -1,0 +1,58 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="JUNIPER-POWER-SUPPLY-UNIT-MIB">
+   <resourceType name="jnxPsuEntry" label="jnxPsuEntry" resourceLabel="${jnxPsuMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxPsuEnvironmentEntry" label="jnxPsuEnvironmentEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxPsuOutletEntry" label="jnxPsuOutletEntry" resourceLabel="${jnxPsuOutletStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxPsuFpcPowerEntry" label="jnxPsuFpcPowerEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="jnxPsuScalars" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.1" instance="0" alias="jnxPsuAvaiDeviCount" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.2" instance="0" alias="jnxPsuAvaAvePowSupp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.3" instance="0" alias="jnxPsuAvaMaxPowSupp" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.4" instance="0" alias="jnxPsuRedundancy" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.5" instance="0" alias="jnxPsuChasPoweReser" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.6" instance="0" alias="jnxPsuChasPoweAlloc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.7" instance="0" alias="jnxPsuReduPoweAvail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.8" instance="0" alias="jnxPsuTotaPoweAvail" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.9" instance="0" alias="jnxPsuChasPoweConsu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.10" instance="0" alias="jnxPsuTemperaInflow" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.11" instance="0" alias="jnxPsuTemperOutflow" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.12" instance="0" alias="jnxPsuTempInflSampl" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.1.13" instance="0" alias="jnxPsuTempOutfSampl" type="integer"/>
+   </group>
+   <group name="jnxPsuTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.2.1.1" instance="jnxPsuEntry" alias="jnxPsuAvgPower" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.2.1.2" instance="jnxPsuEntry" alias="jnxPsuMaxPower" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.2.1.3" instance="jnxPsuEntry" alias="jnxPsuMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.2.1.4" instance="jnxPsuEntry" alias="jnxPsuOutletCount" type="integer"/>
+   </group>
+   <group name="jnxPsuEnvironmentTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.3.1.1" instance="jnxPsuEnvironmentEntry" alias="jnxPsuThermalValue" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.3.1.2" instance="jnxPsuEnvironmentEntry" alias="jnxPsuHumidityValue" type="integer"/>
+   </group>
+   <group name="jnxPsuOutletTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.1" instance="jnxPsuOutletEntry" alias="jnxPsuOutletName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.2" instance="jnxPsuOutletEntry" alias="jnxPsuOutletDescrip" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.3" instance="jnxPsuOutletEntry" alias="jnxPsuOutleAvgPower" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.4" instance="jnxPsuOutletEntry" alias="jnxPsuOutleMaxPower" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.5" instance="jnxPsuOutletEntry" alias="jnxPsuOutletCurrent" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.8" instance="jnxPsuOutletEntry" alias="jnxPsuOutletStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.9" instance="jnxPsuOutletEntry" alias="jnxPsuOutletVoltage" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.10" instance="jnxPsuOutletEntry" alias="jnxPsuOutPowFacValu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.4.1.11" instance="jnxPsuOutletEntry" alias="jnxPsuOutlPoweConsu" type="integer"/>
+   </group>
+   <group name="jnxPsuFpcPowerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.5.1.1" instance="jnxPsuFpcPowerEntry" alias="jnxPsuFpcPowerPrior" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.58.1.2.5.1.2" instance="jnxPsuFpcPowerEntry" alias="jnxPsuFpcPowerAlloc" type="integer"/>
+   </group>
+</datacollection-group>

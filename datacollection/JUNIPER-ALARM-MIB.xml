@@ -1,0 +1,15 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="JUNIPER-ALARM-MIB">
+   <group name="jnxCraftAlarms" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.4.2.1" instance="0" alias="jnxAlarmRelayMode" type="string"/>
+   </group>
+   <group name="jnxYellowAlarms" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.4.2.2.1" instance="0" alias="jnxYellowAlarmState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.4.2.2.2" instance="0" alias="jnxYellowAlarmCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.4.2.2.3" instance="0" alias="jnxYellAlarLastChan" type="timeticks"/>
+   </group>
+   <group name="jnxRedAlarms" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.4.2.3.1" instance="0" alias="jnxRedAlarmState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.4.2.3.2" instance="0" alias="jnxRedAlarmCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.4.2.3.3" instance="0" alias="jnxRedAlarLastChang" type="timeticks"/>
+   </group>
+</datacollection-group>

@@ -1,0 +1,235 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="JUNIPER-COS-MIB">
+   <resourceType name="jnxCosIfqStatsEntry" label="jnxCosIfqStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxCosFcEntry" label="jnxCosFcEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxCosFcIdEntry" label="jnxCosFcIdEntry" resourceLabel="${jnxCosFcFabricPriority} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxCosQstatEntry" label="jnxCosQstatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxCosIfstatFlagEntry" label="jnxCosIfstatFlagEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxCosInvQstatEntry" label="jnxCosInvQstatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxCosIngressQstatEntry" label="jnxCosIngressQstatEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="jnxCosIfqStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.1" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.2" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqFc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.3" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqQedPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.4" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqQedPktRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.5" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqQedBytes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.6" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqQedBytRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.7" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqTxedPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.8" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqTxePktRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.9" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqTxedBytes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.10" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqTxeBytRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.11" instance="jnxCosIfqStatsEntry" alias="jnxCosIfqTaiDroPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.12" instance="jnxCosIfqStatsEntry" alias="jnCoIfqTaiDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.13" instance="jnxCosIfqStatsEntry" alias="jnCoIfqTotRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.14" instance="jnxCosIfqStatsEntry" alias="jnCoIfToReDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.15" instance="jnxCosIfqStatsEntry" alias="jnCoIfLpNoTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.16" instance="jnxCosIfqStatsEntry" alias="jCoIfLpNoTcReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.17" instance="jnxCosIfqStatsEntry" alias="jnCoIfLpTcRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.18" instance="jnxCosIfqStatsEntry" alias="jnCoIfLpTcReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.19" instance="jnxCosIfqStatsEntry" alias="jnCoIfHpNoTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.20" instance="jnxCosIfqStatsEntry" alias="jCoIfHpNoTcReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.21" instance="jnxCosIfqStatsEntry" alias="jnCoIfHpTcRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.22" instance="jnxCosIfqStatsEntry" alias="jnCoIfHpTcReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.23" instance="jnxCosIfqStatsEntry" alias="jnCoIfqTotRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.24" instance="jnxCosIfqStatsEntry" alias="jnCoIfToReDroBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.25" instance="jnxCosIfqStatsEntry" alias="jnCoIfLpNoTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.26" instance="jnxCosIfqStatsEntry" alias="jCoIfLpNoTcReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.27" instance="jnxCosIfqStatsEntry" alias="jnCoIfLpTcRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.28" instance="jnxCosIfqStatsEntry" alias="jnCoIfLpTcReDrByRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.29" instance="jnxCosIfqStatsEntry" alias="jnCoIfHpNoTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.30" instance="jnxCosIfqStatsEntry" alias="jCoIfHpNoTcReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.31" instance="jnxCosIfqStatsEntry" alias="jnCoIfHpTcRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.1.1.32" instance="jnxCosIfqStatsEntry" alias="jnCoIfHpTcReDrByRat" type="gauge"/>
+   </group>
+   <group name="jnxCosFcTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.2.1.1" instance="jnxCosFcEntry" alias="jnxCosFcName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.2.1.2" instance="jnxCosFcEntry" alias="jnxCosFcQueueNr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.2.1.3" instance="jnxCosFcEntry" alias="jnxCosRestrictedQNr" type="integer32"/>
+   </group>
+   <group name="jnxCosFcIdTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.3.1.1" instance="jnxCosFcIdEntry" alias="jnxCosFcId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.3.1.2" instance="jnxCosFcIdEntry" alias="jnxCosFcIdToFcName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.3.1.3" instance="jnxCosFcIdEntry" alias="jnxCosFcFabriPriori" type="string"/>
+   </group>
+   <group name="jnxCosQstatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.1" instance="jnxCosQstatEntry" alias="jnxCosQstatIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.2" instance="jnxCosQstatEntry" alias="jnxCosQstatQueueNr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.3" instance="jnxCosQstatEntry" alias="jnxCosQstatQedPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.4" instance="jnxCosQstatEntry" alias="jnxCosQstQedPktRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.5" instance="jnxCosQstatEntry" alias="jnxCosQstatQedBytes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.6" instance="jnxCosQstatEntry" alias="jnxCosQstQedBytRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.7" instance="jnxCosQstatEntry" alias="jnxCosQstatTxedPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.8" instance="jnxCosQstatEntry" alias="jnxCosQstTxePktRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.9" instance="jnxCosQstatEntry" alias="jnxCosQstaTxedBytes" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.10" instance="jnxCosQstatEntry" alias="jnxCosQstTxeBytRate" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.11" instance="jnxCosQstatEntry" alias="jnxCosQstTaiDroPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.12" instance="jnxCosQstatEntry" alias="jnCoQstTaiDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.13" instance="jnxCosQstatEntry" alias="jnCoQstTotRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.14" instance="jnxCosQstatEntry" alias="jnCoQsToReDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.15" instance="jnxCosQstatEntry" alias="jnCoQsLpNoTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.16" instance="jnxCosQstatEntry" alias="jnCoQsLpNoTcRDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.17" instance="jnxCosQstatEntry" alias="jnCoQsLpTcRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.18" instance="jnxCosQstatEntry" alias="jnCoQsLpTcReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.19" instance="jnxCosQstatEntry" alias="jnCoQsHpNoTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.20" instance="jnxCosQstatEntry" alias="jnCoQsHpNoTcRDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.21" instance="jnxCosQstatEntry" alias="jnCoQsHpTcRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.22" instance="jnxCosQstatEntry" alias="jnCoQsHpTcReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.23" instance="jnxCosQstatEntry" alias="jnCoQstTotRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.24" instance="jnxCosQstatEntry" alias="jnCoQsToReDroBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.25" instance="jnxCosQstatEntry" alias="jnCoQsLpNoTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.26" instance="jnxCosQstatEntry" alias="jnCoQsLpNoTcRDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.27" instance="jnxCosQstatEntry" alias="jnCoQsLpTcRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.28" instance="jnxCosQstatEntry" alias="jnCoQsLpTcReDrByRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.29" instance="jnxCosQstatEntry" alias="jnCoQsHpNoTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.30" instance="jnxCosQstatEntry" alias="jnCoQsHpNoTcRDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.31" instance="jnxCosQstatEntry" alias="jnCoQsHpTcRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.32" instance="jnxCosQstatEntry" alias="jnCoQsHpTcReDrByRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.33" instance="jnxCosQstatEntry" alias="jnCosQstLpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.34" instance="jnxCosQstatEntry" alias="jnCoQsLpReDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.35" instance="jnxCosQstatEntry" alias="jnCoQstMLpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.36" instance="jnxCosQstatEntry" alias="jnCoQsMLpReDrPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.37" instance="jnxCosQstatEntry" alias="jnCoQstMHpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.38" instance="jnxCosQstatEntry" alias="jnCoQsMHpReDrPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.39" instance="jnxCosQstatEntry" alias="jnCosQstHpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.40" instance="jnxCosQstatEntry" alias="jnCoQsHpReDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.41" instance="jnxCosQstatEntry" alias="jnCosQstLpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.42" instance="jnxCosQstatEntry" alias="jnCoQsLpReDroBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.43" instance="jnxCosQstatEntry" alias="jnCoQstMLpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.44" instance="jnxCosQstatEntry" alias="jnCoQsMLpReDrBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.45" instance="jnxCosQstatEntry" alias="jnCoQstMHpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.46" instance="jnxCosQstatEntry" alias="jnCoQsMHpReDrBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.47" instance="jnxCosQstatEntry" alias="jnCosQstHpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.48" instance="jnxCosQstatEntry" alias="jnCoQsHpReDroBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.49" instance="jnxCosQstatEntry" alias="jnCoQstRatLimDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.50" instance="jnxCosQstatEntry" alias="jnCoQsRaLiDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.51" instance="jnxCosQstatEntry" alias="jnCoQstRatLimDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.4.1.52" instance="jnxCosQstatEntry" alias="jnCoQsRaLiDroBytRat" type="gauge"/>
+   </group>
+   <group name="jnxCosIfstatFlagTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.5.1.1" instance="jnxCosIfstatFlagEntry" alias="jnxCosIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.5.1.2" instance="jnxCosIfstatFlagEntry" alias="jnxCosIfstatFlags" type="octetstring"/>
+   </group>
+   <group name="jnxCosInvQstatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.1" instance="jnxCosInvQstatEntry" alias="jnxCosInvQstaQueuNr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.2" instance="jnxCosInvQstatEntry" alias="jnxCosInvQstaIfInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.3" instance="jnxCosInvQstatEntry" alias="jnxCosInvQstQedPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.4" instance="jnxCosInvQstatEntry" alias="jnCoInvQstQedPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.5" instance="jnxCosInvQstatEntry" alias="jnxCosInvQstQedByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.6" instance="jnxCosInvQstatEntry" alias="jnCoInvQstQedBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.7" instance="jnxCosInvQstatEntry" alias="jnxCosInvQstTxePkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.8" instance="jnxCosInvQstatEntry" alias="jnCoInvQstTxePktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.9" instance="jnxCosInvQstatEntry" alias="jnxCosInvQstTxeByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.10" instance="jnxCosInvQstatEntry" alias="jnCoInvQstTxeBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.11" instance="jnxCosInvQstatEntry" alias="jnCoInvQstTaiDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.12" instance="jnxCosInvQstatEntry" alias="jnCoInQsTaDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.13" instance="jnxCosInvQstatEntry" alias="jnCoInQsToRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.14" instance="jnxCosInvQstatEntry" alias="jnCoInQsToReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.15" instance="jnxCosInvQstatEntry" alias="jCoInQsLpNoTcReDrPk" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.16" instance="jnxCosInvQstatEntry" alias="jCInQsLpNoTcRDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.17" instance="jnxCosInvQstatEntry" alias="jnCoInQsLpTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.18" instance="jnxCosInvQstatEntry" alias="jCoInQsLpTcReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.19" instance="jnxCosInvQstatEntry" alias="jCoInQsHpNoTcReDrPk" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.20" instance="jnxCosInvQstatEntry" alias="jCInQsHpNoTcRDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.21" instance="jnxCosInvQstatEntry" alias="jnCoInQsHpTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.22" instance="jnxCosInvQstatEntry" alias="jCoInQsHpTcReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.23" instance="jnxCosInvQstatEntry" alias="jnCoInQsToRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.24" instance="jnxCosInvQstatEntry" alias="jnCoInQsToReDrByRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.25" instance="jnxCosInvQstatEntry" alias="jCoInQsLpNoTcReDrBy" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.26" instance="jnxCosInvQstatEntry" alias="jCInQsLpNoTcRDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.27" instance="jnxCosInvQstatEntry" alias="jnCoInQsLpTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.28" instance="jnxCosInvQstatEntry" alias="jCoInQsLpTcReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.29" instance="jnxCosInvQstatEntry" alias="jCoInQsHpNoTcReDrBy" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.30" instance="jnxCosInvQstatEntry" alias="jCInQsHpNoTcRDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.31" instance="jnxCosInvQstatEntry" alias="jnCoInQsHpTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.32" instance="jnxCosInvQstatEntry" alias="jCoInQsHpTcReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.33" instance="jnxCosInvQstatEntry" alias="jnCoInQsLpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.34" instance="jnxCosInvQstatEntry" alias="jnCoInQsLpReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.35" instance="jnxCosInvQstatEntry" alias="jnCoInQsMLpReDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.36" instance="jnxCosInvQstatEntry" alias="jnCoInQsMLpReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.37" instance="jnxCosInvQstatEntry" alias="jnCoInQsMHpReDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.38" instance="jnxCosInvQstatEntry" alias="jnCoInQsMHpReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.39" instance="jnxCosInvQstatEntry" alias="jnCoInQsHpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.40" instance="jnxCosInvQstatEntry" alias="jnCoInQsHpReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.41" instance="jnxCosInvQstatEntry" alias="jnCoInQsLpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.42" instance="jnxCosInvQstatEntry" alias="jnCoInQsLpReDrByRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.43" instance="jnxCosInvQstatEntry" alias="jnCoInQsMLpReDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.44" instance="jnxCosInvQstatEntry" alias="jnCoInQsMLpReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.45" instance="jnxCosInvQstatEntry" alias="jnCoInQsMHpReDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.46" instance="jnxCosInvQstatEntry" alias="jnCoInQsMHpReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.47" instance="jnxCosInvQstatEntry" alias="jnCoInQsHpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.6.1.48" instance="jnxCosInvQstatEntry" alias="jnCoInQsHpReDrByRat" type="gauge"/>
+   </group>
+   <group name="jnxCosIngressQstatTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.1" instance="jnxCosIngressQstatEntry" alias="jnxCosIngQstaIfInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.2" instance="jnxCosIngressQstatEntry" alias="jnxCosIngQstaQueuNr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.3" instance="jnxCosIngressQstatEntry" alias="jnxCosIngQstQedPkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.4" instance="jnxCosIngressQstatEntry" alias="jnCoIngQstQedPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.5" instance="jnxCosIngressQstatEntry" alias="jnxCosIngQstQedByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.6" instance="jnxCosIngressQstatEntry" alias="jnCoIngQstQedBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.7" instance="jnxCosIngressQstatEntry" alias="jnxCosIngQstTxePkts" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.8" instance="jnxCosIngressQstatEntry" alias="jnCoIngQstTxePktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.9" instance="jnxCosIngressQstatEntry" alias="jnxCosIngQstTxeByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.10" instance="jnxCosIngressQstatEntry" alias="jnCoIngQstTxeBytRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.11" instance="jnxCosIngressQstatEntry" alias="jnCoIngQstTaiDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.12" instance="jnxCosIngressQstatEntry" alias="jnCoInQsTaDroPktRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.13" instance="jnxCosIngressQstatEntry" alias="jnCoInQsToRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.14" instance="jnxCosIngressQstatEntry" alias="jnCoInQsToReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.15" instance="jnxCosIngressQstatEntry" alias="jCoInQsLpNoTcReDrPk" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.16" instance="jnxCosIngressQstatEntry" alias="jCInQsLpNoTcRDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.17" instance="jnxCosIngressQstatEntry" alias="jnCoInQsLpTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.18" instance="jnxCosIngressQstatEntry" alias="jCoInQsLpTcReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.19" instance="jnxCosIngressQstatEntry" alias="jCoInQsHpNoTcReDrPk" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.20" instance="jnxCosIngressQstatEntry" alias="jCInQsHpNoTcRDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.21" instance="jnxCosIngressQstatEntry" alias="jnCoInQsHpTcReDrPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.22" instance="jnxCosIngressQstatEntry" alias="jCoInQsHpTcReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.23" instance="jnxCosIngressQstatEntry" alias="jnCoInQsToRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.24" instance="jnxCosIngressQstatEntry" alias="jnCoInQsToReDrByRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.25" instance="jnxCosIngressQstatEntry" alias="jCoInQsLpNoTcReDrBy" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.26" instance="jnxCosIngressQstatEntry" alias="jCInQsLpNoTcRDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.27" instance="jnxCosIngressQstatEntry" alias="jnCoInQsLpTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.28" instance="jnxCosIngressQstatEntry" alias="jCoInQsLpTcReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.29" instance="jnxCosIngressQstatEntry" alias="jCoInQsHpNoTcReDrBy" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.30" instance="jnxCosIngressQstatEntry" alias="jCInQsHpNoTcRDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.31" instance="jnxCosIngressQstatEntry" alias="jnCoInQsHpTcReDrByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.32" instance="jnxCosIngressQstatEntry" alias="jCoInQsHpTcReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.33" instance="jnxCosIngressQstatEntry" alias="jnCoInQsLpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.34" instance="jnxCosIngressQstatEntry" alias="jnCoInQsLpReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.35" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMLpReDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.36" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMLpReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.37" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMHpReDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.38" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMHpReDrPkRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.39" instance="jnxCosIngressQstatEntry" alias="jnCoInQsHpRedDroPkt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.40" instance="jnxCosIngressQstatEntry" alias="jnCoInQsHpReDrPkRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.41" instance="jnxCosIngressQstatEntry" alias="jnCoInQsLpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.42" instance="jnxCosIngressQstatEntry" alias="jnCoInQsLpReDrByRat" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.43" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMLpReDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.44" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMLpReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.45" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMHpReDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.46" instance="jnxCosIngressQstatEntry" alias="jnCoInQsMHpReDrByRa" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.47" instance="jnxCosIngressQstatEntry" alias="jnCoInQsHpRedDroByt" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.7.1.48" instance="jnxCosIngressQstatEntry" alias="jnCoInQsHpReDrByRat" type="gauge"/>
+   </group>
+   <group name="jnxCosNotifyVars" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.15.8.1" instance="0" alias="jnxCosInterfaceName" type="octetstring"/>
+   </group>
+</datacollection-group>

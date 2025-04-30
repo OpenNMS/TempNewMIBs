@@ -1,0 +1,27 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="JUNIPER-FIREWALL-MIB">
+   <resourceType name="jnxFirewallsEntry" label="jnxFirewallsEntry" resourceLabel="${jnxFWType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="jnxFirewallCounterEntry" label="jnxFirewallCounterEntry" resourceLabel="${jnxFWCounterType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="jnxFirewallsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.1.1.1" instance="jnxFirewallsEntry" alias="jnxFWFilter" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.1.1.2" instance="jnxFirewallsEntry" alias="jnxFWCounter" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.1.1.3" instance="jnxFirewallsEntry" alias="jnxFWType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.1.1.4" instance="jnxFirewallsEntry" alias="jnxFWPackets" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.1.1.5" instance="jnxFirewallsEntry" alias="jnxFWBytes" type="counter64"/>
+   </group>
+   <group name="jnxFirewallCounterTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.1" instance="jnxFirewallCounterEntry" alias="jnxFWCountFilteName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.2" instance="jnxFirewallCounterEntry" alias="jnxFWCounterName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.3" instance="jnxFirewallCounterEntry" alias="jnxFWCounterType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.4" instance="jnxFirewallCounterEntry" alias="jnxFWCounPackeCount" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.5" instance="jnxFirewallCounterEntry" alias="jnxFWCountByteCount" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.6" instance="jnxFirewallCounterEntry" alias="jnxFWCouDisFiltName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.7" instance="jnxFirewallCounterEntry" alias="jnxFWCountDisplName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.2636.3.5.2.1.8" instance="jnxFirewallCounterEntry" alias="jnxFWCountDisplType" type="string"/>
+   </group>
+</datacollection-group>
