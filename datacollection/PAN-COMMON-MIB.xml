@@ -1,0 +1,57 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="PAN-COMMON-MIB">
+   <resourceType name="panVsysEntry" label="panVsysEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="panSys" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.1" instance="0" alias="panSysSwVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.2" instance="0" alias="panSysHwVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.3" instance="0" alias="panSysSerialNumber" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.4" instance="0" alias="panSysTimeZoneOffse" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.5" instance="0" alias="panSysDaylighSaving" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.6" instance="0" alias="panSysVpnClienVersi" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.7" instance="0" alias="panSysAppVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.8" instance="0" alias="panSysAvVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.9" instance="0" alias="panSysThreatVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.10" instance="0" alias="panSysUrlFilteVersi" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.11" instance="0" alias="panSysHAState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.12" instance="0" alias="panSysHAPeerState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.13" instance="0" alias="panSysHAMode" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.14" instance="0" alias="panSysUrlFilteDatab" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.15" instance="0" alias="panSysGloProCliVers" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.1.16" instance="0" alias="panSysOpswDataVersi" type="octetstring"/>
+   </group>
+   <group name="panChassis" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.2.1" instance="0" alias="panChassisType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.2.2" instance="0" alias="panMSeriesMode" type="octetstring"/>
+   </group>
+   <group name="panSession" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.1" instance="0" alias="panSessionUtilizati" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.2" instance="0" alias="panSessionMax" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.3" instance="0" alias="panSessionActive" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.4" instance="0" alias="panSessionActiveTcp" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.5" instance="0" alias="panSessionActiveUdp" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.6" instance="0" alias="panSessioActiveICMP" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.7" instance="0" alias="panSessActiSslProxy" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.8" instance="0" alias="panSessSslProxUtili" type="integer32"/>
+   </group>
+   <group name="panVsysTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.9.1.1" instance="panVsysEntry" alias="panVsysId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.9.1.2" instance="panVsysEntry" alias="panVsysName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.9.1.3" instance="panVsysEntry" alias="panVsysSessUtiliPct" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.9.1.4" instance="panVsysEntry" alias="panVsysActiveSessio" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.3.9.1.5" instance="panVsysEntry" alias="panVsysMaxSessions" type="integer32"/>
+   </group>
+   <group name="panMgmt" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.4.1" instance="0" alias="panMgmtPanoraConnec" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.4.2" instance="0" alias="panMgmtPanor2Connec" type="octetstring"/>
+   </group>
+   <group name="panGPGatewayUtilization" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.5.1.1" instance="0" alias="panGPGWUtilizatiPct" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.5.1.2" instance="0" alias="panGPGWUtilMaxTunne" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.2.5.1.3" instance="0" alias="panGPGWUtilActiTunn" type="integer32"/>
+   </group>
+   <group name="panCommonEventObjs" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.25461.2.1.3.1.1" instance="0" alias="panCommonEventDescr" type="octetstring"/>
+   </group>
+</datacollection-group>
