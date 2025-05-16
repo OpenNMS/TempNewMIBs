@@ -1,0 +1,32 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.25461.2.1.3.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/PAN-COMMON-MIB/panCommonEventLog</uei>
+      <event-label>PAN-COMMON-MIB defined trap event: panCommonEventLog</event-label>
+      <descr>
+&lt;p>A config/system/firewall/threat log&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	panCommonEventDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	panCommonEventLog trap received
+	panCommonEventDescr=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+</events>
