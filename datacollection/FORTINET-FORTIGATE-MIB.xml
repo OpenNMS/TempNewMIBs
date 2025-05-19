@@ -1,0 +1,849 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="FORTINET-FORTIGATE-MIB">
+   <resourceType name="fgVdEntry" label="fgVdEntry" resourceLabel="${fgVdEntOpMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgVdTpEntry" label="fgVdTpEntry" resourceLabel="${fgVdTpMgmtAddrType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgHwSensorEntry" label="fgHwSensorEntry" resourceLabel="${fgHwSensorEntAlarmStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgProcessorEntry" label="fgProcessorEntry" resourceLabel="${fgProcessorType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgProcessorModuleEntry" label="fgProcessorModuleEntry" resourceLabel="${fgProcModType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgFwPolStatsEntry" label="fgFwPolStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgFwPol6StatsEntry" label="fgFwPol6StatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgFwUserEntry" label="fgFwUserEntry" resourceLabel="${fgFwUserAuth} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgAdminEntry" label="fgAdminEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgIntfEntry" label="fgIntfEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgAvStatsEntry" label="fgAvStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgIpsStatsEntry" label="fgIpsStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWebfilterStatsEntry" label="fgWebfilterStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgFortiGuardStatsEntry" label="fgFortiGuardStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApHTTPStatsEntry" label="fgApHTTPStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApSMTPStatsEntry" label="fgApSMTPStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApPOP3StatsEntry" label="fgApPOP3StatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApIMAPStatsEntry" label="fgApIMAPStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApNNTPStatsEntry" label="fgApNNTPStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApIMStatsEntry" label="fgApIMStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApSIPStatsEntry" label="fgApSIPStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgAppSuStatsEntry" label="fgAppSuStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgAppVoIPStatsEntry" label="fgAppVoIPStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgAppP2PStatsEntry" label="fgAppP2PStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgAppP2PProtoEntry" label="fgAppP2PProtoEntry" resourceLabel="${fgAppP2PProtEntProto} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgAppIMStatsEntry" label="fgAppIMStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgApFTPStatsEntry" label="fgApFTPStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgExplicitProxyStatsEntry" label="fgExplicitProxyStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgExplicitProxyScanStatsEntry" label="fgExplicitProxyScanStatsEntry" resourceLabel="${fgExplicitProxyScanStatsDisp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgExplicitProxyScriptStatsEntry" label="fgExplicitProxyScriptStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgExplicitProxyFilterStatsEntry" label="fgExplicitProxyFilterStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWebCacheDiskStatsEntry" label="fgWebCacheDiskStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWanOptStatsEntry" label="fgWanOptStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWanOptHistoryStatsEntry" label="fgWanOptHistoryStatsEntry" resourceLabel="${fgWanOptHistPeriod} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWanOptTrafficStatsEntry" label="fgWanOptTrafficStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWanOptDiskStatsEntry" label="fgWanOptDiskStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgIpSessEntry" label="fgIpSessEntry" resourceLabel="${fgIpSessProto} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgIpSessStatsEntry" label="fgIpSessStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgIp6SessStatsEntry" label="fgIp6SessStatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgVpnDialupEntry" label="fgVpnDialupEntry" resourceLabel="${fgVpnDialupGateway} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgVpnTunEntry" label="fgVpnTunEntry" resourceLabel="${fgVpnTunEntRemGwyIp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgVpnSslStatsEntry" label="fgVpnSslStatsEntry" resourceLabel="${fgVpnSslState} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgVpnSslTunnelEntry" label="fgVpnSslTunnelEntry" resourceLabel="${fgVpnSslTunnelSrcIp} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgHaStatsEntry" label="fgHaStatsEntry" resourceLabel="${fgHaStatsSyncStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcWlanEntry" label="fgWcWlanEntry" resourceLabel="${fgWcWlanBroadcastSsid} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcWtpProfileEntry" label="fgWcWtpProfileEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcWtpProfileRadioEntry" label="fgWcWtpProfileRadioEntry" resourceLabel="${fgWcWtpProfileRadioMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcWtpConfigEntry" label="fgWcWtpConfigEntry" resourceLabel="${fgWcWtpConfigWtpAdmin} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcWtpSessionEntry" label="fgWcWtpSessionEntry" resourceLabel="${fgWcWtpSessionWtpIpAddressType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcWtpSessionRadioEntry" label="fgWcWtpSessionRadioEntry" resourceLabel="${fgWcWtpSessionRadioMode} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcWtpSessionVapEntry" label="fgWcWtpSessionVapEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="fgWcStaEntry" label="fgWcStaEntry" resourceLabel="${fgWcStaIpAddressType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="fgVdInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.1.1" instance="0" alias="fgVdNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.1.2" instance="0" alias="fgVdMaxVdoms" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.1.3" instance="0" alias="fgVdEnabled" type="string"/>
+   </group>
+   <group name="fgVdTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.2.1.1.1" instance="fgVdEntry" alias="fgVdEntIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.2.1.1.2" instance="fgVdEntry" alias="fgVdEntName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.2.1.1.3" instance="fgVdEntry" alias="fgVdEntOpMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.2.1.1.4" instance="fgVdEntry" alias="fgVdEntHaState" type="string"/>
+   </group>
+   <group name="fgVdTpTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.2.2.1.1" instance="fgVdTpEntry" alias="fgVdTpMgmtAddrType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.2.2.1.2" instance="fgVdTpEntry" alias="fgVdTpMgmtAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.3.2.2.1.3" instance="fgVdTpEntry" alias="fgVdTpMgmtMask" type="integer"/>
+   </group>
+   <group name="fgSystemInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.1" instance="0" alias="fgSysVersion" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.2" instance="0" alias="fgSysMgmtVdom" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.3" instance="0" alias="fgSysCpuUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.4" instance="0" alias="fgSysMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.5" instance="0" alias="fgSysMemCapacity" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.6" instance="0" alias="fgSysDiskUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.7" instance="0" alias="fgSysDiskCapacity" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.8" instance="0" alias="fgSysSesCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.9" instance="0" alias="fgSysLowMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.10" instance="0" alias="fgSysLowMemCapacity" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.11" instance="0" alias="fgSysSesRate1" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.12" instance="0" alias="fgSysSesRate10" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.13" instance="0" alias="fgSysSesRate30" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.14" instance="0" alias="fgSysSesRate60" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.15" instance="0" alias="fgSysSes6Count" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.16" instance="0" alias="fgSysSes6Rate1" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.17" instance="0" alias="fgSysSes6Rate10" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.18" instance="0" alias="fgSysSes6Rate30" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.19" instance="0" alias="fgSysSes6Rate60" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.1.20" instance="0" alias="fgSysUpTime" type="counter64"/>
+   </group>
+   <group name="fgSoftware" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.2.1" instance="0" alias="fgSysVersionAv" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.2.2" instance="0" alias="fgSysVersionIps" type="octetstring"/>
+   </group>
+   <group name="fgHwSensors" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.3.1" instance="0" alias="fgHwSensorCount" type="integer32"/>
+   </group>
+   <group name="fgHwSensorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.3.2.1.1" instance="fgHwSensorEntry" alias="fgHwSensorEntIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.3.2.1.2" instance="fgHwSensorEntry" alias="fgHwSensorEntName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.3.2.1.3" instance="fgHwSensorEntry" alias="fgHwSensorEntValue" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.3.2.1.4" instance="fgHwSensorEntry" alias="fgHwSensEntAlarStat" type="string"/>
+   </group>
+   <group name="fgProcessors" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.1" instance="0" alias="fgProcessorCount" type="integer32"/>
+   </group>
+   <group name="fgProcessorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.1" instance="fgProcessorEntry" alias="fgProcessorEntIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.2" instance="fgProcessorEntry" alias="fgProcessorUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.3" instance="fgProcessorEntry" alias="fgProcessoUsage5sec" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.4" instance="fgProcessorEntry" alias="fgProcessorType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.5" instance="fgProcessorEntry" alias="fgProcessContaineIn" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.6" instance="fgProcessorEntry" alias="fgProcessPktRxCount" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.7" instance="fgProcessorEntry" alias="fgProcessPktTxCount" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.8" instance="fgProcessorEntry" alias="fgProcPktDroppCount" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.9" instance="fgProcessorEntry" alias="fgProcessoUserUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.4.2.1.10" instance="fgProcessorEntry" alias="fgProcessorSysUsage" type="gauge32"/>
+   </group>
+   <group name="fgProcessorModules" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.2" instance="0" alias="fgProcesModuleCount" type="integer32"/>
+   </group>
+   <group name="fgProcessorModuleTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.1" instance="fgProcessorModuleEntry" alias="fgProcModIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.2" instance="fgProcessorModuleEntry" alias="fgProcModType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.3" instance="fgProcessorModuleEntry" alias="fgProcModName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.4" instance="fgProcessorModuleEntry" alias="fgProcModDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.5" instance="fgProcessorModuleEntry" alias="fgProcModProceCount" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.6" instance="fgProcessorModuleEntry" alias="fgProcModMemCapacit" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.7" instance="fgProcessorModuleEntry" alias="fgProcModMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.8" instance="fgProcessorModuleEntry" alias="fgProcModSessiCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.5.3.1.9" instance="fgProcessorModuleEntry" alias="fgProcModSACount" type="gauge32"/>
+   </group>
+   <group name="fgSysInfoAdvMem" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.1" instance="0" alias="fgSIAdvMemPageCache" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.2" instance="0" alias="fgSIAdvMemCachActiv" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.3" instance="0" alias="fgSIAdvMemCachInact" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.4" instance="0" alias="fgSIAdvMemBuffer" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.5" instance="0" alias="fgSIAdMeEnKerConThr" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.6" instance="0" alias="fgSIAdMeLeKerConThr" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.7" instance="0" alias="fgSIAdMeEnProConThr" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.1.8" instance="0" alias="fgSIAdMeLeProConThr" type="gauge32"/>
+   </group>
+   <group name="fgSysInfoAdvSessions" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.2.1" instance="0" alias="fgSIAdvSesEpheCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.2.2" instance="0" alias="fgSIAdvSesEpheLimit" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.2.3" instance="0" alias="fgSIAdvSesClasCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.2.4" instance="0" alias="fgSIAdvSesExpCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.2.5" instance="0" alias="fgSIAdvSesSynQFCoun" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.2.6" instance="0" alias="fgSIAdvSesAccQFCoun" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.4.6.2.7" instance="0" alias="fgSIAdvSesNoLisCoun" type="gauge32"/>
+   </group>
+   <group name="fgFwPolStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.1.2.1.1.1" instance="fgFwPolStatsEntry" alias="fgFwPolID" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.1.2.1.1.2" instance="fgFwPolStatsEntry" alias="fgFwPolPktCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.1.2.1.1.3" instance="fgFwPolStatsEntry" alias="fgFwPolByteCount" type="counter32"/>
+   </group>
+   <group name="fgFwPol6StatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.1.2.2.1.1" instance="fgFwPol6StatsEntry" alias="fgFwPol6ID" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.1.2.2.1.2" instance="fgFwPol6StatsEntry" alias="fgFwPol6PktCount" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.1.2.2.1.3" instance="fgFwPol6StatsEntry" alias="fgFwPol6ByteCount" type="counter64"/>
+   </group>
+   <group name="fgFwUserInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.2.1.1" instance="0" alias="fgFwUserNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.2.1.2" instance="0" alias="fgFwUserAuthTimeout" type="integer32"/>
+   </group>
+   <group name="fgFwUserTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.2.2.1.1.1" instance="fgFwUserEntry" alias="fgFwUserIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.2.2.1.1.2" instance="fgFwUserEntry" alias="fgFwUserName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.2.2.1.1.3" instance="fgFwUserEntry" alias="fgFwUserAuth" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.2.2.1.1.4" instance="fgFwUserEntry" alias="fgFwUserState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.5.2.2.1.1.5" instance="fgFwUserEntry" alias="fgFwUserVdom" type="integer32"/>
+   </group>
+   <group name="fgAdminOptions" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.6.1.1.1" instance="0" alias="fgAdminIdleTimeout" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.6.1.1.2" instance="0" alias="fgAdminLcdProtectio" type="string"/>
+   </group>
+   <group name="fgAdminTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.6.1.2.1.1.1" instance="fgAdminEntry" alias="fgAdminVdom" type="integer32"/>
+   </group>
+   <group name="fgMgmtTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.6.2.1" instance="0" alias="fgManIfIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.6.2.2" instance="0" alias="fgManIfMask" type="string"/>
+   </group>
+   <group name="fgIntfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.7.2.1.1.1" instance="fgIntfEntry" alias="fgIntfEntVdom" type="integer32"/>
+   </group>
+   <group name="fgAvStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.1" instance="fgAvStatsEntry" alias="fgAvVirusDetected" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.2" instance="fgAvStatsEntry" alias="fgAvVirusBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.3" instance="fgAvStatsEntry" alias="fgAvHTTPVirusDetect" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.4" instance="fgAvStatsEntry" alias="fgAvHTTPVirusBlocke" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.5" instance="fgAvStatsEntry" alias="fgAvSMTPVirusDetect" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.6" instance="fgAvStatsEntry" alias="fgAvSMTPVirusBlocke" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.7" instance="fgAvStatsEntry" alias="fgAvPOP3VirusDetect" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.8" instance="fgAvStatsEntry" alias="fgAvPOP3VirusBlocke" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.9" instance="fgAvStatsEntry" alias="fgAvIMAPVirusDetect" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.10" instance="fgAvStatsEntry" alias="fgAvIMAPVirusBlocke" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.11" instance="fgAvStatsEntry" alias="fgAvFTPVirusDetecte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.12" instance="fgAvStatsEntry" alias="fgAvFTPVirusBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.13" instance="fgAvStatsEntry" alias="fgAvIMVirusDetected" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.14" instance="fgAvStatsEntry" alias="fgAvIMVirusBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.15" instance="fgAvStatsEntry" alias="fgAvNNTPVirusDetect" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.16" instance="fgAvStatsEntry" alias="fgAvNNTPVirusBlocke" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.17" instance="fgAvStatsEntry" alias="fgAvOversizDetected" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.2.1.1.18" instance="fgAvStatsEntry" alias="fgAvOversizeBlocked" type="counter32"/>
+   </group>
+   <group name="fgAvTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.8.3.1" instance="0" alias="fgAvTrapVirName" type="octetstring"/>
+   </group>
+   <group name="fgIpsStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.1" instance="fgIpsStatsEntry" alias="fgIpsIntrusiDetecte" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.2" instance="fgIpsStatsEntry" alias="fgIpsIntrusiBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.3" instance="fgIpsStatsEntry" alias="fgIpsCritSevDetecti" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.4" instance="fgIpsStatsEntry" alias="fgIpsHighSevDetecti" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.5" instance="fgIpsStatsEntry" alias="fgIpsMedSevDetectio" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.6" instance="fgIpsStatsEntry" alias="fgIpsLowSevDetectio" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.7" instance="fgIpsStatsEntry" alias="fgIpsInfoSevDetecti" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.8" instance="fgIpsStatsEntry" alias="fgIpsSignatuDetecti" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.2.1.1.9" instance="fgIpsStatsEntry" alias="fgIpsAnomalyDetecti" type="counter32"/>
+   </group>
+   <group name="fgIpsTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.3.1" instance="0" alias="fgIpsTrapSigId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.3.2" instance="0" alias="fgIpsTrapSrcIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.9.3.3" instance="0" alias="fgIpsTrapSigMsg" type="octetstring"/>
+   </group>
+   <group name="fgWebfilterStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.1.1.1" instance="fgWebfilterStatsEntry" alias="fgWfHTTPBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.1.1.2" instance="fgWebfilterStatsEntry" alias="fgWfHTTPSBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.1.1.3" instance="fgWebfilterStatsEntry" alias="fgWfHTTPURLBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.1.1.4" instance="fgWebfilterStatsEntry" alias="fgWfHTTPSURLBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.1.1.5" instance="fgWebfilterStatsEntry" alias="fgWfActiveXBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.1.1.6" instance="fgWebfilterStatsEntry" alias="fgWfCookieBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.1.1.7" instance="fgWebfilterStatsEntry" alias="fgWfAppletBlocked" type="counter32"/>
+   </group>
+   <group name="fgFortiGuardStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.1" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPExamined" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.2" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPSExamined" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.3" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPAllowed" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.4" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPSAllowed" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.5" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.6" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPSBlocked" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.7" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPLogged" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.8" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPSLogged" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.9" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPOverridde" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.1.2.2.1.10" instance="fgFortiGuardStatsEntry" alias="fgFgWfHTTPSOverridd" type="counter32"/>
+   </group>
+   <group name="fgAppProxyHTTP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.100.1" instance="0" alias="fgApHTTPUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.100.2" instance="0" alias="fgApHTTPMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.100.4" instance="0" alias="fgApHTTPConnections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.100.5" instance="0" alias="fgApHTTPMaxConnecti" type="integer"/>
+   </group>
+   <group name="fgApHTTPStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.100.3.1.1" instance="fgApHTTPStatsEntry" alias="fgApHTTPReqProcesse" type="counter32"/>
+   </group>
+   <group name="fgAppProxySMTP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.101.1" instance="0" alias="fgApSMTPUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.101.2" instance="0" alias="fgApSMTPMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.101.4" instance="0" alias="fgApSMTPConnections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.101.5" instance="0" alias="fgApSMTPMaxConnecti" type="integer"/>
+   </group>
+   <group name="fgApSMTPStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.101.3.1.1" instance="fgApSMTPStatsEntry" alias="fgApSMTPReqProcesse" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.101.3.1.2" instance="fgApSMTPStatsEntry" alias="fgApSMTPSpamDetecte" type="counter32"/>
+   </group>
+   <group name="fgAppProxyPOP3" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.102.1" instance="0" alias="fgApPOP3UpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.102.2" instance="0" alias="fgApPOP3MemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.102.4" instance="0" alias="fgApPOP3Connections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.102.5" instance="0" alias="fgApPOP3MaxConnecti" type="integer"/>
+   </group>
+   <group name="fgApPOP3StatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.102.3.1.1" instance="fgApPOP3StatsEntry" alias="fgApPOP3ReqProcesse" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.102.3.1.2" instance="fgApPOP3StatsEntry" alias="fgApPOP3SpamDetecte" type="counter32"/>
+   </group>
+   <group name="fgAppProxyIMAP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.103.1" instance="0" alias="fgApIMAPUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.103.2" instance="0" alias="fgApIMAPMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.103.4" instance="0" alias="fgApIMAPConnections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.103.5" instance="0" alias="fgApIMAPMaxConnecti" type="integer"/>
+   </group>
+   <group name="fgApIMAPStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.103.3.1.1" instance="fgApIMAPStatsEntry" alias="fgApIMAPReqProcesse" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.103.3.1.2" instance="fgApIMAPStatsEntry" alias="fgApIMAPSpamDetecte" type="counter32"/>
+   </group>
+   <group name="fgAppProxyNNTP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.104.1" instance="0" alias="fgApNNTPUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.104.2" instance="0" alias="fgApNNTPMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.104.4" instance="0" alias="fgApNNTPConnections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.104.5" instance="0" alias="fgApNNTPMaxConnecti" type="integer"/>
+   </group>
+   <group name="fgApNNTPStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.104.3.1.1" instance="fgApNNTPStatsEntry" alias="fgApNNTPReqProcesse" type="counter32"/>
+   </group>
+   <group name="fgAppProxyIM" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.105.1" instance="0" alias="fgApIMUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.105.2" instance="0" alias="fgApIMMemUsage" type="gauge32"/>
+   </group>
+   <group name="fgApIMStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.105.3.1.1" instance="fgApIMStatsEntry" alias="fgApIMReqProcessed" type="counter32"/>
+   </group>
+   <group name="fgAppProxySIP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.106.1" instance="0" alias="fgApSIPUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.106.2" instance="0" alias="fgApSIPMemUsage" type="gauge32"/>
+   </group>
+   <group name="fgApSIPStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.106.3.1.1" instance="fgApSIPStatsEntry" alias="fgApSIPClientReg" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.106.3.1.2" instance="fgApSIPStatsEntry" alias="fgApSIPCallHandling" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.106.3.1.3" instance="fgApSIPStatsEntry" alias="fgApSIPServices" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.106.3.1.4" instance="fgApSIPStatsEntry" alias="fgApSIPOtherReq" type="counter32"/>
+   </group>
+   <group name="fgAppScanUnit" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.107.1" instance="0" alias="fgAppSuNumber" type="counter32"/>
+   </group>
+   <group name="fgAppSuStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.107.2.1.1" instance="fgAppSuStatsEntry" alias="fgAppSuIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.107.2.1.2" instance="fgAppSuStatsEntry" alias="fgAppSuFileScanned" type="counter32"/>
+   </group>
+   <group name="fgAppVoIPStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.108.1.1.1" instance="fgAppVoIPStatsEntry" alias="fgAppVoIPConn" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.108.1.1.2" instance="fgAppVoIPStatsEntry" alias="fgAppVoIPCallBlocke" type="counter32"/>
+   </group>
+   <group name="fgAppP2PStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.109.1.1.1" instance="fgAppP2PStatsEntry" alias="fgAppP2PConnBlocked" type="counter32"/>
+   </group>
+   <group name="fgAppP2PProtoTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.109.2.1.1" instance="fgAppP2PProtoEntry" alias="fgAppP2PProtEntProt" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.109.2.1.2" instance="fgAppP2PProtoEntry" alias="fgAppP2PProtEntByte" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.109.2.1.3" instance="fgAppP2PProtoEntry" alias="fgApP2PProEntLasRes" type="timeticks"/>
+   </group>
+   <group name="fgAppIMStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.110.1.1.1" instance="fgAppIMStatsEntry" alias="fgAppIMMessages" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.110.1.1.2" instance="fgAppIMStatsEntry" alias="fgAppIMFileTransfer" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.110.1.1.3" instance="fgAppIMStatsEntry" alias="fgAppIMFileTxBlocke" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.110.1.1.4" instance="fgAppIMStatsEntry" alias="fgAppIMConnBlocked" type="counter32"/>
+   </group>
+   <group name="fgAppProxyFTP" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.111.1" instance="0" alias="fgApFTPUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.111.2" instance="0" alias="fgApFTPMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.111.4" instance="0" alias="fgApFTPConnections" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.111.5" instance="0" alias="fgApFTPMaxConnectio" type="integer"/>
+   </group>
+   <group name="fgApFTPStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.111.3.1.1" instance="fgApFTPStatsEntry" alias="fgApFTPReqProcessed" type="counter32"/>
+   </group>
+   <group name="fgExplicitProxyInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.1.1" instance="0" alias="fgExplicProxyUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.1.2" instance="0" alias="fgExplProxyMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.1.3" instance="0" alias="fgExplicProxyReques" type="counter64"/>
+   </group>
+   <group name="fgExplicitProxyStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.2.1.1" instance="fgExplicitProxyStatsEntry" alias="fgExpliciProxyUsers" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.2.1.2" instance="fgExplicitProxyStatsEntry" alias="fgExplicProxySessio" type="integer32"/>
+   </group>
+   <group name="fgExplicitProxyScanStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.1" instance="fgExplicitProxyScanStatsEntry" alias="fgExpProScaStatDisp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.2" instance="fgExplicitProxyScanStatsEntry" alias="fgExpliciProxyVirus" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.3" instance="fgExplicitProxyScanStatsEntry" alias="fgExplProxBannWords" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.4" instance="fgExplicitProxyScanStatsEntry" alias="fgExplicProxyPolicy" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.5" instance="fgExplicitProxyScanStatsEntry" alias="fgExplicProxyOversi" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.6" instance="fgExplicitProxyScanStatsEntry" alias="fgExplProxyArchNest" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.7" instance="fgExplicitProxyScanStatsEntry" alias="fgExplProxyArchSize" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.8" instance="fgExplicitProxyScanStatsEntry" alias="fgExplProxArchEncry" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.9" instance="fgExplicitProxyScanStatsEntry" alias="fgExpProArcMultPart" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.10" instance="fgExplicitProxyScanStatsEntry" alias="fgExplProxArchUnsup" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.11" instance="fgExplicitProxyScanStatsEntry" alias="fgExplProxyArchBomb" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.3.1.12" instance="fgExplicitProxyScanStatsEntry" alias="fgExplProxArchCorru" type="counter32"/>
+   </group>
+   <group name="fgExplicitProxyScriptStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.4.1.1" instance="fgExplicitProxyScriptStatsEntry" alias="fgExplProxFiltApple" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.4.1.2" instance="fgExplicitProxyScriptStatsEntry" alias="fgExplProxFiltActiX" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.4.1.3" instance="fgExplicitProxyScriptStatsEntry" alias="fgExplProxFiltJScri" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.4.1.4" instance="fgExplicitProxyScriptStatsEntry" alias="fgExpliProxyFilteJS" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.4.1.5" instance="fgExplicitProxyScriptStatsEntry" alias="fgExplProxyFilteVBS" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.4.1.6" instance="fgExplicitProxyScriptStatsEntry" alias="fgExpProFiltOthScri" type="counter32"/>
+   </group>
+   <group name="fgExplicitProxyFilterStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.5.1.1" instance="fgExplicitProxyFilterStatsEntry" alias="fgExplProxyBlockDLP" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.5.1.2" instance="fgExplicitProxyFilterStatsEntry" alias="fgExpProBlocConType" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.5.1.3" instance="fgExplicitProxyFilterStatsEntry" alias="fgExplProxExamiURLs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.5.1.4" instance="fgExplicitProxyFilterStatsEntry" alias="fgExplProxAllowURLs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.5.1.5" instance="fgExplicitProxyFilterStatsEntry" alias="fgExplProxBlockURLs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.5.1.6" instance="fgExplicitProxyFilterStatsEntry" alias="fgExplProxLoggeURLs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.112.5.1.7" instance="fgExplicitProxyFilterStatsEntry" alias="fgExplProxOverrURLs" type="counter32"/>
+   </group>
+   <group name="fgWebCacheInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.1.1" instance="0" alias="fgWebCacheRAMLimit" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.1.2" instance="0" alias="fgWebCacheRAMUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.1.3" instance="0" alias="fgWebCacheRAMHits" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.1.4" instance="0" alias="fgWebCacheRAMMisses" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.1.5" instance="0" alias="fgWebCacheRequests" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.1.6" instance="0" alias="fgWebCacheBypass" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.1.7" instance="0" alias="fgWebCacheUpTime" type="counter32"/>
+   </group>
+   <group name="fgWebCacheDiskStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.2.1.1" instance="fgWebCacheDiskStatsEntry" alias="fgWebCacheDisk" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.2.1.2" instance="fgWebCacheDiskStatsEntry" alias="fgWebCacheDiskLimit" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.2.1.3" instance="fgWebCacheDiskStatsEntry" alias="fgWebCacheDiskUsage" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.2.1.4" instance="fgWebCacheDiskStatsEntry" alias="fgWebCacheDiskHits" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.113.2.1.5" instance="fgWebCacheDiskStatsEntry" alias="fgWebCacheDiskMisse" type="counter32"/>
+   </group>
+   <group name="fgWanOptInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.1.1" instance="0" alias="fgMemCacheLimit" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.1.2" instance="0" alias="fgMemCacheUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.1.3" instance="0" alias="fgMemCacheHits" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.1.4" instance="0" alias="fgMemCacheMisses" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.1.5" instance="0" alias="fgByteCacheRAMLimit" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.1.6" instance="0" alias="fgByteCacheRAMUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.1.7" instance="0" alias="fgWanOptUpTime" type="counter32"/>
+   </group>
+   <group name="fgWanOptStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.2.1.1" instance="fgWanOptStatsEntry" alias="fgWanOptTunnels" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.2.1.2" instance="fgWanOptStatsEntry" alias="fgWanOptLANBytesIn" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.2.1.3" instance="fgWanOptStatsEntry" alias="fgWanOptLANBytesOut" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.2.1.4" instance="fgWanOptStatsEntry" alias="fgWanOptWANBytesIn" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.2.1.5" instance="fgWanOptStatsEntry" alias="fgWanOptWANBytesOut" type="gauge32"/>
+   </group>
+   <group name="fgWanOptHistoryStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.3.1.1" instance="fgWanOptHistoryStatsEntry" alias="fgWanOptHistPeriod" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.3.1.2" instance="fgWanOptHistoryStatsEntry" alias="fgWanOptProtocol" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.3.1.3" instance="fgWanOptHistoryStatsEntry" alias="fgWanOptReductiRate" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.3.1.4" instance="fgWanOptHistoryStatsEntry" alias="fgWanOptLanTraffic" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.3.1.5" instance="fgWanOptHistoryStatsEntry" alias="fgWanOptWanTraffic" type="gauge"/>
+   </group>
+   <group name="fgWanOptTrafficStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.4.1.1" instance="fgWanOptTrafficStatsEntry" alias="fgWanOptLanInTraffi" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.4.1.2" instance="fgWanOptTrafficStatsEntry" alias="fgWanOptLanOutTraff" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.4.1.3" instance="fgWanOptTrafficStatsEntry" alias="fgWanOptWanInTraffi" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.4.1.4" instance="fgWanOptTrafficStatsEntry" alias="fgWanOptWanOutTraff" type="counter64"/>
+   </group>
+   <group name="fgWanOptDiskStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.5.1.1" instance="fgWanOptDiskStatsEntry" alias="fgWanOptDisk" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.5.1.2" instance="fgWanOptDiskStatsEntry" alias="fgWanOptDiskLimit" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.5.1.3" instance="fgWanOptDiskStatsEntry" alias="fgWanOptDiskUsage" type="gauge"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.5.1.4" instance="fgWanOptDiskStatsEntry" alias="fgWanOptDiskHits" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.10.114.5.1.5" instance="fgWanOptDiskStatsEntry" alias="fgWanOptDiskMisses" type="counter32"/>
+   </group>
+   <group name="fgIpSessTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.1" instance="fgIpSessEntry" alias="fgIpSessIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.2" instance="fgIpSessEntry" alias="fgIpSessProto" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.3" instance="fgIpSessEntry" alias="fgIpSessFromAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.4" instance="fgIpSessEntry" alias="fgIpSessFromPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.5" instance="fgIpSessEntry" alias="fgIpSessToAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.6" instance="fgIpSessEntry" alias="fgIpSessToPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.7" instance="fgIpSessEntry" alias="fgIpSessExp" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.1.1.8" instance="fgIpSessEntry" alias="fgIpSessVdom" type="integer32"/>
+   </group>
+   <group name="fgIpSessStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.2.1.1" instance="fgIpSessStatsEntry" alias="fgIpSessNumber" type="counter32"/>
+   </group>
+   <group name="fgIp6SessStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.11.2.3.1.1" instance="fgIp6SessStatsEntry" alias="fgIp6SessNumber" type="counter32"/>
+   </group>
+   <group name="fgVpnInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.1.1" instance="0" alias="fgVpnTunnelUpCount" type="integer32"/>
+   </group>
+   <group name="fgVpnDialupTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.1" instance="fgVpnDialupEntry" alias="fgVpnDialupIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.2" instance="fgVpnDialupEntry" alias="fgVpnDialupGateway" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.3" instance="fgVpnDialupEntry" alias="fgVpnDialupLifetime" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.4" instance="fgVpnDialupEntry" alias="fgVpnDialupTimeout" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.5" instance="fgVpnDialupEntry" alias="fgVpnDialupSrcBegin" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.6" instance="fgVpnDialupEntry" alias="fgVpnDialupSrcEnd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.7" instance="fgVpnDialupEntry" alias="fgVpnDialupDstAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.8" instance="fgVpnDialupEntry" alias="fgVpnDialupVdom" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.9" instance="fgVpnDialupEntry" alias="fgVpnDialupInOctets" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.1.1.10" instance="fgVpnDialupEntry" alias="fgVpnDialuOutOctets" type="counter64"/>
+   </group>
+   <group name="fgVpnTunTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.1" instance="fgVpnTunEntry" alias="fgVpnTunEntIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.2" instance="fgVpnTunEntry" alias="fgVpnTunEntPha1Name" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.3" instance="fgVpnTunEntry" alias="fgVpnTunEntPha2Name" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.4" instance="fgVpnTunEntry" alias="fgVpnTunEntRemGwyIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.5" instance="fgVpnTunEntry" alias="fgVpTunEntRemGwyPor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.6" instance="fgVpnTunEntry" alias="fgVpnTunEntLocGwyIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.7" instance="fgVpnTunEntry" alias="fgVpTunEntLocGwyPor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.8" instance="fgVpnTunEntry" alias="fgVpTuEnSelSrcBegIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.9" instance="fgVpnTunEntry" alias="fgVpTuEnSelSrcEndIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.10" instance="fgVpnTunEntry" alias="fgVpTunEntSelSrcPor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.11" instance="fgVpnTunEntry" alias="fgVpTuEnSelDstBegIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.12" instance="fgVpnTunEntry" alias="fgVpTuEnSelDstEndIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.13" instance="fgVpnTunEntry" alias="fgVpTunEntSelDstPor" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.14" instance="fgVpnTunEntry" alias="fgVpnTunEntSeleProt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.15" instance="fgVpnTunEntry" alias="fgVpnTunEntLifeSecs" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.16" instance="fgVpnTunEntry" alias="fgVpnTunEntLifeByte" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.17" instance="fgVpnTunEntry" alias="fgVpnTunEntTimeout" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.18" instance="fgVpnTunEntry" alias="fgVpnTunEntInOctets" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.19" instance="fgVpnTunEntry" alias="fgVpnTunEntOutOctet" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.20" instance="fgVpnTunEntry" alias="fgVpnTunEntStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.2.1.21" instance="fgVpnTunEntry" alias="fgVpnTunEntVdom" type="integer32"/>
+   </group>
+   <group name="fgVpnSslStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.3.1.1" instance="fgVpnSslStatsEntry" alias="fgVpnSslState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.3.1.2" instance="fgVpnSslStatsEntry" alias="fgVpnSslStaLogiUser" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.3.1.3" instance="fgVpnSslStatsEntry" alias="fgVpnSslStatMaxUser" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.3.1.4" instance="fgVpnSslStatsEntry" alias="fgVpSslStaActWebSes" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.3.1.5" instance="fgVpnSslStatsEntry" alias="fgVpSslStaMaxWebSes" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.3.1.6" instance="fgVpnSslStatsEntry" alias="fgVpnSslStaActiTunn" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.3.1.7" instance="fgVpnSslStatsEntry" alias="fgVpnSslStatMaxTunn" type="counter32"/>
+   </group>
+   <group name="fgVpnSslTunnelTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.1" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunnelIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.2" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunnelVdom" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.3" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunUserName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.4" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunnelSrcIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.5" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunnelIp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.6" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunneUpTime" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.7" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunnBytesIn" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.2.4.1.8" instance="fgVpnSslTunnelEntry" alias="fgVpnSslTunnByteOut" type="counter64"/>
+   </group>
+   <group name="fgVpnTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.3.2" instance="0" alias="fgVpnTrapLocalGatew" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.3.3" instance="0" alias="fgVpnTrapRemotGatew" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.12.3.4" instance="0" alias="fgVpnTrapPhase1Name" type="octetstring"/>
+   </group>
+   <group name="fgHaInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.1.1" instance="0" alias="fgHaSystemMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.1.2" instance="0" alias="fgHaGroupId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.1.3" instance="0" alias="fgHaPriority" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.1.4" instance="0" alias="fgHaOverride" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.1.5" instance="0" alias="fgHaAutoSync" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.1.6" instance="0" alias="fgHaSchedule" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.1.7" instance="0" alias="fgHaGroupName" type="octetstring"/>
+   </group>
+   <group name="fgHaStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.1" instance="fgHaStatsEntry" alias="fgHaStatsIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.2" instance="fgHaStatsEntry" alias="fgHaStatsSerial" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.3" instance="fgHaStatsEntry" alias="fgHaStatsCpuUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.4" instance="fgHaStatsEntry" alias="fgHaStatsMemUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.5" instance="fgHaStatsEntry" alias="fgHaStatsNetUsage" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.6" instance="fgHaStatsEntry" alias="fgHaStatsSesCount" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.7" instance="fgHaStatsEntry" alias="fgHaStatsPktCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.8" instance="fgHaStatsEntry" alias="fgHaStatsByteCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.9" instance="fgHaStatsEntry" alias="fgHaStatsIdsCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.10" instance="fgHaStatsEntry" alias="fgHaStatsAvCount" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.11" instance="fgHaStatsEntry" alias="fgHaStatsHostname" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.12" instance="fgHaStatsEntry" alias="fgHaStatsSyncStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.13" instance="fgHaStatsEntry" alias="fgHaStaSyncDatiSucc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.14" instance="fgHaStatsEntry" alias="fgHaStaSyncDatiUnsu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.15" instance="fgHaStatsEntry" alias="fgHaStatsGlobaCheck" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.2.1.1.16" instance="fgHaStatsEntry" alias="fgHaStatsMasteSeria" type="octetstring"/>
+   </group>
+   <group name="fgHaTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.13.3.1" instance="0" alias="fgHaTrapMembeSerial" type="octetstring"/>
+   </group>
+   <group name="fgWcTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.1.1" instance="0" alias="fgWcApVdom" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.1.2" instance="0" alias="fgWcApSerial" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.1.3" instance="0" alias="fgWcApName" type="octetstring"/>
+   </group>
+   <group name="fgWcInfo" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.2.1" instance="0" alias="fgWcInfoName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.2.2" instance="0" alias="fgWcInfoLocation" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.2.3" instance="0" alias="fgWcInfoWtpCapacity" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.2.4" instance="0" alias="fgWcInfoWtpManaged" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.2.5" instance="0" alias="fgWcInfoWtpSessions" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.2.6" instance="0" alias="fgWcInfoStatiCapaci" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.2.7" instance="0" alias="fgWcInfoStatioCount" type="gauge32"/>
+   </group>
+   <group name="fgWcWlanTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.1" instance="fgWcWlanEntry" alias="fgWcWlanSsid" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.2" instance="fgWcWlanEntry" alias="fgWcWlanBroadcaSsid" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.3" instance="fgWcWlanEntry" alias="fgWcWlanSecurity" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.4" instance="fgWcWlanEntry" alias="fgWcWlanEncryption" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.5" instance="fgWcWlanEntry" alias="fgWcWlanAuthenticat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.6" instance="fgWcWlanEntry" alias="fgWcWlanRadiuServer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.7" instance="fgWcWlanEntry" alias="fgWcWlanUserGroup" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.8" instance="fgWcWlanEntry" alias="fgWcWlanLocalBridgi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.9" instance="fgWcWlanEntry" alias="fgWcWlanVlanId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.10" instance="fgWcWlanEntry" alias="fgWcWlanMeshBackhau" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.11" instance="fgWcWlanEntry" alias="fgWcWlanStatiCapaci" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.3.1.12" instance="fgWcWlanEntry" alias="fgWcWlanStatioCount" type="gauge32"/>
+   </group>
+   <group name="fgWcWtpProfileTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.1.1.1" instance="fgWcWtpProfileEntry" alias="fgWcWtpProfileName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.1.1.2" instance="fgWcWtpProfileEntry" alias="fgWcWtpProfilPlatfo" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.1.1.3" instance="fgWcWtpProfileEntry" alias="fgWcWtPrDaChaDtlPol" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.1.1.4" instance="fgWcWtpProfileEntry" alias="fgWcWtpProfCounStri" type="octetstring"/>
+   </group>
+   <group name="fgWcWtpProfileRadioTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.1" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadProNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.2" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadRadiId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.3" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProfRadiMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.4" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadApScan" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.5" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadWidPro" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.6" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProfRadiDarr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.7" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadFreHan" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.8" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadApHand" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.9" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadBeaInt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.10" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadDtiPer" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.11" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProfRadiBand" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.12" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadChaBon" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.13" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProfRadiChan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.14" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtPrRaAuTxPoCon" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.15" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtPrRaAuTxPoLow" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.16" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtPrRaAuTxPoHig" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.17" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtPrRadTxPowLev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.18" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProfRadiVaps" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.2.1.19" instance="fgWcWtpProfileRadioEntry" alias="fgWcWtpProRadStaCap" type="integer"/>
+   </group>
+   <group name="fgWcWtpConfigTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.1" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfigWtpId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.2" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfWtpAdmin" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.3" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfiWtpName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.4" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfWtpLocat" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.5" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfWtpProfi" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.6" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfRadiEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.7" instance="fgWcWtpConfigEntry" alias="fgWcWtCoRaAuTxPoCon" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.8" instance="fgWcWtpConfigEntry" alias="fgWcWtCoRaAuTxPoLow" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.9" instance="fgWcWtpConfigEntry" alias="fgWcWtCoRaAuTxPoHig" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.10" instance="fgWcWtpConfigEntry" alias="fgWcWtCoRadTxPowLev" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.11" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfRadiBand" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.12" instance="fgWcWtpConfigEntry" alias="fgWcWtpConRadApScan" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.13" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfigVapAll" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.3.1.14" instance="fgWcWtpConfigEntry" alias="fgWcWtpConfigVaps" type="octetstring"/>
+   </group>
+   <group name="fgWcWtpSessionTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.1" instance="fgWcWtpSessionEntry" alias="fgWcWtpSessionWtpId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.2" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtpIpAddTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.3" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpIpAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.4" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtLoIpAdTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.5" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtpLocIpAdd" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.6" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtBasMacAdd" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.7" instance="fgWcWtpSessionEntry" alias="fgWcWtpSessConnStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.8" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpUpTime" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.9" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtpDaeUpTim" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.10" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtpSesUpTim" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.11" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpProNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.12" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpModNum" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.13" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpHwVers" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.14" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpSwVers" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.15" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpBooVer" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.16" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpRegCod" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.17" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpStaCou" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.18" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtpBytRxCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.19" instance="fgWcWtpSessionEntry" alias="fgWcWtSeWtpBytTxCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.20" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpCpuUsa" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.21" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpMemUsa" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.4.1.22" instance="fgWcWtpSessionEntry" alias="fgWcWtpSesWtpMemCap" type="integer"/>
+   </group>
+   <group name="fgWcWtpSessionRadioTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.1" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadiWtpId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.2" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadRadiId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.3" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSessRadiMode" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.4" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadBasBss" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.5" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadCouStr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.6" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadCouCod" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.7" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadOpeCha" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.8" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadOpePow" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.5.1.9" instance="fgWcWtpSessionRadioEntry" alias="fgWcWtpSesRadStaCou" type="gauge32"/>
+   </group>
+   <group name="fgWcWtpSessionVapTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.6.1.1" instance="fgWcWtpSessionVapEntry" alias="fgWcWtpSessVapWtpId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.6.1.2" instance="fgWcWtpSessionVapEntry" alias="fgWcWtpSesVapRadiId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.6.1.3" instance="fgWcWtpSessionVapEntry" alias="fgWcWtpSessiVapSsid" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.6.1.4" instance="fgWcWtpSessionVapEntry" alias="fgWcWtpSesVapStaCou" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.6.1.5" instance="fgWcWtpSessionVapEntry" alias="fgWcWtSeVapBytRxCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.4.6.1.6" instance="fgWcWtpSessionVapEntry" alias="fgWcWtSeVapBytTxCou" type="counter64"/>
+   </group>
+   <group name="fgWcStaTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.1" instance="fgWcStaEntry" alias="fgWcStaMacAddress" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.2" instance="fgWcStaEntry" alias="fgWcStaWlan" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.3" instance="fgWcStaEntry" alias="fgWcStaWtpId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.4" instance="fgWcStaEntry" alias="fgWcStaRadioId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.5" instance="fgWcStaEntry" alias="fgWcStaVlanId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.6" instance="fgWcStaEntry" alias="fgWcStaIpAddresType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.7" instance="fgWcStaEntry" alias="fgWcStaIpAddress" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.8" instance="fgWcStaEntry" alias="fgWcStaVci" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.9" instance="fgWcStaEntry" alias="fgWcStaHost" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.10" instance="fgWcStaEntry" alias="fgWcStaUser" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.11" instance="fgWcStaEntry" alias="fgWcStaGroup" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.12" instance="fgWcStaEntry" alias="fgWcStaSignal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.13" instance="fgWcStaEntry" alias="fgWcStaNoise" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.14" instance="fgWcStaEntry" alias="fgWcStaIdle" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.15" instance="fgWcStaEntry" alias="fgWcStaBandwidthTx" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.16" instance="fgWcStaEntry" alias="fgWcStaBandwidthRx" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.17" instance="fgWcStaEntry" alias="fgWcStaChannel" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.18" instance="fgWcStaEntry" alias="fgWcStaRadioType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.19" instance="fgWcStaEntry" alias="fgWcStaSecurity" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.20" instance="fgWcStaEntry" alias="fgWcStaEncrypt" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.14.5.1.21" instance="fgWcStaEntry" alias="fgWcStaOnline" type="string"/>
+   </group>
+   <group name="fgFcTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.15.1.1" instance="0" alias="fgFcSwVdom" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.15.1.2" instance="0" alias="fgFcSwSerial" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.15.1.3" instance="0" alias="fgFcSwName" type="octetstring"/>
+   </group>
+   <group name="fgServerLoadBalanceTrapObjects" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.12356.101.16.1.1" instance="0" alias="fgSeLoaBalReaSerAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.12356.101.16.1.2" instance="0" alias="fgSeLoaBalVirSerNam" type="octetstring"/>
+   </group>
+</datacollection-group>
