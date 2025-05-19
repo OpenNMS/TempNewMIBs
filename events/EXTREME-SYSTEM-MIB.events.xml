@@ -1,0 +1,434 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.1916.1.1.1.45.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/EXTREME-SYSTEM-MIB/downloadImageTrap</uei>
+      <event-label>EXTREME-SYSTEM-MIB defined trap event: downloadImageTrap</event-label>
+      <descr>
+&lt;p>This notification indicates the status of the last/current
+           download operation.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeDownloadImageSlotId&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeDownloadImageStatus&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>
+		downloadInProgress(1)
+		downloadOperationSuccess(2)
+		downloadNotPrimary(3)
+		downloadNameLengthError(4)
+		downloadInvalidFileType(5)
+		downloadActivePartitionError(6)
+		downloadIllegalHostname(7)
+		downloadFailed(8)
+		downloadInvalidIpaddr(9)
+		downloadMemAllocFailed(10)
+		downloadNotInActiveTop(11)
+		downloadMissingFileName(12)
+		downloadIllegalFileName(13)
+		downloadOperationTimeout(14)
+		downloadInvalidRowStatus(15)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeDownloadImageFilename&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeDownloadImagePartition&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		primary(1)
+		secondary(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeDownloadImageStartTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	downloadImageTrap trap received
+	extremeDownloadImageSlotId=%parm[#1]%
+	extremeDownloadImageStatus=%parm[#2]%
+	extremeDownloadImageFilename=%parm[#3]%
+	extremeDownloadImagePartition=%parm[#4]%
+	extremeDownloadImageStartTime=%parm[#5]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#2]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="downloadInProgress"/>
+         <decode varbindvalue="2" varbinddecodedstring="downloadOperationSuccess"/>
+         <decode varbindvalue="3" varbinddecodedstring="downloadNotPrimary"/>
+         <decode varbindvalue="4" varbinddecodedstring="downloadNameLengthError"/>
+         <decode varbindvalue="5" varbinddecodedstring="downloadInvalidFileType"/>
+         <decode varbindvalue="6" varbinddecodedstring="downloadActivePartitionError"/>
+         <decode varbindvalue="7" varbinddecodedstring="downloadIllegalHostname"/>
+         <decode varbindvalue="8" varbinddecodedstring="downloadFailed"/>
+         <decode varbindvalue="9" varbinddecodedstring="downloadInvalidIpaddr"/>
+         <decode varbindvalue="10" varbinddecodedstring="downloadMemAllocFailed"/>
+         <decode varbindvalue="11" varbinddecodedstring="downloadNotInActiveTop"/>
+         <decode varbindvalue="12" varbinddecodedstring="downloadMissingFileName"/>
+         <decode varbindvalue="13" varbinddecodedstring="downloadIllegalFileName"/>
+         <decode varbindvalue="14" varbinddecodedstring="downloadOperationTimeout"/>
+         <decode varbindvalue="15" varbinddecodedstring="downloadInvalidRowStatus"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="primary"/>
+         <decode varbindvalue="2" varbinddecodedstring="secondary"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.1916.1.1.1.45.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/EXTREME-SYSTEM-MIB/installImageTrap</uei>
+      <event-label>EXTREME-SYSTEM-MIB defined trap event: installImageTrap</event-label>
+      <descr>
+&lt;p>This notification indicates the status of the last/current
+           install operation.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeInstallImageSlotId&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeInstallImageStatus&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>
+		installInProgress(1)
+		installOperationSuccess(2)
+		installOperationPending(3)
+		installNameLengthError(4)
+		installInvalidFileType(5)
+		installActivePartitionError(6)
+		installDwnloadSlotMismatch(7)
+		installFailed(8)
+		installNotPrimary(9)
+		installMemAllocFailed(10)
+		installNotInActiveTop(11)
+		installMissingFileName(12)
+		installIllegalFileName(13)
+		installOperationTimeout(14)
+		installOperBackupTimeout(15)
+		installInvalidRowStatus(16)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeInstallImageFilename&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeInstallImagePartition&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		primary(1)
+		secondary(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeInstallImageStartTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	installImageTrap trap received
+	extremeInstallImageSlotId=%parm[#1]%
+	extremeInstallImageStatus=%parm[#2]%
+	extremeInstallImageFilename=%parm[#3]%
+	extremeInstallImagePartition=%parm[#4]%
+	extremeInstallImageStartTime=%parm[#5]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#2]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="installInProgress"/>
+         <decode varbindvalue="2" varbinddecodedstring="installOperationSuccess"/>
+         <decode varbindvalue="3" varbinddecodedstring="installOperationPending"/>
+         <decode varbindvalue="4" varbinddecodedstring="installNameLengthError"/>
+         <decode varbindvalue="5" varbinddecodedstring="installInvalidFileType"/>
+         <decode varbindvalue="6" varbinddecodedstring="installActivePartitionError"/>
+         <decode varbindvalue="7" varbinddecodedstring="installDwnloadSlotMismatch"/>
+         <decode varbindvalue="8" varbinddecodedstring="installFailed"/>
+         <decode varbindvalue="9" varbinddecodedstring="installNotPrimary"/>
+         <decode varbindvalue="10" varbinddecodedstring="installMemAllocFailed"/>
+         <decode varbindvalue="11" varbinddecodedstring="installNotInActiveTop"/>
+         <decode varbindvalue="12" varbinddecodedstring="installMissingFileName"/>
+         <decode varbindvalue="13" varbinddecodedstring="installIllegalFileName"/>
+         <decode varbindvalue="14" varbinddecodedstring="installOperationTimeout"/>
+         <decode varbindvalue="15" varbinddecodedstring="installOperBackupTimeout"/>
+         <decode varbindvalue="16" varbinddecodedstring="installInvalidRowStatus"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="primary"/>
+         <decode varbindvalue="2" varbinddecodedstring="secondary"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.1916.1.1.6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/EXTREME-SYSTEM-MIB/extremeSystemPowerStatus</uei>
+      <event-label>EXTREME-SYSTEM-MIB defined trap event: extremeSystemPowerStatus</event-label>
+      <descr>
+&lt;p>Change in status of System Power  
+                        The trap will not be generated for discovering state.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	sysDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeSystemPowerState&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>
+		computing(1)
+		sufficientButNotRedundantPower(2)
+		redundantPowerAvailable(3)
+		insufficientPower(4)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extremeSystemPowerStatus trap received
+	sysDescr=%parm[#1]%
+	extremeSystemPowerState=%parm[#2]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#2]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="computing"/>
+         <decode varbindvalue="2" varbinddecodedstring="sufficientButNotRedundantPower"/>
+         <decode varbindvalue="3" varbinddecodedstring="redundantPowerAvailable"/>
+         <decode varbindvalue="4" varbinddecodedstring="insufficientPower"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.1916.1.1.6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/EXTREME-SYSTEM-MIB/extremeGenericTrap</uei>
+      <event-label>EXTREME-SYSTEM-MIB defined trap event: extremeGenericTrap</event-label>
+      <descr>
+&lt;p>Some event took place in the system&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	severity&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		critical(1)
+		error(2)
+		warning(3)
+		notice(4)
+		info(5)
+		debug-summary(6)
+		debug-verbose(7)
+		debug-data(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	eventName&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	message&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extremeGenericTrap trap received
+	severity=%parm[#1]%
+	eventName=%parm[#2]%
+	message=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="critical"/>
+         <decode varbindvalue="2" varbinddecodedstring="error"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="notice"/>
+         <decode varbindvalue="5" varbinddecodedstring="info"/>
+         <decode varbindvalue="6" varbinddecodedstring="debug-summary"/>
+         <decode varbindvalue="7" varbinddecodedstring="debug-verbose"/>
+         <decode varbindvalue="8" varbinddecodedstring="debug-data"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.1916.1.1.6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>3</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/EXTREME-SYSTEM-MIB/extremePsuPowerStatus</uei>
+      <event-label>EXTREME-SYSTEM-MIB defined trap event: extremePsuPowerStatus</event-label>
+      <descr>
+&lt;p>Trap to indicate change in status of Power Supply.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	sysDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremePowerSupplyNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremePowerSupplyStatus&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>
+		notPresent(1)
+		presentOK(2)
+		presentNotOK(3)
+		presentPowerOff(4)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extremePsuPowerStatus trap received
+	sysDescr=%parm[#1]%
+	extremePowerSupplyNumber=%parm[#2]%
+	extremePowerSupplyStatus=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#3]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="notPresent"/>
+         <decode varbindvalue="2" varbinddecodedstring="presentOK"/>
+         <decode varbindvalue="3" varbinddecodedstring="presentNotOK"/>
+         <decode varbindvalue="4" varbinddecodedstring="presentPowerOff"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.1916.1.1.6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>4</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/EXTREME-SYSTEM-MIB/extremeSystemPowerUsageNotification</uei>
+      <event-label>EXTREME-SYSTEM-MIB defined trap event: extremeSystemPowerUsageNotification</event-label>
+      <descr>
+&lt;p>Whenever the power usage is increased/decreased by the configured
+                  threshold value then the power usage trap is generated if the trap is enabled..&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	sysUpTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	sysDescr&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeSystemPowerUsageValue&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	extremeSystemPowerUsageUnitMultiplier&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		yocto(-24)
+		zepto(-21)
+		atto(-18)
+		femto(-15)
+		pico(-12)
+		nano(-9)
+		micro(-6)
+		milli(-3)
+		units(0)
+		kilo(3)
+		mega(6)
+		giga(9)
+		tera(12)
+		peta(15)
+		exa(18)
+		zetta(21)
+		yotta(24)
+	&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extremeSystemPowerUsageNotification trap received
+	sysUpTime=%parm[#1]%
+	sysDescr=%parm[#2]%
+	extremeSystemPowerUsageValue=%parm[#3]%
+	extremeSystemPowerUsageUnitMultiplier=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="-24" varbinddecodedstring="yocto"/>
+         <decode varbindvalue="-21" varbinddecodedstring="zepto"/>
+         <decode varbindvalue="-18" varbinddecodedstring="atto"/>
+         <decode varbindvalue="-15" varbinddecodedstring="femto"/>
+         <decode varbindvalue="-12" varbinddecodedstring="pico"/>
+         <decode varbindvalue="-9" varbinddecodedstring="nano"/>
+         <decode varbindvalue="-6" varbinddecodedstring="micro"/>
+         <decode varbindvalue="-3" varbinddecodedstring="milli"/>
+         <decode varbindvalue="0" varbinddecodedstring="units"/>
+         <decode varbindvalue="3" varbinddecodedstring="kilo"/>
+         <decode varbindvalue="6" varbinddecodedstring="mega"/>
+         <decode varbindvalue="9" varbinddecodedstring="giga"/>
+         <decode varbindvalue="12" varbinddecodedstring="tera"/>
+         <decode varbindvalue="15" varbinddecodedstring="peta"/>
+         <decode varbindvalue="18" varbinddecodedstring="exa"/>
+         <decode varbindvalue="21" varbinddecodedstring="zetta"/>
+         <decode varbindvalue="24" varbinddecodedstring="yotta"/>
+      </varbindsdecode>
+   </event>
+</events>
