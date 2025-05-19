@@ -1,0 +1,202 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="EXTREME-VLAN-MIB">
+   <resourceType name="extremeVlanGlobalMappingEntry" label="extremeVlanGlobalMappingEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanIfEntry" label="extremeVlanIfEntry" resourceLabel="${extremeVlanIfType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanEncapsIfEntry" label="extremeVlanEncapsIfEntry" resourceLabel="${extremeVlanEncapsIfType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanIpEntry" label="extremeVlanIpEntry" resourceLabel="${extremeVlanIpNetAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanProtocolEntry" label="extremeVlanProtocolEntry" resourceLabel="${extremeVlanProtocolDllEncapsType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanProtocolVlanEntry" label="extremeVlanProtocolVlanEntry" resourceLabel="${extremeVlanProtocolVlanStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanProtocolDefEntry" label="extremeVlanProtocolDefEntry" resourceLabel="${extremeVlanProtocolDefDllEncapsType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanProtocolBindingEntry" label="extremeVlanProtocolBindingEntry" resourceLabel="${extremeVlanProtocolBindingStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanOpaqueEntry" label="extremeVlanOpaqueEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanOpaqueControlEntry" label="extremeVlanOpaqueControlEntry" resourceLabel="${extremeVlanOpaqueControlOperation} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanStackEntry" label="extremeVlanStackEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanL2StatsEntry" label="extremeVlanL2StatsEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanAggregationEntry" label="extremeVlanAggregationEntry" resourceLabel="${extremeVlanAggregationSubVlanStartIpNetAddress} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanAggregationConfigEntry" label="extremeVlanAggregationConfigEntry" resourceLabel="${extremeVlanAggregationConfigSubVlanProxyEnable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeVlanTranslationEntry" label="extremeVlanTranslationEntry" resourceLabel="${extremeVlanTranslationStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremePortVlanStatsEntry" label="extremePortVlanStatsEntry" resourceLabel="${extremePortConfigureVlanStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremePvlanEntry" label="extremePvlanEntry" resourceLabel="${extremePvlanRowStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremePvlanSubscriberEntry" label="extremePvlanSubscriberEntry" resourceLabel="${extremePvlanSubscriberType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="extremeVlanGlobalMappingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.1.1.1" instance="extremeVlanGlobalMappingEntry" alias="extVlanGlobMappIden" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.1.1.2" instance="extremeVlanGlobalMappingEntry" alias="extVlaGloMappIfInde" type="integer32"/>
+   </group>
+   <group name="extremeVlanIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.1" instance="extremeVlanIfEntry" alias="extremeVlanIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.2" instance="extremeVlanIfEntry" alias="extremeVlanIfDescr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.3" instance="extremeVlanIfEntry" alias="extremeVlanIfType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.4" instance="extremeVlanIfEntry" alias="extrVlanIfGlobIdent" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.6" instance="extremeVlanIfEntry" alias="extremeVlanIfStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.7" instance="extremeVlanIfEntry" alias="extVlaIfIgnoStpFlag" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.8" instance="extremeVlanIfEntry" alias="extVlaIfIgnBpduFlag" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.9" instance="extremeVlanIfEntry" alias="extVlaIfLooModeFlag" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.10" instance="extremeVlanIfEntry" alias="extremeVlanIfVlanId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.11" instance="extremeVlanIfEntry" alias="extrVlanIfEncapType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.1.2.1.12" instance="extremeVlanIfEntry" alias="extrVlanIfAdmiStatu" type="string"/>
+   </group>
+   <group name="extremeVlanEncapsIfTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.3.1.1.1" instance="extremeVlanEncapsIfEntry" alias="extrVlanEncaIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.3.1.1.2" instance="extremeVlanEncapsIfEntry" alias="extrVlanEncapIfType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.3.1.1.3" instance="extremeVlanEncapsIfEntry" alias="extreVlanEncapIfTag" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.3.1.1.4" instance="extremeVlanEncapsIfEntry" alias="extrVlanEncaIfStatu" type="string"/>
+   </group>
+   <group name="extremeVirtualGroup" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.2.1" instance="0" alias="extNexAvaVirtIfInde" type="integer32"/>
+   </group>
+   <group name="extremeVlanIpTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.4.1.1.1" instance="extremeVlanIpEntry" alias="extreVlanIpNetAddre" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.4.1.1.2" instance="extremeVlanIpEntry" alias="extremVlanIpNetMask" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.4.1.1.3" instance="extremeVlanIpEntry" alias="extremeVlanIpStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.4.1.1.4" instance="extremeVlanIpEntry" alias="extrVlanIpForwState" type="string"/>
+   </group>
+   <group name="extremeVlanProtocolTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.1" instance="extremeVlanProtocolEntry" alias="extreVlanProtoIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.2" instance="extremeVlanProtocolEntry" alias="extrVlanProtIdIndex" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.3" instance="extremeVlanProtocolEntry" alias="extreVlanProtocName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.4" instance="extremeVlanProtocolEntry" alias="extVlaProDllEncType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.5" instance="extremeVlanProtocolEntry" alias="extremVlanProtocoId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.6" instance="extremeVlanProtocolEntry" alias="extreVlanProtoStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.7" instance="extremeVlanProtocolEntry" alias="extVlanProtDestAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.8" instance="extremeVlanProtocolEntry" alias="extVlaProDesAddVali" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.9" instance="extremeVlanProtocolEntry" alias="extVlaProUseFieOffs" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.10" instance="extremeVlanProtocolEntry" alias="extVlaProUseFieValu" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.1.1.11" instance="extremeVlanProtocolEntry" alias="extVlaProUseFieMask" type="octetstring"/>
+   </group>
+   <group name="extremeVlanProtocolVlanTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.2.1.1" instance="extremeVlanProtocolVlanEntry" alias="extVlaProVlanIfInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.2.1.2" instance="extremeVlanProtocolVlanEntry" alias="extVlaProVlaProInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.2.1.3" instance="extremeVlanProtocolVlanEntry" alias="extVlanProtVlanStat" type="string"/>
+   </group>
+   <group name="extremeVlanProtocolDefTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.3.1.1" instance="extremeVlanProtocolDefEntry" alias="extrVlanProtDefName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.3.1.2" instance="extremeVlanProtocolDefEntry" alias="exVlProDefDllEncTyp" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.3.1.3" instance="extremeVlanProtocolDefEntry" alias="extrVlanProtDefValu" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.3.1.4" instance="extremeVlanProtocolDefEntry" alias="extrVlanProtDefStat" type="string"/>
+   </group>
+   <group name="extremeVlanProtocolBindingTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.4.1.1" instance="extremeVlanProtocolBindingEntry" alias="extVlaProBindIfInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.4.1.2" instance="extremeVlanProtocolBindingEntry" alias="extVlanProtBindName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.5.4.1.3" instance="extremeVlanProtocolBindingEntry" alias="extVlanProtBindStat" type="string"/>
+   </group>
+   <group name="extremeVlanOpaqueTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.6.1.1.1" instance="extremeVlanOpaqueEntry" alias="extVlanOpaqTaggPort" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.6.1.1.2" instance="extremeVlanOpaqueEntry" alias="extVlanOpaqUntaPort" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.6.1.1.3" instance="extremeVlanOpaqueEntry" alias="extVlanOpaqTranPort" type="octetstring"/>
+   </group>
+   <group name="extremeVlanOpaqueControlTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.6.2.1.1" instance="extremeVlanOpaqueControlEntry" alias="extVlanOpaqContPort" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.6.2.1.2" instance="extremeVlanOpaqueControlEntry" alias="extVlanOpaqContOper" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.6.2.1.3" instance="extremeVlanOpaqueControlEntry" alias="extVlanOpaqContStat" type="string"/>
+   </group>
+   <group name="extremeVlanStackTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.7.1.1.1" instance="extremeVlanStackEntry" alias="extVlanStacHighLaye" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.7.1.1.2" instance="extremeVlanStackEntry" alias="extVlanStacLoweLaye" type="integer32"/>
+   </group>
+   <group name="extremeVlanL2StatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.1.1.1" instance="extremeVlanL2StatsEntry" alias="extVlanL2StatIfDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.1.1.2" instance="extremeVlanL2StatsEntry" alias="extVlaL2StaPktToCpu" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.1.1.3" instance="extremeVlanL2StatsEntry" alias="extVlaL2StaPktsLear" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.1.1.4" instance="extremeVlanL2StatsEntry" alias="exVlL2StIgCtrPktSno" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.1.1.5" instance="extremeVlanL2StatsEntry" alias="exVlL2StIgDatPktSwi" type="counter64"/>
+   </group>
+   <group name="extremeVlanAggregationTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.1.1.1" instance="extremeVlanAggregationEntry" alias="exVlaAggSupVlaIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.1.1.2" instance="extremeVlanAggregationEntry" alias="exVlaAggSubVlaIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.1.1.3" instance="extremeVlanAggregationEntry" alias="exVlAgSuVlStIpNeAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.1.1.4" instance="extremeVlanAggregationEntry" alias="exVlAgSuVlStIpNeMas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.1.1.5" instance="extremeVlanAggregationEntry" alias="exVlAgSuVlEnIpNeAdd" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.1.1.6" instance="extremeVlanAggregationEntry" alias="exVlAgSuVlEnIpNeMas" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.1.1.7" instance="extremeVlanAggregationEntry" alias="extreVlanAggreStatu" type="string"/>
+   </group>
+   <group name="extremeVlanAggregationConfigTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.2.1.1" instance="extremeVlanAggregationConfigEntry" alias="exVlAgCoSupVlaIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.9.2.1.2" instance="extremeVlanAggregationConfigEntry" alias="exVlAgCoSuVlaProEna" type="string"/>
+   </group>
+   <group name="extremeVlanTranslationTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.10.1.1.1" instance="extremeVlanTranslationEntry" alias="exVlaTraSupVlaIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.10.1.1.2" instance="extremeVlanTranslationEntry" alias="exVlaTraMemVlaIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.10.1.1.3" instance="extremeVlanTranslationEntry" alias="extreVlanTransStatu" type="string"/>
+   </group>
+   <group name="extremePortVlanStatsTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.1" instance="extremePortVlanStatsEntry" alias="extrStatPortIfIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.2" instance="extremePortVlanStatsEntry" alias="extStatVlanNameInde" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.3" instance="extremePortVlanStatsEntry" alias="extPorVlaStaCntType" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.4" instance="extremePortVlanStatsEntry" alias="exPoVlaUniRecPacCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.5" instance="extremePortVlanStatsEntry" alias="exPoVlaMulRecPacCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.6" instance="extremePortVlanStatsEntry" alias="exPoVlaBroRecPacCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.7" instance="extremePortVlanStatsEntry" alias="exPoVlaTotRecBytCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.8" instance="extremePortVlanStatsEntry" alias="exPoVlaTotRecFraCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.9" instance="extremePortVlanStatsEntry" alias="exPoVlaUniTraPacCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.10" instance="extremePortVlanStatsEntry" alias="exPoVlaMulTraPacCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.11" instance="extremePortVlanStatsEntry" alias="exPoVlaBroTraPacCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.12" instance="extremePortVlanStatsEntry" alias="exPoVlaTotTraBytCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.13" instance="extremePortVlanStatsEntry" alias="exPoVlaTotTraFraCou" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.8.2.1.14" instance="extremePortVlanStatsEntry" alias="extPortConfVlanStat" type="string"/>
+   </group>
+   <group name="extremePvlanTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.1.1.1" instance="extremePvlanEntry" alias="extremePvlanName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.1.1.2" instance="extremePvlanEntry" alias="extremePvlanVrName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.1.1.3" instance="extremePvlanEntry" alias="extPvlNetVlanIfInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.1.1.4" instance="extremePvlanEntry" alias="extrePvlanRowStatus" type="string"/>
+   </group>
+   <group name="extremePvlanSubscriberTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.2.1.1" instance="extremePvlanSubscriberEntry" alias="extPvlSubVlanIfInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.2.1.2" instance="extremePvlanSubscriberEntry" alias="extrePvlanSubscType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.2.1.3" instance="extremePvlanSubscriberEntry" alias="exPvSuLoBacPorIfInd" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.2.11.2.1.4" instance="extremePvlanSubscriberEntry" alias="extrPvlaSubsRowStat" type="string"/>
+   </group>
+</datacollection-group>

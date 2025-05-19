@@ -1,0 +1,233 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="EXTREME-SYSTEM-MIB">
+   <resourceType name="extremeFanStatusEntry" label="extremeFanStatusEntry" resourceLabel="${extremeFanOperational} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremePowerSupplyEntry" label="extremePowerSupplyEntry" resourceLabel="${extremePowerSupplyStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeCpuTask2Entry" label="extremeCpuTask2Entry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeImageEntry" label="extremeImageEntry" resourceLabel="${extremeImageNumber} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeImageFeatureEntry" label="extremeImageFeatureEntry" resourceLabel="${extremeImageFeatureNumber} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremePowerSupplyOutputPowerEntry" label="extremePowerSupplyOutputPowerEntry" resourceLabel="${extremePowerSupplyOutputUnitMultiplier} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremePowerSupplyUsageEntry" label="extremePowerSupplyUsageEntry" resourceLabel="${extremePowerSupplyUnitMultiplier} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeSystemPowerMonitorEntry" label="extremeSystemPowerMonitorEntry" resourceLabel="${extremeSystemPowerMonitorReportChanges} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="rebootTimeEntry" label="rebootTimeEntry" resourceLabel="${extremeRebootAsStandby} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeDownloadImageEntry" label="extremeDownloadImageEntry" resourceLabel="${extremeDownloadImageStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeInstallImageEntry" label="extremeInstallImageEntry" resourceLabel="${extremeInstallImageStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="extremeSlotEntry" label="extremeSlotEntry" resourceLabel="${extremeSlotModuleConfiguredType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="extremeSystemCommon" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.7" instance="0" alias="extreOverTempeAlarm" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.8" instance="0" alias="extremCurrenTempera" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.10" instance="0" alias="extrPrimaPowerOpera" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.11" instance="0" alias="extrRedunPowerStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.12" instance="0" alias="extrRedunPowerAlarm" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.13" instance="0" alias="extrePrimaSoftwaRev" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.14" instance="0" alias="extreSeconSoftwaRev" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.15" instance="0" alias="extrImagToUseOnRebo" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.16" instance="0" alias="extremeSystemID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.17" instance="0" alias="extremSystemBoardID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.18" instance="0" alias="extrSystLeftBoardID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.19" instance="0" alias="extrSystRighBoardID" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.20" instance="0" alias="extrInputPowerVolta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.21" instance="0" alias="extremePowerStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.22" instance="0" alias="extremePowerAlarm" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.23" instance="0" alias="extremeRmonEnable" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.25" instance="0" alias="extremBootROMVersio" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.26" instance="0" alias="extDot1dTpFdbTabEna" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.28" instance="0" alias="extreCpuAggreUtiliz" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.30" instance="0" alias="extrAuthFailSrcAddr" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.31" instance="0" alias="extreCpuTransPriori" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.32" instance="0" alias="extremeImageBooted" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.33" instance="0" alias="extreMsmFailovCause" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.36" instance="0" alias="extrSystePowerState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.37" instance="0" alias="extremeBootTime" type="counter64"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.50" instance="0" alias="extAutFaiSrcAddType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.51" instance="0" alias="extrAuthFailSrcAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.52" instance="0" alias="exAutFaiSrcAddVrNam" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.3" instance="0" alias="extremeSaveConfigur" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.4" instance="0" alias="extremeSaveStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.5" instance="0" alias="extrCurreConfiInUse" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.6" instance="0" alias="extrConfToUseOnRebo" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.48" instance="0" alias="extSaveConfFileName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.49" instance="0" alias="extUseOnRebFileName" type="octetstring"/>
+   </group>
+   <group name="extremeFanStatusTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.9.1.1" instance="extremeFanStatusEntry" alias="extremeFanNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.9.1.2" instance="extremeFanStatusEntry" alias="extremeFanOperation" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.9.1.3" instance="extremeFanStatusEntry" alias="extrFanEntPhysIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.9.1.4" instance="extremeFanStatusEntry" alias="extremeFanSpeed" type="integer32"/>
+   </group>
+   <group name="extremePowerSupplyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.1" instance="extremePowerSupplyEntry" alias="extrPowerSupplNumbe" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.2" instance="extremePowerSupplyEntry" alias="extrPowerSupplStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.3" instance="extremePowerSupplyEntry" alias="extPoweSuppInpuVolt" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.4" instance="extremePowerSupplyEntry" alias="extPoweSuppSeriNumb" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.5" instance="extremePowerSupplyEntry" alias="extPowSupEntPhyInde" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.6" instance="extremePowerSupplyEntry" alias="extPoweSuppFan1Spee" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.7" instance="extremePowerSupplyEntry" alias="extPoweSuppFan2Spee" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.8" instance="extremePowerSupplyEntry" alias="extrPowerSupplSourc" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.9" instance="extremePowerSupplyEntry" alias="extPowSupInpPowUsag" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.10" instance="extremePowerSupplyEntry" alias="extPowMonSupNumOutp" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.27.1.11" instance="extremePowerSupplyEntry" alias="exPoSuInPoUsaUniMul" type="string"/>
+   </group>
+   <group name="extremeCpuTask2Table" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.29.1.1" instance="extremeCpuTask2Entry" alias="extremCpuTask2CpuId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.29.1.2" instance="extremeCpuTask2Entry" alias="extremeCpuTask2Name" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.29.1.3" instance="extremeCpuTask2Entry" alias="extremeCpuTask2Id" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.29.1.4" instance="extremeCpuTask2Entry" alias="extremeCpuTask2Pc" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.29.1.5" instance="extremeCpuTask2Entry" alias="extreCpuTask2Status" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.29.1.6" instance="extremeCpuTask2Entry" alias="extreCpuTask2Utiliz" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.29.1.7" instance="extremeCpuTask2Entry" alias="extrCpuTask2MaxUtil" type="integer"/>
+   </group>
+   <group name="extremeImageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.1" instance="extremeImageEntry" alias="extremeImageNumber" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.2" instance="extremeImageEntry" alias="extremeMajorVersion" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.3" instance="extremeImageEntry" alias="extreSubMajorVersio" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.4" instance="extremeImageEntry" alias="extremeMinorVersion" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.5" instance="extremeImageEntry" alias="extremeBuildNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.6" instance="extremeImageEntry" alias="extrTechnReleaNumbe" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.7" instance="extremeImageEntry" alias="extrSustaReleaNumbe" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.8" instance="extremeImageEntry" alias="extrBrancRevisNumbe" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.9" instance="extremeImageEntry" alias="extremeImageType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.10" instance="extremeImageEntry" alias="extremeImageDescrip" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.11" instance="extremeImageEntry" alias="extremeImageSecurit" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.34.1.12" instance="extremeImageEntry" alias="extremePatchVersion" type="integer32"/>
+   </group>
+   <group name="extremeImageFeatureTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.35.1.1" instance="extremeImageFeatureEntry" alias="extrImageFeatuNumbe" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.35.1.2" instance="extremeImageFeatureEntry" alias="extreImageSshCapabi" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.35.1.3" instance="extremeImageFeatureEntry" alias="extreImageUAACapabi" type="string"/>
+   </group>
+   <group name="extremePowerSupplyOutputPowerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.38.1.1" instance="extremePowerSupplyOutputPowerEntry" alias="extrPowerSupplIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.38.1.2" instance="extremePowerSupplyOutputPowerEntry" alias="extPowSupOutSensIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.38.1.3" instance="extremePowerSupplyOutputPowerEntry" alias="extPoweSuppOutpVolt" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.38.1.4" instance="extremePowerSupplyOutputPowerEntry" alias="extPoweSuppOutpCurr" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.38.1.5" instance="extremePowerSupplyOutputPowerEntry" alias="extPowSupOutUniMult" type="string"/>
+   </group>
+   <group name="extremePowerSupplyUsageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.39.1.1" instance="extremePowerSupplyUsageEntry" alias="extremeSlotIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.39.1.2" instance="extremePowerSupplyUsageEntry" alias="extPoweSuppUsagValu" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.39.1.3" instance="extremePowerSupplyUsageEntry" alias="extPoweSuppUnitMult" type="string"/>
+   </group>
+   <group name="extremeSystemPowerUsage" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.40.1" instance="0" alias="extSystPoweUsagValu" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.40.2" instance="0" alias="extSysPowUsaUniMult" type="string"/>
+   </group>
+   <group name="extremeSystemPowerMonitorTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.41.1.1" instance="extremeSystemPowerMonitorEntry" alias="extSysPoweMoniInde1" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.41.1.2" instance="extremeSystemPowerMonitorEntry" alias="extSysPowMonPolInte" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.41.1.3" instance="extremeSystemPowerMonitorEntry" alias="extSysPowMonRepChan" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.41.1.4" instance="extremeSystemPowerMonitorEntry" alias="extSysPowMonChaThre" type="integer32"/>
+   </group>
+   <group name="extremeRebootTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.1" instance="rebootTimeEntry" alias="extremeRebootSlotId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.2" instance="rebootTimeEntry" alias="extreRebooNodeAddre" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.3" instance="rebootTimeEntry" alias="extrReboModulSlotId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.4" instance="rebootTimeEntry" alias="extreRebooSlotNumbe" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.5" instance="rebootTimeEntry" alias="extreRebootAsStandb" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.6" instance="rebootTimeEntry" alias="extrRebooStackTopol" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.7" instance="rebootTimeEntry" alias="extremeRebootMonth" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.8" instance="rebootTimeEntry" alias="extremeRebootDay" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.9" instance="rebootTimeEntry" alias="extremeRebootYear" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.10" instance="rebootTimeEntry" alias="extremeRebootHour" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.11" instance="rebootTimeEntry" alias="extremeRebootMinute" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.12" instance="rebootTimeEntry" alias="extremRebootSeconds" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.13" instance="rebootTimeEntry" alias="extremeRebootCancel" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.14" instance="rebootTimeEntry" alias="extremRebootImmedia" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.42.1.15" instance="rebootTimeEntry" alias="extreRebooRowStatus" type="string"/>
+   </group>
+   <group name="extremeDownloadImageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.1" instance="extremeDownloadImageEntry" alias="extrDownImageSlotId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.2" instance="extremeDownloadImageEntry" alias="extrDownlImageStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.3" instance="extremeDownloadImageEntry" alias="extrDownlImageFilen" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.4" instance="extremeDownloadImageEntry" alias="extrDownlImageParti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.5" instance="extremeDownloadImageEntry" alias="extDownImagHostName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.6" instance="extremeDownloadImageEntry" alias="extrDownlImageIpadd" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.7" instance="extremeDownloadImageEntry" alias="extDownImagStarTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.8" instance="extremeDownloadImageEntry" alias="extrDownlImageMemor" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.9" instance="extremeDownloadImageEntry" alias="extrDownlImageInsta" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.10" instance="extremeDownloadImageEntry" alias="extreDownlSlotNumbe" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.11" instance="extremeDownloadImageEntry" alias="extrDownModulSlotId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.12" instance="extremeDownloadImageEntry" alias="extreDownlRowStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.43.1.13" instance="extremeDownloadImageEntry" alias="extreDownlBlockSize" type="integer"/>
+   </group>
+   <group name="extremeInstallImageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.1" instance="extremeInstallImageEntry" alias="extrInstImageSlotId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.2" instance="extremeInstallImageEntry" alias="extrInstaImageStatu" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.3" instance="extremeInstallImageEntry" alias="extrInstaImageFilen" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.4" instance="extremeInstallImageEntry" alias="extrInstaImageParti" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.5" instance="extremeInstallImageEntry" alias="extInstImagStarTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.6" instance="extremeInstallImageEntry" alias="extrInstaImageReboo" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.7" instance="extremeInstallImageEntry" alias="extInsImaModuSlotId" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.8" instance="extremeInstallImageEntry" alias="extInstImagSlotNumb" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.44.1.9" instance="extremeInstallImageEntry" alias="extrInstImagRowStat" type="string"/>
+   </group>
+   <group name="loadInstallControl" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.45.1.1" instance="0" alias="downlImageTrapEnabl" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.45.1.2" instance="0" alias="instaImageTrapEnabl" type="string"/>
+   </group>
+   <group name="extremeChassisGroup" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.1" instance="0" alias="extremMasterMSMSlot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.3" instance="0" alias="extrChasPortPerSlot" type="integer32"/>
+   </group>
+   <group name="extremeSlotTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.2.1.1" instance="extremeSlotEntry" alias="extremeSlotNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.2.1.2" instance="extremeSlotEntry" alias="extremeSlotName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.2.1.3" instance="extremeSlotEntry" alias="extSlotModuConfType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.2.1.4" instance="extremeSlotEntry" alias="extSlotModuInseType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.2.1.5" instance="extremeSlotEntry" alias="extreSlotModulState" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.2.2.1.6" instance="extremeSlotEntry" alias="extSlotModuSeriNumb" type="octetstring"/>
+   </group>
+   <group name="extremeSystemHealthCheck" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.3.1" instance="0" alias="extHealChecErroType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.3.2" instance="0" alias="extrHealtCheckActio" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.3.3" instance="0" alias="extrHealChecMaxRetr" type="integer32"/>
+   </group>
+   <group name="extremeSystemThresholds" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.4.1" instance="0" alias="extrCpuUtilRisiThre" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.4.2" instance="0" alias="extrCpuTaskUtilPair" type="octetstring"/>
+   </group>
+   <group name="extremeGenericTrapParams" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.7.1" instance="0" alias="severity" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.7.2" instance="0" alias="eventName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.7.3" instance="0" alias="message" type="octetstring"/>
+   </group>
+   <group name="extremeAutoSave" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.53.1" instance="0" alias="extAutSavConFilName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.53.2" instance="0" alias="extAutoSaveConfEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1916.1.1.1.53.3" instance="0" alias="extAutSavConTimInte" type="integer"/>
+   </group>
+</datacollection-group>
