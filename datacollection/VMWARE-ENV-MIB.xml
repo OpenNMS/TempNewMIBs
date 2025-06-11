@@ -1,0 +1,44 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="VMWARE-ENV-MIB">
+   <resourceType name="vmwEnvEntry" label="vmwEnvEntry" resourceLabel="${vmwSubsystemType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="vmwEnv" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.1" instance="0" alias="vmwEnvNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.2" instance="0" alias="vmwEnvLastChange" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.30" instance="0" alias="vmwSELCapacity" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.100" instance="0" alias="vmwEnvSource" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.101" instance="0" alias="vmwEnvInIndications" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.102" instance="0" alias="vmwEnvLastIn" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.103" instance="0" alias="vmwEnvOutNotificati" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.104" instance="0" alias="vmwEnvInErrs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.105" instance="0" alias="vmwEnvIndOidErrs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.106" instance="0" alias="vmwEnvCvtValueErrs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.107" instance="0" alias="vmwEnvCvtSyntaxErrs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.108" instance="0" alias="vmwEnvCvtOidErrs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.109" instance="0" alias="vmwEnvGetClassErrs" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.110" instance="0" alias="vmwEnvPropertySkips" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.111" instance="0" alias="vmwEnvIndicatiSkips" type="counter32"/>
+   </group>
+   <group name="vmwEnvTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.3.1.1" instance="vmwEnvEntry" alias="vmwEnvIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.3.1.2" instance="vmwEnvEntry" alias="vmwSubsystemType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.3.1.3" instance="vmwEnvEntry" alias="vmwHardwareStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.3.1.4" instance="vmwEnvEntry" alias="vmwEventDescription" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.3.1.5" instance="vmwEnvEntry" alias="vmwEnvHardwareTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.3.1.6" instance="vmwEnvEntry" alias="vmwEnvHrDeviceIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.20.3.1.7" instance="vmwEnvEntry" alias="vmwEnvSelSensoNumbe" type="integer32"/>
+   </group>
+   <group name="vmwEnvCIM" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.1" instance="0" alias="vmwEnvDescription" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.2" instance="0" alias="vmwEnvEventTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.3" instance="0" alias="vmwEnvIndicatioTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.4" instance="0" alias="vmwEnvPerceiSeverit" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.5" instance="0" alias="vmwEnvAlertType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.6" instance="0" alias="vmwEnvSysCreClaName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.7" instance="0" alias="vmwEnvAlertiElement" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.8" instance="0" alias="vmwEnvAlertinFormat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.9" instance="0" alias="vmwEnvSystemName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.4.30.10" instance="0" alias="vmwEnvProviderName" type="octetstring"/>
+   </group>
+</datacollection-group>

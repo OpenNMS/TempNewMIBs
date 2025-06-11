@@ -1,0 +1,74 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="VMWARE-VMINFO-MIB">
+   <resourceType name="vmwVmEntry" label="vmwVmEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vmwVmHbaEntry" label="vmwVmHbaEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vmwHbaTgtEntry" label="vmwHbaTgtEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vmwVmNetEntry" label="vmwVmNetEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vmwFloppyEntry" label="vmwFloppyEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="vmwCdromEntry" label="vmwCdromEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="vmwVmTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.1" instance="vmwVmEntry" alias="vmwVmIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.2" instance="vmwVmEntry" alias="vmwVmDisplayName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.3" instance="vmwVmEntry" alias="vmwVmConfigFile" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.4" instance="vmwVmEntry" alias="vmwVmGuestOS" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.5" instance="vmwVmEntry" alias="vmwVmMemSize" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.6" instance="vmwVmEntry" alias="vmwVmState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.7" instance="vmwVmEntry" alias="vmwVmVMID" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.8" instance="vmwVmEntry" alias="vmwVmGuestState" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.9" instance="vmwVmEntry" alias="vmwVmCpus" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.1.1.10" instance="vmwVmEntry" alias="vmwVmUUID" type="octetstring"/>
+   </group>
+   <group name="vmwVmHbaTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.2.2.1.1" instance="vmwVmHbaEntry" alias="vmwHbaVmIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.2.1.2" instance="vmwVmHbaEntry" alias="vmwVmHbaIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.2.1.3" instance="vmwVmHbaEntry" alias="vmwHbaNum" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.2.1.4" instance="vmwVmHbaEntry" alias="vmwHbaVirtDev" type="octetstring"/>
+   </group>
+   <group name="vmwHbaTgtTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.2.3.1.1" instance="vmwHbaTgtEntry" alias="vmwHbaTgtVmIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.3.1.2" instance="vmwHbaTgtEntry" alias="vmwHbaTgtIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.3.1.3" instance="vmwHbaTgtEntry" alias="vmwHbaTgtNum" type="octetstring"/>
+   </group>
+   <group name="vmwVmNetTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.2.4.1.1" instance="vmwVmNetEntry" alias="vmwVmNetVmIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.4.1.2" instance="vmwVmNetEntry" alias="vmwVmNetIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.4.1.3" instance="vmwVmNetEntry" alias="vmwVmNetNum" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.4.1.4" instance="vmwVmNetEntry" alias="vmwVmNetName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.4.1.5" instance="vmwVmNetEntry" alias="vmwVmNetConnType" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.4.1.6" instance="vmwVmNetEntry" alias="vmwVmNetConnected" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.4.1.7" instance="vmwVmNetEntry" alias="vmwVmMAC" type="octetstring"/>
+   </group>
+   <group name="vmwFloppyTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.2.5.1.1" instance="vmwFloppyEntry" alias="vmwFdVmIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.5.1.2" instance="vmwFloppyEntry" alias="vmwFdIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.5.1.3" instance="vmwFloppyEntry" alias="vmwFdName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.5.1.4" instance="vmwFloppyEntry" alias="vmwFdConnected" type="octetstring"/>
+   </group>
+   <group name="vmwCdromTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.2.6.1.1" instance="vmwCdromEntry" alias="vmwCdVmIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.6.1.2" instance="vmwCdromEntry" alias="vmwCdromIdx" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.6.1.3" instance="vmwCdromEntry" alias="vmwCdromName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.2.6.1.4" instance="vmwCdromEntry" alias="vmwCdromConnected" type="octetstring"/>
+   </group>
+   <group name="vmwTraps" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6876.50.101" instance="0" alias="vmwVmID" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.50.102" instance="0" alias="vmwVmConfigFilePath" type="octetstring"/>
+   </group>
+</datacollection-group>
