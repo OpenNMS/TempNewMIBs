@@ -1,0 +1,26 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="VMWARE-RESOURCES-MIB">
+   <resourceType name="vmwHostBusAdapterEntry" label="vmwHostBusAdapterEntry" resourceLabel="${vmwHbaStatus} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="vmwCPU" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6876.3.1.1" instance="0" alias="vmwNumCPUs" type="gauge32"/>
+   </group>
+   <group name="vmwMemory" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6876.3.2.1" instance="0" alias="vmwMemSize" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.2.2" instance="0" alias="vmwMemCOS" type="gauge32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.2.3" instance="0" alias="vmwMemAvail" type="gauge32"/>
+   </group>
+   <group name="vmwStorage" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.1" instance="0" alias="vmwHostBusAdapNumbe" type="integer32"/>
+   </group>
+   <group name="vmwHostBusAdapterTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.2.1.1" instance="vmwHostBusAdapterEntry" alias="vmwHostBusAdapIndex" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.2.1.2" instance="vmwHostBusAdapterEntry" alias="vmwHbaDeviceName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.2.1.3" instance="vmwHostBusAdapterEntry" alias="vmwHbaBusNumber" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.2.1.4" instance="vmwHostBusAdapterEntry" alias="vmwHbaStatus" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.2.1.5" instance="vmwHostBusAdapterEntry" alias="vmwHbaModelName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.2.1.6" instance="vmwHostBusAdapterEntry" alias="vmwHbaDriverName" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6876.3.5.2.1.7" instance="vmwHostBusAdapterEntry" alias="vmwHbaPci" type="octetstring"/>
+   </group>
+</datacollection-group>
