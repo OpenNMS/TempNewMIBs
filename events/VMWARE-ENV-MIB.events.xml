@@ -1,0 +1,1659 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>390</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelFull</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelFull</event-label>
+      <descr>
+&lt;p>An IPMI System Event Log has fixed amount of entries (65535). This event is sent once when
+         the managed object vmwSELCapacity reaches 100% capacity at which point new entries
+         to the SEL will be dropped if overflow is not enabled (default) on most hardware systems.
+         This event will rearm any time vmwSELCapacity.0 drops below 80%.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwSELCapacity&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelFull trap received
+	vmwSELCapacity=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>400</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelMemoryRaised</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelMemoryRaised</event-label>
+      <descr>
+&lt;p>A memory related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state asserted.
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelMemoryRaised trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>401</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelMemoryCleared</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelMemoryCleared</event-label>
+      <descr>
+&lt;p>A memory related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state deasserted
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelMemoryCleared trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>410</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelPowerSupplyRaised</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelPowerSupplyRaised</event-label>
+      <descr>
+&lt;p>A power supply related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state asserted.
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelPowerSupplyRaised trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>411</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelPowerSupplyCleared</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelPowerSupplyCleared</event-label>
+      <descr>
+&lt;p>A power supply related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state deasserted
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelPowerSupplyCleared trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>420</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelFanRaised</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelFanRaised</event-label>
+      <descr>
+&lt;p>A fan related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state asserted.
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelFanRaised trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>421</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelFanCleared</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelFanCleared</event-label>
+      <descr>
+&lt;p>A fan related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state deasserted
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelFanCleared trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>430</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelCpuRaised</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelCpuRaised</event-label>
+      <descr>
+&lt;p>A CPU related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state asserted.
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelCpuRaised trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>431</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvIpmiSelCpuCleared</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvIpmiSelCpuCleared</event-label>
+      <descr>
+&lt;p>A CPU related IPMI SDR has updated IPMI SEL with record id of vmwEnvIndex with state deasserted
+         The vmwEnvTable will have an entry at vmwEnvIndex with additional details&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSelSensorNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvIpmiSelCpuCleared trap received
+	vmwEnvSelSensorNumber=%parm[#1]%
+	vmwEnvHardwareTime=%parm[#2]%
+	vmwEventDescription=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>301</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwEnvHardwareEvent</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwEnvHardwareEvent</event-label>
+      <descr>
+&lt;p>This notification, if the agent is so configured, may be sent when the
+         system has detected a material change in physical condition of the
+         hardware&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwSubsystemType&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		chassis(2)
+		powerSupply(3)
+		fan(4)
+		cpu(5)
+		memory(6)
+		battery(7)
+		temperatureSensor(8)
+		raidController(9)
+		voltage(10)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwHardwareStatus&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		normal(2)
+		marginal(3)
+		critical(4)
+		failed(5)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwEnvHardwareEvent trap received
+	vmwSubsystemType=%parm[#1]%
+	vmwHardwareStatus=%parm[#2]%
+	vmwEventDescription=%parm[#3]%
+	vmwEnvHardwareTime=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="chassis"/>
+         <decode varbindvalue="3" varbinddecodedstring="powerSupply"/>
+         <decode varbindvalue="4" varbinddecodedstring="fan"/>
+         <decode varbindvalue="5" varbinddecodedstring="cpu"/>
+         <decode varbindvalue="6" varbinddecodedstring="memory"/>
+         <decode varbindvalue="7" varbinddecodedstring="battery"/>
+         <decode varbindvalue="8" varbinddecodedstring="temperatureSensor"/>
+         <decode varbindvalue="9" varbinddecodedstring="raidController"/>
+         <decode varbindvalue="10" varbinddecodedstring="voltage"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#2]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="normal"/>
+         <decode varbindvalue="3" varbinddecodedstring="marginal"/>
+         <decode varbindvalue="4" varbinddecodedstring="critical"/>
+         <decode varbindvalue="5" varbinddecodedstring="failed"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>301</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvHardwareEvent</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvHardwareEvent</event-label>
+      <descr>
+&lt;p>ESX Specific version of this notification,
+         if the agent is so configured, may be sent when
+         the ESX Operating System has detected a material change in
+         physical condition of the hardware&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwSubsystemType&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		chassis(2)
+		powerSupply(3)
+		fan(4)
+		cpu(5)
+		memory(6)
+		battery(7)
+		temperatureSensor(8)
+		raidController(9)
+		voltage(10)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwHardwareStatus&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>
+		unknown(1)
+		normal(2)
+		marginal(3)
+		critical(4)
+		failed(5)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEventDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvHardwareTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvHardwareEvent trap received
+	vmwSubsystemType=%parm[#1]%
+	vmwHardwareStatus=%parm[#2]%
+	vmwEventDescription=%parm[#3]%
+	vmwEnvHardwareTime=%parm[#4]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#1]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="chassis"/>
+         <decode varbindvalue="3" varbinddecodedstring="powerSupply"/>
+         <decode varbindvalue="4" varbinddecodedstring="fan"/>
+         <decode varbindvalue="5" varbinddecodedstring="cpu"/>
+         <decode varbindvalue="6" varbinddecodedstring="memory"/>
+         <decode varbindvalue="7" varbinddecodedstring="battery"/>
+         <decode varbindvalue="8" varbinddecodedstring="temperatureSensor"/>
+         <decode varbindvalue="9" varbinddecodedstring="raidController"/>
+         <decode varbindvalue="10" varbinddecodedstring="voltage"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#2]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="2" varbinddecodedstring="normal"/>
+         <decode varbindvalue="3" varbinddecodedstring="marginal"/>
+         <decode varbindvalue="4" varbinddecodedstring="critical"/>
+         <decode varbindvalue="5" varbinddecodedstring="failed"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>302</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvHardwareAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvHardwareAlert</event-label>
+      <descr>
+&lt;p>A hardware alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvHardwareAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>303</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvBatteryAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvBatteryAlert</event-label>
+      <descr>
+&lt;p>A battery alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvBatteryAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>304</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvChassisAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvChassisAlert</event-label>
+      <descr>
+&lt;p>A chassis alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvChassisAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>305</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvThermalAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvThermalAlert</event-label>
+      <descr>
+&lt;p>A cooling/thermal alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvThermalAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>306</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvDiskAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvDiskAlert</event-label>
+      <descr>
+&lt;p>A disk drive alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvDiskAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>307</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvPowerAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvPowerAlert</event-label>
+      <descr>
+&lt;p>A power suppply alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvPowerAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>308</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvProcessorAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvProcessorAlert</event-label>
+      <descr>
+&lt;p>A IPMI processor alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvProcessorAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>309</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvMemoryAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvMemoryAlert</event-label>
+      <descr>
+&lt;p>A IPMI memory alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvMemoryAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6876.4.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>310</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/VMWARE-ENV-MIB/vmwESXEnvBIOSAlert</uei>
+      <event-label>VMWARE-ENV-MIB defined trap event: vmwESXEnvBIOSAlert</event-label>
+      <descr>
+&lt;p>BIOS System Event Log alert as received from the Common Infrastructure Management (CIM) subsystem on this system.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvEventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvIndicationTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvPerceivedSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		information(2)
+		warning(3)
+		minor(4)
+		major(5)
+		critical(6)
+		fatal(7)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>
+		other(1)
+		communications(2)
+		qos(3)
+		processingError(4)
+		deviceAlert(5)
+		environmentalAlert(6)
+		modelChange(7)
+		securityAlert(8)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSysCreationClassName&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingElement&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvAlertingFormat&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		other(1)
+		cimObjectPath(2)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvSystemName&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	vmwEnvProviderName&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	vmwESXEnvBIOSAlert trap received
+	vmwEnvDescription=%parm[#1]%
+	vmwEnvEventTime=%parm[#2]%
+	vmwEnvIndicationTime=%parm[#3]%
+	vmwEnvPerceivedSeverity=%parm[#4]%
+	vmwEnvAlertType=%parm[#5]%
+	vmwEnvSysCreationClassName=%parm[#6]%
+	vmwEnvAlertingElement=%parm[#7]%
+	vmwEnvAlertingFormat=%parm[#8]%
+	vmwEnvSystemName=%parm[#9]%
+	vmwEnvProviderName=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#4]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="information"/>
+         <decode varbindvalue="3" varbinddecodedstring="warning"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="major"/>
+         <decode varbindvalue="6" varbinddecodedstring="critical"/>
+         <decode varbindvalue="7" varbinddecodedstring="fatal"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#5]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="communications"/>
+         <decode varbindvalue="3" varbinddecodedstring="qos"/>
+         <decode varbindvalue="4" varbinddecodedstring="processingError"/>
+         <decode varbindvalue="5" varbinddecodedstring="deviceAlert"/>
+         <decode varbindvalue="6" varbinddecodedstring="environmentalAlert"/>
+         <decode varbindvalue="7" varbinddecodedstring="modelChange"/>
+         <decode varbindvalue="8" varbinddecodedstring="securityAlert"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#8]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="other"/>
+         <decode varbindvalue="2" varbinddecodedstring="cimObjectPath"/>
+      </varbindsdecode>
+   </event>
+</events>
