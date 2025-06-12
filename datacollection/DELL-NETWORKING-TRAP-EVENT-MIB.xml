@@ -1,0 +1,46 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="DELL-NETWORKING-TRAP-EVENT-MIB">
+   <resourceType name="dellNetHistoryTrapEventEntry" label="dellNetHistoryTrapEventEntry" resourceLabel="${historyTrapEventOid} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="dellNetActiveTrapEventEntry" label="dellNetActiveTrapEventEntry" resourceLabel="${activeTrapEventOid} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="dellNetTrapEventVarbindEntry" label="dellNetTrapEventVarbindEntry" resourceLabel="${trapEventVarbindOid} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="dellNetHistoryTrapEvent" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.1" instance="0" alias="dellNetChasBootTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.2" instance="0" alias="deNetLasTraEveSeqId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.3" instance="0" alias="delNetMaxHisTabSize" type="integer32"/>
+   </group>
+   <group name="dellNetHistoryTrapEventTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.1" instance="dellNetHistoryTrapEventEntry" alias="histoTrapEventSeqId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.2" instance="dellNetHistoryTrapEventEntry" alias="histoTrapEventSever" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.3" instance="dellNetHistoryTrapEventEntry" alias="historTrapEventType" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.4" instance="dellNetHistoryTrapEventEntry" alias="historyTrapEventMsg" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.5" instance="dellNetHistoryTrapEventEntry" alias="historyTrapEventOid" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.6" instance="dellNetHistoryTrapEventEntry" alias="historTrapEventSlot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.7" instance="dellNetHistoryTrapEventEntry" alias="hisTrapEvenTimeStam" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.1.4.1.8" instance="dellNetHistoryTrapEventEntry" alias="historTrapEventPort" type="integer32"/>
+   </group>
+   <group name="dellNetActiveTrapEventTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.1" instance="dellNetActiveTrapEventEntry" alias="activTrapEventSeqId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.2" instance="dellNetActiveTrapEventEntry" alias="activTrapEventSever" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.3" instance="dellNetActiveTrapEventEntry" alias="activeTrapEventType" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.4" instance="dellNetActiveTrapEventEntry" alias="activeTrapEventMsg" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.5" instance="dellNetActiveTrapEventEntry" alias="activeTrapEventOid" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.6" instance="dellNetActiveTrapEventEntry" alias="activeTrapEventSlot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.7" instance="dellNetActiveTrapEventEntry" alias="actTrapEvenTimeStam" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.2.1.1.8" instance="dellNetActiveTrapEventEntry" alias="activeTrapEventPort" type="integer32"/>
+   </group>
+   <group name="dellNetTrapEventVarbindTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.3.1.1.1" instance="dellNetTrapEventVarbindEntry" alias="trapEventVarbiSeqId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.3.1.1.2" instance="dellNetTrapEventVarbindEntry" alias="trapEventVarbindId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.3.1.1.3" instance="dellNetTrapEventVarbindEntry" alias="trapEventVarbindOid" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.3.1.1.4" instance="dellNetTrapEventVarbindEntry" alias="trapEventVarbinType" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.6.1.3.1.1.5" instance="dellNetTrapEventVarbindEntry" alias="trapEventVarbiValue" type="octetstring"/>
+   </group>
+</datacollection-group>
