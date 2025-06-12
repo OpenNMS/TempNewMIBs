@@ -1,0 +1,73 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="DELL-NETWORKING-SYSTEM-COMPONENT-MIB">
+   <resourceType name="camUsageEntry" label="camUsageEntry" resourceLabel="${camUsagePartId} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="camUsageL2Entry" label="camUsageL2Entry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="camUsageL3Entry" label="camUsageL3Entry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="camUsageL3ExtEntry" label="camUsageL3ExtEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="camUsageTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.1.1.1" instance="camUsageEntry" alias="camUsageSlot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.1.1.2" instance="camUsageEntry" alias="camUsagePipeNum" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.1.1.3" instance="camUsageEntry" alias="camUsagePartId" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.1.1.4" instance="camUsageEntry" alias="camUsagePartDesc" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.1.1.5" instance="camUsageEntry" alias="camUsageTotal" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.1.1.6" instance="camUsageEntry" alias="camUsageUsed" type="integer32"/>
+   </group>
+   <group name="camUsageL2Table" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.1" instance="camUsageL2Entry" alias="camUsageL2Slot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.2" instance="camUsageL2Entry" alias="camUsageL2PipeId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.3" instance="camUsageL2Entry" alias="camUsagL2IngAclTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.4" instance="camUsageL2Entry" alias="camUsagL2IngAclUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.7" instance="camUsageL2Entry" alias="camUsagL2IngFibTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.8" instance="camUsageL2Entry" alias="camUsagL2IngFibUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.9" instance="camUsageL2Entry" alias="camUsagL2EgrAclTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.10" instance="camUsageL2Entry" alias="camUsagL2EgrAclUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.2.1.11" instance="camUsageL2Entry" alias="camUsageL2PipeLine" type="integer32"/>
+   </group>
+   <group name="camUsageL3Table" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.1" instance="camUsageL3Entry" alias="camUsageL3Slot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.2" instance="camUsageL3Entry" alias="camUsageL3PipeId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.3" instance="camUsageL3Entry" alias="camUsagL3IngFibTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.4" instance="camUsageL3Entry" alias="camUsagL3IngFibUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.5" instance="camUsageL3Entry" alias="caUsaL3IngSysFloTot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.6" instance="camUsageL3Entry" alias="caUsaL3IngSysFloUse" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.7" instance="camUsageL3Entry" alias="caUsaL3IngTrcLisTot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.8" instance="camUsageL3Entry" alias="caUsaL3IngTrcLisUse" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.9" instance="camUsageL3Entry" alias="caUsaL3IngMcaFibTot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.10" instance="camUsageL3Entry" alias="caUsaL3IngMcaFibUse" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.11" instance="camUsageL3Entry" alias="camUsagL3IngQosTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.12" instance="camUsageL3Entry" alias="camUsagL3IngQosUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.13" instance="camUsageL3Entry" alias="camUsagL3IngPbrTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.14" instance="camUsageL3Entry" alias="camUsagL3IngPbrUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.15" instance="camUsageL3Entry" alias="camUsagL3IngAclTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.16" instance="camUsageL3Entry" alias="camUsagL3IngAclUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.17" instance="camUsageL3Entry" alias="camUsagL3EgrAclTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.18" instance="camUsageL3Entry" alias="camUsagL3EgrAclUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.3.1.19" instance="camUsageL3Entry" alias="camUsageL3PipeLine" type="integer32"/>
+   </group>
+   <group name="camUsageL3ExtTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.4.1.1" instance="camUsageL3ExtEntry" alias="camUsageL3ExtSlot" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.4.1.2" instance="camUsageL3ExtEntry" alias="camUsageL3ExtPipeId" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.4.1.3" instance="camUsageL3ExtEntry" alias="camUsaL3ExtHostTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.4.1.4" instance="camUsageL3ExtEntry" alias="camUsaL3ExtHostUsed" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.4.1.5" instance="camUsageL3ExtEntry" alias="camUsagL3ExtLPMTota" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.1.4.1.6" instance="camUsageL3ExtEntry" alias="camUsagL3ExtLPMUsed" type="integer32"/>
+   </group>
+   <group name="sysCompAlarmVariable" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.2.1.1" instance="0" alias="sysCompAlarmLevel" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.2.1.2" instance="0" alias="sysCompAlarVarStrin" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.2.1.3" instance="0" alias="sysCompSlotId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.2.1.4" instance="0" alias="sysCompPortPipe" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.6027.3.7.1.2.1.5" instance="0" alias="sysCompCamPartId" type="octetstring"/>
+   </group>
+</datacollection-group>
