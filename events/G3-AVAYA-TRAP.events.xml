@@ -1,0 +1,1533 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>0</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmClear</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmClear</event-label>
+      <descr>
+&lt;p>A Cleared Alarm Notification has been issued by
+			the switch indicating that all alarms have been
+                        cleared.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmClear trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmCritical</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmCritical</event-label>
+      <descr>
+&lt;p>This trap is defined for future use.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmCritical trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3alarmsIPAddress=%parm[#8]%
+	g3alarmsCategory=%parm[#9]%
+	g3alarmsErrorCodes=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmMajor</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmMajor</event-label>
+      <descr>
+&lt;p>A Major alarm has been issued by the switch. The
+			MIB variables provide attributes of the alarm. The
+			information contained in the g3alarmsPort,
+			g3alarmsMaintName, g3alarmsOnBrd trap variables
+			differ depending on the kind of alarm. If the
+			alarm is a voice server alarm these fields
+			contain, respectively, an equipment location,
+			maintenance object name, and flag indicating
+			whether or not the alarm was on-board. For
+			server platform alarms and messaging alarms these
+			fields contain, respectively, an alarm description
+			including the source of the alarm, a string
+			indicating the resource from which the alarm
+			was generated, and an event ID associated with that
+			resource. More details on the contents of these
+			fields can be found in the appropriate product
+			maintenance documentation.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmMajor trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3alarmsIPAddress=%parm[#8]%
+	g3alarmsCategory=%parm[#9]%
+	g3alarmsErrorCodes=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>3</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmMinor</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmMinor</event-label>
+      <descr>
+&lt;p>A Minor alarm has been issued by the switch.
+			The fields in this trap type has the same
+			differences, for g3alarmsPort, g3alarmsMaintName,
+			and g3alarmsOnBrd, as described above for the
+			alarmMajor trap type.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmMinor trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3alarmsIPAddress=%parm[#8]%
+	g3alarmsCategory=%parm[#9]%
+	g3alarmsErrorCodes=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>4</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmWarning</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmWarning</event-label>
+      <descr>
+&lt;p>A Warning alarm has been issued by the switch.
+			The fields in this trap type has the same
+			differences, for g3alarmsPort, g3alarmsMaintName,
+			and g3alarmsOnBrd, as described above for the
+			alarmMajor trap type.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmWarning trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3alarmsIPAddress=%parm[#8]%
+	g3alarmsCategory=%parm[#9]%
+	g3alarmsErrorCodes=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>12</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmResolved</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmResolved</event-label>
+      <descr>
+&lt;p>An alarm has been resolved on the switch.
+			The fields in this trap type has the same
+			differences, for g3alarmsPort, g3alarmsMaintName,
+			and g3alarmsOnBrd, as described above for the
+			alarmMajor trap type.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmResolved trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3alarmsIPAddress=%parm[#8]%
+	g3alarmsCategory=%parm[#9]%
+	g3alarmsErrorCodes=%parm[#10]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>13</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmRMS</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmRMS</event-label>
+      <descr>
+&lt;p>An alarm associated with security related events
+			has been issued by the server.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsSrcIPAddr&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsSrcMACAddr&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsDestIPAddr&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsDestPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProtocol&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCount&lt;/b>&lt;/td>&lt;td>
+	%parm[#12]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsViolationType&lt;/b>&lt;/td>&lt;td>
+	%parm[#13]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCode&lt;/b>&lt;/td>&lt;td>
+	%parm[#14]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsData&lt;/b>&lt;/td>&lt;td>
+	%parm[#15]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsICMPType&lt;/b>&lt;/td>&lt;td>
+	%parm[#16]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsEventID&lt;/b>&lt;/td>&lt;td>
+	%parm[#17]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsStatus&lt;/b>&lt;/td>&lt;td>
+	%parm[#18]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmRMS trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsAlarmType=%parm[#5]%
+	g3alarmsCategory=%parm[#6]%
+	g3alarmsSrcIPAddr=%parm[#7]%
+	g3alarmsSrcMACAddr=%parm[#8]%
+	g3alarmsDestIPAddr=%parm[#9]%
+	g3alarmsDestPort=%parm[#10]%
+	g3alarmsProtocol=%parm[#11]%
+	g3alarmsCount=%parm[#12]%
+	g3alarmsViolationType=%parm[#13]%
+	g3alarmsCode=%parm[#14]%
+	g3alarmsData=%parm[#15]%
+	g3alarmsICMPType=%parm[#16]%
+	g3alarmsEventID=%parm[#17]%
+	g3alarmsStatus=%parm[#18]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>5</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/extalarmMajor</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: extalarmMajor</event-label>
+      <descr>
+&lt;p>An external device Major alarm has been issued
+			by the switch. The variables describe the location
+			and nature of the alarm. This trap type only
+			applies to voice server alarms.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAltName&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevID&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevBuilding&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#12]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#13]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#14]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#15]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extalarmMajor trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3extdevAltName=%parm[#8]%
+	g3extdevDescription=%parm[#9]%
+	g3extdevID=%parm[#10]%
+	g3extdevBuilding=%parm[#11]%
+	g3extdevAddress=%parm[#12]%
+	g3alarmsIPAddress=%parm[#13]%
+	g3alarmsCategory=%parm[#14]%
+	g3alarmsErrorCodes=%parm[#15]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/extalarmMinor</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: extalarmMinor</event-label>
+      <descr>
+&lt;p>An external device Minor alarm has been issued
+			by the switch. The variables describe the location
+			and nature of the alarm. This trap type only
+			applies to voice server alarms.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAltName&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevID&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevBuilding&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#12]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#13]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#14]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#15]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extalarmMinor trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3extdevAltName=%parm[#8]%
+	g3extdevDescription=%parm[#9]%
+	g3extdevID=%parm[#10]%
+	g3extdevBuilding=%parm[#11]%
+	g3extdevAddress=%parm[#12]%
+	g3alarmsIPAddress=%parm[#13]%
+	g3alarmsCategory=%parm[#14]%
+	g3alarmsErrorCodes=%parm[#15]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>14</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/extalarmWarning</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: extalarmWarning</event-label>
+      <descr>
+&lt;p>An external device Warning alarm has been issued
+			by the switch. The variables describe the location
+			and nature of the alarm. This trap type only
+			applies to voice server alarms.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAltName&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevID&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevBuilding&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#12]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#13]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#14]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#15]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extalarmWarning trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3extdevAltName=%parm[#8]%
+	g3extdevDescription=%parm[#9]%
+	g3extdevID=%parm[#10]%
+	g3extdevBuilding=%parm[#11]%
+	g3extdevAddress=%parm[#12]%
+	g3alarmsIPAddress=%parm[#13]%
+	g3alarmsCategory=%parm[#14]%
+	g3alarmsErrorCodes=%parm[#15]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>15</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/extalarmResolved</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: extalarmResolved</event-label>
+      <descr>
+&lt;p>An external device alarm has been resolved
+			by the switch. The variables describe the location
+			and nature of the alarm. This trap type only
+			applies to voice server alarms.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsPort&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsMaintName&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsOnBrd&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmType&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAltName&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevDescription&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevID&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevBuilding&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3extdevAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#12]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsIPAddress&lt;/b>&lt;/td>&lt;td>
+	%parm[#13]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsCategory&lt;/b>&lt;/td>&lt;td>
+	%parm[#14]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsErrorCodes&lt;/b>&lt;/td>&lt;td>
+	%parm[#15]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	extalarmResolved trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3alarmsPort=%parm[#4]%
+	g3alarmsMaintName=%parm[#5]%
+	g3alarmsOnBrd=%parm[#6]%
+	g3alarmsAlarmType=%parm[#7]%
+	g3extdevAltName=%parm[#8]%
+	g3extdevDescription=%parm[#9]%
+	g3extdevID=%parm[#10]%
+	g3extdevBuilding=%parm[#11]%
+	g3extdevAddress=%parm[#12]%
+	g3alarmsIPAddress=%parm[#13]%
+	g3alarmsCategory=%parm[#14]%
+	g3alarmsErrorCodes=%parm[#15]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>7</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmDispatch</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmDispatch</event-label>
+      <descr>
+&lt;p>INADS has dispatched the alarm.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmDispatch trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>8</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmClose</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmClose</event-label>
+      <descr>
+&lt;p>INADS has closed the alarm.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmClose trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>9</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmRestart</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmRestart</event-label>
+      <descr>
+&lt;p>A system restart has occurred on the switch.
+                        The variables describe the location and nature of
+                        the restart.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartDateTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartLevel&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartCarrier&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartCraftDemand&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartEscalated&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartInterchange&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartUnavailable&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3restartCause&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3vintageSpeArelease&lt;/b>&lt;/td>&lt;td>
+	%parm[#12]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3vintageSpeBrelease&lt;/b>&lt;/td>&lt;td>
+	%parm[#13]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3vintageSpeAupID&lt;/b>&lt;/td>&lt;td>
+	%parm[#14]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3vintageSpeBupID&lt;/b>&lt;/td>&lt;td>
+	%parm[#15]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmRestart trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%
+	g3restartDateTime=%parm[#4]%
+	g3restartLevel=%parm[#5]%
+	g3restartCarrier=%parm[#6]%
+	g3restartCraftDemand=%parm[#7]%
+	g3restartEscalated=%parm[#8]%
+	g3restartInterchange=%parm[#9]%
+	g3restartUnavailable=%parm[#10]%
+	g3restartCause=%parm[#11]%
+	g3vintageSpeArelease=%parm[#12]%
+	g3vintageSpeBrelease=%parm[#13]%
+	g3vintageSpeAupID=%parm[#14]%
+	g3vintageSpeBupID=%parm[#15]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>10</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmNak</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmNak</event-label>
+      <descr>
+&lt;p>A NAK was received in an attempt to forward the
+			alarm to INADS.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmNak trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>11</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/alarmNoAck</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: alarmNoAck</event-label>
+      <descr>
+&lt;p>A response other than an ACK or NAK was received
+			in an attempt to forward the alarm to INADS.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsProductID&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3alarmsAlarmNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	alarmNoAck trap received
+	g3clientExternalName=%parm[#1]%
+	g3alarmsProductID=%parm[#2]%
+	g3alarmsAlarmNumber=%parm[#3]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>101</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/connectOther</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: connectOther</event-label>
+      <descr>
+&lt;p>The connection status of the PBX/ECS has changed
+                        to OTHER. This status indicates that the connect is
+                        in an unknown state.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	connectOther trap received
+	g3clientExternalName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>102</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/connectOff</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: connectOff</event-label>
+      <descr>
+&lt;p>The connection status of the PBX/ECS has changed
+                        to OFF. This status indicates that user set the
+                        connection state to off so that the Proxy Agent
+                        will not start up a connection with the PBX/ECS.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	connectOff trap received
+	g3clientExternalName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>103</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/connectDown</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: connectDown</event-label>
+      <descr>
+&lt;p>The connection status of the PBX/ECS has changed
+                        to DOWN. This status indicates that the Proxy
+                        Agent attempted to establish a connection with the
+                        PBX/ECS and failed.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	connectDown trap received
+	g3clientExternalName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>104</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/connectInit</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: connectInit</event-label>
+      <descr>
+&lt;p>The connection status of the PBX/ECS has changed
+			to INIT. This status indicates that the Proxy
+			Agent is in the process of attempting to connect
+			to the PBX/ECS.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	connectInit trap received
+	g3clientExternalName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>105</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/connectUp</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: connectUp</event-label>
+      <descr>
+&lt;p>The connection status of the PBX/ECS has changed
+			to UP. This status indicates that the Proxy
+			Agent has a connection established with the PBX/ECS.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	connectUp trap received
+	g3clientExternalName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>106</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/connectIdle</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: connectIdle</event-label>
+      <descr>
+&lt;p>The connection status of the PBX/ECS has changed
+			to IDLE. This status indicates that a connection
+			with the PBX/ECS is currently inactive due to the
+			dynamic timeout having been reached without any
+			activity. The connection will stay in the IDLE state
+			until an SNMP request or alarm is received. This
+			connection status only applies if the connection
+			type is 'dynamic'.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	connectIdle trap received
+	g3clientExternalName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>110</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/connectMax</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: connectMax</event-label>
+      <descr>
+&lt;p>The connection to a PBX/ECS could not be established
+			due to the maximum allowed number of simultaneous
+			connections already being active.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	g3clientExternalName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	connectMax trap received
+	g3clientExternalName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>150</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/proxyDown</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: proxyDown</event-label>
+      <descr>
+&lt;p>The user has issued a stop proxy-agent command to
+			bring down the Proxy Agent.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	sysName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	proxyDown trap received
+	sysName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.6889.1.8.1</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>151</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/G3-AVAYA-TRAP/proxyUp</uei>
+      <event-label>G3-AVAYA-TRAP defined trap event: proxyUp</event-label>
+      <descr>
+&lt;p>The user has issued a start proxy-agent command to
+			bring up the Proxy Agent.&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	sysName&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	proxyUp trap received
+	sysName=%parm[#1]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+</events>
