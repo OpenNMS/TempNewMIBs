@@ -1,0 +1,42 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="ALCATEL-NMC-PROXY-AGENT-MIB">
+   <group name="objectClass" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.1.1" instance="0" alias="topClass" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.1.2" instance="0" alias="baseClass" type="integer"/>
+   </group>
+   <group name="objectInstance" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.2" instance="0" alias="rdnDepth" type="integer"/>
+   </group>
+   <group name="rdn1" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.1.1" instance="0" alias="classId1" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.1.2" instance="0" alias="rdnValue1" type="octetstring"/>
+   </group>
+   <group name="rdn2" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.2.1" instance="0" alias="classId2" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.2.2" instance="0" alias="rdnValue2" type="octetstring"/>
+   </group>
+   <group name="rdn3" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.3.1" instance="0" alias="classId3" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.3.2" instance="0" alias="rdnValue3" type="octetstring"/>
+   </group>
+   <group name="rdn4" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.4.1" instance="0" alias="classId4" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.4.2" instance="0" alias="rdnValue4" type="octetstring"/>
+   </group>
+   <group name="rdn5" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.5.1" instance="0" alias="classId5" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.3.5.2" instance="0" alias="rdnValue5" type="octetstring"/>
+   </group>
+   <group name="cmipEventArg" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.3" instance="0" alias="eventTime" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.4" instance="0" alias="eventType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.5" instance="0" alias="severity" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.6" instance="0" alias="probableCause" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.7" instance="0" alias="packedForm" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.8" instance="0" alias="notificationId" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.9" instance="0" alias="addText" type="octetstring"/>
+   </group>
+   <group name="voiceIds" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.4.1" instance="0" alias="objectNumber" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.637.64.0.10.1.1.2.4.2" instance="0" alias="parentNumber" type="integer"/>
+   </group>
+</datacollection-group>
