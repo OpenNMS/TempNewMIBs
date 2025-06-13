@@ -1,0 +1,523 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.637.64.0.10.1.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>1</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ALCATEL-NMC-PROXY-AGENT-MIB/packedCmipTrap</uei>
+      <event-label>ALCATEL-NMC-PROXY-AGENT-MIB defined trap event: packedCmipTrap</event-label>
+      <descr>
+&lt;p>packed forwarded trap :
+
+	contains a part (or all) of the arguments of the CMIP notification
+
+	inside one variable binding.
+
+	The arguments are selected with the NMC.
+
+	This form suits well to a simple display of informations.
+
+	HP OpenView Display=> Packed form: $2&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	openViewSeverity&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	packedForm&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	packedCmipTrap trap received
+	openViewSeverity=%parm[#1]%
+	packedForm=%parm[#2]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.637.64.0.10.1.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>2</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ALCATEL-NMC-PROXY-AGENT-MIB/startOfResyncTrap</uei>
+      <event-label>ALCATEL-NMC-PROXY-AGENT-MIB defined trap event: startOfResyncTrap</event-label>
+      <descr>
+&lt;p>start of resynchronization :
+
+	this trap announces the beginning of the reemission of all
+
+	the traps corresponding to the active alarms of
+
+	the managed nodes.
+
+	HP OpenView Display=> Start of resynchronization: $*&lt;/p>&lt;table>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	startOfResyncTrap trap received&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.637.64.0.10.1.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>3</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ALCATEL-NMC-PROXY-AGENT-MIB/cmipTrap</uei>
+      <event-label>ALCATEL-NMC-PROXY-AGENT-MIB defined trap event: cmipTrap</event-label>
+      <descr>
+&lt;p>developped form trap :
+
+	contains all arguments of the CMIP notification, each of them
+
+	is placed in one independant variable binding.
+
+	This form suits well for the processing of informations on
+
+	a supervision station in a view to build an application,
+
+	like a topology presentation and animation.
+
+	HP OpenView Display=> Top class: $1 | Base Class: $2 | Hierarchy height: $3 | ClassId: $4-$6-$8-$10-$12 Values: $5-$7-$9-$11-$13 | Date: $14 | Event type: $15 | Severity: $16 | Probable cause: $17 | Notification ID: $18 | Add Text: $19&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	topClass&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	baseClass&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	rdnDepth&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	classId1&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	rdnValue1&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	classId2&lt;/b>&lt;/td>&lt;td>
+	%parm[#6]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	rdnValue2&lt;/b>&lt;/td>&lt;td>
+	%parm[#7]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	classId3&lt;/b>&lt;/td>&lt;td>
+	%parm[#8]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	rdnValue3&lt;/b>&lt;/td>&lt;td>
+	%parm[#9]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	classId4&lt;/b>&lt;/td>&lt;td>
+	%parm[#10]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	rdnValue4&lt;/b>&lt;/td>&lt;td>
+	%parm[#11]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	classId5&lt;/b>&lt;/td>&lt;td>
+	%parm[#12]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	rdnValue5&lt;/b>&lt;/td>&lt;td>
+	%parm[#13]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	eventTime&lt;/b>&lt;/td>&lt;td>
+	%parm[#14]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	eventType&lt;/b>&lt;/td>&lt;td>
+	%parm[#15]%;&lt;/td>&lt;td>&lt;p>
+		communicationAlarm(2)
+		environmentalAlarm(3)
+		equipmentAlarm(4)
+		processingErrorAlarm(10)
+		qualityOfServiceAlarm(11)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	severity&lt;/b>&lt;/td>&lt;td>
+	%parm[#16]%;&lt;/td>&lt;td>&lt;p>
+		indeterminate(1)
+		critical(2)
+		major(3)
+		minor(4)
+		warning(5)
+		clear(6)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	probableCause&lt;/b>&lt;/td>&lt;td>
+	%parm[#17]%;&lt;/td>&lt;td>&lt;p>
+		unknown(0)
+		adapterror(1)
+		applicationSubsystemFailure(2)
+		bandWidthReduced(3)
+		callEstablishmentError(4)
+		communicationsProtocolError(5)
+		communicationsSubsystemFailure(6)
+		configurationOrCustomizationError(7)
+		congestion(8)
+		corruptData(9)
+		cpuCyclesLimitExceeded(10)
+		cataSetOrModemError(11)
+		degradedSignal(12)
+		dteDceInterfaceError(13)
+		enclosureDoorOpen(14)
+		equipmentMalFunction(15)
+		excessiveVibration(16)
+		fileError(17)
+		fireDetected(18)
+		floodDetected(19)
+		framingError(20)
+		heatingVentilationCoolingSystemProblem(21)
+		humidityUnacceptable(22)
+		inputOutputDeviceError(23)
+		inputDeviceError(24)
+		lanError(25)
+		leakDetected(26)
+		localNodeTransmissionError(27)
+		lossOfFrame(28)
+		lossOfSignal(29)
+		materialSupplyExhausted(30)
+		multiplexerProblem(31)
+		outOfMemory(32)
+		outputDeviceError(33)
+		performanceDegraded(34)
+		powerProblem(35)
+		pressureUnacceptable(36)
+		processorProblem(37)
+		pumpFailure(38)
+		queueSizeExceeded(39)
+		receiveFailure(40)
+		receiverFailure(41)
+		remoteNodeTransmissionFailure(42)
+		resourceAtOrNearingCapacity(43)
+		responseTimeExcessive(44)
+		retransmissionRateExcessive(45)
+		softwareError(46)
+		softwareProgramAbnormallyTerminated(47)
+		softwareProgramError(48)
+		storageCapacityProblem(49)
+		temperatureUnacceptable(50)
+		thresholdCrossed(51)
+		timingProblem(52)
+		toxicLeakDetected(53)
+		transmitFailure(54)
+		transmitterFailure(55)
+		underlyingResourceUnavailable(56)
+		versionMismatch(57)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	notificationId&lt;/b>&lt;/td>&lt;td>
+	%parm[#18]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	addText&lt;/b>&lt;/td>&lt;td>
+	%parm[#19]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	cmipTrap trap received
+	topClass=%parm[#1]%
+	baseClass=%parm[#2]%
+	rdnDepth=%parm[#3]%
+	classId1=%parm[#4]%
+	rdnValue1=%parm[#5]%
+	classId2=%parm[#6]%
+	rdnValue2=%parm[#7]%
+	classId3=%parm[#8]%
+	rdnValue3=%parm[#9]%
+	classId4=%parm[#10]%
+	rdnValue4=%parm[#11]%
+	classId5=%parm[#12]%
+	rdnValue5=%parm[#13]%
+	eventTime=%parm[#14]%
+	eventType=%parm[#15]%
+	severity=%parm[#16]%
+	probableCause=%parm[#17]%
+	notificationId=%parm[#18]%
+	addText=%parm[#19]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#15]</parmid>
+         <decode varbindvalue="2" varbinddecodedstring="communicationAlarm"/>
+         <decode varbindvalue="3" varbinddecodedstring="environmentalAlarm"/>
+         <decode varbindvalue="4" varbinddecodedstring="equipmentAlarm"/>
+         <decode varbindvalue="10" varbinddecodedstring="processingErrorAlarm"/>
+         <decode varbindvalue="11" varbinddecodedstring="qualityOfServiceAlarm"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#16]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="indeterminate"/>
+         <decode varbindvalue="2" varbinddecodedstring="critical"/>
+         <decode varbindvalue="3" varbinddecodedstring="major"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="warning"/>
+         <decode varbindvalue="6" varbinddecodedstring="clear"/>
+      </varbindsdecode>
+      <varbindsdecode>
+         <parmid>parm[#17]</parmid>
+         <decode varbindvalue="0" varbinddecodedstring="unknown"/>
+         <decode varbindvalue="1" varbinddecodedstring="adapterror"/>
+         <decode varbindvalue="2" varbinddecodedstring="applicationSubsystemFailure"/>
+         <decode varbindvalue="3" varbinddecodedstring="bandWidthReduced"/>
+         <decode varbindvalue="4" varbinddecodedstring="callEstablishmentError"/>
+         <decode varbindvalue="5" varbinddecodedstring="communicationsProtocolError"/>
+         <decode varbindvalue="6" varbinddecodedstring="communicationsSubsystemFailure"/>
+         <decode varbindvalue="7" varbinddecodedstring="configurationOrCustomizationError"/>
+         <decode varbindvalue="8" varbinddecodedstring="congestion"/>
+         <decode varbindvalue="9" varbinddecodedstring="corruptData"/>
+         <decode varbindvalue="10" varbinddecodedstring="cpuCyclesLimitExceeded"/>
+         <decode varbindvalue="11" varbinddecodedstring="cataSetOrModemError"/>
+         <decode varbindvalue="12" varbinddecodedstring="degradedSignal"/>
+         <decode varbindvalue="13" varbinddecodedstring="dteDceInterfaceError"/>
+         <decode varbindvalue="14" varbinddecodedstring="enclosureDoorOpen"/>
+         <decode varbindvalue="15" varbinddecodedstring="equipmentMalFunction"/>
+         <decode varbindvalue="16" varbinddecodedstring="excessiveVibration"/>
+         <decode varbindvalue="17" varbinddecodedstring="fileError"/>
+         <decode varbindvalue="18" varbinddecodedstring="fireDetected"/>
+         <decode varbindvalue="19" varbinddecodedstring="floodDetected"/>
+         <decode varbindvalue="20" varbinddecodedstring="framingError"/>
+         <decode varbindvalue="21" varbinddecodedstring="heatingVentilationCoolingSystemProblem"/>
+         <decode varbindvalue="22" varbinddecodedstring="humidityUnacceptable"/>
+         <decode varbindvalue="23" varbinddecodedstring="inputOutputDeviceError"/>
+         <decode varbindvalue="24" varbinddecodedstring="inputDeviceError"/>
+         <decode varbindvalue="25" varbinddecodedstring="lanError"/>
+         <decode varbindvalue="26" varbinddecodedstring="leakDetected"/>
+         <decode varbindvalue="27" varbinddecodedstring="localNodeTransmissionError"/>
+         <decode varbindvalue="28" varbinddecodedstring="lossOfFrame"/>
+         <decode varbindvalue="29" varbinddecodedstring="lossOfSignal"/>
+         <decode varbindvalue="30" varbinddecodedstring="materialSupplyExhausted"/>
+         <decode varbindvalue="31" varbinddecodedstring="multiplexerProblem"/>
+         <decode varbindvalue="32" varbinddecodedstring="outOfMemory"/>
+         <decode varbindvalue="33" varbinddecodedstring="outputDeviceError"/>
+         <decode varbindvalue="34" varbinddecodedstring="performanceDegraded"/>
+         <decode varbindvalue="35" varbinddecodedstring="powerProblem"/>
+         <decode varbindvalue="36" varbinddecodedstring="pressureUnacceptable"/>
+         <decode varbindvalue="37" varbinddecodedstring="processorProblem"/>
+         <decode varbindvalue="38" varbinddecodedstring="pumpFailure"/>
+         <decode varbindvalue="39" varbinddecodedstring="queueSizeExceeded"/>
+         <decode varbindvalue="40" varbinddecodedstring="receiveFailure"/>
+         <decode varbindvalue="41" varbinddecodedstring="receiverFailure"/>
+         <decode varbindvalue="42" varbinddecodedstring="remoteNodeTransmissionFailure"/>
+         <decode varbindvalue="43" varbinddecodedstring="resourceAtOrNearingCapacity"/>
+         <decode varbindvalue="44" varbinddecodedstring="responseTimeExcessive"/>
+         <decode varbindvalue="45" varbinddecodedstring="retransmissionRateExcessive"/>
+         <decode varbindvalue="46" varbinddecodedstring="softwareError"/>
+         <decode varbindvalue="47" varbinddecodedstring="softwareProgramAbnormallyTerminated"/>
+         <decode varbindvalue="48" varbinddecodedstring="softwareProgramError"/>
+         <decode varbindvalue="49" varbinddecodedstring="storageCapacityProblem"/>
+         <decode varbindvalue="50" varbinddecodedstring="temperatureUnacceptable"/>
+         <decode varbindvalue="51" varbinddecodedstring="thresholdCrossed"/>
+         <decode varbindvalue="52" varbinddecodedstring="timingProblem"/>
+         <decode varbindvalue="53" varbinddecodedstring="toxicLeakDetected"/>
+         <decode varbindvalue="54" varbinddecodedstring="transmitFailure"/>
+         <decode varbindvalue="55" varbinddecodedstring="transmitterFailure"/>
+         <decode varbindvalue="56" varbinddecodedstring="underlyingResourceUnavailable"/>
+         <decode varbindvalue="57" varbinddecodedstring="versionMismatch"/>
+      </varbindsdecode>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.637.64.0.10.1.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>4</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ALCATEL-NMC-PROXY-AGENT-MIB/startProxyTrap</uei>
+      <event-label>ALCATEL-NMC-PROXY-AGENT-MIB defined trap event: startProxyTrap</event-label>
+      <descr>
+&lt;p>proxy started :
+
+	this trap announces that a proxy has just been started
+
+	HP OpenView Display=> Start of NMC proxy $A&lt;/p>&lt;table>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	startProxyTrap trap received&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.637.64.0.10.1.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>5</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ALCATEL-NMC-PROXY-AGENT-MIB/stopProxyTrap</uei>
+      <event-label>ALCATEL-NMC-PROXY-AGENT-MIB defined trap event: stopProxyTrap</event-label>
+      <descr>
+&lt;p>proxy stopped :
+
+	this trap announces that a proxy has just been stopped
+
+	HP OpenView Display=> End of proxy: $A&lt;/p>&lt;table>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	stopProxyTrap trap received&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.637.64.0.10.1.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ALCATEL-NMC-PROXY-AGENT-MIB/eventLostTrap</uei>
+      <event-label>ALCATEL-NMC-PROXY-AGENT-MIB defined trap event: eventLostTrap</event-label>
+      <descr>
+&lt;p>event lost :
+
+	this trap announces that a proxy didn't succeed to send all
+
+	events and that the operator should perform a resynchronization.
+
+	HP OpenView Display=> Event lost from $A&lt;/p>&lt;table>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	eventLostTrap trap received&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <mask>
+         <maskelement>
+            <mename>id</mename>
+            <mevalue>.1.3.6.1.4.1.637.64.0.10.1.2</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>generic</mename>
+            <mevalue>6</mevalue>
+         </maskelement>
+         <maskelement>
+            <mename>specific</mename>
+            <mevalue>7</mevalue>
+         </maskelement>
+      </mask>
+      <uei>uei.opennms.org/traps/ALCATEL-NMC-PROXY-AGENT-MIB/topClassStateTrap</uei>
+      <event-label>ALCATEL-NMC-PROXY-AGENT-MIB defined trap event: topClassStateTrap</event-label>
+      <descr>
+&lt;p>state trap :
+
+	contains arguments that describe the current state of a top class
+
+	object.
+
+	HP OpenView Display=> Voice element $2 of class $1 has state $3&lt;/p>&lt;table>
+	&lt;tr>&lt;td>&lt;b>
+
+	classId1&lt;/b>&lt;/td>&lt;td>
+	%parm[#1]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	rdnValue1&lt;/b>&lt;/td>&lt;td>
+	%parm[#2]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	severity&lt;/b>&lt;/td>&lt;td>
+	%parm[#3]%;&lt;/td>&lt;td>&lt;p>
+		indeterminate(1)
+		critical(2)
+		major(3)
+		minor(4)
+		warning(5)
+		clear(6)
+	&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	objectNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#4]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>&lt;b>
+
+	parentNumber&lt;/b>&lt;/td>&lt;td>
+	%parm[#5]%;&lt;/td>&lt;td>&lt;p>&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+	</descr>
+      <logmsg dest="logndisplay">&lt;p>
+	topClassStateTrap trap received
+	classId1=%parm[#1]%
+	rdnValue1=%parm[#2]%
+	severity=%parm[#3]%
+	objectNumber=%parm[#4]%
+	parentNumber=%parm[#5]%&lt;/p>
+	</logmsg>
+      <severity>Indeterminate</severity>
+      <varbindsdecode>
+         <parmid>parm[#3]</parmid>
+         <decode varbindvalue="1" varbinddecodedstring="indeterminate"/>
+         <decode varbindvalue="2" varbinddecodedstring="critical"/>
+         <decode varbindvalue="3" varbinddecodedstring="major"/>
+         <decode varbindvalue="4" varbinddecodedstring="minor"/>
+         <decode varbindvalue="5" varbinddecodedstring="warning"/>
+         <decode varbindvalue="6" varbinddecodedstring="clear"/>
+      </varbindsdecode>
+   </event>
+</events>
