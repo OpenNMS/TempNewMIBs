@@ -1,0 +1,13 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="BROCADE-SYSLOG-MIB">
+   <resourceType name="brcdSysLogServerEntry" label="brcdSysLogServerEntry" resourceLabel="${brcdSysLogServerAddrType} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="brcdSysLogServerTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.1991.1.1.11.1.1.1.1.1" instance="brcdSysLogServerEntry" alias="brcSysLogSerAddType" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.1991.1.1.11.1.1.1.1.2" instance="brcdSysLogServerEntry" alias="brcdSysLogServeAddr" type="octetstring"/>
+      <mibObj oid=".1.3.6.1.4.1.1991.1.1.11.1.1.1.1.3" instance="brcdSysLogServerEntry" alias="brcSysLogSerUDPPort" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.1991.1.1.11.1.1.1.1.4" instance="brcdSysLogServerEntry" alias="brcSysLogSerOutPkts" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.1991.1.1.11.1.1.1.1.5" instance="brcdSysLogServerEntry" alias="brcSysLogSerRowStat" type="string"/>
+   </group>
+</datacollection-group>
