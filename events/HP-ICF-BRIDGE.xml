@@ -1,0 +1,59 @@
+<datacollection-group xmlns="http://xmlns.opennms.org/xsd/config/datacollection" name="HP-ICF-BRIDGE">
+   <resourceType name="hpicfBridgeGvrpPortEntry" label="hpicfBridgeGvrpPortEntry" resourceLabel="${hpicfBridgeGvrpRestrictedVlanReg} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hpicfBridgeRstpPortEntry" label="hpicfBridgeRstpPortEntry" resourceLabel="${hpicfBridgeRstpAdminEdgePort} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hpicfBridgeLoopProtectPortEntry" label="hpicfBridgeLoopProtectPortEntry" resourceLabel="${hpicfBridgeLoopProtectPortEnable} (${index})">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <resourceType name="hpicfBridgeMirrorSessionEntry" label="hpicfBridgeMirrorSessionEntry" resourceLabel="${index}">
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+   </resourceType>
+   <group name="hpicfBridgeBase" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.1.1" instance="0" alias="hpicfBridgeMaxVlans" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.1.2" instance="0" alias="hpicfBridgVlanEnabl" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.1.3" instance="0" alias="hpicfBridgPrimaVlan" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.1.4" instance="0" alias="hpiBridVlanConfStat" type="string"/>
+   </group>
+   <group name="hpicfBridgeGvrpPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.2.1.1.1" instance="hpicfBridgeGvrpPortEntry" alias="hpiBriGvrResVlanReg" type="string"/>
+   </group>
+   <group name="hpicfBridgeRstp" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.1" instance="0" alias="hpiBridRstpForcVers" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.2" instance="0" alias="hpiBridRstpConfStat" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.3" instance="0" alias="hpiBridRstpProtVers" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.4" instance="0" alias="hpiBridRstpAdmiStat" type="string"/>
+   </group>
+   <group name="hpicfBridgeRstpPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.1" instance="hpicfBridgeRstpPortEntry" alias="hpiBridRstpPortInde" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.2" instance="hpicfBridgeRstpPortEntry" alias="hpiBriRstAdmEdgPort" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.3" instance="hpicfBridgeRstpPortEntry" alias="hpiBriRstOpeEdgPort" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.4" instance="hpicfBridgeRstpPortEntry" alias="hpBrRsAdPoiToPoiMac" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.5" instance="hpicfBridgeRstpPortEntry" alias="hpBrRsOpPoiToPoiMac" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.6" instance="hpicfBridgeRstpPortEntry" alias="hpiBriRstPorPatCost" type="integer"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.7" instance="hpicfBridgeRstpPortEntry" alias="hpBrRstForBpdMigChe" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.8" instance="hpicfBridgeRstpPortEntry" alias="hpiBriRstAutEdgPort" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.4.5.1.9" instance="hpicfBridgeRstpPortEntry" alias="hpiBriRstPorBpdFilt" type="string"/>
+   </group>
+   <group name="hpicfBridgeLoopProtectBase" ifType="ignore">
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.1.1" instance="0" alias="hpiBridLoopProtInte" type="integer32"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.1.2" instance="0" alias="hpBrLoPrTrLooDetEna" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.1.3" instance="0" alias="hpiBriLooProEnaTime" type="integer32"/>
+   </group>
+   <group name="hpicfBridgeLoopProtectPortTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.2.1.1.1" instance="hpicfBridgeLoopProtectPortEntry" alias="hpiBriLooProPorEnab" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.2.1.1.2" instance="hpicfBridgeLoopProtectPortEntry" alias="hpBrLooProPorLooDet" type="string"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.2.1.1.3" instance="hpicfBridgeLoopProtectPortEntry" alias="hpBrLoPrPoLasLooTim" type="timeticks"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.2.1.1.4" instance="hpicfBridgeLoopProtectPortEntry" alias="hpBrLooProPorLooCou" type="counter32"/>
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.5.2.1.1.5" instance="hpicfBridgeLoopProtectPortEntry" alias="hpBrLooProPorRecAct" type="string"/>
+   </group>
+   <group name="hpicfBridgeMirrorSessionTable" ifType="all">
+      <mibObj oid=".1.3.6.1.4.1.11.2.14.11.5.1.12.1.6.2.1.1.1" instance="hpicfBridgeMirrorSessionEntry" alias="hpicBridMirrSessiID" type="integer32"/>
+   </group>
+</datacollection-group>
